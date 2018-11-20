@@ -1,0 +1,42 @@
+TIES448 Kääntäjätekniikka
+Harjoitustyön suunnitelma
+
+Ryhmän jäsenet: 
+    Vilma Lappi     vijulapp@student.jyu.fi
+    Janne Isoaho    jaosisoa@student.jyu.fi
+
+Lähdekieli: Messembly
+    Ominaisuudet:
+        Pakolliset:     3op
+            -lukukelpoinen (ei binäärimössöä)
+            -kommentit
+            -kokonaislukuaritmetiikka (infix-syntaksilla, ellei erikseen muuta sovita)
+            -valintojen tekeminen (if tms)
+            -toisto (silmukat, rekursio tms)
+            -muuttujat
+            -jonkinlainen syötteen välitys vähintään ohjelman alussa, esim. -muuttujille alkuarvot
+            -jonkinlainen tulostus vähintään ohjelman lopussa, esim. muuttujien -loppuarvot
+        Valinnaiset (Näistä karsimme vielä pois suunitelman tarkentuessa):    1-2op
+            -aliohjelmat (ehkä rekursiolla)
+            -merkkijonosyöte ja -tulostus
+            -merkkijonojen interpolointi tai printf-tyylinen formatointi itse tehtynä
+            -staattinen tyypintarkastus
+    Lähdekielen syntaksi tulee muistuttamaan Javaa/C#:ia
+
+Kohdekieli: WebAssembly    2op
+
+Käytettävät työkalut:
+    Isäntäkieli: Haskell
+
+Kääntäjän testaus:
+    Milloin: Jatkuva testaus
+    Millä työkaluilla: QuickQheck
+
+Ryhmän työnjako
+    Molemmat osallistuvat kaikilla osa-alueilla. Tarkemmat työtehtävät jaetaan sprintti-kohtaisesti.
+
+Tavoiteltu opintopistemäärä: 6-7 op
+
+Aikataulusuunnitelma:
+    Yhden viikon sprintit alkaen 10.12.
+
