@@ -30,7 +30,7 @@ Käytettävät työkalut:
 
 Kääntäjän testaus:
     Milloin: Jatkuva testaus
-    Millä työkaluilla: QuickQheck
+    Millä työkaluilla: Tasty, HUnit, QuickQheck
 
 Ryhmän työnjako
     Molemmat osallistuvat kaikilla osa-alueilla. Tarkemmat työtehtävät jaetaan sprintti-kohtaisesti.
@@ -38,5 +38,9 @@ Ryhmän työnjako
 Tavoiteltu opintopistemäärä: 6-7 op
 
 Aikataulusuunnitelma:
-    Yhden viikon sprintit alkaen 10.12.
+    Yhden viikon sprintit alkaen 10.12. Harjoitustyön tekemisen aloituspäivä on valittu muiden kurssien aikataulujen perusteella. 10.12. eteenpäin yhmän jäsenillä on aikaa työstää harjoitustyötä.
+
+    Harjoitustyön tekemisestä tullaan pitämään joululoma 21.12.2018-3.1.2019 (alustavat päivämäärät, saattavat vielä tarkentua).
+
+    Jokaisen sprintin alussa pidetään alkupalaveri, jossa päätetään sprintin aikaiset tavoitteet ja työnjako (mitä tehdään ja kuka tekee). Jokaisen sprintin lopussa pidetään loppupalaveri, jossa kirjataan alkupalavereissa päätettyjen tavoitteiden toteutuminen. Loppu- ja alkupalaveri voidaan yhdistää niin, että samassa tapaamisessa käsitellään edellisen sprintin tulokset ja suunnitellaan seuraavan sprintin tavoitteet. 
 
