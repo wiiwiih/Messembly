@@ -18,6 +18,7 @@ Lähdekieli: Messembly
             -jonkinlainen tulostus vähintään ohjelman lopussa, esim. muuttujien -loppuarvot
         Valinnaiset (Näistä karsimme vielä pois suunitelman tarkentuessa):    1-2op
             -aliohjelmat (ehkä rekursiolla)
+            -yksiuloitteiset taulukot 
             -merkkijonosyöte ja -tulostus
             -merkkijonojen interpolointi tai printf-tyylinen formatointi itse tehtynä
             -staattinen tyypintarkastus

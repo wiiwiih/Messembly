@@ -1,0 +1,65 @@
+TIES448 Kääntäjätekniikka
+Lähdekielen syntaksin suunnitelma
+
+
+
+- Kieli koostuu blokeista, joita merkitään aaltosuluilla {}. 
+
+- Ohjelman ylimmän tason rakenne on class, joka sisältää vain main-ohjelman, josta suoritus aloitetaan ja mahdollisesti aliohjelmia ja kommentteja
+
+- Ohjelmablokit sisältävät valinta- ja toistoblokkeja, kommentteja, sekä lausekkeita
+
+- Kommentit aloitetaan #-merkillä, jonka jälkeen kommentti jatkuu rivinvaihtoon asti
+
+- Tietotyypit: int, bool, string
+
+- Määritelmät (expression):
+    - Muuttuja
+    - Kokonaisluku
+    - Totuusarvo
+        - true
+        - false
+    - Merkkijono
+        - "[merkkijono]"
+    - Aritmeettiset
+        - [määritelmä, joka tuottaa kokonaisluvun] + [määritelmä, joka tuottaa kokonaisluvun]
+        - [määritelmä, joka tuottaa kokonaisluvun] - [määritelmä, joka tuottaa kokonaisluvun]
+        - [määritelmä, joka tuottaa kokonaisluvun] * [määritelmä, joka tuottaa kokonaisluvun]
+        - [määritelmä, joka tuottaa kokonaisluvun] / [määritelmä, joka tuottaa kokonaisluvun]
+    - Vertailu
+        - [määritelmä, joka tuottaa totuusarvon] < [määritelmä, joka tuottaa totuusarvon]
+        - [määritelmä, joka tuottaa totuusarvon] > [määritelmä, joka tuottaa totuusarvon]
+        - [määritelmä, joka tuottaa totuusarvon] = [määritelmä, joka tuottaa totuusarvon]
+        - [määritelmä, joka tuottaa totuusarvon] != [määritelmä, joka tuottaa totuusarvon]
+        - [määritelmä, joka tuottaa totuusarvon] <= [määritelmä, joka tuottaa totuusarvon]
+        - [määritelmä, joka tuottaa totuusarvon] <= [määritelmä, joka tuottaa totuusarvon]
+
+- Lausekkeet (statement):
+    - Tulostus
+        - print [määritelmä] ?
+    - Muuttujaan sijoitus
+        - uusi muuttuja: 
+            [tietotyyppi] [muuttujan nimi] = [määritelmä, joka tuottaa oikean tyyppisen arvon] ?
+        - sijoitus olemassa olevaan muuttujaan
+            [muuttujan nimi] = [määritelmä, joka tuottaa oikean tyyppisen arvon] ?
+    - Palautus aliohjelmasta
+        return [palautettava arvo] ?
+
+- If-lauseen syntaksi (else ei ole pakollinen):
+      if ([määritelmä joka tuottaa totuusarvon]) { [suoritettava lauseke]* }
+      else { [suoritettava lauseke]* } 
+
+
+- Silmukat 
+    - while
+        while ([määritelmä]) { [suoritettava lauseke]* }
+
+
+- class
+    class [luokan nimi] { [main] [kommentti tai aliohjelma]* }
+
+- main
+    main (string[] args) { [suoritettava lauseke tai kommentti]* }
+
+- aliohjelma
+    [palautusarvon tyyppi tai void] [aliohjelman nimi] ([parametrit pilkulla erotettuna, esim. "int a, int b"]) { [suoritettava lauseke tai kommentti]* }
