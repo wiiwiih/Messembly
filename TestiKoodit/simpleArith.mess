@@ -1,0 +1,6 @@
+class SimpleArith {
+    
+    main(string[] args){
+        print 3 + 4?
+    }
+}

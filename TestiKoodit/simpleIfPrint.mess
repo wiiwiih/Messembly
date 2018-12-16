@@ -1,0 +1,12 @@
+class simpleIfPrint {
+    
+    main(string[] args){
+        int a = 3?
+        int b = 4?
+        if(a > b) {
+            print a?
+        } else {
+            print b?
+        }
+    }
+}

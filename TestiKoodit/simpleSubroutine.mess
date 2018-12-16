@@ -1,0 +1,10 @@
+class SimpleSubroutine {
+    
+    main(string[] args){
+        sum(3, 4)?
+    }
+    
+    int sum(int a, int b) {
+        return a + b?
+    }
+}
