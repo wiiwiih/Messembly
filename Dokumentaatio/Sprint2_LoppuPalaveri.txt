@@ -1,0 +1,18 @@
+Sprintti 2
+Loppupalaveri
+
+23.12.2018
+
+Vilma Lappi ja Janne Isoaho
+
+Sprintin tavoitteet:
+
+- Päätavoitteena lähdekielen kieliopin suunnittelu
+
+- Mahdollisesti parserin/lexerin generoiminen
+
+
+Tavoitteiden toteutuminen:
+
+- Sprintti epäonnistui jäsenten henkilökohtaisten suunnitelmien muutoksista johtuen
+

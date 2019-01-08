@@ -1,0 +1,23 @@
+Sprintti 3
+Alkupalaveri
+
+8.1.2019
+
+Vilma Lappi ja Janne Isoaho
+
+Sprintin tavoitteet:
+
+- Pyritään pääsemään epäonnistuneen sprintin (2) tavoitteisiin
+
+- Päätavoitteena lähdekielen kieliopin suunnittelu
+
+- Mahdollisesti parserin/lexerin generoiminen
+
+
+Työnjako:
+
+- Työtä tehdään yhdessä molempien läsnäollessa.
+
+Muuta:
+
+- Joulutauko oli viikon suunnitelmaa pidempi
