@@ -29,10 +29,10 @@ Lähdekielen syntaksin suunnitelma
     - Vertailu
         - [määritelmä, joka tuottaa totuusarvon] < [määritelmä, joka tuottaa totuusarvon]
         - [määritelmä, joka tuottaa totuusarvon] > [määritelmä, joka tuottaa totuusarvon]
-        - [määritelmä, joka tuottaa totuusarvon] = [määritelmä, joka tuottaa totuusarvon]
+        - [määritelmä, joka tuottaa totuusarvon] == [määritelmä, joka tuottaa totuusarvon]
         - [määritelmä, joka tuottaa totuusarvon] != [määritelmä, joka tuottaa totuusarvon]
         - [määritelmä, joka tuottaa totuusarvon] <= [määritelmä, joka tuottaa totuusarvon]
-        - [määritelmä, joka tuottaa totuusarvon] <= [määritelmä, joka tuottaa totuusarvon]
+        - [määritelmä, joka tuottaa totuusarvon] >= [määritelmä, joka tuottaa totuusarvon]
 
 - Lausekkeet (statement):
     - Tulostus
@@ -43,7 +43,7 @@ Lähdekielen syntaksin suunnitelma
         - sijoitus olemassa olevaan muuttujaan
             [muuttujan nimi] = [määritelmä, joka tuottaa oikean tyyppisen arvon] ?
     - Palautus aliohjelmasta
-        return [palautettava arvo] ?
+        return [määritelmä] ?
 
 - If-lauseen syntaksi (else ei ole pakollinen):
       if ([määritelmä joka tuottaa totuusarvon]) { [suoritettava lauseke]* }
