@@ -1,0 +1,24 @@
+Sprintti 3
+Loppupalaveri
+
+15.1.2019
+
+Vilma Lappi ja Janne Isoaho
+
+Sprintin tavoitteet:
+
+- Pyritään pääsemään epäonnistuneen sprintin (2) tavoitteisiin
+
+- Päätavoitteena lähdekielen kieliopin suunnittelu
+
+- Mahdollisesti parserin/lexerin generoiminen
+
+
+Tavoitteiden toteutuminen:
+
+- Kielioppia suunniteltu ja tehty luonnos versionhallintaan
+
+- Vertailtu eri vaihtoehtoja lexerin ja parserin toteuttamiseen (esim. Alex, Happy, Megaparsec)
+
+- Valittu Megaparsec ja alettu määrittelemään datatyyppejä parserille
+

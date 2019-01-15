@@ -38,7 +38,8 @@ lauseke:  "print" määritelmä "?"
         | "return" määritelmä "?"
         | "if" "(" määritelmä ")" "{" lauseke* "}" ("else" "{" lauseke* "}")?
         | "while" "(" määritelmä ")" "{" lauseke* "}"
-        
+ 
+sijoitus: tietotyyppi ID '=' määritelmä | ID '=' määritelmä       
 
 määritelmä:   ID | INT | BOOL | STRING | määritelmä operaattori määritelmä | määritelmä vertailuOperaattori määritelmä 
 
