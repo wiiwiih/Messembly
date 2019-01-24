@@ -1,0 +1,26 @@
+Sprintti 4
+Loppupalaveri
+
+24.1.2019
+
+Vilma Lappi ja Janne Isoaho
+
+Sprintin tavoitteet:
+
+- Toimiva lexer
+
+- Toimiva parser
+
+
+Tavoitteiden toteutuminen:
+
+- Parserista/Lexeristä tehty versio, joka toimii yksinkertaisella esimerkillä
+
+- Tunnetut bugit ovat:
+    - Aliohjelmakutsut olivat unohtuneet kieliopista eikä jäsenninkään siis tunnista niitä
+    - Jäsennin ei osaa jäsentää vertailuoperaattoreita, syy toistaiseksi tuntematon
+
+Muuta:
+
+- Sprintti venähti muutamalla päivällä
+
