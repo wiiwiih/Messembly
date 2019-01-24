@@ -23,9 +23,9 @@ KOMMENTTI: # .* \n -> skip
 
 luokka: "class" ID "{" main aliohjelma* "}"
 
-main: "main" "(" "string[]" ID ")" "{" lauseke* "}"
+main: "main" "(" "string[]" ID ")" "{" lauseke* "}" ";"
 
-aliohjelma: (tietotyyppi|void) ID "(" parametri_lista ")" "{" lauseke* "}"
+aliohjelma: (tietotyyppi|void) ID "(" parametri_lista ")" "{" lauseke* "}" ";"
 
 tietotyyppi: "int" | "bool" | "string" 
 
@@ -36,8 +36,8 @@ parametri: tietotyyppi ID
 lauseke:  "print" määritelmä "?"
         | sijoitus "?"
         | "return" määritelmä "?"
-        | "if" "(" määritelmä ")" "{" lauseke* "}" ("else" "{" lauseke* "}")?
-        | "while" "(" määritelmä ")" "{" lauseke* "}"
+        | "if" "(" määritelmä ")" "{" lauseke* "}" ("else" "{" lauseke* "}")? "?"
+        | "while" "(" määritelmä ")" "{" lauseke* "}" "?"
  
 sijoitus: tietotyyppi ID '=' määritelmä | ID '=' määritelmä       
 

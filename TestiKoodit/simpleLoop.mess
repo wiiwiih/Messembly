@@ -5,7 +5,7 @@ class SimpleLoop {
         int a = 0?
         while(i < 10) {
             a = a + i?
-        }
+        }?
         print a?
-    }
+    };
 }
