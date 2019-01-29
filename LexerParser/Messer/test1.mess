@@ -1,0 +1,11 @@
+class SimpleLoop {
+    
+    main(string[] args){
+        int i = 0?
+        int a = 0?
+        while(i < 10) {
+            a = a + i?
+        }?
+        print a?
+    };
+}

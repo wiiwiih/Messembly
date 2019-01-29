@@ -29,12 +29,12 @@ version :: Version
 version = Version [0,1,0,0] []
 bindir, libdir, dynlibdir, datadir, libexecdir, sysconfdir :: FilePath
 
-bindir     = "C:\\Users\\Vilma\\Documents\\GitHub\\Messembly\\LexerParser\\Messer\\.stack-work\\install\\4ce01a7c\\bin"
-libdir     = "C:\\Users\\Vilma\\Documents\\GitHub\\Messembly\\LexerParser\\Messer\\.stack-work\\install\\4ce01a7c\\lib\\x86_64-windows-ghc-8.6.3\\Messer-0.1.0.0-BCO8VhpvnAg26KqZs0lYo1-Messer"
-dynlibdir  = "C:\\Users\\Vilma\\Documents\\GitHub\\Messembly\\LexerParser\\Messer\\.stack-work\\install\\4ce01a7c\\lib\\x86_64-windows-ghc-8.6.3"
-datadir    = "C:\\Users\\Vilma\\Documents\\GitHub\\Messembly\\LexerParser\\Messer\\.stack-work\\install\\4ce01a7c\\share\\x86_64-windows-ghc-8.6.3\\Messer-0.1.0.0"
-libexecdir = "C:\\Users\\Vilma\\Documents\\GitHub\\Messembly\\LexerParser\\Messer\\.stack-work\\install\\4ce01a7c\\libexec\\x86_64-windows-ghc-8.6.3\\Messer-0.1.0.0"
-sysconfdir = "C:\\Users\\Vilma\\Documents\\GitHub\\Messembly\\LexerParser\\Messer\\.stack-work\\install\\4ce01a7c\\etc"
+bindir     = "C:\\Users\\jaosisoa\\kurssit\\kate\\Messembly\\LexerParser\\Messer\\.stack-work\\install\\4ce01a7c\\bin"
+libdir     = "C:\\Users\\jaosisoa\\kurssit\\kate\\Messembly\\LexerParser\\Messer\\.stack-work\\install\\4ce01a7c\\lib\\x86_64-windows-ghc-8.6.3\\Messer-0.1.0.0-BCO8VhpvnAg26KqZs0lYo1-Messer"
+dynlibdir  = "C:\\Users\\jaosisoa\\kurssit\\kate\\Messembly\\LexerParser\\Messer\\.stack-work\\install\\4ce01a7c\\lib\\x86_64-windows-ghc-8.6.3"
+datadir    = "C:\\Users\\jaosisoa\\kurssit\\kate\\Messembly\\LexerParser\\Messer\\.stack-work\\install\\4ce01a7c\\share\\x86_64-windows-ghc-8.6.3\\Messer-0.1.0.0"
+libexecdir = "C:\\Users\\jaosisoa\\kurssit\\kate\\Messembly\\LexerParser\\Messer\\.stack-work\\install\\4ce01a7c\\libexec\\x86_64-windows-ghc-8.6.3\\Messer-0.1.0.0"
+sysconfdir = "C:\\Users\\jaosisoa\\kurssit\\kate\\Messembly\\LexerParser\\Messer\\.stack-work\\install\\4ce01a7c\\etc"
 
 getBinDir, getLibDir, getDynLibDir, getDataDir, getLibexecDir, getSysconfDir :: IO FilePath
 getBinDir = catchIO (getEnv "Messer_bindir") (\_ -> return bindir)

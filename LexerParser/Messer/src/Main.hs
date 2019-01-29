@@ -138,8 +138,8 @@ lauseke = sepEndBy lauseke' km
 
 lauseke' :: Parser Lauseke
 lauseke' =  tulostus
-        <|> lakutsu
         <|> sijoitus
+        <|> lakutsu
         <|> palautus
         <|> ehtolause
         <|> silmukka
@@ -242,8 +242,7 @@ parametri = do
     return (Parametri tyyppi id)
 
 maaritelma :: Parser Maaritelma
-maaritelma = aMaaritelma
-         <|> bMaaritelma
+maaritelma = oMaaritelma
          <|> mjono
          <|> mid
          <|> makutsu
@@ -259,24 +258,17 @@ mjono = do
     merkit <- manyTill anySingle (symboli "\"")
     return (MArvo (ArvoString merkit))
     
-aMaaritelma :: Parser Maaritelma
-aMaaritelma = makeExprParser aTermi aOperaattorit
-
-bMaaritelma :: Parser Maaritelma
-bMaaritelma = makeExprParser bTermi bOperaattorit
+oMaaritelma :: Parser Maaritelma
+oMaaritelma = makeExprParser aTermi operaattorit
 
 aTermi :: Parser Maaritelma
-aTermi = sulut aMaaritelma <|> luku <|> mid
+aTermi = sulut oMaaritelma <|> luku <|> mid
     
 luku :: Parser Maaritelma
 luku = do
     arvo <- integer
     return (MArvo (ArvoInt arvo))
 
-bTermi :: Parser Maaritelma
-bTermi = sulut bMaaritelma
-    <|> boolTosi
-    <|> boolEtosi
 
 boolTosi :: Parser Maaritelma
 boolTosi = do
@@ -306,21 +298,18 @@ stringi = do
     vsana "string"
     return (TTString)
 
-aOperaattorit :: [[Operator Parser Maaritelma]]
-aOperaattorit = [ [ InfixL (Aritmeettinen Kerto  <$ symboli "*")
+operaattorit :: [[Operator Parser Maaritelma]]
+operaattorit = [ [ InfixL (Aritmeettinen Kerto  <$ symboli "*")
                   , InfixL (Aritmeettinen Jako   <$ symboli "/") ]
                 , [ InfixL (Aritmeettinen Plus   <$ symboli "+")
-                  , InfixL (Aritmeettinen Miinus <$ symboli "-") ]
-                ]
-
-bOperaattorit :: [[Operator Parser Maaritelma]]
-bOperaattorit = [ [ InfixL (Vertailu Pienempi          <$ symboli "<")
+                  , InfixL (Aritmeettinen Miinus <$ symboli "-") ],
+                  [InfixL (Vertailu Pienempi          <$ symboli "<")
                   , InfixL (Vertailu Suurempi          <$ symboli ">")
                   , InfixL (Vertailu PienempiYhtasuuri <$ symboli "<=")
                   , InfixL (Vertailu SuurempiYhtasuuri <$ symboli ">=")
                   , InfixL (Vertailu Yhtasuuri         <$ symboli "==")
-                  , InfixL (Vertailu Erisuuri          <$ symboli "!=") 
-                ] ]
+                  , InfixL (Vertailu Erisuuri          <$ symboli "!=") ]
+                ]
 
 jasennin :: Parser Luokka
 jasennin = between whitespace eof luokka
