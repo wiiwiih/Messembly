@@ -31,12 +31,16 @@ data Lauseke = LTulostus Maaritelma
              | LSijoitus Sijoitus 
              | LPalautus Maaritelma
              | LEhto Ehtolause
-             | LSilmukka Maaritelma [Lauseke] deriving (Show)
+             | LSilmukka Maaritelma [Lauseke]
+             | LAKutsu AKutsu deriving (Show)
 
 data Maaritelma = MId Id
                 | MArvo Arvo 
                 | Aritmeettinen Op Maaritelma Maaritelma
-                | Vertailu VOp Maaritelma Maaritelma deriving (Show)
+                | Vertailu VOp Maaritelma Maaritelma
+                | MAKutsu AKutsu deriving (Show)
+
+data AKutsu = AKutsu Id [Maaritelma] deriving (Show)
 
 data Sijoitus = UusiSijoitus Tietotyyppi Id Maaritelma 
               | VanhaSijoitus Id Maaritelma deriving (Show)
@@ -117,7 +121,7 @@ jMain = do
     return (MainOhjelma (Parametri TTString parametriNimi) lausekkeet)
 
 jAliohjelma :: Parser [Aliohjelma]
-jAliohjelma = sepBy jAliohjelma' semi
+jAliohjelma = sepEndBy jAliohjelma' semi
 
 jAliohjelma' :: Parser Aliohjelma
 jAliohjelma' = do
@@ -130,15 +134,34 @@ jAliohjelma' = do
         return (Aliohjelma nimi palautus parametrit lausekkeet)
 
 lauseke :: Parser [Lauseke]
-lauseke = sepBy lauseke' km
+lauseke = sepEndBy lauseke' km
 
 lauseke' :: Parser Lauseke
 lauseke' =  tulostus
+        <|> lakutsu
         <|> sijoitus
         <|> palautus
         <|> ehtolause
         <|> silmukka
+        
 
+lakutsu :: Parser Lauseke
+lakutsu = do
+    kutsu <- akutsu
+    return (LAKutsu kutsu)
+
+makutsu :: Parser Maaritelma
+makutsu = do
+    kutsu <- akutsu
+    return (MAKutsu kutsu)
+
+akutsu :: Parser AKutsu
+akutsu = do
+    id <- identifier
+    symboli "("
+    maaritelmat <- sepBy maaritelma (symboli ",")
+    symboli ")"
+    return (AKutsu id maaritelmat)
 
 tulostus :: Parser Lauseke
 tulostus = do
@@ -223,6 +246,7 @@ maaritelma = aMaaritelma
          <|> bMaaritelma
          <|> mjono
          <|> mid
+         <|> makutsu
 
 mid :: Parser Maaritelma
 mid = do
@@ -242,7 +266,7 @@ bMaaritelma :: Parser Maaritelma
 bMaaritelma = makeExprParser bTermi bOperaattorit
 
 aTermi :: Parser Maaritelma
-aTermi = sulut aMaaritelma <|> luku
+aTermi = sulut aMaaritelma <|> luku <|> mid
     
 luku :: Parser Maaritelma
 luku = do
