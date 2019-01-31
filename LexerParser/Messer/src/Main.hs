@@ -137,23 +137,36 @@ lauseke :: Parser [Lauseke]
 lauseke = sepEndBy lauseke' km
 
 lauseke' :: Parser Lauseke
-lauseke' =  tulostus
-        <|> sijoitus
-        <|> lakutsu
+lauseke' =  idAlku
+        <|> uusisijoitus
+        <|> tulostus
         <|> palautus
         <|> ehtolause
         <|> silmukka
-        
 
-lakutsu :: Parser Lauseke
-lakutsu = do
-    kutsu <- akutsu
-    return (LAKutsu kutsu)
+idAlku :: Parser Lauseke
+idAlku = do
+    id <- identifier
+    loppu <- idLoppu id
+    return loppu
+
+idLoppu :: Id -> Parser Lauseke
+idLoppu id = lakutsu id <|> vanhasijoitus id
+
+lakutsu :: Id -> Parser Lauseke
+lakutsu id = do
+    symboli "("
+    maaritelmat <- sepBy maaritelma (symboli ",")
+    symboli ")"
+    return (LAKutsu (AKutsu id maaritelmat))
 
 makutsu :: Parser Maaritelma
 makutsu = do
-    kutsu <- akutsu
-    return (MAKutsu kutsu)
+    id <- identifier
+    symboli "("
+    maaritelmat <- sepBy maaritelma (symboli ",")
+    symboli ")"
+    return (MAKutsu (AKutsu id maaritelmat))
 
 akutsu :: Parser AKutsu
 akutsu = do
@@ -169,8 +182,6 @@ tulostus = do
     maaritelma <- maaritelma
     return (LTulostus maaritelma)
 
-sijoitus :: Parser Lauseke
-sijoitus = uusisijoitus <|> vanhasijoitus
     
 uusisijoitus :: Parser Lauseke
 uusisijoitus = do
@@ -180,9 +191,8 @@ uusisijoitus = do
     maaritelma <- maaritelma
     return (LSijoitus (UusiSijoitus tyyppi id maaritelma))
 
-vanhasijoitus :: Parser Lauseke
-vanhasijoitus = do
-    id <- identifier
+vanhasijoitus :: Id -> Parser Lauseke
+vanhasijoitus id = do
     symboli "="
     maaritelma <- maaritelma
     return (LSijoitus (VanhaSijoitus id maaritelma))

@@ -1,10 +1,11 @@
-class SimpleSubroutine {
+class SimpleLoop {
     
     main(string[] args){
-        sum(3, 4)?
-    };
-    
-    int sum(int a, int b) {
-        return a + b?
+        int i = 0?
+        int a = 0?
+        while(i < 10) {
+            a = a + i?
+        }?
+        print a?
     };
 }
