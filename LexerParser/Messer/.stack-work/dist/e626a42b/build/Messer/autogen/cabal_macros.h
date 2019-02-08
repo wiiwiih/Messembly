@@ -44,6 +44,28 @@
   (major1) == 1 && (major2) == 0 && (minor) <= 1)
 #endif /* MIN_VERSION_parser_combinators */
 
+/* package tasty-1.2 */
+#ifndef VERSION_tasty
+#define VERSION_tasty "1.2"
+#endif /* VERSION_tasty */
+#ifndef MIN_VERSION_tasty
+#define MIN_VERSION_tasty(major1,major2,minor) (\
+  (major1) <  1 || \
+  (major1) == 1 && (major2) <  2 || \
+  (major1) == 1 && (major2) == 2 && (minor) <= 0)
+#endif /* MIN_VERSION_tasty */
+
+/* package tasty-hunit-0.10.0.1 */
+#ifndef VERSION_tasty_hunit
+#define VERSION_tasty_hunit "0.10.0.1"
+#endif /* VERSION_tasty_hunit */
+#ifndef MIN_VERSION_tasty_hunit
+#define MIN_VERSION_tasty_hunit(major1,major2,minor) (\
+  (major1) <  0 || \
+  (major1) == 0 && (major2) <  10 || \
+  (major1) == 0 && (major2) == 10 && (minor) <= 0)
+#endif /* MIN_VERSION_tasty_hunit */
+
 /* tool gcc-7.2.0 */
 #ifndef TOOL_VERSION_gcc
 #define TOOL_VERSION_gcc "7.2.0"
@@ -144,7 +166,7 @@
 #endif /* MIN_TOOL_VERSION_strip */
 
 #ifndef CURRENT_COMPONENT_ID
-#define CURRENT_COMPONENT_ID "Messer-0.1.0.0-BCO8VhpvnAg26KqZs0lYo1-Messer"
+#define CURRENT_COMPONENT_ID "Messer-0.1.0.0-BdZ1K9jn2OIDjV6GLvm7KS-Messer"
 #endif /* CURRENT_COMPONENT_ID */
 #ifndef CURRENT_PACKAGE_VERSION
 #define CURRENT_PACKAGE_VERSION "0.1.0.0"

@@ -1,0 +1,22 @@
+Sprintti 6
+Loppupalaveri
+
+8.2.2019
+
+Vilma Lappi ja Janne Isoaho
+
+Sprintin tavoitteet:
+
+- Jäsentimelle testejä
+
+- Aloitetaan tulkin tekeminen
+
+
+Tavoitteiden toteutuminen:
+
+- Tutkimme vaihtoehtoja testien toteuttamiseen, päädyimme Tasty-kirjastoon
+
+- Aloitimme testien tekemistä, mutta törmäsimme ongelmiin jäsentimen ja Tastyn yhdistämisessä
+
+- Tulkkia ei vielä aloitettu
+
