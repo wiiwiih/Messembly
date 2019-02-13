@@ -22,6 +22,17 @@
   (major1) == 4 && (major2) == 12 && (minor) <= 0)
 #endif /* MIN_VERSION_base */
 
+/* package directory-1.3.3.0 */
+#ifndef VERSION_directory
+#define VERSION_directory "1.3.3.0"
+#endif /* VERSION_directory */
+#ifndef MIN_VERSION_directory
+#define MIN_VERSION_directory(major1,major2,minor) (\
+  (major1) <  1 || \
+  (major1) == 1 && (major2) <  3 || \
+  (major1) == 1 && (major2) == 3 && (minor) <= 3)
+#endif /* MIN_VERSION_directory */
+
 /* package megaparsec-7.0.4 */
 #ifndef VERSION_megaparsec
 #define VERSION_megaparsec "7.0.4"
@@ -166,7 +177,7 @@
 #endif /* MIN_TOOL_VERSION_strip */
 
 #ifndef CURRENT_COMPONENT_ID
-#define CURRENT_COMPONENT_ID "Messer-0.1.0.0-BdZ1K9jn2OIDjV6GLvm7KS-Messer"
+#define CURRENT_COMPONENT_ID "Messer-0.1.0.0-LT3aYZdj2Jz3M8ekYjp8hG-Messer"
 #endif /* CURRENT_COMPONENT_ID */
 #ifndef CURRENT_PACKAGE_VERSION
 #define CURRENT_PACKAGE_VERSION "0.1.0.0"

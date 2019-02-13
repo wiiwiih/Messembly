@@ -334,13 +334,13 @@ luokka = do
     symboli "}"
     return (Luokka luokanNimi maini aliohjelmat)
 
-testaaTiedosto :: String -> IO (Either (ParseErrorBundle String Void) Luokka)
-testaaTiedosto tiedosto = runParser jasennin tiedosto <$> readFile tiedosto
+testaaTiedosto :: String -> IO (Maybe Luokka)
+testaaTiedosto tiedosto = parseMaybe jasennin <$> readFile tiedosto
 
-main :: IO ()
+{-main :: IO ()
 main = do
     ioInput <- readFile "test.mess"
-    parseTest jasennin ioInput
+    parseTest jasennin ioInput-}
 
 
 

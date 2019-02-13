@@ -1,11 +1,11 @@
 
 ==================== FINAL INTERFACE ====================
-2019-02-08 20:22:42.4388996 UTC
+2019-02-13 19:40:00.0457373 UTC
 
 interface main:Messer 8063
-  interface hash: fb165a67a9b311f0b2ce77010b80aa27
-  ABI hash: ed4d7718bc5c7742851086ad661129aa
-  export-list hash: 9068244645e2160251ec0551dfde5fe6
+  interface hash: 9f150c02f626cf131983c169543f64a3
+  ABI hash: 3db3194435f825831ec3110b8592c69e
+  export-list hash: d60fac1c181857a8cf913227acf2bcdb
   orphan hash: 4361e17c2c4b34b9d50ba3a67e9a0257
   flag hash: 2452984e3642aa8a1249384a992068a7
   opt_hash: 6faf2de08de32d19db9870899d88e59a
@@ -41,7 +41,6 @@ exports:
   Messer.luku
   Messer.luokka
   Messer.maaritelma
-  Messer.main
   Messer.makutsu
   Messer.mid
   Messer.mjono
@@ -118,7 +117,6 @@ family instance modules: base-4.12.0.0:Control.Applicative
                          text-1.2.3.1:Data.Text.Lazy
 import  -/  base-4.12.0.0:Control.Applicative 123b0192fa051c5703dd008e6b21f32d
 import  -/  base-4.12.0.0:Control.Monad 80b89bcb2e69935b319a1dd37eaf3802
-import  -/  base-4.12.0.0:Data.Either b81d41b5f4255f0a7c195f59e02f5b66
 import  -/  base-4.12.0.0:Data.Foldable 0d844d41f2c5ae5ccafb3f5378ff6867
 import  -/  base-4.12.0.0:Data.Functor d76c001d92d0a1adf6f6220faa8ca3e5
 import  -/  base-4.12.0.0:Data.Void 8275bdb9ce14f1255dfe4ed62fee1492
@@ -133,7 +131,6 @@ import  -/  megaparsec-7.0.4:Text.Megaparsec.Char cf99495c2b9d970340d924c58fdc23
 import  -/  megaparsec-7.0.4:Text.Megaparsec.Char.Lexer 7491e70f16b8f2481f147918ded7fb2b
 import  -/  megaparsec-7.0.4:Text.Megaparsec.Class 69e3fcf22b7fea6247ba39e1e5f983a6
 import  -/  megaparsec-7.0.4:Text.Megaparsec.Common 8aae37b98788a01a2a8755bd42f942d8
-import  -/  megaparsec-7.0.4:Text.Megaparsec.Error ae4537c895f9e85ef8486eb6ee5eacb2
 import  -/  megaparsec-7.0.4:Text.Megaparsec.Lexer 83dbd661cbe9657eaf7f67f0d3a31c0d
 import  -/  parser-combinators-1.0.1:Control.Applicative.Combinators 79d226f48196dca675b00a2047bb8e23
 import  -/  parser-combinators-1.0.1:Control.Monad.Combinators a896246bc439928f68ca3d3bc3e18ce9
@@ -7407,48 +7404,6 @@ e9e6c5f3b5fad9f209eb9f031f73979c
                           <[GHC.Types.Char]>_N
                           <Data.Functor.Identity.Identity>_R
                           <Messer.Maaritelma>_R)) -}
-77ccc3eb8d97567c02680d9435ae52d2
-  main :: GHC.Types.IO ()
-  {- Arity: 1, Strictness: <S,U>,
-     Unfolding: InlineRule (0, True, True)
-                Messer.main1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
-d7ed918caffb82f35bde023d89140ea2
-  main1 ::
-    GHC.Prim.State# GHC.Prim.RealWorld
-    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
-  {- Arity: 1, Strictness: <S,U>,
-     Unfolding: (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld) ->
-                 case GHC.IO.Handle.FD.openFile1
-                        Messer.main2
-                        GHC.IO.IOMode.ReadMode
-                        s of ds1 { (#,#) ipv ipv1 ->
-                 case GHC.IO.Handle.Text.hGetContents1
-                        ipv1
-                        ipv of ds2 { (#,#) ipv2 ipv3 ->
-                 (Text.Megaparsec.parseTest
-                    @ Data.Void.Void
-                    @ Messer.Luokka
-                    @ GHC.Base.String
-                    Text.Megaparsec.Error.$fShowErrorComponentVoid
-                    Messer.$fShowLuokka
-                    Text.Megaparsec.Stream.$fStream[]
-                    Messer.jasennin1
-                      `cast`
-                    (Sym (Text.Megaparsec.Internal.N:ParsecT[0]
-                              <Data.Void.Void>_N
-                              <[GHC.Types.Char]>_N
-                              <Data.Functor.Identity.Identity>_R
-                              <Messer.Luokka>_R))
-                    ipv3)
-                   `cast`
-                 (GHC.Types.N:IO[0] <()>_R)
-                   ipv2 } }) -}
-bedc981fcd1b604dc2d96a8cafb89069
-  main2 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString# Messer.main3) -}
-607f7e68365471597a4a28e433a63452
-  main3 :: GHC.Prim.Addr#
-  {- HasNoCafRefs, Unfolding: ("test.mess"#) -}
 0c3b9cfcae0ab036f866a9e5b8d270d2
   makutsu :: Messer.Parser Messer.Maaritelma
   {- Arity: 5,
@@ -10750,33 +10705,21 @@ ee42e2e0334cc344947bfe50935d057a
                                <[GHC.Types.Char]>_N
                                <Data.Functor.Identity.Identity>_R
                                (Sub (Sym (Text.Megaparsec.Stream.D:R:Tokens[][0]))))) -}
-5d98291832c698ddec73a91475e3456f
+4fadd190441c7003fcddfd28055d37b8
   testaaTiedosto ::
-    GHC.Base.String
-    -> GHC.Types.IO
-         (Data.Either.Either
-            (Text.Megaparsec.Error.ParseErrorBundle
-               GHC.Base.String Data.Void.Void)
-            Messer.Luokka)
+    GHC.Base.String -> GHC.Types.IO (GHC.Maybe.Maybe Messer.Luokka)
   {- Arity: 2, Strictness: <L,U><S,U>,
      Unfolding: InlineRule (0, True, True)
                 Messer.testaaTiedosto1
                   `cast`
                 (<GHC.Base.String>_R
-                 ->_R Sym (GHC.Types.N:IO[0]
-                               <Data.Either.Either
-                                  (Text.Megaparsec.Error.ParseErrorBundle
-                                     GHC.Base.String Data.Void.Void)
-                                  Messer.Luokka>_R)) -}
-ed2fe73a9a431cc753b4a6661e0553dd
+                 ->_R Sym (GHC.Types.N:IO[0] <GHC.Maybe.Maybe Messer.Luokka>_R)) -}
+9ef588f9f8116e21a422193c58a891e6
   testaaTiedosto1 ::
     GHC.Base.String
     -> GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld,
-          Data.Either.Either
-            (Text.Megaparsec.Error.ParseErrorBundle
-               GHC.Base.String Data.Void.Void)
-            Messer.Luokka #)
+          GHC.Maybe.Maybe Messer.Luokka #)
   {- Arity: 2, Strictness: <L,U><S,U>,
      Unfolding: (\ (tiedosto :: GHC.Base.String)
                    (s :: GHC.Prim.State# GHC.Prim.RealWorld) ->
@@ -10788,10 +10731,11 @@ ed2fe73a9a431cc753b4a6661e0553dd
                         ipv1
                         ipv of ds { (#,#) ipv2 ipv3 ->
                  (# ipv2,
-                    Text.Megaparsec.runParser
+                    Text.Megaparsec.$wparseMaybe
                       @ Data.Void.Void
                       @ GHC.Base.String
                       @ Messer.Luokka
+                      Text.Megaparsec.Stream.$fStream[]
                       Messer.jasennin1
                         `cast`
                       (Sym (Text.Megaparsec.Internal.N:ParsecT[0]
@@ -10799,7 +10743,6 @@ ed2fe73a9a431cc753b4a6661e0553dd
                                 <[GHC.Types.Char]>_N
                                 <Data.Functor.Identity.Identity>_R
                                 <Messer.Luokka>_R))
-                      tiedosto
                       ipv3 #) } }) -}
 4b2c4199de2e174e6c51c7234c36dbac
   tietotyyppi :: Messer.Parser Messer.Tietotyyppi
