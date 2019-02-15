@@ -1,10 +1,10 @@
 
 ==================== FINAL INTERFACE ====================
-2019-02-13 22:55:28.3197731 UTC
+2019-02-15 16:21:41.2380966 UTC
 
 interface main:MesserTests 8063
-  interface hash: 56ff337e6604a90391b6a9c4a09f8490
-  ABI hash: 1f6459dd31e2e0f6f75a78fbc6f08af7
+  interface hash: a4385b86ea5c50bf243321620539d152
+  ABI hash: 29d277d94829812dcfc125b6a08b767e
   export-list hash: e35b28a1c19fe6eb222ed752d8a861b0
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
   flag hash: 2452984e3642aa8a1249384a992068a7
@@ -103,12 +103,12 @@ f3341607f85969cd9c0d6bfa35ad07f8
 94b4ea6cecc2d902974cc4bf6cfe2e96
   $trModule4 :: GHC.Prim.Addr#
   {- HasNoCafRefs, Unfolding: ("main"#) -}
-c879178264f7d69ed995b1daa656fb37
+5da21f3789de37fd94f899ff95df2da3
   ajaTestit :: GHC.Types.IO ()
   {- Arity: 1, Strictness: <S,U>,
      Unfolding: InlineRule (0, True, True)
                 MesserTests.ajaTestit1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
-1044d3e8ab340f10ffc0bcf92f2e155f
+d9eb2cc1b7630d5334629bd922bffaf5
   ajaTestit1 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
@@ -163,14 +163,14 @@ c879178264f7d69ed995b1daa656fb37
                   `cast`
                 (<[GHC.Base.String]>_R
                  ->_R Sym (GHC.Types.N:IO[0] <[Test.Tasty.Core.TestTree]>_R)) -}
-5086f08375d94a3235583362c3c4d19b
+62808f91d18fc1e61923852ed233e132
   parseOnnistui :: GHC.Types.IO Test.Tasty.Core.TestTree
   {- Arity: 1, Strictness: <S,U>,
      Unfolding: InlineRule (0, True, True)
                 MesserTests.parseOnnistui1
                   `cast`
                 (Sym (GHC.Types.N:IO[0] <Test.Tasty.Core.TestTree>_R)) -}
-d2d920e2ba07e7f8db509b30e2bd1234
+5defcaebc22e3641384f39585c1f218e
   parseOnnistui1 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld,
@@ -188,7 +188,7 @@ d2d920e2ba07e7f8db509b30e2bd1234
                         ipv of ds1 { (#,#) ipv2 ipv3 ->
                  (# ipv2,
                     Test.Tasty.Core.TestGroup MesserTests.ajaTestit2 ipv3 #) } }) -}
-c97fcfec34ea5a65464b14f7e0024f71
+9e0bbac516ba2612285b43853f618131
   tTiedosto :: [GHC.Types.Char] -> GHC.Types.IO GHC.Types.Bool
   {- Arity: 2, Strictness: <L,1*U><S,U>,
      Unfolding: InlineRule (0, True, True)
@@ -196,7 +196,7 @@ c97fcfec34ea5a65464b14f7e0024f71
                   `cast`
                 (<[GHC.Types.Char]>_R
                  ->_R Sym (GHC.Types.N:IO[0] <GHC.Types.Bool>_R)) -}
-66af2d9b5ee8b665e19b2449c183a877
+901e09ef97cf81a709f3c6d8631e8184
   tTiedosto1 ::
     [GHC.Types.Char]
     -> GHC.Prim.State# GHC.Prim.RealWorld
@@ -227,14 +227,14 @@ c97fcfec34ea5a65464b14f7e0024f71
                            ipv3 of wild {
                       GHC.Maybe.Nothing -> GHC.Types.False
                       GHC.Maybe.Just ipv4 -> GHC.Types.True } #) } }) -}
-ec88ab4858f06911cb71fd9256bf2bc3
+8cb5d3c99ec6303dd6fb82185d6d37cc
   testit :: GHC.Types.IO Test.Tasty.Core.TestTree
   {- Arity: 1, Strictness: <S,U>,
      Unfolding: InlineRule (0, True, True)
                 MesserTests.testit1
                   `cast`
                 (Sym (GHC.Types.N:IO[0] <Test.Tasty.Core.TestTree>_R)) -}
-0d1ca73c98f114f7939a1b50610f2fe1
+b74eb2324566c4cba3e1a78165a03802
   testit1 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld,
@@ -257,14 +257,14 @@ ec88ab4858f06911cb71fd9256bf2bc3
                          @ Test.Tasty.Core.TestTree
                          (Test.Tasty.Core.TestGroup MesserTests.ajaTestit2 ipv3)
                          (GHC.Types.[] @ Test.Tasty.Core.TestTree)) #) } }) -}
-366628b72606b75ad540d7ed66f44051
+a33ea0223dcbc63d33c3d81406960e5f
   testitiedostot :: GHC.Types.IO [GHC.Base.String]
   {- Arity: 1, Strictness: <S,U>,
      Unfolding: InlineRule (0, True, True)
                 MesserTests.testitiedostot1
                   `cast`
                 (Sym (GHC.Types.N:IO[0] <[[GHC.Types.Char]]>_R)) -}
-e277f6de8481792d529d8762ebb70642
+d56a29f6489d7c6981b0c5681421ca51
   testitiedostot1 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, [[GHC.Types.Char]] #)
@@ -290,12 +290,12 @@ e277f6de8481792d529d8762ebb70642
                             System.Directory.listDirectory2)
                          n
                          ipv1) #) }) -}
-f92bbd7df512122ffd5efde07c5424d1
+fbb4740079898b0572f79ad67123ba66
   tpf :: GHC.Base.String
   {- Unfolding: (GHC.CString.unpackCString# MesserTests.tpf1) -}
-dd47f079cdd0b0eeaf54dbe9ad8a3f28
+a3e572af6552840560ddb405939bed6c
   tpf1 :: GHC.Prim.Addr#
-  {- HasNoCafRefs, Unfolding: ("..\\..\\TestiKoodit\\"#) -}
+  {- HasNoCafRefs, Unfolding: ("../../TestiKoodit/"#) -}
 trusted: none
 require own pkg trusted: False
 module header:

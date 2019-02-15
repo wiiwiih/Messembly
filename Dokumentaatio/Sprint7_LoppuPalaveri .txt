@@ -1,0 +1,20 @@
+Sprintti 7
+Loppupalaveri
+
+15.2.2019
+
+Vilma Lappi ja Janne Isoaho
+
+Sprintin tavoitteet:
+
+- Selvitetään jäsentimen testauksen ongelmat
+
+- Aloitetaan tulkin tekeminen
+
+
+Tavoitteiden toteutuminen:
+
+- Jäsentimen testauksen ongelmat selvitetty
+
+- Tulkin tekeminen aloitettu
+

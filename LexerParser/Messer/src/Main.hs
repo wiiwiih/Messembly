@@ -2,6 +2,8 @@ module Main where
 
 import Messer
 import MesserTests
+import Interpreter
 
 main :: IO ()
-main = ajaTestit
+-- main = ajaTestit
+main = iTest

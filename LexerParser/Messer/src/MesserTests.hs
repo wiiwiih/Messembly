@@ -16,7 +16,7 @@ testit = do
     return (testGroup "Jäsentimen testit" [testit])
 
 tpf :: String
-tpf = "..\\..\\TestiKoodit\\"
+tpf = "../../TestiKoodit/"
 
 testitiedostot :: IO [String]
 testitiedostot = listDirectory tpf
