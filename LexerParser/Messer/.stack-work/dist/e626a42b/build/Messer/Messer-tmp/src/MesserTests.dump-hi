@@ -1,9 +1,9 @@
 
 ==================== FINAL INTERFACE ====================
-2019-02-15 16:21:41.2380966 UTC
+2019-02-20 20:31:56.1467581 UTC
 
 interface main:MesserTests 8063
-  interface hash: a4385b86ea5c50bf243321620539d152
+  interface hash: 77e1567b369639d3c8e5a5cd06a14120
   ABI hash: 29d277d94829812dcfc125b6a08b767e
   export-list hash: e35b28a1c19fe6eb222ed752d8a861b0
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
@@ -76,8 +76,8 @@ import  -/  base-4.12.0.0:Prelude b1ccc486556b171042710ef6f2d1a539
 import  -/  directory-1.3.3.0:System.Directory f8b884860478f4114f6736c1024e8261
 import  -/  ghc-prim-0.5.3:GHC.Classes 555218a5f891dab16ebc6e6e04763e77
 import  -/  ghc-prim-0.5.3:GHC.Types 57064c9f957b09bc2e360061ad5cae0b
-import  -/  Messer 3db3194435f825831ec3110b8592c69e
-  exports: d60fac1c181857a8cf913227acf2bcdb
+import  -/  Messer 6832eff5008fb002c8170054b11fbaac
+  exports: 54d4b285b424046044dbbd9939edcda4
   testaaTiedosto 4fadd190441c7003fcddfd28055d37b8
 import  -/  tasty-1.2:Test.Tasty c22fcdb4c8b1fcac6b62bbb378995a7a
 import  -/  tasty-1.2:Test.Tasty.Core ae8841dc1ffc182b40a128efea66bb90

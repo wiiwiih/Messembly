@@ -160,9 +160,8 @@ lakutsu id = do
     symboli ")"
     return (LAKutsu (AKutsu id maaritelmat))
 
-makutsu :: Parser Maaritelma
-makutsu = do
-    id <- identifier
+makutsu :: Id -> Parser Maaritelma
+makutsu id = do
     symboli "("
     maaritelmat <- sepBy maaritelma (symboli ",")
     symboli ")"
@@ -254,8 +253,21 @@ parametri = do
 maaritelma :: Parser Maaritelma
 maaritelma = oMaaritelma
          <|> mjono
-         <|> mid
-         <|> makutsu
+         <|> boolTosi
+         <|> boolEtosi
+--         <|> idAlkuM
+--         <|> luku
+--         <|> mid
+--         <|> makutsu
+
+idAlkuM :: Parser Maaritelma
+idAlkuM = do
+    id <- identifier
+    loppu <- idLoppuM id
+    return loppu
+
+idLoppuM :: Id -> Parser Maaritelma
+idLoppuM id = makutsu id <|> return (MId id)
 
 mid :: Parser Maaritelma
 mid = do
@@ -269,10 +281,10 @@ mjono = do
     return (MArvo (ArvoString merkit))
     
 oMaaritelma :: Parser Maaritelma
-oMaaritelma = makeExprParser aTermi operaattorit
+oMaaritelma = makeExprParser aTermi operaattorit -- ennen maaritelma = aTermi
 
 aTermi :: Parser Maaritelma
-aTermi = sulut oMaaritelma <|> luku <|> mid
+aTermi = sulut oMaaritelma <|> luku <|> idAlkuM
     
 luku :: Parser Maaritelma
 luku = do
@@ -313,10 +325,10 @@ operaattorit = [ [ InfixL (Aritmeettinen Kerto  <$ symboli "*")
                   , InfixL (Aritmeettinen Jako   <$ symboli "/") ]
                 , [ InfixL (Aritmeettinen Plus   <$ symboli "+")
                   , InfixL (Aritmeettinen Miinus <$ symboli "-") ],
-                  [InfixL (Vertailu Pienempi          <$ symboli "<")
-                  , InfixL (Vertailu Suurempi          <$ symboli ">")
-                  , InfixL (Vertailu PienempiYhtasuuri <$ symboli "<=")
+                  [InfixL (Vertailu PienempiYhtasuuri <$ symboli "<=")
                   , InfixL (Vertailu SuurempiYhtasuuri <$ symboli ">=")
+                  , InfixL (Vertailu Pienempi          <$ symboli "<")
+                  , InfixL (Vertailu Suurempi          <$ symboli ">")
                   , InfixL (Vertailu Yhtasuuri         <$ symboli "==")
                   , InfixL (Vertailu Erisuuri          <$ symboli "!=") ]
                 ]

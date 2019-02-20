@@ -7,6 +7,7 @@ import qualified Data.Map.Strict as Map
 
 type Ohjelma = Luokka
 
+iTest :: IO()
 iTest = do 
     ast <- testaaTiedosto "test.mess"
     if isJust ast 
@@ -23,8 +24,22 @@ type Muuttujat = Map.Map String IArvo
 
 type Aliohjelmat = Map.Map String (Palautustyyppi, [Parametri], [Lauseke])
 
-interpret :: a -> IO ()
-interpret = undefined
+interpret :: Luokka -> IO ()
+interpret (Luokka _ main axs) = do
+                    let a = mapAliohj axs
+                    iMain main a
+
+iMain :: MainOhjelma -> Aliohjelmat -> IO()
+iMain (MainOhjelma (Parametri t (Id id)) xs) a = do
+                    let m = Map.empty -- Tässä lisättäisiin komentoriviparametrien arvot ympäristöön
+                    lausekkeet xs m a
+                    print "Ohjelman suoritus onnistui"
+
+
+-- Tekee aliohjelmalistasta aliohjelma Mapin
+mapAliohj :: [Aliohjelma] -> Aliohjelmat
+mapAliohj [] = Map.empty
+mapAliohj ((Aliohjelma (Id id) t p l):xs) = Map.singleton id (t, p, l) <> mapAliohj xs
 
 exec :: Lauseke -> Muuttujat -> Aliohjelmat -> IO Muuttujat
 exec (LTulostus x) m a = do
@@ -80,6 +95,13 @@ exec (LSilmukka ehto xs) m a = do
                             else 
                                 return m
                     _ -> error ("Ei bool, rip")
+exec (LAKutsu (AKutsu (Id id) xs)) m a = case Map.lookup id a of
+                        Nothing -> error ("Aliohjelmaa ei löydy :(")
+                        Just (t, param, ys) -> do
+                                    parametrit <- params xs param m a Map.empty
+                                    lausekkeet ys parametrit a
+                                    return m
+
 
                                 
 lausekkeet :: [Lauseke] -> Muuttujat -> Aliohjelmat -> IO Muuttujat
@@ -143,17 +165,21 @@ eval (Vertailu vop x y) m a = case vop of
                                 return (B ((iluku arvo1) /= (iluku arvo2)))
 eval (MAKutsu (AKutsu (Id id) xs)) m a = case Map.lookup id a of
                         Nothing -> error ("Aliohjelmaa ei löydy :(")
-                        Just (t, param, ys) -> undefined 
-                        ---jatka tästä
-                        --
-                        --
-                        --
-                                    
+                        Just (t, param, ys) -> do
+                                    parametrit <- params xs param m a Map.empty
+                                    palautus <- lausekkeet ys parametrit a
+                                    case Map.lookup "return" palautus of --"return"-nimiseen muuttujaan on tallennettu mahdollinen paluuarvo
+                                        Nothing -> return Interpreter.Void
+                                        Just arvo -> return arvo
+
+
+--tekee parametreista uuden muuttujaympäristön aliohjelmaa varten                                    
 params :: [Maaritelma] -> [Parametri] -> Muuttujat -> Aliohjelmat -> Muuttujat -> IO Muuttujat
 params [] [] am a um = return um
 params (x:xs) ((Parametri t (Id id)):ys) am a um = do
                                 arvo <- eval x am a
-                                return (Map.insert id arvo um)
+                                let uusiM = Map.insert id arvo um
+                                params xs ys am a uusiM
 params _ _ _ _ _ = error ("Parametrien määrä ei täsmää")
 
 testt :: Maaritelma

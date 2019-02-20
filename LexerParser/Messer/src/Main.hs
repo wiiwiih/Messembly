@@ -5,5 +5,6 @@ import MesserTests
 import Interpreter
 
 main :: IO ()
--- main = ajaTestit
-main = iTest
+main = do
+    --ajaTestit
+    iTest
