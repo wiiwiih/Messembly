@@ -2,32 +2,20 @@
 module Interpreter where
 
 import Messer
+import Messemlyzer hiding (AArvo, I, B, S)
 import Data.Maybe
 import qualified Data.Map.Strict as Map
 
-type Ohjelma = Luokka
 
-iTest :: IO()
-iTest = do 
-    ast <- testaaTiedosto "test.mess"
-    if isJust ast 
-        then do
-            let ast2 = fromJust ast
-            interpret ast2
 
-        else print "rip"
+
 
 data IArvo = I Int | B Bool | S String | Void deriving (Show)
 
-
 type Muuttujat = Map.Map String IArvo
 
-type Aliohjelmat = Map.Map String (Palautustyyppi, [Parametri], [Lauseke])
-
-interpret :: Luokka -> IO ()
-interpret (Luokka _ main axs) = do
-                    let a = mapAliohj axs
-                    iMain main a
+interpret :: ALuokka -> IO ()
+interpret (ALuokka _ main amap) = iMain main amap
 
 iMain :: MainOhjelma -> Aliohjelmat -> IO()
 iMain (MainOhjelma (Parametri t (Id id)) xs) a = do
@@ -37,9 +25,9 @@ iMain (MainOhjelma (Parametri t (Id id)) xs) a = do
 
 
 -- Tekee aliohjelmalistasta aliohjelma Mapin
-mapAliohj :: [Aliohjelma] -> Aliohjelmat
-mapAliohj [] = Map.empty
-mapAliohj ((Aliohjelma (Id id) t p l):xs) = Map.singleton id (t, p, l) <> mapAliohj xs
+--mapAliohj :: [Aliohjelma] -> Aliohjelmat
+--mapAliohj [] = Map.empty
+--mapAliohj ((Aliohjelma (Id id) t p l):xs) = Map.singleton id (t, p, l) <> mapAliohj xs
 
 exec :: Lauseke -> Muuttujat -> Aliohjelmat -> IO Muuttujat
 exec (LTulostus x) m a = do

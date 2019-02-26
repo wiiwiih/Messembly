@@ -17,5 +17,5 @@ executable Messer
   hs-source-dirs:      src
   main-is:             Main.hs
   default-language:    Haskell2010
-  other-modules:       Interpreter, Messer, MesserTests
+  other-modules:       Interpreter, Messer, MesserTests, Messemlyzer
   build-depends:       base >= 4.7 && < 5, megaparsec, parser-combinators, tasty, tasty-hunit, directory, containers

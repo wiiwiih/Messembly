@@ -1,10 +1,10 @@
 
 ==================== FINAL INTERFACE ====================
-2019-02-20 21:01:39.1463192 UTC
+2019-02-26 20:15:25.8848863 UTC
 
 interface main:Main 8063
-  interface hash: 853d82dedf12033fd4e42defce59829c
-  ABI hash: 3b4f1e32c97b69085c17c5b43aa1c5ea
+  interface hash: 63827fadf96895172f62667b9a45b84b
+  ABI hash: f8469883e55db4a0cd018ddb18c3ac8f
   export-list hash: 9a140310786b0d3c58b1dceabc4e1578
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
   flag hash: b07cf7511fd3478f1b51e1f2f52c7c7c
@@ -16,7 +16,7 @@ interface main:Main 8063
   where
 exports:
   Main.main
-module dependencies: Interpreter Messer MesserTests
+module dependencies: Interpreter Messemlyzer Messer MesserTests
 package dependencies: Win32-2.6.1.0 ansi-terminal-0.8.2
                       ansi-wl-pprint-0.6.8.2 array-0.5.3.0 async-2.2.1 base-4.12.0.0
                       binary-0.8.6.0 bytestring-0.10.8.2 call-stack-0.1.0
@@ -63,13 +63,20 @@ family instance modules: base-4.12.0.0:Control.Applicative
                          primitive-0.6.4.0:Data.Primitive.Array tagged-0.8.6:Data.Tagged
                          tasty-1.2:Test.Tasty.Core text-1.2.3.1:Data.Text
                          text-1.2.3.1:Data.Text.Lazy
+import  -/  base-4.12.0.0:Data.Either b81d41b5f4255f0a7c195f59e02f5b66
+import  -/  base-4.12.0.0:Data.Maybe f4c6afc48ee9ed1cd2fb5a451772b4fb
 import  -/  base-4.12.0.0:Prelude b1ccc486556b171042710ef6f2d1a539
+import  -/  base-4.12.0.0:System.IO c4f9b4edbf0d6a7a9a49fe16b71318d4
 import  -/  ghc-prim-0.5.3:GHC.Types 57064c9f957b09bc2e360061ad5cae0b
-import  -/  Interpreter 6d2151633d334e9abfda0af945ecd3ae
-  exports: 8a780745e83d4da39792e22f2627c00b
-  iTest 2d066e04f350f8d8f81bcff5a045dfaa
+import  -/  Interpreter dafbc930e37f4eb57453ae260d2cb651
+  exports: 47a8a381c661d23c290fec9cfaf581dc
+  interpret 93dc165e7098dc793bd6e7c296cd1e83
+import  -/  Messemlyzer e1feb26166cf025c0524ae3423c7011f
+  exports: 85392fde55d23216ff97e52423d314a0
+  analysoi bbdc18726786956dbd7fb72a23b33a18
 import  -/  Messer 25190be13d909f772cccae550e2d2f43
   exports: 54d4b285b424046044dbbd9939edcda4
+  testaaTiedosto 4fadd190441c7003fcddfd28055d37b8
 import  -/  MesserTests 29d277d94829812dcfc125b6a08b767e
   exports: e35b28a1c19fe6eb222ed752d8a861b0
 be86c9d078d3acbf19ba91fe74a24273
@@ -90,19 +97,83 @@ e5875966b74dad2d29772660b8a75e33
 d026be77cb9ced20e35a61514e0458aa
   $trModule4 :: GHC.Prim.Addr#
   {- HasNoCafRefs, Unfolding: ("main"#) -}
-ad2464243669ebea453b95c0c30b4047
+ceb7ae198f4b55fcbe1dda89d51547e3
   main :: GHC.Types.IO ()
   {- Arity: 1, Strictness: <S,U>,
      Unfolding: InlineRule (0, True, True)
-                Interpreter.iTest1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
-d6b3dd9088b5187d20b54e52bdf86f9c
+                Main.main1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
+0736b14d58022692dbaefb4f9efec50f
   main1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 case GHC.IO.Handle.FD.openFile1
+                        Main.main6
+                        GHC.IO.IOMode.ReadMode
+                        s of ds1 { (#,#) ipv ipv1 ->
+                 case GHC.IO.Handle.Text.hGetContents1
+                        ipv1
+                        ipv of ds { (#,#) ipv2 ipv3 ->
+                 case Text.Megaparsec.$wparseMaybe
+                        @ Data.Void.Void
+                        @ GHC.Base.String
+                        @ Messer.Luokka
+                        Text.Megaparsec.Stream.$fStream[]
+                        Messer.jasennin1
+                          `cast`
+                        (Sym (Text.Megaparsec.Internal.N:ParsecT[0]
+                                  <Data.Void.Void>_N
+                                  <[GHC.Types.Char]>_N
+                                  <Data.Functor.Identity.Identity>_R
+                                  <Messer.Luokka>_R))
+                        ipv3 of wild {
+                   GHC.Maybe.Nothing
+                   -> (GHC.IO.Handle.Text.hPutStr'
+                         GHC.IO.Handle.FD.stdout
+                         Main.main3
+                         GHC.Types.True)
+                        `cast`
+                      (GHC.Types.N:IO[0] <()>_R)
+                        ipv2
+                   GHC.Maybe.Just ipv4
+                   -> case Main.main2 wild
+                      ret_ty (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+                      of {} } } }) -}
+c3b3437ba80c82d9f2b41b438901b1c0
+  main2 ::
+    GHC.Maybe.Maybe Messer.Luokka
+    -> Data.Either.Either Messemlyzer.ALuokka [Messemlyzer.AVirhe]
+  {- Arity: 1, Strictness: <B,1*U>b -}
+ad5c5f7cb87d815b1b2afe607f14b332
+  main3 :: [GHC.Types.Char]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Char
+                   GHC.Show.$fShow(,)3
+                   Main.main4) -}
+3fb54dbcc8a8f7217042e44e5dc96012
+  main4 :: GHC.Base.String
+  {- Unfolding: (GHC.Show.showLitString
+                   (GHC.CString.unpackCString# Main.main5)
+                   GHC.Show.$fShow[]1) -}
+769ae7e9829ae3d88c4f20f0f155dab1
+  main5 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("rip"#) -}
+f55115e69d41e8b6b84d491acac80e88
+  main6 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.main7) -}
+f09e60ef7f01680d457d2f5ea22a6e35
+  main7 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("test.mess"#) -}
+8968afc1eb3116a6426404dc4c6ee127
+  main8 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
   {- Arity: 1,
      Unfolding: (GHC.TopHandler.runMainIO1
                    @ ()
-                   Interpreter.iTest1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R))) -}
+                   Main.main1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R))) -}
 trusted: none
 require own pkg trusted: False
 module header:
