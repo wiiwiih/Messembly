@@ -1,10 +1,10 @@
 
 ==================== FINAL INTERFACE ====================
-2019-02-26 20:11:09.8737929 UTC
+2019-02-28 21:08:06.7409692 UTC
 
 interface main:Interpreter 8063
-  interface hash: 787b4565c94859e9cf2a78e69197caf5
-  ABI hash: dafbc930e37f4eb57453ae260d2cb651
+  interface hash: 59d95960db6562392e58906035a3773c
+  ABI hash: ee88e3469a2bbc8c65d3e171c4b27740
   export-list hash: 47a8a381c661d23c290fec9cfaf581dc
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
   flag hash: 2452984e3642aa8a1249384a992068a7
@@ -72,48 +72,48 @@ import  -/  containers-0.6.0.1:Data.Map.Strict 862f7498e42e3aea305e0ee4cce1d01a
 import  -/  containers-0.6.0.1:Data.Map.Strict.Internal f5a5f5ea9db0644dd801e65e72083886
 import  -/  ghc-prim-0.5.3:GHC.Classes 555218a5f891dab16ebc6e6e04763e77
 import  -/  ghc-prim-0.5.3:GHC.Types 57064c9f957b09bc2e360061ad5cae0b
-import  -/  Messemlyzer de6f1e6323f4071a25896746dce2a846
-  exports: 85392fde55d23216ff97e52423d314a0
-  ALuokka 4ef14c2f303d6ff537bc37e568d9f6df
-  ALuokka f7f2d4fd6ff2411511a7b972b5081185
-  Aliohjelmat 9fbf660baecb57fe3a94503fc2de1611
-import  -/  Messer 25190be13d909f772cccae550e2d2f43
-  exports: 54d4b285b424046044dbbd9939edcda4
-  AKutsu 33975ac44e531eba6f7238f1a2da20e8
-  Aritmeettinen e98ea33891575fb8b002d870eaa54cd2
+import  -/  Messemlyzer 2fcd7aab27ec5dd237a36d0514936916
+  exports: cff7a23a858d2e1ac03060c395b89fce
+  ALuokka f1529654f98adfa3b86431c6129d5953
+  ALuokka 58e21e7599866c38e9dc6dbd67b91472
+  Aliohjelmat 0341a522c50717da24edaba8c68dd704
+import  -/  Messer e1f88e828dd5e13e6dc757211349c899
+  exports: eedbb4c9b519f3ec35d949e301366b6f
+  AKutsu 3c442870e02d5bf9feed93c2e572f9af
+  Aritmeettinen 6a29a995a425e9131e2fe8391a4e0004
   ArvoBool daea4fb2b5aa783b243fc98b36d8c8cd
   ArvoInt 1c46658729c19ac660817da145aac84a
   ArvoString 4bbe16ef07879a67daedba60ad49cd3c
   Erisuuri 8171fd78ef3e7292da90e806df9e2bbc
   Id d78631d083b8ede42d51e70eafbf7de0
-  If 8d653a4f1c2e2770471b4a314443dc84
-  IfElse 00d00b8b05e35e7ca2333d43a378bf86
-  Jako b64d6ba87cbf69770d82f7c5fcfcd941
-  Kerto 7052451239f3b2908bfb4e3bed213ab6
-  LAKutsu 5fd1a48b01cba4b2a57792963750fbdb
-  LEhto eca48f706206976fe0d2d6e8f57065f6
-  LPalautus e049ccc9ab85919db16dcf45f33257be
-  LSijoitus e7bb60dd4e58d502958e34154d026b06
-  LSilmukka 083cb73e58ce548640d4618c2ca3b7d9
-  LTulostus 0369baa19e17ae2a2eb447c9ef12a815
-  Lauseke 35ffe00197e7a7ad84ac30b44bd99abe
-  MAKutsu 48c0f35bd1ea0131eb3ff3b0e55457d4
-  MArvo 47aef4a4aa3a55dde8f3a4cc0f0614d0
-  MId e794c37f866dbe456007437fe6ee1eca
-  Maaritelma 751d449543c137d36c97de644f2b6fd2
-  MainOhjelma f272da5a510a71b99e80e4f4650a8b26
-  MainOhjelma bb968219de3a27be9e868866acd97afa
-  Miinus 319348e59c4d86bbc9c04fb0748d297b
-  Parametri 2456dc330917bd2ab4675cff09258e74
-  Parametri e036b69e8a4ddab9e41face3197a0887
+  If 0cef250a6b2f48f5d321ce643024ecca
+  IfElse 54b70cf177992a3f2a7f895343a724a6
+  Jako 77172067be0a76b22555fd5ac221a127
+  Kerto 015c02bcf4d8098b360c048ef52ef326
+  LAKutsu 8c923ee2c2dbb5be62683bc379c545c0
+  LEhto eb7b1cac59446f75f7f648cc308fff3c
+  LPalautus a87e8db9a88d63474ecd67a7377588f9
+  LSijoitus ea73aae5918fa4397c0aa8262109164b
+  LSilmukka f8cc4910b97fef8e857c292690e9bb0e
+  LTulostus c2ede7ffa15f59d65ca0ddc63d60a111
+  Lauseke 1c899e862121308cd4f91402a82ba3f9
+  MAKutsu f8930763ae36b65b34a951fd7b2eadfe
+  MArvo f55ccd5f76451238c75f6f4750308fb8
+  MId adbf1cadfbd5b2bf212682e6b2713b2d
+  Maaritelma ea67a20a6ff998dcfcbb33a0a151c225
+  MainOhjelma 64827bc2510906d3c6f23026a016f94a
+  MainOhjelma 76f67d672f2abe8d4a26760b75255aa7
+  Miinus 92f36f9e9bbcf8ef6323f436df8bb93b
+  Parametri 921e794e49ffe9faa3d22dee476adede
+  Parametri 3da2d94919361cdb400e175048f0ba4d
   Pienempi 26ea671db924e241e84451281099e1a0
   PienempiYhtasuuri b0983f9b55de5257b403af70c2c94b07
-  Plus b6b7eefb843ffcf2ba31e59c418d96e0
+  Plus 507edfff22260490c324f99136998a92
   Suurempi 061e56268f492989a8f96153916b4885
   SuurempiYhtasuuri 23fa5de2ed0e893282eabcbc986375ce
-  UusiSijoitus 71df12585c228a86a1c1b85953ce98c0
-  VanhaSijoitus cb4855bef4baf82de81f2d70deee560a
-  Vertailu 37bfb5c6dde610639d4031d016495f85
+  UusiSijoitus a27a4c2845449030206723666c04affc
+  VanhaSijoitus ba79738bd896b7cc369085d876f07c0b
+  Vertailu 308a7d4fec066fc9bc1d8934dc1c24dc
   Yhtasuuri d4fbbbfbb5c160f6d9655f086f68c1c0
 ba548f1ff7f30f99032035a89da44029
   $fShowIArvo :: GHC.Show.Show Interpreter.IArvo
@@ -423,7 +423,7 @@ ba548f1ff7f30f99032035a89da44029
 b64f986854d6c8f4beecddace82a9abf
   type Muuttujat =
     Data.Map.Internal.Map GHC.Base.String Interpreter.IArvo
-49464dfc12619d4053d767cd99fac5cc
+a831a7f7d213cf1ef674033d1d116fa0
   eval ::
     Messer.Maaritelma
     -> Interpreter.Muuttujat
@@ -437,7 +437,7 @@ b64f986854d6c8f4beecddace82a9abf
                  ->_R <Interpreter.Muuttujat>_R
                  ->_R <Messemlyzer.Aliohjelmat>_R
                  ->_R Sym (GHC.Types.N:IO[0] <Interpreter.IArvo>_R)) -}
-38c85f0869f717bdba7541d3ba5ea941
+c7c94ec598c74e04659413e38af72c6c
   eval1 ::
     Messer.Maaritelma
     -> Interpreter.Muuttujat
@@ -445,7 +445,7 @@ b64f986854d6c8f4beecddace82a9abf
     -> GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, Interpreter.IArvo #)
   {- Arity: 4, Strictness: <S,1*U><L,U><L,U><S,U> -}
-5f24c04b91abb5a4b379b7cd7917dbb6
+3c52778b23ada816ddea357851f1af7e
   exec ::
     Messer.Lauseke
     -> Interpreter.Muuttujat
@@ -459,7 +459,7 @@ b64f986854d6c8f4beecddace82a9abf
                  ->_R <Interpreter.Muuttujat>_R
                  ->_R <Messemlyzer.Aliohjelmat>_R
                  ->_R Sym (GHC.Types.N:IO[0] <Interpreter.Muuttujat>_R)) -}
-c9ce97700a3ff950471f560d9fc977e5
+d6ad3c4c9cf91b670246753e91aa6870
   exec1 ::
     Messer.Lauseke
     -> Interpreter.Muuttujat
@@ -467,7 +467,7 @@ c9ce97700a3ff950471f560d9fc977e5
     -> GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, Interpreter.Muuttujat #)
   {- Arity: 4, Strictness: <S,1*U><L,U><L,U><S,U> -}
-a5eda8899cb5379dff89133d7417f3d1
+f9247ce2484c9a96840bef028103c3d0
   iMain ::
     Messer.MainOhjelma -> Messemlyzer.Aliohjelmat -> GHC.Types.IO ()
   {- Arity: 3, Strictness: <S(S(LS)S),1*U(1*U(A,1*H),1*U)><L,U><S,U>,
@@ -477,7 +477,7 @@ a5eda8899cb5379dff89133d7417f3d1
                 (<Messer.MainOhjelma>_R
                  ->_R <Messemlyzer.Aliohjelmat>_R
                  ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
-dad3833bc60942b4d7f85d80cc23ed37
+e3e2647d4346d8294a812f0f5b03f47b
   iMain1 ::
     Messer.MainOhjelma
     -> Messemlyzer.Aliohjelmat
@@ -519,7 +519,7 @@ dad3833bc60942b4d7f85d80cc23ed37
 4ac710c6702fb9feaf9efaa7fd0a27aa
   iMain4 :: GHC.Prim.Addr#
   {- HasNoCafRefs, Unfolding: ("Ohjelman suoritus onnistui"#) -}
-9eb45cab1affc3815d97009770b9624a
+06a5b3f8292d6b21b48d1118d188bcd4
   iMain5 ::
     [Messer.Lauseke]
     -> Interpreter.Muuttujat
@@ -537,7 +537,7 @@ dad3833bc60942b4d7f85d80cc23ed37
 4ffb3f74ed8cf768ca093413298b9e07
   iluku1 :: Interpreter.IArvo -> GHC.Types.Int
   {- Arity: 1, Strictness: <B,1*U>x -}
-93dc165e7098dc793bd6e7c296cd1e83
+1501418fb72c183bf5487d9e0ce2de26
   interpret :: Messemlyzer.ALuokka -> GHC.Types.IO ()
   {- Arity: 2,
      Strictness: <S(LS(S(LS)S)L),1*U(A,1*U(1*U(A,1*H),1*U),U)><S,U>,
@@ -545,7 +545,7 @@ dad3833bc60942b4d7f85d80cc23ed37
                 Interpreter.interpret1
                   `cast`
                 (<Messemlyzer.ALuokka>_R ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
-acde688efa1daffc5ed9ec6f449019cf
+3a102564f75d747a1ce41131ca280ae1
   interpret1 ::
     Messemlyzer.ALuokka
     -> GHC.Prim.State# GHC.Prim.RealWorld
@@ -557,7 +557,7 @@ acde688efa1daffc5ed9ec6f449019cf
                    (eta :: GHC.Prim.State# GHC.Prim.RealWorld) ->
                  case ds of wild { Messemlyzer.ALuokka ds1 main amap ->
                  Interpreter.iMain1 main amap eta }) -}
-c19800599f7ed6c22d06ebd37e58ad8f
+c5df30f379059aac2647713658d370e8
   lausekkeet ::
     [Messer.Lauseke]
     -> Interpreter.Muuttujat
@@ -571,7 +571,7 @@ c19800599f7ed6c22d06ebd37e58ad8f
                  ->_R <Interpreter.Muuttujat>_R
                  ->_R <Messemlyzer.Aliohjelmat>_R
                  ->_R Sym (GHC.Types.N:IO[0] <Interpreter.Muuttujat>_R)) -}
-ce95d970da0d2db74fa7cb35762ccb74
+85cd20f6578a496661b1f9ac0800f65e
   params ::
     [Messer.Maaritelma]
     -> [Messer.Parametri]
@@ -589,7 +589,7 @@ ce95d970da0d2db74fa7cb35762ccb74
                  ->_R <Messemlyzer.Aliohjelmat>_R
                  ->_R <Interpreter.Muuttujat>_R
                  ->_R Sym (GHC.Types.N:IO[0] <Interpreter.Muuttujat>_R)) -}
-07ecfa3dd8937d1d1db26e225f206dce
+03bb09989167fe306a4a9400c82fdc39
   params1 ::
     [Messer.Maaritelma]
     -> [Messer.Parametri]
@@ -599,14 +599,14 @@ ce95d970da0d2db74fa7cb35762ccb74
     -> GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, Interpreter.Muuttujat #)
   {- Arity: 6, Strictness: <S,1*U><S,1*U><L,U><L,U><L,U><S,U> -}
-42d76dd3d989d371b408f2af078c850d
+41d8aefd229e0da841ecd0f735ea1d89
   testt :: Messer.Maaritelma
   {- HasNoCafRefs, Strictness: m4,
      Unfolding: (Messer.Vertailu
                    Messer.Pienempi
                    Interpreter.testt4
                    Interpreter.testt1) -}
-dd44ee1dcc85e7de4725c568260a7464
+33931464793f8e7d46abc5ce80bc990d
   testt1 :: Messer.Maaritelma
   {- HasNoCafRefs, Strictness: m2,
      Unfolding: (Messer.MArvo Interpreter.testt2) -}
@@ -620,14 +620,14 @@ dd44ee1dcc85e7de4725c568260a7464
 922e172de90f931c67d559dcf1e930c2
   testt3 :: GHC.Types.Int
   {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 1#) -}
-8aa81668fce614aa44f5f399d9e52f06
+300808dde4acf8ae58b48cf676f4010c
   testt4 :: Messer.Maaritelma
   {- HasNoCafRefs, Strictness: m3,
      Unfolding: (Messer.Aritmeettinen
                    Messer.Kerto
                    Interpreter.testt8
                    Interpreter.testt5) -}
-52b00c4a579e30571aa109575f297f04
+e7a22f1229f6d2d6ffa40e85fde9714b
   testt5 :: Messer.Maaritelma
   {- HasNoCafRefs, Strictness: m2,
      Unfolding: (Messer.MArvo Interpreter.testt6) -}
@@ -638,7 +638,7 @@ dd44ee1dcc85e7de4725c568260a7464
 16c816d2f3fe21554c38f351d927a6b1
   testt7 :: GHC.Types.Int
   {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 3#) -}
-ff5a5f44e36ad5c8529f70a55cb63155
+8c502eabb7e4e3e6b700cc1e0d1050b8
   testt8 :: Messer.Maaritelma
   {- HasNoCafRefs, Strictness: m2,
      Unfolding: (Messer.MArvo Interpreter.testt9) -}

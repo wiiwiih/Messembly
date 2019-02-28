@@ -21,7 +21,7 @@ data Id = Id String deriving (Show)
 
 data Palautustyyppi = Palautustyyppi Tietotyyppi | Void deriving (Show)
 
-data Tietotyyppi = TTInt | TTBool | TTString | TTVoid deriving (Show)
+data Tietotyyppi = TTInt | TTBool | TTString deriving (Show, Eq)
 
 data Parametri = Parametri Tietotyyppi Id deriving (Show)
 

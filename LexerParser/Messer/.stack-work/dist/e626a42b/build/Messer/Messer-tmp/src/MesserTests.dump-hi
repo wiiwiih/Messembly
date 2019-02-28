@@ -1,10 +1,10 @@
 
 ==================== FINAL INTERFACE ====================
-2019-02-20 20:31:56.1467581 UTC
+2019-02-28 21:08:06.1897526 UTC
 
 interface main:MesserTests 8063
-  interface hash: 77e1567b369639d3c8e5a5cd06a14120
-  ABI hash: 29d277d94829812dcfc125b6a08b767e
+  interface hash: 988215e038b4be4df08632ad32fc8ab7
+  ABI hash: c0aa858c7d907ba527ea3408a3461a0c
   export-list hash: e35b28a1c19fe6eb222ed752d8a861b0
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
   flag hash: 2452984e3642aa8a1249384a992068a7
@@ -76,9 +76,9 @@ import  -/  base-4.12.0.0:Prelude b1ccc486556b171042710ef6f2d1a539
 import  -/  directory-1.3.3.0:System.Directory f8b884860478f4114f6736c1024e8261
 import  -/  ghc-prim-0.5.3:GHC.Classes 555218a5f891dab16ebc6e6e04763e77
 import  -/  ghc-prim-0.5.3:GHC.Types 57064c9f957b09bc2e360061ad5cae0b
-import  -/  Messer 6832eff5008fb002c8170054b11fbaac
-  exports: 54d4b285b424046044dbbd9939edcda4
-  testaaTiedosto 4fadd190441c7003fcddfd28055d37b8
+import  -/  Messer e1f88e828dd5e13e6dc757211349c899
+  exports: eedbb4c9b519f3ec35d949e301366b6f
+  testaaTiedosto e094851cec6b11b57f0d16b1c4ccf80f
 import  -/  tasty-1.2:Test.Tasty c22fcdb4c8b1fcac6b62bbb378995a7a
 import  -/  tasty-1.2:Test.Tasty.Core ae8841dc1ffc182b40a128efea66bb90
 import  -/  tasty-hunit-0.10.0.1:Test.Tasty.HUnit 451a5ebe1ff5e16a6403f8dfb84a2d22
@@ -188,7 +188,7 @@ d9eb2cc1b7630d5334629bd922bffaf5
                         ipv of ds1 { (#,#) ipv2 ipv3 ->
                  (# ipv2,
                     Test.Tasty.Core.TestGroup MesserTests.ajaTestit2 ipv3 #) } }) -}
-9e0bbac516ba2612285b43853f618131
+98f9c2184ed51121642a5b0c4a1803a0
   tTiedosto :: [GHC.Types.Char] -> GHC.Types.IO GHC.Types.Bool
   {- Arity: 2, Strictness: <L,1*U><S,U>,
      Unfolding: InlineRule (0, True, True)
@@ -196,7 +196,7 @@ d9eb2cc1b7630d5334629bd922bffaf5
                   `cast`
                 (<[GHC.Types.Char]>_R
                  ->_R Sym (GHC.Types.N:IO[0] <GHC.Types.Bool>_R)) -}
-901e09ef97cf81a709f3c6d8631e8184
+9c263d5678cbe533924bfcde594e8ac8
   tTiedosto1 ::
     [GHC.Types.Char]
     -> GHC.Prim.State# GHC.Prim.RealWorld

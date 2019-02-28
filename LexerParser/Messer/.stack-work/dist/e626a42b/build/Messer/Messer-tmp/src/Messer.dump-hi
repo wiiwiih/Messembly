@@ -1,11 +1,11 @@
 
 ==================== FINAL INTERFACE ====================
-2019-02-20 21:13:43.8419522 UTC
+2019-02-28 21:07:09.1688952 UTC
 
 interface main:Messer 8063
-  interface hash: fe4b4938335a2dd500720db76133bc1c
-  ABI hash: 25190be13d909f772cccae550e2d2f43
-  export-list hash: 54d4b285b424046044dbbd9939edcda4
+  interface hash: 2a930f729a3ec97b6fdec01c8b5b6dfb
+  ABI hash: e1f88e828dd5e13e6dc757211349c899
+  export-list hash: eedbb4c9b519f3ec35d949e301366b6f
   orphan hash: 4361e17c2c4b34b9d50ba3a67e9a0257
   flag hash: 2452984e3642aa8a1249384a992068a7
   opt_hash: 6faf2de08de32d19db9870899d88e59a
@@ -81,7 +81,7 @@ exports:
   Messer.Parametri{Messer.Parametri}
   Messer.Parser
   Messer.Sijoitus{Messer.UusiSijoitus Messer.VanhaSijoitus}
-  Messer.Tietotyyppi{Messer.TTBool Messer.TTInt Messer.TTString Messer.TTVoid}
+  Messer.Tietotyyppi{Messer.TTBool Messer.TTInt Messer.TTString}
   Messer.VOp{Messer.Erisuuri Messer.Pienempi Messer.PienempiYhtasuuri Messer.Suurempi Messer.SuurempiYhtasuuri Messer.Yhtasuuri}
 module dependencies:
 package dependencies: array-0.5.3.0 base-4.12.0.0 binary-0.8.6.0
@@ -137,7 +137,50 @@ import  -/  megaparsec-7.0.4:Text.Megaparsec.Lexer 83dbd661cbe9657eaf7f67f0d3a31
 import  -/  parser-combinators-1.0.1:Control.Applicative.Combinators 79d226f48196dca675b00a2047bb8e23
 import  -/  parser-combinators-1.0.1:Control.Monad.Combinators a896246bc439928f68ca3d3bc3e18ce9
 import  -/  parser-combinators-1.0.1:Control.Monad.Combinators.Expr cc1a4ce057c2488c66b7a422ae48f5f4
-751d449543c137d36c97de644f2b6fd2
+e9c807259680593d625496093d974d4b
+  $fEqTietotyyppi :: GHC.Classes.Eq Messer.Tietotyyppi
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ Messer.Tietotyyppi
+                  Messer.$fEqTietotyyppi_$c==
+                  Messer.$fEqTietotyyppi_$c/= -}
+e9c807259680593d625496093d974d4b
+  $fEqTietotyyppi_$c/= ::
+    Messer.Tietotyyppi -> Messer.Tietotyyppi -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Inline: (sat-args=2),
+     Unfolding: InlineRule (2, False, False)
+                (\ (x :: Messer.Tietotyyppi) (y :: Messer.Tietotyyppi) ->
+                 case x of wild {
+                   Messer.TTInt
+                   -> case y of wild1 {
+                        DEFAULT -> GHC.Types.True Messer.TTInt -> GHC.Types.False }
+                   Messer.TTBool
+                   -> case y of wild1 {
+                        DEFAULT -> GHC.Types.True Messer.TTBool -> GHC.Types.False }
+                   Messer.TTString
+                   -> case y of wild1 {
+                        DEFAULT -> GHC.Types.True
+                        Messer.TTString -> GHC.Types.False } }) -}
+e9c807259680593d625496093d974d4b
+  $fEqTietotyyppi_$c== ::
+    Messer.Tietotyyppi -> Messer.Tietotyyppi -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (ds :: Messer.Tietotyyppi) (ds1 :: Messer.Tietotyyppi) ->
+                 case ds of wild {
+                   Messer.TTInt
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False Messer.TTInt -> GHC.Types.True }
+                   Messer.TTBool
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False Messer.TTBool -> GHC.Types.True }
+                   Messer.TTString
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False
+                        Messer.TTString -> GHC.Types.True } }) -}
+ea67a20a6ff998dcfcbb33a0a151c225
   $fShowAKutsu :: GHC.Show.Show Messer.AKutsu
   DFunId
   {- Strictness: m, Inline: CONLIKE,
@@ -146,7 +189,7 @@ import  -/  parser-combinators-1.0.1:Control.Monad.Combinators.Expr cc1a4ce057c2
                   Messer.$fShowAKutsu_$cshowsPrec
                   Messer.$fShowAKutsu_$cshow
                   Messer.$fShowAKutsu_$cshowList -}
-751d449543c137d36c97de644f2b6fd2
+ea67a20a6ff998dcfcbb33a0a151c225
   $fShowAKutsu1 :: Messer.AKutsu -> GHC.Show.ShowS
   {- Arity: 2, Strictness: <S,1*U(1*U(1*U),1*U)><L,U>,
      Unfolding: (\ (w :: Messer.AKutsu) (w1 :: GHC.Base.String) ->
@@ -161,7 +204,7 @@ c3802edfe854710dfbed994a2fc48413
 d5a91980cf25ccfd61ec7b50e621b084
   $fShowAKutsu4 :: GHC.Types.Int
   {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 0#) -}
-751d449543c137d36c97de644f2b6fd2
+ea67a20a6ff998dcfcbb33a0a151c225
   $fShowAKutsu_$cshow :: Messer.AKutsu -> GHC.Base.String
   {- Arity: 1, Strictness: <S,1*U(1*U(1*U),1*U)>,
      Unfolding: InlineRule (1, True, False)
@@ -170,13 +213,13 @@ d5a91980cf25ccfd61ec7b50e621b084
                    Messer.$fShowAKutsu4
                    x
                    (GHC.Types.[] @ GHC.Types.Char)) -}
-751d449543c137d36c97de644f2b6fd2
+ea67a20a6ff998dcfcbb33a0a151c225
   $fShowAKutsu_$cshowList :: [Messer.AKutsu] -> GHC.Show.ShowS
   {- Arity: 2, Strictness: <S,1*U><L,U>,
      Unfolding: InlineRule (2, True, False)
                 (\ (ls :: [Messer.AKutsu]) (s :: GHC.Base.String) ->
                  GHC.Show.showList__ @ Messer.AKutsu Messer.$fShowAKutsu1 ls s) -}
-751d449543c137d36c97de644f2b6fd2
+ea67a20a6ff998dcfcbb33a0a151c225
   $fShowAKutsu_$cshowsPrec ::
     GHC.Types.Int -> Messer.AKutsu -> GHC.Show.ShowS
   {- Arity: 3, Strictness: <S(S),1*U(U)><S,1*U(1*U(1*U),1*U)><L,U>,
@@ -188,7 +231,7 @@ d5a91980cf25ccfd61ec7b50e621b084
                  case w of ww { GHC.Types.I# ww1 ->
                  case w1 of ww2 { Messer.AKutsu ww3 ww4 ->
                  Messer.$w$cshowsPrec ww1 ww3 ww4 w2 } }) -}
-d33ffb47eb0e18561df09a5c227ae5e8
+f616844a16ec6006fac1a1627820eb52
   $fShowAliohjelma :: GHC.Show.Show Messer.Aliohjelma
   DFunId
   {- Strictness: m, Inline: CONLIKE,
@@ -197,13 +240,13 @@ d33ffb47eb0e18561df09a5c227ae5e8
                   Messer.$fShowAliohjelma_$cshowsPrec
                   Messer.$fShowAliohjelma_$cshow
                   Messer.$fShowAliohjelma_$cshowList -}
-d33ffb47eb0e18561df09a5c227ae5e8
+f616844a16ec6006fac1a1627820eb52
   $fShowAliohjelma1 :: Messer.Aliohjelma -> GHC.Show.ShowS
   {- Arity: 2, Strictness: <S,1*U(1*U(1*U),1*U,1*U,1*U)><L,U>,
      Unfolding: (\ (w :: Messer.Aliohjelma) (w1 :: GHC.Base.String) ->
                  case w of ww { Messer.Aliohjelma ww1 ww2 ww3 ww4 ->
                  Messer.$w$cshowsPrec3 0# ww1 ww2 ww3 ww4 w1 }) -}
-d33ffb47eb0e18561df09a5c227ae5e8
+f616844a16ec6006fac1a1627820eb52
   $fShowAliohjelma_$cshow :: Messer.Aliohjelma -> GHC.Base.String
   {- Arity: 1, Strictness: <S,1*U(1*U(1*U),1*U,1*U,1*U)>,
      Unfolding: InlineRule (1, True, False)
@@ -212,7 +255,7 @@ d33ffb47eb0e18561df09a5c227ae5e8
                    Messer.$fShowAKutsu4
                    x
                    (GHC.Types.[] @ GHC.Types.Char)) -}
-d33ffb47eb0e18561df09a5c227ae5e8
+f616844a16ec6006fac1a1627820eb52
   $fShowAliohjelma_$cshowList ::
     [Messer.Aliohjelma] -> GHC.Show.ShowS
   {- Arity: 2, Strictness: <S,1*U><L,U>,
@@ -223,7 +266,7 @@ d33ffb47eb0e18561df09a5c227ae5e8
                    Messer.$fShowAliohjelma1
                    ls
                    s) -}
-d33ffb47eb0e18561df09a5c227ae5e8
+f616844a16ec6006fac1a1627820eb52
   $fShowAliohjelma_$cshowsPrec ::
     GHC.Types.Int -> Messer.Aliohjelma -> GHC.Show.ShowS
   {- Arity: 3,
@@ -309,7 +352,7 @@ bf41d4de4b56175748014be3792dcb5b
                    (w2 :: GHC.Base.String) ->
                  case w of ww { GHC.Types.I# ww1 ->
                  Messer.$w$cshowsPrec4 ww1 w1 w2 }) -}
-35ffe00197e7a7ad84ac30b44bd99abe
+1c899e862121308cd4f91402a82ba3f9
   $fShowEhtolause :: GHC.Show.Show Messer.Ehtolause
   DFunId
   {- Strictness: m, Inline: CONLIKE,
@@ -318,12 +361,12 @@ bf41d4de4b56175748014be3792dcb5b
                   Messer.$fShowEhtolause_$cshowsPrec
                   Messer.$fShowEhtolause_$cshow
                   Messer.$fShowEhtolause_$cshowList -}
-35ffe00197e7a7ad84ac30b44bd99abe
+1c899e862121308cd4f91402a82ba3f9
   $fShowEhtolause1 :: Messer.Ehtolause -> GHC.Show.ShowS
   {- Arity: 2, Strictness: <S,1*U><L,U>,
      Unfolding: (\ (w :: Messer.Ehtolause) (w1 :: GHC.Base.String) ->
                  Messer.$w$cshowsPrec5 0# w w1) -}
-35ffe00197e7a7ad84ac30b44bd99abe
+1c899e862121308cd4f91402a82ba3f9
   $fShowEhtolause_$cshow :: Messer.Ehtolause -> GHC.Base.String
   {- Arity: 1, Strictness: <S,1*U>,
      Unfolding: InlineRule (1, True, False)
@@ -332,7 +375,7 @@ bf41d4de4b56175748014be3792dcb5b
                    Messer.$fShowAKutsu4
                    x
                    (GHC.Types.[] @ GHC.Types.Char)) -}
-35ffe00197e7a7ad84ac30b44bd99abe
+1c899e862121308cd4f91402a82ba3f9
   $fShowEhtolause_$cshowList :: [Messer.Ehtolause] -> GHC.Show.ShowS
   {- Arity: 2, Strictness: <S,1*U><L,U>,
      Unfolding: InlineRule (2, True, False)
@@ -342,7 +385,7 @@ bf41d4de4b56175748014be3792dcb5b
                    Messer.$fShowEhtolause1
                    ls
                    s) -}
-35ffe00197e7a7ad84ac30b44bd99abe
+1c899e862121308cd4f91402a82ba3f9
   $fShowEhtolause_$cshowsPrec ::
     GHC.Types.Int -> Messer.Ehtolause -> GHC.Show.ShowS
   {- Arity: 3, Strictness: <S(S),1*U(U)><S,1*U><L,U>, Inline: [2],
@@ -391,7 +434,7 @@ b8fb69268f765c3ef225c661dc5360de
                  case w of ww { GHC.Types.I# ww1 ->
                  case w1 of ww2 { Messer.Id ww3 ->
                  Messer.$w$cshowsPrec2 ww1 ww3 w2 } }) -}
-35ffe00197e7a7ad84ac30b44bd99abe
+1c899e862121308cd4f91402a82ba3f9
   $fShowLauseke :: GHC.Show.Show Messer.Lauseke
   DFunId
   {- Strictness: m, Inline: CONLIKE,
@@ -400,12 +443,12 @@ b8fb69268f765c3ef225c661dc5360de
                   Messer.$fShowLauseke_$cshowsPrec
                   Messer.$fShowLauseke_$cshow
                   Messer.$fShowLauseke_$cshowList -}
-35ffe00197e7a7ad84ac30b44bd99abe
+1c899e862121308cd4f91402a82ba3f9
   $fShowLauseke1 :: Messer.Lauseke -> GHC.Show.ShowS
   {- Arity: 2, Strictness: <S,1*U><L,U>,
      Unfolding: (\ (w :: Messer.Lauseke) (w1 :: GHC.Base.String) ->
                  Messer.$w$cshowsPrec6 0# w w1) -}
-35ffe00197e7a7ad84ac30b44bd99abe
+1c899e862121308cd4f91402a82ba3f9
   $fShowLauseke_$cshow :: Messer.Lauseke -> GHC.Base.String
   {- Arity: 1, Strictness: <S,1*U>,
      Unfolding: InlineRule (1, True, False)
@@ -414,13 +457,13 @@ b8fb69268f765c3ef225c661dc5360de
                    Messer.$fShowAKutsu4
                    x
                    (GHC.Types.[] @ GHC.Types.Char)) -}
-35ffe00197e7a7ad84ac30b44bd99abe
+1c899e862121308cd4f91402a82ba3f9
   $fShowLauseke_$cshowList :: [Messer.Lauseke] -> GHC.Show.ShowS
   {- Arity: 2, Strictness: <S,1*U><L,U>,
      Unfolding: InlineRule (2, True, False)
                 (\ (ls :: [Messer.Lauseke]) (s :: GHC.Base.String) ->
                  GHC.Show.showList__ @ Messer.Lauseke Messer.$fShowLauseke1 ls s) -}
-35ffe00197e7a7ad84ac30b44bd99abe
+1c899e862121308cd4f91402a82ba3f9
   $fShowLauseke_$cshowsPrec ::
     GHC.Types.Int -> Messer.Lauseke -> GHC.Show.ShowS
   {- Arity: 3, Strictness: <S(S),1*U(U)><S,1*U><L,U>, Inline: [2],
@@ -430,7 +473,7 @@ b8fb69268f765c3ef225c661dc5360de
                    (w2 :: GHC.Base.String) ->
                  case w of ww { GHC.Types.I# ww1 ->
                  Messer.$w$cshowsPrec6 ww1 w1 w2 }) -}
-3c28d7793fdc23d267517a968ea01d61
+e7cb6c20637ed95ce0cae1a22331cd3d
   $fShowLuokka :: GHC.Show.Show Messer.Luokka
   DFunId
   {- Strictness: m, Inline: CONLIKE,
@@ -439,24 +482,18 @@ b8fb69268f765c3ef225c661dc5360de
                   Messer.$fShowLuokka_$cshowsPrec
                   Messer.$fShowLuokka_$cshow
                   Messer.$fShowLuokka_$cshowList -}
-3c28d7793fdc23d267517a968ea01d61
+e7cb6c20637ed95ce0cae1a22331cd3d
   $fShowLuokka1 :: Messer.Luokka -> GHC.Show.ShowS
   {- Arity: 2,
      Strictness: <S,1*U(1*U(1*U),1*U(1*U(1*U,1*U(1*U)),1*U),1*U)><L,U>,
      Unfolding: (\ (w :: Messer.Luokka) (w1 :: GHC.Base.String) ->
                  case w of ww { Messer.Luokka ww1 ww2 ww3 ->
                  Messer.$w$cshowsPrec7 0# ww1 ww2 ww3 w1 }) -}
-37e5348abcdbe7ac21dcd846a553bcc9
-  $fShowLuokka10 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString# Messer.$fShowLuokka11) -}
-09ac3e9f550d5561f6955ec6928d5fa7
-  $fShowLuokka11 :: GHC.Prim.Addr#
+ecf9e7eba406f2b7b2e98e6834ba29fd
+  $fShowLuokka10 :: GHC.Prim.Addr#
   {- HasNoCafRefs, Unfolding: ("TTInt"#) -}
-084a6c20756120715f93af5afd42ea97
-  $fShowLuokka12 :: GHC.Prim.Addr#
-  {- HasNoCafRefs, Unfolding: ("Parametri "#) -}
-76b27f63da0f853691f981b61adf4f56
-  $fShowLuokka13 :: GHC.Prim.Addr#
+94e2224c754861d420d792a012123266
+  $fShowLuokka11 :: GHC.Prim.Addr#
   {- HasNoCafRefs, Unfolding: ("MainOhjelma "#) -}
 28888f82d3a0a12bee6ef126810bf8a9
   $fShowLuokka2 :: [GHC.Types.Char]
@@ -464,25 +501,25 @@ b8fb69268f765c3ef225c661dc5360de
 3b8aad6ec90c55cf61b8042b0dbee5b4
   $fShowLuokka3 :: GHC.Prim.Addr#
   {- HasNoCafRefs, Unfolding: ("Luokka "#) -}
-446c2be4c9246d98b1864b8d8ee91665
-  $fShowLuokka4 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString# Messer.$fShowLuokka5) -}
-4ea162100d9d6774e09028be58153005
-  $fShowLuokka5 :: GHC.Prim.Addr#
-  {- HasNoCafRefs, Unfolding: ("TTVoid"#) -}
-f730c7858b24d0d513acdeed4281cb3f
-  $fShowLuokka6 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString# Messer.$fShowLuokka7) -}
-99717a2082c690861594f72062fa55d0
-  $fShowLuokka7 :: GHC.Prim.Addr#
+3f4cf080c0743c026eeae97a4ca11b79
+  $fShowLuokka4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Parametri "#) -}
+2010312f3dbabead306758244efd99dc
+  $fShowLuokka5 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Messer.$fShowLuokka6) -}
+d3dc015894dabd66de993ae0c9aa1a38
+  $fShowLuokka6 :: GHC.Prim.Addr#
   {- HasNoCafRefs, Unfolding: ("TTString"#) -}
-dd6dacdda87e46c8bbdc844c6de09f57
-  $fShowLuokka8 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString# Messer.$fShowLuokka9) -}
-3280c755d47068047ce28a9600216e63
-  $fShowLuokka9 :: GHC.Prim.Addr#
+f66615b3a9dc9fdd1638f65c6511dc2c
+  $fShowLuokka7 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Messer.$fShowLuokka8) -}
+70e0b39706e2a288bcf5d0ac148bb9c3
+  $fShowLuokka8 :: GHC.Prim.Addr#
   {- HasNoCafRefs, Unfolding: ("TTBool"#) -}
-3c28d7793fdc23d267517a968ea01d61
+84156a1105ab9f08ed70870fcda6a9d2
+  $fShowLuokka9 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Messer.$fShowLuokka10) -}
+e7cb6c20637ed95ce0cae1a22331cd3d
   $fShowLuokka_$cshow :: Messer.Luokka -> GHC.Base.String
   {- Arity: 1,
      Strictness: <S,1*U(1*U(1*U),1*U(1*U(1*U,1*U(1*U)),1*U),1*U)>,
@@ -492,13 +529,13 @@ dd6dacdda87e46c8bbdc844c6de09f57
                    Messer.$fShowAKutsu4
                    x
                    (GHC.Types.[] @ GHC.Types.Char)) -}
-3c28d7793fdc23d267517a968ea01d61
+e7cb6c20637ed95ce0cae1a22331cd3d
   $fShowLuokka_$cshowList :: [Messer.Luokka] -> GHC.Show.ShowS
   {- Arity: 2, Strictness: <S,1*U><L,U>,
      Unfolding: InlineRule (2, True, False)
                 (\ (ls :: [Messer.Luokka]) (s :: GHC.Base.String) ->
                  GHC.Show.showList__ @ Messer.Luokka Messer.$fShowLuokka1 ls s) -}
-3c28d7793fdc23d267517a968ea01d61
+e7cb6c20637ed95ce0cae1a22331cd3d
   $fShowLuokka_$cshowsPrec ::
     GHC.Types.Int -> Messer.Luokka -> GHC.Show.ShowS
   {- Arity: 3,
@@ -511,7 +548,7 @@ dd6dacdda87e46c8bbdc844c6de09f57
                  case w of ww { GHC.Types.I# ww1 ->
                  case w1 of ww2 { Messer.Luokka ww3 ww4 ww5 ->
                  Messer.$w$cshowsPrec7 ww1 ww3 ww4 ww5 w2 } }) -}
-751d449543c137d36c97de644f2b6fd2
+ea67a20a6ff998dcfcbb33a0a151c225
   $fShowMaaritelma :: GHC.Show.Show Messer.Maaritelma
   DFunId
   {- Strictness: m, Inline: CONLIKE,
@@ -520,12 +557,12 @@ dd6dacdda87e46c8bbdc844c6de09f57
                   Messer.$fShowMaaritelma_$cshowsPrec
                   Messer.$fShowMaaritelma_$cshow
                   Messer.$fShowMaaritelma_$cshowList -}
-751d449543c137d36c97de644f2b6fd2
+ea67a20a6ff998dcfcbb33a0a151c225
   $fShowMaaritelma1 :: Messer.Maaritelma -> GHC.Show.ShowS
   {- Arity: 2, Strictness: <S,1*U><L,U>,
      Unfolding: (\ (w :: Messer.Maaritelma) (w1 :: GHC.Base.String) ->
                  Messer.$w$cshowsPrec1 0# w w1) -}
-751d449543c137d36c97de644f2b6fd2
+ea67a20a6ff998dcfcbb33a0a151c225
   $fShowMaaritelma_$cshow :: Messer.Maaritelma -> GHC.Base.String
   {- Arity: 1, Strictness: <S,1*U>,
      Unfolding: InlineRule (1, True, False)
@@ -534,7 +571,7 @@ dd6dacdda87e46c8bbdc844c6de09f57
                    Messer.$fShowAKutsu4
                    x
                    (GHC.Types.[] @ GHC.Types.Char)) -}
-751d449543c137d36c97de644f2b6fd2
+ea67a20a6ff998dcfcbb33a0a151c225
   $fShowMaaritelma_$cshowList ::
     [Messer.Maaritelma] -> GHC.Show.ShowS
   {- Arity: 2, Strictness: <S,1*U><L,U>,
@@ -545,7 +582,7 @@ dd6dacdda87e46c8bbdc844c6de09f57
                    Messer.$fShowMaaritelma1
                    ls
                    s) -}
-751d449543c137d36c97de644f2b6fd2
+ea67a20a6ff998dcfcbb33a0a151c225
   $fShowMaaritelma_$cshowsPrec ::
     GHC.Types.Int -> Messer.Maaritelma -> GHC.Show.ShowS
   {- Arity: 3, Strictness: <S(S),1*U(U)><S,1*U><L,U>, Inline: [2],
@@ -555,7 +592,7 @@ dd6dacdda87e46c8bbdc844c6de09f57
                    (w2 :: GHC.Base.String) ->
                  case w of ww { GHC.Types.I# ww1 ->
                  Messer.$w$cshowsPrec1 ww1 w1 w2 }) -}
-bb968219de3a27be9e868866acd97afa
+76f67d672f2abe8d4a26760b75255aa7
   $fShowMainOhjelma :: GHC.Show.Show Messer.MainOhjelma
   DFunId
   {- Strictness: m, Inline: CONLIKE,
@@ -564,13 +601,13 @@ bb968219de3a27be9e868866acd97afa
                   Messer.$fShowMainOhjelma_$cshowsPrec
                   Messer.$fShowMainOhjelma_$cshow
                   Messer.$fShowMainOhjelma_$cshowList -}
-bb968219de3a27be9e868866acd97afa
+76f67d672f2abe8d4a26760b75255aa7
   $fShowMainOhjelma1 :: Messer.MainOhjelma -> GHC.Show.ShowS
   {- Arity: 2, Strictness: <S,1*U(1*U(1*U,1*U(1*U)),1*U)><L,U>,
      Unfolding: (\ (w :: Messer.MainOhjelma) (w1 :: GHC.Base.String) ->
                  case w of ww { Messer.MainOhjelma ww1 ww2 ->
                  Messer.$w$cshowsPrec8 0# ww1 ww2 w1 }) -}
-bb968219de3a27be9e868866acd97afa
+76f67d672f2abe8d4a26760b75255aa7
   $fShowMainOhjelma_$cshow :: Messer.MainOhjelma -> GHC.Base.String
   {- Arity: 1, Strictness: <S,1*U(1*U(1*U,1*U(1*U)),1*U)>,
      Unfolding: InlineRule (1, True, False)
@@ -579,7 +616,7 @@ bb968219de3a27be9e868866acd97afa
                    Messer.$fShowAKutsu4
                    x
                    (GHC.Types.[] @ GHC.Types.Char)) -}
-bb968219de3a27be9e868866acd97afa
+76f67d672f2abe8d4a26760b75255aa7
   $fShowMainOhjelma_$cshowList ::
     [Messer.MainOhjelma] -> GHC.Show.ShowS
   {- Arity: 2, Strictness: <S,1*U><L,U>,
@@ -590,7 +627,7 @@ bb968219de3a27be9e868866acd97afa
                    Messer.$fShowMainOhjelma1
                    ls
                    s) -}
-bb968219de3a27be9e868866acd97afa
+76f67d672f2abe8d4a26760b75255aa7
   $fShowMainOhjelma_$cshowsPrec ::
     GHC.Types.Int -> Messer.MainOhjelma -> GHC.Show.ShowS
   {- Arity: 3,
@@ -603,7 +640,7 @@ bb968219de3a27be9e868866acd97afa
                  case w of ww { GHC.Types.I# ww1 ->
                  case w1 of ww2 { Messer.MainOhjelma ww3 ww4 ->
                  Messer.$w$cshowsPrec8 ww1 ww3 ww4 w2 } }) -}
-1272d08cc29726bc4f2572d6bb1ba215
+bde17f79e23430487e427b810bff59a0
   $fShowOp :: GHC.Show.Show Messer.Op
   DFunId
   {- Strictness: m, Inline: CONLIKE,
@@ -636,7 +673,7 @@ bb9aea5b97f510ab7d8331ef7284dba1
 67483a1941583c49dc5929d0c2a67a2f
   $fShowOp8 :: GHC.Prim.Addr#
   {- HasNoCafRefs, Unfolding: ("Plus"#) -}
-1272d08cc29726bc4f2572d6bb1ba215
+bde17f79e23430487e427b810bff59a0
   $fShowOp_$cshow :: Messer.Op -> GHC.Base.String
   {- Arity: 1, Strictness: <S,1*U>,
      Unfolding: InlineRule (1, True, False)
@@ -646,13 +683,13 @@ bb9aea5b97f510ab7d8331ef7284dba1
                    Messer.Miinus -> Messer.$fShowOp5
                    Messer.Kerto -> Messer.$fShowOp3
                    Messer.Jako -> Messer.$fShowOp1 }) -}
-1272d08cc29726bc4f2572d6bb1ba215
+bde17f79e23430487e427b810bff59a0
   $fShowOp_$cshowList :: [Messer.Op] -> GHC.Show.ShowS
   {- Arity: 2, Strictness: <S,1*U><L,U>,
      Unfolding: InlineRule (2, True, False)
                 (\ (ls :: [Messer.Op]) (s :: GHC.Base.String) ->
-                 GHC.Show.showList__ @ Messer.Op Messer.$w$cshowsPrec11 ls s) -}
-1272d08cc29726bc4f2572d6bb1ba215
+                 GHC.Show.showList__ @ Messer.Op Messer.$w$cshowsPrec10 ls s) -}
+bde17f79e23430487e427b810bff59a0
   $fShowOp_$cshowsPrec ::
     GHC.Types.Int -> Messer.Op -> GHC.Show.ShowS
   {- Arity: 3, Strictness: <L,A><S,1*U><L,1*U>, Inline: [2],
@@ -660,8 +697,8 @@ bb9aea5b97f510ab7d8331ef7284dba1
                 (\ (w :: GHC.Types.Int)
                    (w1 :: Messer.Op)
                    (w2 :: GHC.Base.String) ->
-                 Messer.$w$cshowsPrec11 w1 w2) -}
-e05ac33899b5c6e273f74cb3d0739c84
+                 Messer.$w$cshowsPrec10 w1 w2) -}
+34c02ede3d9961458594ae2e3e82e002
   $fShowPalautustyyppi :: GHC.Show.Show Messer.Palautustyyppi
   DFunId
   {- Strictness: m, Inline: CONLIKE,
@@ -670,7 +707,7 @@ e05ac33899b5c6e273f74cb3d0739c84
                   Messer.$fShowPalautustyyppi_$cshowsPrec
                   Messer.$fShowPalautustyyppi_$cshow
                   Messer.$fShowPalautustyyppi_$cshowList -}
-e05ac33899b5c6e273f74cb3d0739c84
+34c02ede3d9961458594ae2e3e82e002
   $fShowPalautustyyppi1 :: Messer.Palautustyyppi -> GHC.Show.ShowS
   {- Arity: 2,
      Unfolding: (Messer.$fShowPalautustyyppi_$cshowsPrec
@@ -689,19 +726,17 @@ d192933ddcafe36762a70c3e16f1cc62
 c3ea6be00fd0a56b83a756babf28fdca
   $fShowPalautustyyppi5 :: GHC.Prim.Addr#
   {- HasNoCafRefs, Unfolding: ("Palautustyyppi "#) -}
-e05ac33899b5c6e273f74cb3d0739c84
+34c02ede3d9961458594ae2e3e82e002
   $fShowPalautustyyppi_$cshow ::
     Messer.Palautustyyppi -> GHC.Base.String
   {- Arity: 1, Strictness: <S,1*U>,
-     Unfolding: (\ (x :: Messer.Palautustyyppi) ->
-                 case x of wild {
-                   Messer.Palautustyyppi b1
-                   -> GHC.Base.++
-                        @ GHC.Types.Char
-                        Messer.$fShowPalautustyyppi4
-                        (Messer.$w$cshowsPrec10 b1 (GHC.Types.[] @ GHC.Types.Char))
-                   Messer.Void -> Messer.$fShowPalautustyyppi2 }) -}
-e05ac33899b5c6e273f74cb3d0739c84
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: Messer.Palautustyyppi) ->
+                 Messer.$fShowPalautustyyppi_$cshowsPrec
+                   Messer.$fShowAKutsu4
+                   x
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+34c02ede3d9961458594ae2e3e82e002
   $fShowPalautustyyppi_$cshowList ::
     [Messer.Palautustyyppi] -> GHC.Show.ShowS
   {- Arity: 2, Strictness: <S,1*U><L,U>,
@@ -712,7 +747,7 @@ e05ac33899b5c6e273f74cb3d0739c84
                    Messer.$fShowPalautustyyppi1
                    ls
                    s) -}
-e05ac33899b5c6e273f74cb3d0739c84
+34c02ede3d9961458594ae2e3e82e002
   $fShowPalautustyyppi_$cshowsPrec ::
     GHC.Types.Int -> Messer.Palautustyyppi -> GHC.Show.ShowS
   {- Arity: 3, Strictness: <L,1*U(U)><S,1*U><L,U>,
@@ -722,12 +757,24 @@ e05ac33899b5c6e273f74cb3d0739c84
                  case ds of wild {
                    Messer.Palautustyyppi b1
                    -> case a of wild1 { GHC.Types.I# x ->
+                      let {
+                        g :: GHC.Base.String -> GHC.Base.String
+                          {- Arity: 1, Strictness: <L,1*U> -}
+                        = \ (eta1 :: GHC.Base.String)[OneShot] ->
+                          case b1 of wild2 {
+                            Messer.TTInt
+                            -> GHC.Base.++ @ GHC.Types.Char Messer.$fShowLuokka9 eta1
+                            Messer.TTBool
+                            -> GHC.Base.++ @ GHC.Types.Char Messer.$fShowLuokka7 eta1
+                            Messer.TTString
+                            -> GHC.Base.++ @ GHC.Types.Char Messer.$fShowLuokka5 eta1 }
+                      } in
                       case GHC.Prim.>=# x 11# of lwild {
                         DEFAULT
                         -> GHC.Base.++
                              @ GHC.Types.Char
                              Messer.$fShowPalautustyyppi4
-                             (Messer.$w$cshowsPrec10 b1 eta)
+                             (g eta)
                         1#
                         -> GHC.Types.:
                              @ GHC.Types.Char
@@ -735,15 +782,13 @@ e05ac33899b5c6e273f74cb3d0739c84
                              (GHC.Base.++
                                 @ GHC.Types.Char
                                 Messer.$fShowPalautustyyppi4
-                                (Messer.$w$cshowsPrec10
-                                   b1
-                                   (GHC.Types.: @ GHC.Types.Char GHC.Show.$fShow(,)2 eta))) } }
+                                (g (GHC.Types.: @ GHC.Types.Char GHC.Show.$fShow(,)2 eta))) } }
                    Messer.Void
                    -> GHC.Base.++
                         @ GHC.Types.Char
                         Messer.$fShowPalautustyyppi2
                         eta }) -}
-e036b69e8a4ddab9e41face3197a0887
+3da2d94919361cdb400e175048f0ba4d
   $fShowParametri :: GHC.Show.Show Messer.Parametri
   DFunId
   {- Strictness: m, Inline: CONLIKE,
@@ -752,13 +797,13 @@ e036b69e8a4ddab9e41face3197a0887
                   Messer.$fShowParametri_$cshowsPrec
                   Messer.$fShowParametri_$cshow
                   Messer.$fShowParametri_$cshowList -}
-e036b69e8a4ddab9e41face3197a0887
+3da2d94919361cdb400e175048f0ba4d
   $fShowParametri1 :: Messer.Parametri -> GHC.Show.ShowS
   {- Arity: 2, Strictness: <S,1*U(1*U,1*U(1*U))><L,U>,
      Unfolding: (\ (w :: Messer.Parametri) (w1 :: GHC.Base.String) ->
                  case w of ww { Messer.Parametri ww1 ww2 ->
                  Messer.$w$cshowsPrec9 0# ww1 ww2 w1 }) -}
-e036b69e8a4ddab9e41face3197a0887
+3da2d94919361cdb400e175048f0ba4d
   $fShowParametri_$cshow :: Messer.Parametri -> GHC.Base.String
   {- Arity: 1, Strictness: <S,1*U(1*U,1*U(1*U))>,
      Unfolding: InlineRule (1, True, False)
@@ -767,7 +812,7 @@ e036b69e8a4ddab9e41face3197a0887
                    Messer.$fShowAKutsu4
                    x
                    (GHC.Types.[] @ GHC.Types.Char)) -}
-e036b69e8a4ddab9e41face3197a0887
+3da2d94919361cdb400e175048f0ba4d
   $fShowParametri_$cshowList :: [Messer.Parametri] -> GHC.Show.ShowS
   {- Arity: 2, Strictness: <S,1*U><L,U>,
      Unfolding: InlineRule (2, True, False)
@@ -777,7 +822,7 @@ e036b69e8a4ddab9e41face3197a0887
                    Messer.$fShowParametri1
                    ls
                    s) -}
-e036b69e8a4ddab9e41face3197a0887
+3da2d94919361cdb400e175048f0ba4d
   $fShowParametri_$cshowsPrec ::
     GHC.Types.Int -> Messer.Parametri -> GHC.Show.ShowS
   {- Arity: 3, Strictness: <S(S),1*U(U)><S,1*U(1*U,1*U(1*U))><L,U>,
@@ -789,7 +834,7 @@ e036b69e8a4ddab9e41face3197a0887
                  case w of ww { GHC.Types.I# ww1 ->
                  case w1 of ww2 { Messer.Parametri ww3 ww4 ->
                  Messer.$w$cshowsPrec9 ww1 ww3 ww4 w2 } }) -}
-ed3a72d4f2d33947cec13d2467374b94
+20044911cd3457ad5eccb21c1ded82e0
   $fShowSijoitus :: GHC.Show.Show Messer.Sijoitus
   DFunId
   {- Strictness: m, Inline: CONLIKE,
@@ -798,18 +843,12 @@ ed3a72d4f2d33947cec13d2467374b94
                   Messer.$fShowSijoitus_$cshowsPrec
                   Messer.$fShowSijoitus_$cshow
                   Messer.$fShowSijoitus_$cshowList -}
-ed3a72d4f2d33947cec13d2467374b94
+20044911cd3457ad5eccb21c1ded82e0
   $fShowSijoitus1 :: Messer.Sijoitus -> GHC.Show.ShowS
   {- Arity: 2, Strictness: <S,1*U><L,U>,
      Unfolding: (\ (w :: Messer.Sijoitus) (w1 :: GHC.Base.String) ->
-                 Messer.$w$cshowsPrec12 0# w w1) -}
-788daf652acf5cb9f4c5baa2374dae68
-  $fShowSijoitus2 :: GHC.Prim.Addr#
-  {- HasNoCafRefs, Unfolding: ("VanhaSijoitus "#) -}
-77254e6a41ebaa6071b0c0812254623f
-  $fShowSijoitus3 :: GHC.Prim.Addr#
-  {- HasNoCafRefs, Unfolding: ("UusiSijoitus "#) -}
-ed3a72d4f2d33947cec13d2467374b94
+                 Messer.$w$cshowsPrec11 0# w w1) -}
+20044911cd3457ad5eccb21c1ded82e0
   $fShowSijoitus_$cshow :: Messer.Sijoitus -> GHC.Base.String
   {- Arity: 1, Strictness: <S,1*U>,
      Unfolding: InlineRule (1, True, False)
@@ -818,7 +857,7 @@ ed3a72d4f2d33947cec13d2467374b94
                    Messer.$fShowAKutsu4
                    x
                    (GHC.Types.[] @ GHC.Types.Char)) -}
-ed3a72d4f2d33947cec13d2467374b94
+20044911cd3457ad5eccb21c1ded82e0
   $fShowSijoitus_$cshowList :: [Messer.Sijoitus] -> GHC.Show.ShowS
   {- Arity: 2, Strictness: <S,1*U><L,U>,
      Unfolding: InlineRule (2, True, False)
@@ -828,7 +867,7 @@ ed3a72d4f2d33947cec13d2467374b94
                    Messer.$fShowSijoitus1
                    ls
                    s) -}
-ed3a72d4f2d33947cec13d2467374b94
+20044911cd3457ad5eccb21c1ded82e0
   $fShowSijoitus_$cshowsPrec ::
     GHC.Types.Int -> Messer.Sijoitus -> GHC.Show.ShowS
   {- Arity: 3, Strictness: <S(S),1*U(U)><S,1*U><L,U>, Inline: [2],
@@ -837,8 +876,8 @@ ed3a72d4f2d33947cec13d2467374b94
                    (w1 :: Messer.Sijoitus)
                    (w2 :: GHC.Base.String) ->
                  case w of ww { GHC.Types.I# ww1 ->
-                 Messer.$w$cshowsPrec12 ww1 w1 w2 }) -}
-7b4dd7e00fa6adef555f3eff25e44c2c
+                 Messer.$w$cshowsPrec11 ww1 w1 w2 }) -}
+e9c807259680593d625496093d974d4b
   $fShowTietotyyppi :: GHC.Show.Show Messer.Tietotyyppi
   DFunId
   {- Strictness: m, Inline: CONLIKE,
@@ -847,17 +886,16 @@ ed3a72d4f2d33947cec13d2467374b94
                   Messer.$fShowTietotyyppi_$cshowsPrec
                   Messer.$fShowTietotyyppi_$cshow
                   Messer.$fShowTietotyyppi_$cshowList -}
-7b4dd7e00fa6adef555f3eff25e44c2c
+e9c807259680593d625496093d974d4b
   $fShowTietotyyppi_$cshow :: Messer.Tietotyyppi -> GHC.Base.String
   {- Arity: 1, Strictness: <S,1*U>,
      Unfolding: InlineRule (1, True, False)
                 (\ (x :: Messer.Tietotyyppi) ->
                  case x of wild {
-                   Messer.TTInt -> Messer.$fShowLuokka10
-                   Messer.TTBool -> Messer.$fShowLuokka8
-                   Messer.TTString -> Messer.$fShowLuokka6
-                   Messer.TTVoid -> Messer.$fShowLuokka4 }) -}
-7b4dd7e00fa6adef555f3eff25e44c2c
+                   Messer.TTInt -> Messer.$fShowLuokka9
+                   Messer.TTBool -> Messer.$fShowLuokka7
+                   Messer.TTString -> Messer.$fShowLuokka5 }) -}
+e9c807259680593d625496093d974d4b
   $fShowTietotyyppi_$cshowList ::
     [Messer.Tietotyyppi] -> GHC.Show.ShowS
   {- Arity: 2, Strictness: <S,1*U><L,U>,
@@ -865,10 +903,10 @@ ed3a72d4f2d33947cec13d2467374b94
                 (\ (ls :: [Messer.Tietotyyppi]) (s :: GHC.Base.String) ->
                  GHC.Show.showList__
                    @ Messer.Tietotyyppi
-                   Messer.$w$cshowsPrec10
+                   Messer.$w$cshowsPrec12
                    ls
                    s) -}
-7b4dd7e00fa6adef555f3eff25e44c2c
+e9c807259680593d625496093d974d4b
   $fShowTietotyyppi_$cshowsPrec ::
     GHC.Types.Int -> Messer.Tietotyyppi -> GHC.Show.ShowS
   {- Arity: 3, Strictness: <L,A><S,1*U><L,1*U>, Inline: [2],
@@ -876,7 +914,7 @@ ed3a72d4f2d33947cec13d2467374b94
                 (\ (w :: GHC.Types.Int)
                    (w1 :: Messer.Tietotyyppi)
                    (w2 :: GHC.Base.String) ->
-                 Messer.$w$cshowsPrec10 w1 w2) -}
+                 Messer.$w$cshowsPrec12 w1 w2) -}
 0dfe887190fc5e7f9132b52740352094
   $fShowVOp :: GHC.Show.Show Messer.VOp
   DFunId
@@ -2305,23 +2343,6 @@ f7fcd147dd453d6a33220f114e67d2b5
 a44127fbdd48a2eed3a01fe2adb8b3d3
   $tc'TTString2 :: GHC.Prim.Addr#
   {- HasNoCafRefs, Unfolding: ("'TTString"#) -}
-ff5b42d062c662db4adc13c109246c91
-  $tc'TTVoid :: GHC.Types.TyCon
-  {- HasNoCafRefs, Strictness: m,
-     Unfolding: (GHC.Types.TyCon
-                   15188950588423036013##
-                   14184249367660752206##
-                   Messer.$trModule
-                   Messer.$tc'TTVoid1
-                   0#
-                   Messer.$tc'TTBool1) -}
-2bf0c5fbe8e99e3fa0e586b7c67d8fab
-  $tc'TTVoid1 :: GHC.Types.TrName
-  {- HasNoCafRefs, Strictness: m1,
-     Unfolding: (GHC.Types.TrNameS Messer.$tc'TTVoid2) -}
-ccb629a2cd97454b6721cbaf3c70976c
-  $tc'TTVoid2 :: GHC.Prim.Addr#
-  {- HasNoCafRefs, Unfolding: ("'TTVoid"#) -}
 45be3f7c8bf99b718a6ecb73b1ecc9a4
   $tc'UusiSijoitus :: GHC.Types.TyCon
   {- HasNoCafRefs, Strictness: m,
@@ -2704,7 +2725,7 @@ d26e82a2659e5d3ee4d232ae1153d6a9
                       @ GHC.Types.Char
                       GHC.Show.$fShow(,)3
                       (GHC.Show.showLitString ww Messer.$fShowArvo5))) -}
-751d449543c137d36c97de644f2b6fd2
+ea67a20a6ff998dcfcbb33a0a151c225
   $w$cshowsPrec ::
     GHC.Prim.Int#
     -> Messer.Id
@@ -2739,7 +2760,7 @@ d26e82a2659e5d3ee4d232ae1153d6a9
                                         0#
                                         x1
                                         (let {
-                                           lvl46 :: [GHC.Types.Char]
+                                           lvl48 :: [GHC.Types.Char]
                                            = GHC.Types.: @ GHC.Types.Char GHC.Show.showList__2 x
                                          } in
                                          letrec {
@@ -2747,7 +2768,7 @@ d26e82a2659e5d3ee4d232ae1153d6a9
                                              {- Arity: 1, Strictness: <S,1*U> -}
                                            = \ (ds2 :: [Messer.Maaritelma]) ->
                                              case ds2 of wild1 {
-                                               [] -> lvl46
+                                               [] -> lvl48
                                                : y ys
                                                -> GHC.Types.:
                                                     @ GHC.Types.Char
@@ -2763,27 +2784,13 @@ d26e82a2659e5d3ee4d232ae1153d6a9
                         @ GHC.Types.Char
                         GHC.Show.$fShow(,)4
                         (p (GHC.Types.: @ GHC.Types.Char GHC.Show.$fShow(,)2 w)) }) -}
-751d449543c137d36c97de644f2b6fd2
+ea67a20a6ff998dcfcbb33a0a151c225
   $w$cshowsPrec1 ::
     GHC.Prim.Int#
     -> Messer.Maaritelma -> GHC.Base.String -> GHC.Base.String
   {- Arity: 3, Strictness: <S,U><S,1*U><L,U>, Inline: [2] -}
-7b4dd7e00fa6adef555f3eff25e44c2c
-  $w$cshowsPrec10 ::
-    Messer.Tietotyyppi -> GHC.Base.String -> GHC.Base.String
-  {- Arity: 2, Strictness: <S,1*U><L,1*U>, Inline: [2],
-     Unfolding: (\ (w :: Messer.Tietotyyppi) (w1 :: GHC.Base.String) ->
-                 case w of wild {
-                   Messer.TTInt
-                   -> GHC.Base.++ @ GHC.Types.Char Messer.$fShowLuokka10 w1
-                   Messer.TTBool
-                   -> GHC.Base.++ @ GHC.Types.Char Messer.$fShowLuokka8 w1
-                   Messer.TTString
-                   -> GHC.Base.++ @ GHC.Types.Char Messer.$fShowLuokka6 w1
-                   Messer.TTVoid
-                   -> GHC.Base.++ @ GHC.Types.Char Messer.$fShowLuokka4 w1 }) -}
-1272d08cc29726bc4f2572d6bb1ba215
-  $w$cshowsPrec11 :: Messer.Op -> GHC.Base.String -> GHC.Base.String
+bde17f79e23430487e427b810bff59a0
+  $w$cshowsPrec10 :: Messer.Op -> GHC.Base.String -> GHC.Base.String
   {- Arity: 2, Strictness: <S,1*U><L,1*U>, Inline: [2],
      Unfolding: (\ (w :: Messer.Op) (w1 :: GHC.Base.String) ->
                  case w of wild {
@@ -2792,75 +2799,23 @@ d26e82a2659e5d3ee4d232ae1153d6a9
                    Messer.Kerto -> GHC.Base.++ @ GHC.Types.Char Messer.$fShowOp3 w1
                    Messer.Jako
                    -> GHC.Base.++ @ GHC.Types.Char Messer.$fShowOp1 w1 }) -}
-ed3a72d4f2d33947cec13d2467374b94
-  $w$cshowsPrec12 ::
+20044911cd3457ad5eccb21c1ded82e0
+  $w$cshowsPrec11 ::
     GHC.Prim.Int#
     -> Messer.Sijoitus -> GHC.Base.String -> GHC.Base.String
-  {- Arity: 3, Strictness: <S,U><S,1*U><L,U>, Inline: [2],
-     Unfolding: (\ (ww :: GHC.Prim.Int#)
-                   (w :: Messer.Sijoitus)
-                   (w1 :: GHC.Base.String) ->
+  {- Arity: 3, Strictness: <S,U><S,1*U><L,U>, Inline: [2] -}
+e9c807259680593d625496093d974d4b
+  $w$cshowsPrec12 ::
+    Messer.Tietotyyppi -> GHC.Base.String -> GHC.Base.String
+  {- Arity: 2, Strictness: <S,1*U><L,1*U>, Inline: [2],
+     Unfolding: (\ (w :: Messer.Tietotyyppi) (w1 :: GHC.Base.String) ->
                  case w of wild {
-                   Messer.UusiSijoitus b1 b2 b3
-                   -> let {
-                        p :: GHC.Show.ShowS {- Arity: 1, Strictness: <L,U> -}
-                        = \ (x :: GHC.Base.String)[OneShot] ->
-                          GHC.CString.unpackAppendCString#
-                            Messer.$fShowSijoitus3
-                            (Messer.$w$cshowsPrec10
-                               b1
-                               (GHC.Types.:
-                                  @ GHC.Types.Char
-                                  GHC.Show.showSpace1
-                                  (case b2 of ww1 { Messer.Id ww2 ->
-                                   Messer.$w$cshowsPrec2
-                                     11#
-                                     ww2
-                                     (GHC.Types.:
-                                        @ GHC.Types.Char
-                                        GHC.Show.showSpace1
-                                        (Messer.$w$cshowsPrec1 11# b3 x)) })))
-                      } in
-                      case GHC.Prim.>=# ww 11# of lwild {
-                        DEFAULT -> p w1
-                        1#
-                        -> GHC.Types.:
-                             @ GHC.Types.Char
-                             GHC.Show.$fShow(,)4
-                             (p (GHC.Types.: @ GHC.Types.Char GHC.Show.$fShow(,)2 w1)) }
-                   Messer.VanhaSijoitus b1 b2
-                   -> case GHC.Prim.>=# ww 11# of lwild {
-                        DEFAULT
-                        -> GHC.CString.unpackAppendCString#
-                             Messer.$fShowSijoitus2
-                             (case b1 of ww1 { Messer.Id ww2 ->
-                              Messer.$w$cshowsPrec2
-                                11#
-                                ww2
-                                (GHC.Types.:
-                                   @ GHC.Types.Char
-                                   GHC.Show.showSpace1
-                                   (Messer.$w$cshowsPrec1 11# b2 w1)) })
-                        1#
-                        -> GHC.Types.:
-                             @ GHC.Types.Char
-                             GHC.Show.$fShow(,)4
-                             (GHC.CString.unpackAppendCString#
-                                Messer.$fShowSijoitus2
-                                (case b1 of ww1 { Messer.Id ww2 ->
-                                 Messer.$w$cshowsPrec2
-                                   11#
-                                   ww2
-                                   (GHC.Types.:
-                                      @ GHC.Types.Char
-                                      GHC.Show.showSpace1
-                                      (Messer.$w$cshowsPrec1
-                                         11#
-                                         b2
-                                         (GHC.Types.:
-                                            @ GHC.Types.Char
-                                            GHC.Show.$fShow(,)2
-                                            w1))) })) } }) -}
+                   Messer.TTInt
+                   -> GHC.Base.++ @ GHC.Types.Char Messer.$fShowLuokka9 w1
+                   Messer.TTBool
+                   -> GHC.Base.++ @ GHC.Types.Char Messer.$fShowLuokka7 w1
+                   Messer.TTString
+                   -> GHC.Base.++ @ GHC.Types.Char Messer.$fShowLuokka5 w1 }) -}
 0dfe887190fc5e7f9132b52740352094
   $w$cshowsPrec13 :: Messer.VOp -> GHC.Base.String -> GHC.Base.String
   {- Arity: 2, Strictness: <S,1*U><L,1*U>, Inline: [2],
@@ -2911,7 +2866,7 @@ e64975af6ee58fd48142a3d0c3236196
                                     @ GHC.Types.Char
                                     GHC.Show.$fShow(,)3
                                     (GHC.Types.: @ GHC.Types.Char GHC.Show.$fShow(,)2 w))))) }) -}
-c29d9506ae7497107707745d10f730ba
+e4a367f1bbad3d6ffd374a6577cf6ccf
   $w$cshowsPrec3 ::
     GHC.Prim.Int#
     -> Messer.Id
@@ -3010,17 +2965,17 @@ bf41d4de4b56175748014be3792dcb5b
                                             @ GHC.Types.Char
                                             GHC.Show.$fShow(,)2
                                             w1))))) } }) -}
-35ffe00197e7a7ad84ac30b44bd99abe
+1c899e862121308cd4f91402a82ba3f9
   $w$cshowsPrec5 ::
     GHC.Prim.Int#
     -> Messer.Ehtolause -> GHC.Base.String -> GHC.Base.String
   {- Arity: 3, Strictness: <S,U><S,1*U><L,U>, Inline: [2] -}
-35ffe00197e7a7ad84ac30b44bd99abe
+1c899e862121308cd4f91402a82ba3f9
   $w$cshowsPrec6 ::
     GHC.Prim.Int#
     -> Messer.Lauseke -> GHC.Base.String -> GHC.Base.String
   {- Arity: 3, Strictness: <S,U><S,1*U><L,U>, Inline: [2] -}
-0536db4207edd4e0e8b26dc6664562f4
+381cb69cea4f9c1da6f2eed2933c2e03
   $w$cshowsPrec7 ::
     GHC.Prim.Int#
     -> Messer.Id
@@ -3067,7 +3022,7 @@ bf41d4de4b56175748014be3792dcb5b
                            @ GHC.Types.Char
                            Messer.$fShowLuokka2
                            (g (GHC.Types.: @ GHC.Types.Char GHC.Show.$fShow(,)2 w))) }) -}
-958d4105c10f59b655cc2764b6ac64ce
+e81d0f267a7b26f685122fc49ef691fb
   $w$cshowsPrec8 ::
     GHC.Prim.Int#
     -> Messer.Parametri
@@ -3084,7 +3039,7 @@ bf41d4de4b56175748014be3792dcb5b
                    p :: GHC.Show.ShowS {- Arity: 1, Strictness: <L,U> -}
                    = \ (x :: GHC.Base.String)[OneShot] ->
                      GHC.CString.unpackAppendCString#
-                       Messer.$fShowLuokka13
+                       Messer.$fShowLuokka11
                        (case ww1 of ww3 { Messer.Parametri ww4 ww5 ->
                         Messer.$w$cshowsPrec9
                           11#
@@ -3103,7 +3058,7 @@ bf41d4de4b56175748014be3792dcb5b
                                         0#
                                         x1
                                         (let {
-                                           lvl46 :: [GHC.Types.Char]
+                                           lvl48 :: [GHC.Types.Char]
                                            = GHC.Types.: @ GHC.Types.Char GHC.Show.showList__2 x
                                          } in
                                          letrec {
@@ -3111,7 +3066,7 @@ bf41d4de4b56175748014be3792dcb5b
                                              {- Arity: 1, Strictness: <S,1*U> -}
                                            = \ (ds2 :: [Messer.Lauseke]) ->
                                              case ds2 of wild1 {
-                                               [] -> lvl46
+                                               [] -> lvl48
                                                : y ys
                                                -> GHC.Types.:
                                                     @ GHC.Types.Char
@@ -3127,7 +3082,7 @@ bf41d4de4b56175748014be3792dcb5b
                         @ GHC.Types.Char
                         GHC.Show.$fShow(,)4
                         (p (GHC.Types.: @ GHC.Types.Char GHC.Show.$fShow(,)2 w)) }) -}
-17360bc3e8201d63c3fc5d4d3ac9d59c
+09ce5831af5edfcd188692302af1ad39
   $w$cshowsPrec9 ::
     GHC.Prim.Int#
     -> Messer.Tietotyyppi
@@ -3140,12 +3095,23 @@ bf41d4de4b56175748014be3792dcb5b
                    (ww1 :: Messer.Tietotyyppi)
                    (ww2 :: Messer.Id)
                    (w :: GHC.Base.String) ->
+                 let {
+                   f17 :: GHC.Base.String -> GHC.Base.String
+                     {- Arity: 1, Strictness: <L,1*U> -}
+                   = \ (eta :: GHC.Base.String)[OneShot] ->
+                     case ww1 of wild {
+                       Messer.TTInt
+                       -> GHC.Base.++ @ GHC.Types.Char Messer.$fShowLuokka9 eta
+                       Messer.TTBool
+                       -> GHC.Base.++ @ GHC.Types.Char Messer.$fShowLuokka7 eta
+                       Messer.TTString
+                       -> GHC.Base.++ @ GHC.Types.Char Messer.$fShowLuokka5 eta }
+                 } in
                  case GHC.Prim.>=# ww 11# of lwild {
                    DEFAULT
                    -> GHC.CString.unpackAppendCString#
-                        Messer.$fShowLuokka12
-                        (Messer.$w$cshowsPrec10
-                           ww1
+                        Messer.$fShowLuokka4
+                        (f17
                            (GHC.Types.:
                               @ GHC.Types.Char
                               GHC.Show.showSpace1
@@ -3156,9 +3122,8 @@ bf41d4de4b56175748014be3792dcb5b
                         @ GHC.Types.Char
                         GHC.Show.$fShow(,)4
                         (GHC.CString.unpackAppendCString#
-                           Messer.$fShowLuokka12
-                           (Messer.$w$cshowsPrec10
-                              ww1
+                           Messer.$fShowLuokka4
+                           (f17
                               (GHC.Types.:
                                  @ GHC.Types.Char
                                  GHC.Show.showSpace1
@@ -3295,7 +3260,7 @@ c09ca7db73570fab3ce9c52a00cc5064
 8fe39d271cd859547993b6e137162d77
   $wgo :: [GHC.Types.Char] -> GHC.Prim.Int# -> GHC.Types.Int
   {- Arity: 2, Strictness: <S,1*U><S,U>m, Inline: [2] -}
-6b2b775c4ad0e8f5d296c67505044022
+b9318c95e8f4b2c24a2bddfc79e854c5
   $wgo1 ::
     ([Messer.Lauseke] -> [Messer.Lauseke])
     -> forall b.
@@ -3318,7 +3283,7 @@ c09ca7db73570fab3ce9c52a00cc5064
   {- Arity: 5,
      Strictness: <L,C(U)><L,U(U,U,U)><L,C(C1(C1(U)))><L,U><L,C(C1(C1(U)))>,
      Inline: [2] -}
-5ed7f25af02cf7f6e9274eb6cba96ded
+c5fe0fb8cb312b72fea4b37cc4dd306d
   $wgo2 ::
     ([Messer.Aliohjelma] -> [Messer.Aliohjelma])
     -> forall b.
@@ -3341,7 +3306,7 @@ c09ca7db73570fab3ce9c52a00cc5064
   {- Arity: 5,
      Strictness: <L,C(U)><L,U(U,U,U)><L,C(C1(C1(U)))><L,U><L,C(C1(C1(U)))>,
      Inline: [2] -}
-7c18e8036749b243c555f9af925a6df2
+1a2f8d646a3ec1b12776d8c704a55284
   $widLoppuM ::
     Messer.Id
     -> forall b.
@@ -3523,7 +3488,7 @@ c987f2ed39efcd19851fc18c49d7a745
                                     t `cast` (Sub (Sym (Text.Megaparsec.Stream.D:R:Token[][0]))))))
                            Messer.jasennin3)
                         (Text.Megaparsec.State.State @ [GHC.Types.Char] wild ww1 ww2) }) -}
-16bd7a1af830969f0df0fcf185c4e188
+bc01f909dcc1dc5571ff8676a0751cb9
   $wparametrit ::
     Text.Megaparsec.State.State [GHC.Types.Char]
     -> ([Messer.Parametri]
@@ -3617,9 +3582,9 @@ c8f5aca8d86d2ff627d1160d81cfba91
                           `cast`
                         (Sym (Text.Megaparsec.Internal.N:Hints[0]
                                   <Text.Megaparsec.Stream.Token [GHC.Types.Char]>_N)) } }) -}
-751d449543c137d36c97de644f2b6fd2
+ea67a20a6ff998dcfcbb33a0a151c225
   data AKutsu = AKutsu Messer.Id [Messer.Maaritelma]
-d33ffb47eb0e18561df09a5c227ae5e8
+f616844a16ec6006fac1a1627820eb52
   data Aliohjelma
     = Aliohjelma Messer.Id
                  Messer.Palautustyyppi
@@ -3630,13 +3595,13 @@ bf41d4de4b56175748014be3792dcb5b
     = ArvoInt GHC.Types.Int
     | ArvoBool GHC.Types.Bool
     | ArvoString GHC.Base.String
-35ffe00197e7a7ad84ac30b44bd99abe
+1c899e862121308cd4f91402a82ba3f9
   data Ehtolause
     = If Messer.Maaritelma [Messer.Lauseke]
     | IfElse Messer.Maaritelma [Messer.Lauseke] [Messer.Lauseke]
 b8fb69268f765c3ef225c661dc5360de
   data Id = Id GHC.Base.String
-35ffe00197e7a7ad84ac30b44bd99abe
+1c899e862121308cd4f91402a82ba3f9
   data Lauseke
     = LTulostus Messer.Maaritelma
     | LSijoitus Messer.Sijoitus
@@ -3644,33 +3609,33 @@ b8fb69268f765c3ef225c661dc5360de
     | LEhto Messer.Ehtolause
     | LSilmukka Messer.Maaritelma [Messer.Lauseke]
     | LAKutsu Messer.AKutsu
-3c28d7793fdc23d267517a968ea01d61
+e7cb6c20637ed95ce0cae1a22331cd3d
   data Luokka
     = Luokka Messer.Id Messer.MainOhjelma [Messer.Aliohjelma]
-751d449543c137d36c97de644f2b6fd2
+ea67a20a6ff998dcfcbb33a0a151c225
   data Maaritelma
     = MId Messer.Id
     | MArvo Messer.Arvo
     | Aritmeettinen Messer.Op Messer.Maaritelma Messer.Maaritelma
     | Vertailu Messer.VOp Messer.Maaritelma Messer.Maaritelma
     | MAKutsu Messer.AKutsu
-bb968219de3a27be9e868866acd97afa
+76f67d672f2abe8d4a26760b75255aa7
   data MainOhjelma = MainOhjelma Messer.Parametri [Messer.Lauseke]
-1272d08cc29726bc4f2572d6bb1ba215
+bde17f79e23430487e427b810bff59a0
   data Op = Plus | Miinus | Kerto | Jako
-e05ac33899b5c6e273f74cb3d0739c84
+34c02ede3d9961458594ae2e3e82e002
   data Palautustyyppi = Palautustyyppi Messer.Tietotyyppi | Void
-e036b69e8a4ddab9e41face3197a0887
+3da2d94919361cdb400e175048f0ba4d
   data Parametri = Parametri Messer.Tietotyyppi Messer.Id
 51dad238f33036c72be56611d3b9c9be
   type Parser =
     Text.Megaparsec.Parsec Data.Void.Void GHC.Base.String :: * -> *
-ed3a72d4f2d33947cec13d2467374b94
+20044911cd3457ad5eccb21c1ded82e0
   data Sijoitus
     = UusiSijoitus Messer.Tietotyyppi Messer.Id Messer.Maaritelma
     | VanhaSijoitus Messer.Id Messer.Maaritelma
-7b4dd7e00fa6adef555f3eff25e44c2c
-  data Tietotyyppi = TTInt | TTBool | TTString | TTVoid
+e9c807259680593d625496093d974d4b
+  data Tietotyyppi = TTInt | TTBool | TTString
 0dfe887190fc5e7f9132b52740352094
   data VOp
     = Pienempi
@@ -3679,7 +3644,7 @@ ed3a72d4f2d33947cec13d2467374b94
     | SuurempiYhtasuuri
     | Yhtasuuri
     | Erisuuri
-7cca10627c643ffa03adae6bc803ffbb
+371ce1573722cdac1eb567e4b0f4ba87
   aTermi :: Messer.Parser Messer.Maaritelma
   {- Arity: 5,
      Strictness: <L,U><L,C(C1(C1(U)))><L,U><L,C(C1(C1(U)))><L,C(C1(U))>,
@@ -3691,7 +3656,7 @@ ed3a72d4f2d33947cec13d2467374b94
                           <[GHC.Types.Char]>_N
                           <Data.Functor.Identity.Identity>_R
                           <Messer.Maaritelma>_R)) -}
-f7e4848d205397fb3e9bab3dda240879
+1e09d07f23c44582650a48af452be891
   aTermi1 ::
     Text.Megaparsec.State.State [GHC.Types.Char]
     -> (Messer.Maaritelma
@@ -3715,7 +3680,7 @@ f7e4848d205397fb3e9bab3dda240879
     -> Data.Functor.Identity.Identity b
   {- Arity: 5,
      Strictness: <L,U><L,C(C1(C1(U)))><L,U><L,C(C1(C1(U)))><L,C(C1(U))> -}
-ba9aeb58f784c3f0295b7971f9d8658f
+39099ec3c4e91901b65a2d93dff0df64
   akutsu :: Messer.Parser Messer.AKutsu
   {- Arity: 5,
      Strictness: <L,U><L,C(C1(C1(U)))><L,U><L,C(C1(C1(U)))><L,U>,
@@ -3727,7 +3692,7 @@ ba9aeb58f784c3f0295b7971f9d8658f
                           <[GHC.Types.Char]>_N
                           <Data.Functor.Identity.Identity>_R
                           <Messer.AKutsu>_R)) -}
-0a2ab88563eb385345e8340ce2623e09
+f9bd2d784882e17c9cb30749275f1d53
   akutsu1 ::
     Text.Megaparsec.State.State [GHC.Types.Char]
     -> (Messer.AKutsu
@@ -3916,7 +3881,7 @@ ff1c024f4eb97f9ff64bc8fb595dc48c
                           -> Data.Functor.Identity.Identity b) ->
                  case w of ww { Text.Megaparsec.State.State ww1 ww2 ww3 ->
                  Messer.$widentifier @ b ww1 ww2 ww3 w1 w4 }) -}
-f9186b0be5d57244e6343aad24aa6c5b
+c64fe9414e042f8552bda1321434c4b0
   akutsu2 ::
     Messer.Id
     -> forall b.
@@ -4265,7 +4230,7 @@ f14a5ed4d5c89d493d961ec8998e1d06
 8940c7cb95f4adc6d678b08735360502
   asulut7 :: GHC.Prim.Addr#
   {- HasNoCafRefs, Unfolding: ("{"#) -}
-f71fdc545ab07040b84ac99d3dc08805
+941436bdbafec371a8ce5f754bbf74f9
   boolEtosi :: Messer.Parser Messer.Maaritelma
   {- Arity: 5,
      Strictness: <L,U><L,C(C1(C1(U)))><L,U><L,C(C1(C1(U)))><L,U>,
@@ -4277,7 +4242,7 @@ f71fdc545ab07040b84ac99d3dc08805
                           <[GHC.Types.Char]>_N
                           <Data.Functor.Identity.Identity>_R
                           <Messer.Maaritelma>_R)) -}
-3c9364336b73935dd9fc3f6a5bd23ef6
+3c22e79110e3f408fbbc44fa6d040e85
   boolEtosi1 ::
     Text.Megaparsec.State.State [GHC.Types.Char]
     -> (Messer.Maaritelma
@@ -4394,11 +4359,11 @@ fd849598c739731f219b8dd597d0f868
            -> Data.Functor.Identity.Identity b1)
        -> Data.Functor.Identity.Identity b1
   {- Arity: 1, Strictness: <L,U> -}
-4afe693e4748f49f2cc699762ac0bbc5
+9398d3aed906f19757c4123d406bd6e8
   boolEtosi_x :: Messer.Maaritelma
   {- HasNoCafRefs, Strictness: m2,
      Unfolding: (Messer.MArvo Messer.boolEtosi2) -}
-5070e113b7f4e97351923e0d9cd0e7f4
+ffa8d5bec82467d6b08ad4f444a98d8b
   boolTosi :: Messer.Parser Messer.Maaritelma
   {- Arity: 5,
      Strictness: <L,U><L,C(C1(C1(U)))><L,U><L,C(C1(C1(U)))><L,U>,
@@ -4410,7 +4375,7 @@ fd849598c739731f219b8dd597d0f868
                           <[GHC.Types.Char]>_N
                           <Data.Functor.Identity.Identity>_R
                           <Messer.Maaritelma>_R)) -}
-c8d718d932aa835c9fb639bc41d06dff
+fb67e1b58cf2abdc84841933bde04efb
   boolTosi1 ::
     Text.Megaparsec.State.State [GHC.Types.Char]
     -> (Messer.Maaritelma
@@ -4502,11 +4467,11 @@ b8af5657c109bd68af59ccc4dd820b49
 2cba7714eef05c25b8e65d6673273198
   boolTosi5 :: GHC.Prim.Addr#
   {- HasNoCafRefs, Unfolding: ("true"#) -}
-bec2f58f551255b6d71382183ca8be98
+8b24f0b4727eb1a105cce68f8ac81b48
   boolTosi_x :: Messer.Maaritelma
   {- HasNoCafRefs, Strictness: m2,
      Unfolding: (Messer.MArvo Messer.boolTosi2) -}
-2fd3f51a9c8f72747029b51881611dae
+43bab6c8ab64f6539403cd766102e665
   booli :: Messer.Parser Messer.Tietotyyppi
   {- Arity: 5,
      Strictness: <L,U><L,C(C1(C1(U)))><L,U><L,C(C1(C1(U)))><L,U>,
@@ -4518,7 +4483,7 @@ bec2f58f551255b6d71382183ca8be98
                           <[GHC.Types.Char]>_N
                           <Data.Functor.Identity.Identity>_R
                           <Messer.Tietotyyppi>_R)) -}
-0ec816867df1ce3720d88ac951458526
+2d7d6b3f47fdadbbf05921bea99cd7f1
   booli1 ::
     Text.Megaparsec.State.State [GHC.Types.Char]
     -> (Messer.Tietotyyppi
@@ -4606,7 +4571,7 @@ a2acfcf77b6898ccc3487640f1c588bc
 b78ce732d90d8d7e2fd6ae4c661f5556
   booli4 :: GHC.Prim.Addr#
   {- HasNoCafRefs, Unfolding: ("bool"#) -}
-6b58bb134cb9f4046975d910a55ae562
+abfe58fcfc1f699279901f15ab51f347
   ehtolause :: Messer.Parser Messer.Lauseke
   {- Arity: 5,
      Strictness: <L,U><L,C(C1(C1(U)))><L,U><L,C(C1(C1(U)))><L,C(C1(U))>,
@@ -4618,7 +4583,7 @@ b78ce732d90d8d7e2fd6ae4c661f5556
                           <[GHC.Types.Char]>_N
                           <Data.Functor.Identity.Identity>_R
                           <Messer.Lauseke>_R)) -}
-22e101af14001690eeef43bdb3cf1cd9
+17a274c873224d6d15fcf192f99bc931
   ehtolause1 ::
     Text.Megaparsec.State.State [GHC.Types.Char]
     -> (Messer.Lauseke
@@ -4642,7 +4607,7 @@ b78ce732d90d8d7e2fd6ae4c661f5556
     -> Data.Functor.Identity.Identity b
   {- Arity: 5,
      Strictness: <L,U><L,C(C1(C1(U)))><L,U><L,C(C1(C1(U)))><L,C(C1(U))> -}
-3742367245bb21e7ea651d26f60ea233
+c0efc531f2356e852f08acb7ce436c1f
   elsellinen :: Messer.Parser Messer.Lauseke
   {- Arity: 5,
      Strictness: <L,U><L,C(C1(C1(U)))><L,U><L,C(C1(C1(U)))><L,U>,
@@ -4654,7 +4619,7 @@ b78ce732d90d8d7e2fd6ae4c661f5556
                           <[GHC.Types.Char]>_N
                           <Data.Functor.Identity.Identity>_R
                           <Messer.Lauseke>_R)) -}
-2c2375a45bcb04c11ad409edf7b410ff
+94ff676e8027afe5a306671ab5e239d2
   elsellinen1 ::
     Text.Megaparsec.State.State [GHC.Types.Char]
     -> (Messer.Lauseke
@@ -4784,7 +4749,7 @@ da3815c516be87ecaf36275fcbc76ce8
 796d48d3e9b2fe72eb512740a27a7beb
   elsellinen14 :: GHC.Prim.Addr#
   {- HasNoCafRefs, Unfolding: ("if"#) -}
-b03bf3cdaa6509f355f7358d3e70f4b3
+90c00bffed678b98a4444f8f6a5b5df3
   elsellinen2 ::
     Text.Megaparsec.State.State [GHC.Types.Char]
     -> (Messer.Lauseke
@@ -4901,7 +4866,7 @@ b03bf3cdaa6509f355f7358d3e70f4b3
                          hs
                          eerr))
                    eerr) -}
-143ce331c705785e31090e922ee32990
+eace723cc5e449d7337f2f5756907c3d
   elsellinen3 ::
     Messer.Maaritelma
     -> forall b.
@@ -4960,7 +4925,7 @@ efcaee30cb9781fdb06a678a0221d81b
 e8eb1826bf36fb8df0f3d15dadb2a873
   elsellinen6 :: GHC.Prim.Addr#
   {- HasNoCafRefs, Unfolding: (")"#) -}
-fcb8fc0ef10e5fcda5e79a55c03537b5
+105a6ea34c5849c95a54f65c4d07628c
   elsellinen7 ::
     Text.Megaparsec.State.State [GHC.Types.Char]
     -> (Messer.Maaritelma
@@ -5004,7 +4969,7 @@ fcb8fc0ef10e5fcda5e79a55c03537b5
                              <[GHC.Types.Char]>_N
                              <Data.Functor.Identity.Identity>_R
                              <Messer.Maaritelma>_R))) -}
-efe8b00569130b0abaaea932216dae7b
+3b47cf7047c699d1e7d41a3bb78911aa
   elsellinen8 ::
     Text.Megaparsec.State.State [GHC.Types.Char]
     -> (Messer.Maaritelma
@@ -5054,7 +5019,7 @@ dec6f120a12a77609008ac830d7b05df
                    Messer.elsellinen10
                      `cast`
                    (Sub (Sym (Text.Megaparsec.Stream.D:R:Tokens[][0])))) -}
-f72a27446091f7ef6a5d7e61c913184e
+8dda0a4dc81310ee1f6606a6f0c70529
   elseton :: Messer.Parser Messer.Lauseke
   {- Arity: 5,
      Strictness: <L,U><L,C(C1(C1(U)))><L,U><L,C(C1(C1(U)))><L,U>,
@@ -5066,7 +5031,7 @@ f72a27446091f7ef6a5d7e61c913184e
                           <[GHC.Types.Char]>_N
                           <Data.Functor.Identity.Identity>_R
                           <Messer.Lauseke>_R)) -}
-3a523786f3161f5ae8fd477f0487f45a
+7bd0367cf5a1d8fbeeec124c4a11b146
   elseton1 ::
     Text.Megaparsec.State.State [GHC.Types.Char]
     -> (Messer.Lauseke
@@ -5161,7 +5126,7 @@ f72a27446091f7ef6a5d7e61c913184e
                          hs
                          eerr))
                    eerr) -}
-fd26e09e2f0745b8a94880e1346d229f
+413a65bc83844adba57d27c79c98a453
   elseton2 ::
     Text.Megaparsec.State.State [GHC.Types.Char]
     -> (Messer.Lauseke
@@ -5278,7 +5243,7 @@ fd26e09e2f0745b8a94880e1346d229f
                          hs
                          eerr))
                    eerr) -}
-e1aa48bbe5fbaaabf6f4858d01202ed7
+88ced43ecb6bd339f854708014570758
   elseton3 ::
     Messer.Maaritelma
     -> forall b.
@@ -5360,7 +5325,7 @@ e1aa48bbe5fbaaabf6f4858d01202ed7
                                (Text.Megaparsec.Stream.Token [GHC.Types.Char]))[OneShot] ->
                     eta3 (Messer.LEhto (Messer.If ehto x)) s' hs)
                    eta4) -}
-432b0c8f4fa86761b13260ae9a089b1e
+1944a5c2097ec0d87cff6acab04446ae
   elseton4 ::
     Text.Megaparsec.State.State [GHC.Types.Char]
     -> ([Messer.Lauseke]
@@ -5404,7 +5369,7 @@ e1aa48bbe5fbaaabf6f4858d01202ed7
                              <[GHC.Types.Char]>_N
                              <Data.Functor.Identity.Identity>_R
                              <[Messer.Lauseke]>_R))) -}
-ebfa80ff2008311ad8ef4397b76e0695
+b52a4c7c171561ad478959ed3ff98d5a
   elseton5 ::
     Text.Megaparsec.State.State [GHC.Types.Char]
     -> ([Messer.Lauseke]
@@ -5449,7 +5414,7 @@ ebfa80ff2008311ad8ef4397b76e0695
                           -> Text.Megaparsec.State.State [GHC.Types.Char]
                           -> Data.Functor.Identity.Identity b) ->
                  Messer.$wgo1 (GHC.Base.id @ [Messer.Lauseke]) @ b w w1 w2 w3) -}
-74348a89513772285238bc3d857381d2
+a760b227b95e17b39765367544b52a59
   idAlku :: Messer.Parser Messer.Lauseke
   {- Arity: 5,
      Strictness: <L,U><L,C(C1(C1(U)))><L,U><L,C(C1(C1(U)))><L,U>,
@@ -5461,7 +5426,7 @@ ebfa80ff2008311ad8ef4397b76e0695
                           <[GHC.Types.Char]>_N
                           <Data.Functor.Identity.Identity>_R
                           <Messer.Lauseke>_R)) -}
-8ec9b9231b85ddb95845b69ac59f1bb9
+d144ba300e86be3a17f9a656bc9dc9b8
   idAlku1 ::
     Text.Megaparsec.State.State [GHC.Types.Char]
     -> (Messer.Lauseke
@@ -5506,7 +5471,7 @@ ebfa80ff2008311ad8ef4397b76e0695
                             -> Text.Megaparsec.State.State [GHC.Types.Char]
                             -> Data.Functor.Identity.Identity b1) ->
                  let {
-                   lvl46 :: Messer.Lauseke
+                   lvl48 :: Messer.Lauseke
                             -> Text.Megaparsec.State.State [GHC.Types.Char]
                             -> Text.Megaparsec.Internal.Hints
                                  (Text.Megaparsec.Stream.Token [GHC.Types.Char])
@@ -5549,7 +5514,7 @@ ebfa80ff2008311ad8ef4397b76e0695
                       x
                       @ b1
                       s'
-                      lvl46
+                      lvl48
                       cerr
                       (\ (x1 :: Messer.Lauseke)
                          (s'1 :: Text.Megaparsec.State.State [GHC.Types.Char])[OneShot]
@@ -5581,7 +5546,7 @@ ebfa80ff2008311ad8ef4397b76e0695
                       x
                       @ b1
                       s'
-                      lvl46
+                      lvl48
                       cerr
                       (\ (x1 :: Messer.Lauseke)
                          (s'1 :: Text.Megaparsec.State.State [GHC.Types.Char])[OneShot]
@@ -5605,7 +5570,7 @@ ebfa80ff2008311ad8ef4397b76e0695
                          hs
                          eerr))
                    eerr) -}
-b1341153f003cd5a249bacba4ce309e8
+de352bae4bc296b8211970a53f56bd3d
   idAlku2 ::
     Messer.Id
     -> forall b.
@@ -5631,7 +5596,7 @@ b1341153f003cd5a249bacba4ce309e8
        -> Data.Functor.Identity.Identity b
   {- Arity: 6,
      Strictness: <L,U><L,U><L,C(C1(C1(U)))><L,U><L,C(C1(C1(U)))><L,C(C1(U))> -}
-732b68ad84a645313dcba5b808b29b62
+1d855efd8cfa96f924e2825d770e7664
   idAlkuM :: Messer.Parser Messer.Maaritelma
   {- Arity: 5,
      Strictness: <L,U><L,C(C1(C1(U)))><L,U><L,C(C1(C1(U)))><L,U>,
@@ -5643,7 +5608,7 @@ b1341153f003cd5a249bacba4ce309e8
                           <[GHC.Types.Char]>_N
                           <Data.Functor.Identity.Identity>_R
                           <Messer.Maaritelma>_R)) -}
-558c8dd596e121f0cf442eefae03fa4c
+44bbaf3dc52b68f9170f389581a88a4f
   idAlkuM1 ::
     Text.Megaparsec.State.State [GHC.Types.Char]
     -> (Messer.Maaritelma
@@ -5688,7 +5653,7 @@ b1341153f003cd5a249bacba4ce309e8
                             -> Text.Megaparsec.State.State [GHC.Types.Char]
                             -> Data.Functor.Identity.Identity b1) ->
                  let {
-                   lvl46 :: Messer.Maaritelma
+                   lvl48 :: Messer.Maaritelma
                             -> Text.Megaparsec.State.State [GHC.Types.Char]
                             -> Text.Megaparsec.Internal.Hints
                                  (Text.Megaparsec.Stream.Token [GHC.Types.Char])
@@ -5731,7 +5696,7 @@ b1341153f003cd5a249bacba4ce309e8
                       x
                       @ b1
                       s'
-                      lvl46
+                      lvl48
                       cerr
                       (\ (x1 :: Messer.Maaritelma)
                          (s'1 :: Text.Megaparsec.State.State [GHC.Types.Char])[OneShot]
@@ -5757,7 +5722,7 @@ b1341153f003cd5a249bacba4ce309e8
                       x
                       @ b1
                       s'
-                      lvl46
+                      lvl48
                       cerr
                       (\ (x1 :: Messer.Maaritelma)
                          (s'1 :: Text.Megaparsec.State.State [GHC.Types.Char])[OneShot]
@@ -5775,7 +5740,7 @@ b1341153f003cd5a249bacba4ce309e8
                          s'1
                          hs1))
                    eerr) -}
-60395248fc7784b046f670915d498c20
+276ca061819516d9d63d6fb9360cf0e2
   idAlkuM2 ::
     Messer.Id
     -> forall b.
@@ -5801,7 +5766,7 @@ b1341153f003cd5a249bacba4ce309e8
        -> Data.Functor.Identity.Identity b
   {- Arity: 6,
      Strictness: <L,U><L,U><L,C(C1(C1(U)))><L,U><L,C(C1(C1(U)))><L,U> -}
-ae3dfd223baf23cc4f52857d9f624494
+1c841c82910e63217512bb3056d00025
   idLoppu :: Messer.Id -> Messer.Parser Messer.Lauseke
   {- Arity: 6,
      Strictness: <L,U><L,U><L,C(C1(C1(U)))><L,U><L,C(C1(C1(U)))><L,C(C1(U))>,
@@ -5814,7 +5779,7 @@ ae3dfd223baf23cc4f52857d9f624494
                                <[GHC.Types.Char]>_N
                                <Data.Functor.Identity.Identity>_R
                                <Messer.Lauseke>_R)) -}
-769880b4001fa3b3c390f7e2ad55474e
+d4928e106e85163ca4e8717b681db323
   idLoppuM :: Messer.Id -> Messer.Parser Messer.Maaritelma
   {- Arity: 6,
      Strictness: <L,U><L,U(U,U,U)><L,C(C1(C1(U)))><L,U><L,C(C1(C1(U)))><L,A>,
@@ -5827,7 +5792,7 @@ ae3dfd223baf23cc4f52857d9f624494
                                <[GHC.Types.Char]>_N
                                <Data.Functor.Identity.Identity>_R
                                <Messer.Maaritelma>_R)) -}
-f2ee075ab63bfbeb9275025c46757c18
+95bd50d9d820e5acc6e41c0c53dd4be7
   idLoppuM1 ::
     Messer.Id
     -> forall b.
@@ -5987,7 +5952,7 @@ f2ee075ab63bfbeb9275025c46757c18
                              <GHC.Base.String>_N
                              <Data.Functor.Identity.Identity>_R
                              <()>_R))) -}
-801a6d553d28f6403abd44cab0bab917
+c58f1d171a0df450ebf4140896135dea
   intti :: Messer.Parser Messer.Tietotyyppi
   {- Arity: 5,
      Strictness: <L,U><L,C(C1(C1(U)))><L,U><L,C(C1(C1(U)))><L,U>,
@@ -5999,7 +5964,7 @@ f2ee075ab63bfbeb9275025c46757c18
                           <[GHC.Types.Char]>_N
                           <Data.Functor.Identity.Identity>_R
                           <Messer.Tietotyyppi>_R)) -}
-2aeba1f61588c7eafe847bda2a406ba8
+277ce7ea8e47071970936512f2ce46fe
   intti1 ::
     Text.Megaparsec.State.State [GHC.Types.Char]
     -> (Messer.Tietotyyppi
@@ -6087,7 +6052,7 @@ eb123bcf982b214434f4ffb8bcd67c26
 259963b3896c976206c69b7764acedce
   intti4 :: GHC.Prim.Addr#
   {- HasNoCafRefs, Unfolding: ("int"#) -}
-7cfea437fa7b66267d50ddf02e884b4d
+443b9b12e5eb17b97d4d55c3cd0ae780
   jAliohjelma :: Messer.Parser [Messer.Aliohjelma]
   {- Arity: 5,
      Strictness: <L,U(U,U,U)><L,C(C1(C1(U)))><L,U><L,C(C1(C1(U)))><L,A>,
@@ -6099,7 +6064,7 @@ eb123bcf982b214434f4ffb8bcd67c26
                           <[GHC.Types.Char]>_N
                           <Data.Functor.Identity.Identity>_R
                           <[Messer.Aliohjelma]>_R)) -}
-7bc144bf2991f99cbc1b9cf2d50da201
+a4e85ae4ef78184cc75272227f338303
   jAliohjelma' :: Messer.Parser Messer.Aliohjelma
   {- Arity: 5,
      Strictness: <L,U><L,C(C1(C1(U)))><L,U><L,C(C1(C1(U)))><L,C(U)>,
@@ -6111,7 +6076,7 @@ eb123bcf982b214434f4ffb8bcd67c26
                           <[GHC.Types.Char]>_N
                           <Data.Functor.Identity.Identity>_R
                           <Messer.Aliohjelma>_R)) -}
-fe21b98961c815c1c2a81a265ae5ff27
+1b3f836a03bbdad8a2486c52cd62cce5
   jAliohjelma'1 ::
     Text.Megaparsec.State.State [GHC.Types.Char]
     -> (Messer.Aliohjelma
@@ -6208,7 +6173,7 @@ fe21b98961c815c1c2a81a265ae5ff27
                          hs
                          eerr))
                    eerr) -}
-5f87c00fc15e44d88cf668b04961cb24
+976ac6f26769a0009a341ebe6847a1c6
   jAliohjelma'2 ::
     Messer.Palautustyyppi
     -> forall b.
@@ -6234,7 +6199,7 @@ fe21b98961c815c1c2a81a265ae5ff27
        -> Data.Functor.Identity.Identity b
   {- Arity: 6,
      Strictness: <L,U><L,U><L,C(C1(C1(U)))><L,U><L,C(C1(C1(U)))><L,U> -}
-a95a913b953773c64b21b0c2420f4828
+4c8d0cc3d5b64809572b5ed955605591
   jAliohjelma'3 ::
     Text.Megaparsec.State.State [GHC.Types.Char]
     -> (Messer.Palautustyyppi
@@ -6258,7 +6223,7 @@ a95a913b953773c64b21b0c2420f4828
     -> Data.Functor.Identity.Identity b
   {- Arity: 5,
      Strictness: <L,U><L,C(C1(C1(U)))><L,U><L,C(C1(C1(U)))><L,C(C1(U))> -}
-3f17cbcb27556212df07206d2ef4e00c
+8fda122a937166b9dbbcd1fd9bc64aa5
   jAliohjelma1 ::
     Text.Megaparsec.State.State [GHC.Types.Char]
     -> ([Messer.Aliohjelma]
@@ -6303,7 +6268,7 @@ a95a913b953773c64b21b0c2420f4828
                           -> Text.Megaparsec.State.State [GHC.Types.Char]
                           -> Data.Functor.Identity.Identity b) ->
                  Messer.$wgo2 (GHC.Base.id @ [Messer.Aliohjelma]) @ b w w1 w2 w3) -}
-dcf6c4b479e13f0de29075ddba231912
+7f43d23726a7402444193df03dd64738
   jMain :: Messer.Parser Messer.MainOhjelma
   {- Arity: 5,
      Strictness: <L,U><L,C(C1(C1(U)))><L,U><L,C(C1(C1(U)))><L,U>,
@@ -6315,7 +6280,7 @@ dcf6c4b479e13f0de29075ddba231912
                           <[GHC.Types.Char]>_N
                           <Data.Functor.Identity.Identity>_R
                           <Messer.MainOhjelma>_R)) -}
-f58b3080b9d131de86d0f2884b2154b4
+1ac4b4b650e3eaa4b384a73ef60bbd38
   jMain1 ::
     Text.Megaparsec.State.State [GHC.Types.Char]
     -> (Messer.MainOhjelma
@@ -6442,7 +6407,7 @@ f323fc5670da7f68480db1e59fb7a10a
 a987ee3e00ead453a1839e97b05824c4
   jMain13 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# Messer.$trModule4) -}
-d636733ad118443e667db04e0758e562
+bf463bf1f84b457cf7843cd4c0f20582
   jMain2 ::
     Text.Megaparsec.State.State [GHC.Types.Char]
     -> (Messer.MainOhjelma
@@ -6590,7 +6555,7 @@ d636733ad118443e667db04e0758e562
                                                -> Data.Functor.Identity.Identity b1)
                                               -> Data.Functor.Identity.Identity b1>_R)))))
                    eerr) -}
-b5c997da4bcae68a5321a75ebdebe588
+5d72f227de303839473ba04e0e746510
   jMain3 ::
     Text.Megaparsec.State.State [GHC.Types.Char]
     -> (Messer.MainOhjelma
@@ -6685,7 +6650,7 @@ b5c997da4bcae68a5321a75ebdebe588
                          hs
                          eerr))
                    eerr) -}
-2abf94c35706dad188f632193cca72c5
+bd8084f266e8b4bc00374c436be30bb1
   jMain4 ::
     Text.Megaparsec.State.State [GHC.Types.Char]
     -> (Messer.MainOhjelma
@@ -6833,7 +6798,7 @@ b5c997da4bcae68a5321a75ebdebe588
                                                -> Data.Functor.Identity.Identity b1)
                                               -> Data.Functor.Identity.Identity b1>_R)))))
                    eerr) -}
-bd971b0e7721b822a4b22b03824b9cf4
+bc0d97bfe74344aba95ab1f44408b2b9
   jMain5 ::
     Text.Megaparsec.State.State [GHC.Types.Char]
     -> (Messer.MainOhjelma
@@ -6950,7 +6915,7 @@ bd971b0e7721b822a4b22b03824b9cf4
                          hs
                          eerr))
                    eerr) -}
-0d35b1a54db7192b404a6ecca92cd2a7
+58e33b85a4f3bc30df0a04437daa03fd
   jMain6 ::
     Messer.Id
     -> forall b.
@@ -7005,7 +6970,7 @@ ed6ec415284919cf395ff572d8307451
         -> Data.Functor.Identity.Identity b1)
     -> Data.Functor.Identity.Identity b1
   {- Unfolding: (Messer.boolEtosi6 Messer.jMain10) -}
-5cac17e34088f304205cc6f182e1d084
+d994bc7a75b7773eb39d2d598e88a60d
   jasennin :: Messer.Parser Messer.Luokka
   {- Arity: 5,
      Unfolding: InlineRule (0, True, True)
@@ -7016,7 +6981,7 @@ ed6ec415284919cf395ff572d8307451
                           <[GHC.Types.Char]>_N
                           <Data.Functor.Identity.Identity>_R
                           <Messer.Luokka>_R)) -}
-54ce2a6f05640d5bbfd4daecfcaee8a6
+70e824889da2b24dd7ef3e301b07a8d8
   jasennin1 ::
     Text.Megaparsec.State.State [GHC.Types.Char]
     -> (Messer.Luokka
@@ -7129,7 +7094,7 @@ af3157c6b7c3877be1afe0ba53c8a265
                    (Data.Set.Internal.Tip
                       @ (Text.Megaparsec.Error.ErrorItem
                            (Text.Megaparsec.Stream.Token [GHC.Types.Char])))) -}
-8eb69f56ca6fef7180ad81f886950345
+99ae3c4d68f5f66674a498efd84ff1b9
   jasennin4 ::
     Text.Megaparsec.State.State [GHC.Types.Char]
     -> (Messer.Luokka
@@ -7173,7 +7138,7 @@ af3157c6b7c3877be1afe0ba53c8a265
                              <[GHC.Types.Char]>_N
                              <Data.Functor.Identity.Identity>_R
                              <Messer.Luokka>_R))) -}
-7731298248abc4937f9013e8ca78c552
+90b6e34f84caf03fd58c780325f35a5c
   jasennin5 ::
     Text.Megaparsec.State.State [GHC.Types.Char]
     -> (Messer.Luokka
@@ -7268,7 +7233,7 @@ af3157c6b7c3877be1afe0ba53c8a265
                          hs
                          eerr))
                    eerr) -}
-1e3beec857531a636a0f6a353405ed0a
+6a3a8294376c04dca45730ef3cf77f33
   jasennin6 ::
     Text.Megaparsec.State.State [GHC.Types.Char]
     -> (Messer.Luokka
@@ -7385,7 +7350,7 @@ af3157c6b7c3877be1afe0ba53c8a265
                          hs
                          eerr))
                    eerr) -}
-c4acf78c0b79e37f74131adb4610fc7a
+11e0f96ad70d5cebfeb8f48c10a798d2
   jasennin7 ::
     Messer.Id
     -> forall b.
@@ -7481,7 +7446,7 @@ f3e0753fb151785b1172586e34428f64
 e906226bb947a7a1b914c29594d8d822
   km3 :: GHC.Prim.Addr#
   {- HasNoCafRefs, Unfolding: ("?"#) -}
-e3aef613298e820bcf310d3a5300ba70
+23f8995277d61b069aac87c725019cbc
   lakutsu :: Messer.Id -> Messer.Parser Messer.Lauseke
   {- Arity: 6,
      Strictness: <L,U><L,U><L,C(C1(C1(U)))><L,U><L,C(C1(C1(U)))><L,U>,
@@ -7494,7 +7459,7 @@ e3aef613298e820bcf310d3a5300ba70
                                <[GHC.Types.Char]>_N
                                <Data.Functor.Identity.Identity>_R
                                <Messer.Lauseke>_R)) -}
-d0e64483524b90d0fbcdb23bbf49b9c7
+9282bf8bde1c4e625b4a9eb948257a3b
   lakutsu1 ::
     Messer.Id
     -> forall b.
@@ -7520,7 +7485,7 @@ d0e64483524b90d0fbcdb23bbf49b9c7
        -> Data.Functor.Identity.Identity b
   {- Arity: 6,
      Strictness: <L,U><L,U><L,C(C1(C1(U)))><L,U><L,C(C1(C1(U)))><L,U> -}
-d753cd1fd07c1eedea438e560fe5d6bd
+13f2dcb2a67d23f7d756b7f87c1fb32a
   lauseke :: Messer.Parser [Messer.Lauseke]
   {- Arity: 5,
      Strictness: <L,U(U,U,U)><L,C(C1(C1(U)))><L,U><L,C(C1(C1(U)))><L,A>,
@@ -7532,7 +7497,7 @@ d753cd1fd07c1eedea438e560fe5d6bd
                           <[GHC.Types.Char]>_N
                           <Data.Functor.Identity.Identity>_R
                           <[Messer.Lauseke]>_R)) -}
-f0ca5b50fdcd7c50586bfb1862e2ec45
+561002baca082c8d599eb9a79aac985f
   lauseke' :: Messer.Parser Messer.Lauseke
   {- Arity: 5,
      Strictness: <L,U><L,C(C1(C1(U)))><L,U><L,C(C1(C1(U)))><L,C(C1(U))>,
@@ -7544,7 +7509,7 @@ f0ca5b50fdcd7c50586bfb1862e2ec45
                           <[GHC.Types.Char]>_N
                           <Data.Functor.Identity.Identity>_R
                           <Messer.Lauseke>_R)) -}
-5f9c4b4a2bda9addf70cae71771fa31a
+9e93a6691dbe717276fa38fb9996b56c
   lauseke'1 ::
     Text.Megaparsec.State.State [GHC.Types.Char]
     -> (Messer.Lauseke
@@ -7627,7 +7592,7 @@ c495ad84e776460d922cd56822faacae
                              <GHC.Base.String>_N
                              <Data.Functor.Identity.Identity>_R
                              <()>_R))) -}
-b8deefc95ddae5e2cfc74a1ef270bb8e
+9d054ad383939c24486db7c43e6ec238
   luku :: Messer.Parser Messer.Maaritelma
   {- Arity: 5,
      Strictness: <L,U><L,C(C1(C1(U)))><L,U><L,C(C1(C1(U)))><L,U>,
@@ -7639,7 +7604,7 @@ b8deefc95ddae5e2cfc74a1ef270bb8e
                           <[GHC.Types.Char]>_N
                           <Data.Functor.Identity.Identity>_R
                           <Messer.Maaritelma>_R)) -}
-e9e6c5f3b5fad9f209eb9f031f73979c
+ba846f440413cf3e539060fbb1947d61
   luku1 ::
     Text.Megaparsec.State.State [GHC.Types.Char]
     -> (Messer.Maaritelma
@@ -7718,7 +7683,7 @@ e9e6c5f3b5fad9f209eb9f031f73979c
                                (Text.Megaparsec.Stream.Token [GHC.Types.Char]))[OneShot] ->
                     eok (Messer.MArvo (Messer.ArvoInt x)) s' hs)
                    eerr) -}
-18c95d95731f809afb53ddf9e3632c3b
+992664c2fa57c3f28b76dda8fc2304a3
   luokka :: Messer.Parser Messer.Luokka
   {- Arity: 5,
      Strictness: <L,U><L,C(C1(C1(U)))><L,U><L,C(C1(C1(U)))><L,U>,
@@ -7730,7 +7695,7 @@ e9e6c5f3b5fad9f209eb9f031f73979c
                           <[GHC.Types.Char]>_N
                           <Data.Functor.Identity.Identity>_R
                           <Messer.Luokka>_R)) -}
-0a6b45839668ea495ad2493af7c5bd15
+239a226132c7b90f8c1ee4ce235c2472
   maaritelma :: Messer.Parser Messer.Maaritelma
   {- Arity: 5, Strictness: <L,U><L,U><L,U><L,U><L,C(C1(U))>,
      Unfolding: InlineRule (0, True, True)
@@ -7741,7 +7706,7 @@ e9e6c5f3b5fad9f209eb9f031f73979c
                           <[GHC.Types.Char]>_N
                           <Data.Functor.Identity.Identity>_R
                           <Messer.Maaritelma>_R)) -}
-d399abbb8d1e4522d49310d6a20feb4b
+79cfcb22f52b393b975b3941ce4aca1f
   makutsu :: Messer.Id -> Messer.Parser Messer.Maaritelma
   {- Arity: 6,
      Strictness: <L,U><L,U><L,C(C1(C1(U)))><L,U><L,C(C1(C1(U)))><L,U>,
@@ -7754,7 +7719,7 @@ d399abbb8d1e4522d49310d6a20feb4b
                                <[GHC.Types.Char]>_N
                                <Data.Functor.Identity.Identity>_R
                                <Messer.Maaritelma>_R)) -}
-5e62298344518d889e036262d8fcdbd8
+0fc8030b4a54723723b031c1d0f421ad
   mid :: Messer.Parser Messer.Maaritelma
   {- Arity: 5,
      Strictness: <L,U><L,C(C1(C1(U)))><L,U><L,C(C1(C1(U)))><L,U>,
@@ -7766,7 +7731,7 @@ d399abbb8d1e4522d49310d6a20feb4b
                           <[GHC.Types.Char]>_N
                           <Data.Functor.Identity.Identity>_R
                           <Messer.Maaritelma>_R)) -}
-1e37264ba5d15cf45fc574e8a1166b0e
+e09727341cd0bc6cc576c4808b5dada8
   mid1 ::
     Text.Megaparsec.State.State [GHC.Types.Char]
     -> (Messer.Maaritelma
@@ -7845,7 +7810,7 @@ d399abbb8d1e4522d49310d6a20feb4b
                                (Text.Megaparsec.Stream.Token [GHC.Types.Char]))[OneShot] ->
                     eok (Messer.MId x) s' hs)
                    eerr) -}
-7c12fb931e2d13779a9c6fffb1484950
+c7edf220d8b7d1f1b8b91cbc2f3fe760
   mjono :: Messer.Parser Messer.Maaritelma
   {- Arity: 5,
      Strictness: <L,U><L,C(C1(C1(U)))><L,U><L,C(C1(C1(U)))><L,U>,
@@ -7857,7 +7822,7 @@ d399abbb8d1e4522d49310d6a20feb4b
                           <[GHC.Types.Char]>_N
                           <Data.Functor.Identity.Identity>_R
                           <Messer.Maaritelma>_R)) -}
-f34517a11d0c4ceb037bd7f5bd3a618c
+7f3dbaafdf87a59cc2352f8f1735223b
   mjono1 ::
     Text.Megaparsec.State.State [GHC.Types.Char]
     -> (Messer.Maaritelma
@@ -8005,7 +7970,7 @@ f34517a11d0c4ceb037bd7f5bd3a618c
                                                -> Data.Functor.Identity.Identity b1)
                                               -> Data.Functor.Identity.Identity b1>_R)))))
                    eerr) -}
-7551fe4a56cb9460fce8bd994d736b05
+49eba42013643e0f253697a5967aefdd
   mjono2 ::
     Text.Megaparsec.State.State [GHC.Types.Char]
     -> (Messer.Maaritelma
@@ -8097,7 +8062,7 @@ d41064e8544bd545084aeb09db82e691
 9812b71c2d12f5f792b557bd4f1ec545
   mjono5 :: GHC.Prim.Addr#
   {- HasNoCafRefs, Unfolding: ("\""#) -}
-8b18f07ce732fecba222443171c57cbb
+63fa42c70386f43ac1fd696cadb69d62
   oMaaritelma :: Messer.Parser Messer.Maaritelma
   {- Unfolding: (Messer.oMaaritelma_go
                    Messer.operaattorit
@@ -8108,7 +8073,7 @@ d41064e8544bd545084aeb09db82e691
                              <[GHC.Types.Char]>_N
                              <Data.Functor.Identity.Identity>_R
                              <Messer.Maaritelma>_R))) -}
-4fea2758d4ea36607fd2bda5bbd6414b
+f73945f4f588c70ffc14808dc44a9071
   oMaaritelma_go ::
     [[Control.Monad.Combinators.Expr.Operator
         (Text.Megaparsec.Internal.ParsecT
@@ -8125,7 +8090,7 @@ d41064e8544bd545084aeb09db82e691
          Data.Functor.Identity.Identity
          Messer.Maaritelma
   {- Arity: 2, Strictness: <S,1*U><L,U> -}
-2b08a2bef34542a04be70dedee710798
+590b8911676f69e69a4d2f80e09d41ed
   operaattorit ::
     [[Control.Monad.Combinators.Expr.Operator
         Messer.Parser Messer.Maaritelma]]
@@ -8135,7 +8100,7 @@ d41064e8544bd545084aeb09db82e691
                         Messer.Parser Messer.Maaritelma]
                    Messer.operaattorit43
                    Messer.operaattorit1) -}
-0a0550647921257e9becd6f755fa558f
+fde514bf7e4896b7f29e38ef1dae4f05
   operaattorit1 ::
     [[Control.Monad.Combinators.Expr.Operator
         Messer.Parser Messer.Maaritelma]]
@@ -8145,7 +8110,7 @@ d41064e8544bd545084aeb09db82e691
                         Messer.Parser Messer.Maaritelma]
                    Messer.operaattorit33
                    Messer.operaattorit2) -}
-618df33768dc331529b7d7191f5ed703
+96ede16f207e8c9b3db93a262176dabb
   operaattorit10 ::
     Text.Megaparsec.State.State [GHC.Types.Char]
     -> ((Messer.Maaritelma -> Messer.Maaritelma -> Messer.Maaritelma)
@@ -8192,14 +8157,14 @@ d41064e8544bd545084aeb09db82e691
                             -> Text.Megaparsec.State.State [GHC.Types.Char]
                             -> Data.Functor.Identity.Identity b1) ->
                  let {
-                   lvl46 :: Text.Megaparsec.State.State [GHC.Types.Char]
+                   lvl48 :: Text.Megaparsec.State.State [GHC.Types.Char]
                             -> Text.Megaparsec.Internal.Hints
                                  (Text.Megaparsec.Stream.Token [GHC.Types.Char])
                             -> Data.Functor.Identity.Identity b1
                    = eta4 Messer.operaattorit_x
                  } in
                  let {
-                   lvl47 :: Text.Megaparsec.State.State [GHC.Types.Char]
+                   lvl49 :: Text.Megaparsec.State.State [GHC.Types.Char]
                             -> Text.Megaparsec.Internal.Hints
                                  (Text.Megaparsec.Stream.Token [GHC.Types.Char])
                             -> Data.Functor.Identity.Identity b1
@@ -8211,7 +8176,7 @@ d41064e8544bd545084aeb09db82e691
                    (Sub (Sym (Text.Megaparsec.Stream.D:R:Tokens[][0])))
                    @ b1
                    eta1
-                   (\ (x1 :: GHC.Base.String) -> lvl47)
+                   (\ (x1 :: GHC.Base.String) -> lvl49)
                      `cast`
                    (Nth:2
                         (Nth:3
@@ -8236,7 +8201,7 @@ d41064e8544bd545084aeb09db82e691
                                      -> Data.Functor.Identity.Identity b1)
                                     -> Data.Functor.Identity.Identity b1>_R)))
                    eta3
-                   (\ (x1 :: GHC.Base.String) -> lvl46)
+                   (\ (x1 :: GHC.Base.String) -> lvl48)
                      `cast`
                    (Nth:2
                         (Nth:3
@@ -8271,7 +8236,7 @@ f61e381edf73e84e35eb7b325ca63fd1
 d3fd8f94c11b1576a3b1ff998b66f6eb
   operaattorit12 :: GHC.Prim.Addr#
   {- HasNoCafRefs, Unfolding: ("!="#) -}
-b748b00b141169f7f13bbef73d1d78e7
+fbd7b7d82f874ea0c4d7a46611299a51
   operaattorit13 ::
     Control.Monad.Combinators.Expr.Operator
       (Text.Megaparsec.Internal.ParsecT
@@ -8290,7 +8255,7 @@ b748b00b141169f7f13bbef73d1d78e7
                              <Data.Functor.Identity.Identity>_R
                              <Messer.Maaritelma
                               -> Messer.Maaritelma -> Messer.Maaritelma>_R))) -}
-a8d77c780943083fb76c0ba692536731
+47b82a1902a63904d6f0fd7e5a053a24
   operaattorit14 ::
     Text.Megaparsec.State.State [GHC.Types.Char]
     -> ((Messer.Maaritelma -> Messer.Maaritelma -> Messer.Maaritelma)
@@ -8337,14 +8302,14 @@ a8d77c780943083fb76c0ba692536731
                             -> Text.Megaparsec.State.State [GHC.Types.Char]
                             -> Data.Functor.Identity.Identity b1) ->
                  let {
-                   lvl46 :: Text.Megaparsec.State.State [GHC.Types.Char]
+                   lvl48 :: Text.Megaparsec.State.State [GHC.Types.Char]
                             -> Text.Megaparsec.Internal.Hints
                                  (Text.Megaparsec.Stream.Token [GHC.Types.Char])
                             -> Data.Functor.Identity.Identity b1
                    = eta4 Messer.operaattorit_x1
                  } in
                  let {
-                   lvl47 :: Text.Megaparsec.State.State [GHC.Types.Char]
+                   lvl49 :: Text.Megaparsec.State.State [GHC.Types.Char]
                             -> Text.Megaparsec.Internal.Hints
                                  (Text.Megaparsec.Stream.Token [GHC.Types.Char])
                             -> Data.Functor.Identity.Identity b1
@@ -8356,7 +8321,7 @@ a8d77c780943083fb76c0ba692536731
                    (Sub (Sym (Text.Megaparsec.Stream.D:R:Tokens[][0])))
                    @ b1
                    eta1
-                   (\ (x1 :: GHC.Base.String) -> lvl47)
+                   (\ (x1 :: GHC.Base.String) -> lvl49)
                      `cast`
                    (Nth:2
                         (Nth:3
@@ -8381,7 +8346,7 @@ a8d77c780943083fb76c0ba692536731
                                      -> Data.Functor.Identity.Identity b1)
                                     -> Data.Functor.Identity.Identity b1>_R)))
                    eta3
-                   (\ (x1 :: GHC.Base.String) -> lvl46)
+                   (\ (x1 :: GHC.Base.String) -> lvl48)
                      `cast`
                    (Nth:2
                         (Nth:3
@@ -8416,7 +8381,7 @@ a8d77c780943083fb76c0ba692536731
 5d2adfd2bcfd24f3a22331ee66285674
   operaattorit16 :: GHC.Prim.Addr#
   {- HasNoCafRefs, Unfolding: ("=="#) -}
-4d0d0e7c93e02ce94ca416868f7e92f3
+6aa13d010841a178dde35abc2e89d50c
   operaattorit17 ::
     Control.Monad.Combinators.Expr.Operator
       (Text.Megaparsec.Internal.ParsecT
@@ -8435,7 +8400,7 @@ a8d77c780943083fb76c0ba692536731
                              <Data.Functor.Identity.Identity>_R
                              <Messer.Maaritelma
                               -> Messer.Maaritelma -> Messer.Maaritelma>_R))) -}
-ab0d7a3126632eeb5bba9675b5fb3c31
+c93c9aad4dcc779118742e0f2b2d0986
   operaattorit18 ::
     Text.Megaparsec.State.State [GHC.Types.Char]
     -> ((Messer.Maaritelma -> Messer.Maaritelma -> Messer.Maaritelma)
@@ -8482,14 +8447,14 @@ ab0d7a3126632eeb5bba9675b5fb3c31
                             -> Text.Megaparsec.State.State [GHC.Types.Char]
                             -> Data.Functor.Identity.Identity b1) ->
                  let {
-                   lvl46 :: Text.Megaparsec.State.State [GHC.Types.Char]
+                   lvl48 :: Text.Megaparsec.State.State [GHC.Types.Char]
                             -> Text.Megaparsec.Internal.Hints
                                  (Text.Megaparsec.Stream.Token [GHC.Types.Char])
                             -> Data.Functor.Identity.Identity b1
                    = eta4 Messer.operaattorit_x2
                  } in
                  let {
-                   lvl47 :: Text.Megaparsec.State.State [GHC.Types.Char]
+                   lvl49 :: Text.Megaparsec.State.State [GHC.Types.Char]
                             -> Text.Megaparsec.Internal.Hints
                                  (Text.Megaparsec.Stream.Token [GHC.Types.Char])
                             -> Data.Functor.Identity.Identity b1
@@ -8501,7 +8466,7 @@ ab0d7a3126632eeb5bba9675b5fb3c31
                    (Sub (Sym (Text.Megaparsec.Stream.D:R:Tokens[][0])))
                    @ b1
                    eta1
-                   (\ (x1 :: GHC.Base.String) -> lvl47)
+                   (\ (x1 :: GHC.Base.String) -> lvl49)
                      `cast`
                    (Nth:2
                         (Nth:3
@@ -8526,7 +8491,7 @@ ab0d7a3126632eeb5bba9675b5fb3c31
                                      -> Data.Functor.Identity.Identity b1)
                                     -> Data.Functor.Identity.Identity b1>_R)))
                    eta3
-                   (\ (x1 :: GHC.Base.String) -> lvl46)
+                   (\ (x1 :: GHC.Base.String) -> lvl48)
                      `cast`
                    (Nth:2
                         (Nth:3
@@ -8558,7 +8523,7 @@ ab0d7a3126632eeb5bba9675b5fb3c31
 133901189f0685ea8cb1342045ff41bc
   operaattorit19 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# Messer.operaattorit20) -}
-ded15335e7a4b4f99caecf68ee6f88cc
+e7127ea5c5a97b4958532cf1937e1319
   operaattorit2 ::
     [[Control.Monad.Combinators.Expr.Operator
         Messer.Parser Messer.Maaritelma]]
@@ -8573,7 +8538,7 @@ ded15335e7a4b4f99caecf68ee6f88cc
 4edf3f13e0fe29490a70f34258abb12b
   operaattorit20 :: GHC.Prim.Addr#
   {- HasNoCafRefs, Unfolding: (">"#) -}
-271b6cdcf2dc2d15a72290f9ee7145de
+a1e87096e04f5da56ab7e2967629049e
   operaattorit21 ::
     Control.Monad.Combinators.Expr.Operator
       (Text.Megaparsec.Internal.ParsecT
@@ -8592,7 +8557,7 @@ ded15335e7a4b4f99caecf68ee6f88cc
                              <Data.Functor.Identity.Identity>_R
                              <Messer.Maaritelma
                               -> Messer.Maaritelma -> Messer.Maaritelma>_R))) -}
-b547d4257677e982e2a1fa5a490966d9
+9429858fbb22d672ac178fe5343e30d2
   operaattorit22 ::
     Text.Megaparsec.State.State [GHC.Types.Char]
     -> ((Messer.Maaritelma -> Messer.Maaritelma -> Messer.Maaritelma)
@@ -8639,14 +8604,14 @@ b547d4257677e982e2a1fa5a490966d9
                             -> Text.Megaparsec.State.State [GHC.Types.Char]
                             -> Data.Functor.Identity.Identity b1) ->
                  let {
-                   lvl46 :: Text.Megaparsec.State.State [GHC.Types.Char]
+                   lvl48 :: Text.Megaparsec.State.State [GHC.Types.Char]
                             -> Text.Megaparsec.Internal.Hints
                                  (Text.Megaparsec.Stream.Token [GHC.Types.Char])
                             -> Data.Functor.Identity.Identity b1
                    = eta4 Messer.operaattorit_x3
                  } in
                  let {
-                   lvl47 :: Text.Megaparsec.State.State [GHC.Types.Char]
+                   lvl49 :: Text.Megaparsec.State.State [GHC.Types.Char]
                             -> Text.Megaparsec.Internal.Hints
                                  (Text.Megaparsec.Stream.Token [GHC.Types.Char])
                             -> Data.Functor.Identity.Identity b1
@@ -8658,7 +8623,7 @@ b547d4257677e982e2a1fa5a490966d9
                    (Sub (Sym (Text.Megaparsec.Stream.D:R:Tokens[][0])))
                    @ b1
                    eta1
-                   (\ (x1 :: GHC.Base.String) -> lvl47)
+                   (\ (x1 :: GHC.Base.String) -> lvl49)
                      `cast`
                    (Nth:2
                         (Nth:3
@@ -8683,7 +8648,7 @@ b547d4257677e982e2a1fa5a490966d9
                                      -> Data.Functor.Identity.Identity b1)
                                     -> Data.Functor.Identity.Identity b1>_R)))
                    eta3
-                   (\ (x1 :: GHC.Base.String) -> lvl46)
+                   (\ (x1 :: GHC.Base.String) -> lvl48)
                      `cast`
                    (Nth:2
                         (Nth:3
@@ -8718,7 +8683,7 @@ fb8eea7e195cf5fc97701164bdd0b0bf
 142b47db88949f74c819be287c1cdcb4
   operaattorit24 :: GHC.Prim.Addr#
   {- HasNoCafRefs, Unfolding: ("<"#) -}
-5ed2d2f09a3bc2d3e12c95094d27c732
+cdd0b90684db83f15a850705c09ae641
   operaattorit25 ::
     Control.Monad.Combinators.Expr.Operator
       (Text.Megaparsec.Internal.ParsecT
@@ -8737,7 +8702,7 @@ fb8eea7e195cf5fc97701164bdd0b0bf
                              <Data.Functor.Identity.Identity>_R
                              <Messer.Maaritelma
                               -> Messer.Maaritelma -> Messer.Maaritelma>_R))) -}
-cd1665718fb7a20cd09d5d5d3b447c3f
+9a163b84b4589daad6771d0def33f2f9
   operaattorit26 ::
     Text.Megaparsec.State.State [GHC.Types.Char]
     -> ((Messer.Maaritelma -> Messer.Maaritelma -> Messer.Maaritelma)
@@ -8784,14 +8749,14 @@ cd1665718fb7a20cd09d5d5d3b447c3f
                             -> Text.Megaparsec.State.State [GHC.Types.Char]
                             -> Data.Functor.Identity.Identity b1) ->
                  let {
-                   lvl46 :: Text.Megaparsec.State.State [GHC.Types.Char]
+                   lvl48 :: Text.Megaparsec.State.State [GHC.Types.Char]
                             -> Text.Megaparsec.Internal.Hints
                                  (Text.Megaparsec.Stream.Token [GHC.Types.Char])
                             -> Data.Functor.Identity.Identity b1
                    = eta4 Messer.operaattorit_x4
                  } in
                  let {
-                   lvl47 :: Text.Megaparsec.State.State [GHC.Types.Char]
+                   lvl49 :: Text.Megaparsec.State.State [GHC.Types.Char]
                             -> Text.Megaparsec.Internal.Hints
                                  (Text.Megaparsec.Stream.Token [GHC.Types.Char])
                             -> Data.Functor.Identity.Identity b1
@@ -8803,7 +8768,7 @@ cd1665718fb7a20cd09d5d5d3b447c3f
                    (Sub (Sym (Text.Megaparsec.Stream.D:R:Tokens[][0])))
                    @ b1
                    eta1
-                   (\ (x1 :: GHC.Base.String) -> lvl47)
+                   (\ (x1 :: GHC.Base.String) -> lvl49)
                      `cast`
                    (Nth:2
                         (Nth:3
@@ -8828,7 +8793,7 @@ cd1665718fb7a20cd09d5d5d3b447c3f
                                      -> Data.Functor.Identity.Identity b1)
                                     -> Data.Functor.Identity.Identity b1>_R)))
                    eta3
-                   (\ (x1 :: GHC.Base.String) -> lvl46)
+                   (\ (x1 :: GHC.Base.String) -> lvl48)
                      `cast`
                    (Nth:2
                         (Nth:3
@@ -8863,7 +8828,7 @@ cd1665718fb7a20cd09d5d5d3b447c3f
 6520a0e1e8cee0369e26fd80ea915fd7
   operaattorit28 :: GHC.Prim.Addr#
   {- HasNoCafRefs, Unfolding: (">="#) -}
-e391878a1f619ba12daad283c35466d4
+73825425bc0f48bbee4e156a1816d9bd
   operaattorit29 ::
     Control.Monad.Combinators.Expr.Operator
       (Text.Megaparsec.Internal.ParsecT
@@ -8882,7 +8847,7 @@ e391878a1f619ba12daad283c35466d4
                              <Data.Functor.Identity.Identity>_R
                              <Messer.Maaritelma
                               -> Messer.Maaritelma -> Messer.Maaritelma>_R))) -}
-e3bcf57e66c88f65c6cd39b3c801fb3d
+a89472c89303a51a242a9f4ef701b048
   operaattorit3 ::
     [Control.Monad.Combinators.Expr.Operator
        Messer.Parser Messer.Maaritelma]
@@ -8892,7 +8857,7 @@ e3bcf57e66c88f65c6cd39b3c801fb3d
                         Messer.Parser Messer.Maaritelma)
                    Messer.operaattorit29
                    Messer.operaattorit4) -}
-cb9924e37ddb82e5ddb68f9520099e74
+66d3c0501aa494f974805777d80dcb45
   operaattorit30 ::
     Text.Megaparsec.State.State [GHC.Types.Char]
     -> ((Messer.Maaritelma -> Messer.Maaritelma -> Messer.Maaritelma)
@@ -8939,14 +8904,14 @@ cb9924e37ddb82e5ddb68f9520099e74
                             -> Text.Megaparsec.State.State [GHC.Types.Char]
                             -> Data.Functor.Identity.Identity b1) ->
                  let {
-                   lvl46 :: Text.Megaparsec.State.State [GHC.Types.Char]
+                   lvl48 :: Text.Megaparsec.State.State [GHC.Types.Char]
                             -> Text.Megaparsec.Internal.Hints
                                  (Text.Megaparsec.Stream.Token [GHC.Types.Char])
                             -> Data.Functor.Identity.Identity b1
                    = eta4 Messer.operaattorit_x5
                  } in
                  let {
-                   lvl47 :: Text.Megaparsec.State.State [GHC.Types.Char]
+                   lvl49 :: Text.Megaparsec.State.State [GHC.Types.Char]
                             -> Text.Megaparsec.Internal.Hints
                                  (Text.Megaparsec.Stream.Token [GHC.Types.Char])
                             -> Data.Functor.Identity.Identity b1
@@ -8958,7 +8923,7 @@ cb9924e37ddb82e5ddb68f9520099e74
                    (Sub (Sym (Text.Megaparsec.Stream.D:R:Tokens[][0])))
                    @ b1
                    eta1
-                   (\ (x1 :: GHC.Base.String) -> lvl47)
+                   (\ (x1 :: GHC.Base.String) -> lvl49)
                      `cast`
                    (Nth:2
                         (Nth:3
@@ -8983,7 +8948,7 @@ cb9924e37ddb82e5ddb68f9520099e74
                                      -> Data.Functor.Identity.Identity b1)
                                     -> Data.Functor.Identity.Identity b1>_R)))
                    eta3
-                   (\ (x1 :: GHC.Base.String) -> lvl46)
+                   (\ (x1 :: GHC.Base.String) -> lvl48)
                      `cast`
                    (Nth:2
                         (Nth:3
@@ -9018,7 +8983,7 @@ cb9924e37ddb82e5ddb68f9520099e74
 43d1075415a9b3078633e34c3c5391fe
   operaattorit32 :: GHC.Prim.Addr#
   {- HasNoCafRefs, Unfolding: ("<="#) -}
-c353b6e3c91731387fd46c6ed58229fd
+af020a85af8cf275a86e0aa1478df1e0
   operaattorit33 ::
     [Control.Monad.Combinators.Expr.Operator
        Messer.Parser Messer.Maaritelma]
@@ -9028,7 +8993,7 @@ c353b6e3c91731387fd46c6ed58229fd
                         Messer.Parser Messer.Maaritelma)
                    Messer.operaattorit39
                    Messer.operaattorit34) -}
-f9c555f11fa6ad086c4bec4a823251fa
+0b168f41b7875aa910cc88dc02fdd21b
   operaattorit34 ::
     [Control.Monad.Combinators.Expr.Operator
        Messer.Parser Messer.Maaritelma]
@@ -9040,7 +9005,7 @@ f9c555f11fa6ad086c4bec4a823251fa
                    (GHC.Types.[]
                       @ (Control.Monad.Combinators.Expr.Operator
                            Messer.Parser Messer.Maaritelma))) -}
-86ddb025a38fc7aba9e06e379769b010
+ab1d0825e768ae96e7d724399993bc0f
   operaattorit35 ::
     Control.Monad.Combinators.Expr.Operator
       (Text.Megaparsec.Internal.ParsecT
@@ -9059,7 +9024,7 @@ f9c555f11fa6ad086c4bec4a823251fa
                              <Data.Functor.Identity.Identity>_R
                              <Messer.Maaritelma
                               -> Messer.Maaritelma -> Messer.Maaritelma>_R))) -}
-97fc2fbbb43da15434160bdaffbd64c1
+53a1579c3ff3ea5d242832584738f3cc
   operaattorit36 ::
     Text.Megaparsec.State.State [GHC.Types.Char]
     -> ((Messer.Maaritelma -> Messer.Maaritelma -> Messer.Maaritelma)
@@ -9106,14 +9071,14 @@ f9c555f11fa6ad086c4bec4a823251fa
                             -> Text.Megaparsec.State.State [GHC.Types.Char]
                             -> Data.Functor.Identity.Identity b1) ->
                  let {
-                   lvl46 :: Text.Megaparsec.State.State [GHC.Types.Char]
+                   lvl48 :: Text.Megaparsec.State.State [GHC.Types.Char]
                             -> Text.Megaparsec.Internal.Hints
                                  (Text.Megaparsec.Stream.Token [GHC.Types.Char])
                             -> Data.Functor.Identity.Identity b1
                    = eta4 Messer.operaattorit_x6
                  } in
                  let {
-                   lvl47 :: Text.Megaparsec.State.State [GHC.Types.Char]
+                   lvl49 :: Text.Megaparsec.State.State [GHC.Types.Char]
                             -> Text.Megaparsec.Internal.Hints
                                  (Text.Megaparsec.Stream.Token [GHC.Types.Char])
                             -> Data.Functor.Identity.Identity b1
@@ -9125,7 +9090,7 @@ f9c555f11fa6ad086c4bec4a823251fa
                    (Sub (Sym (Text.Megaparsec.Stream.D:R:Tokens[][0])))
                    @ b1
                    eta1
-                   (\ (x1 :: GHC.Base.String) -> lvl47)
+                   (\ (x1 :: GHC.Base.String) -> lvl49)
                      `cast`
                    (Nth:2
                         (Nth:3
@@ -9150,7 +9115,7 @@ f9c555f11fa6ad086c4bec4a823251fa
                                      -> Data.Functor.Identity.Identity b1)
                                     -> Data.Functor.Identity.Identity b1>_R)))
                    eta3
-                   (\ (x1 :: GHC.Base.String) -> lvl46)
+                   (\ (x1 :: GHC.Base.String) -> lvl48)
                      `cast`
                    (Nth:2
                         (Nth:3
@@ -9185,7 +9150,7 @@ f9c555f11fa6ad086c4bec4a823251fa
 93860b6d8b16a4ec2b53e5b75f741a4c
   operaattorit38 :: GHC.Prim.Addr#
   {- HasNoCafRefs, Unfolding: ("-"#) -}
-abf309f968be4d31915858aa35e6c850
+70628245f6a4eafd2510a56d109108a2
   operaattorit39 ::
     Control.Monad.Combinators.Expr.Operator
       (Text.Megaparsec.Internal.ParsecT
@@ -9204,7 +9169,7 @@ abf309f968be4d31915858aa35e6c850
                              <Data.Functor.Identity.Identity>_R
                              <Messer.Maaritelma
                               -> Messer.Maaritelma -> Messer.Maaritelma>_R))) -}
-8a118188b9e41b4df17b0033b4dab5e7
+d2a728a87b7e7a59df703250364662cc
   operaattorit4 ::
     [Control.Monad.Combinators.Expr.Operator
        Messer.Parser Messer.Maaritelma]
@@ -9214,7 +9179,7 @@ abf309f968be4d31915858aa35e6c850
                         Messer.Parser Messer.Maaritelma)
                    Messer.operaattorit25
                    Messer.operaattorit5) -}
-4b1c54ea2d547d531ea647f28edf772e
+b98e8ba4e577af725fcd5f2438cf787d
   operaattorit40 ::
     Text.Megaparsec.State.State [GHC.Types.Char]
     -> ((Messer.Maaritelma -> Messer.Maaritelma -> Messer.Maaritelma)
@@ -9261,14 +9226,14 @@ abf309f968be4d31915858aa35e6c850
                             -> Text.Megaparsec.State.State [GHC.Types.Char]
                             -> Data.Functor.Identity.Identity b1) ->
                  let {
-                   lvl46 :: Text.Megaparsec.State.State [GHC.Types.Char]
+                   lvl48 :: Text.Megaparsec.State.State [GHC.Types.Char]
                             -> Text.Megaparsec.Internal.Hints
                                  (Text.Megaparsec.Stream.Token [GHC.Types.Char])
                             -> Data.Functor.Identity.Identity b1
                    = eta4 Messer.operaattorit_x7
                  } in
                  let {
-                   lvl47 :: Text.Megaparsec.State.State [GHC.Types.Char]
+                   lvl49 :: Text.Megaparsec.State.State [GHC.Types.Char]
                             -> Text.Megaparsec.Internal.Hints
                                  (Text.Megaparsec.Stream.Token [GHC.Types.Char])
                             -> Data.Functor.Identity.Identity b1
@@ -9280,7 +9245,7 @@ abf309f968be4d31915858aa35e6c850
                    (Sub (Sym (Text.Megaparsec.Stream.D:R:Tokens[][0])))
                    @ b1
                    eta1
-                   (\ (x1 :: GHC.Base.String) -> lvl47)
+                   (\ (x1 :: GHC.Base.String) -> lvl49)
                      `cast`
                    (Nth:2
                         (Nth:3
@@ -9305,7 +9270,7 @@ abf309f968be4d31915858aa35e6c850
                                      -> Data.Functor.Identity.Identity b1)
                                     -> Data.Functor.Identity.Identity b1>_R)))
                    eta3
-                   (\ (x1 :: GHC.Base.String) -> lvl46)
+                   (\ (x1 :: GHC.Base.String) -> lvl48)
                      `cast`
                    (Nth:2
                         (Nth:3
@@ -9340,7 +9305,7 @@ ed454a1657940500a49b29a11e0aa63c
 e1cbe3cad3a9b7e8b7756f1ed2fde918
   operaattorit42 :: GHC.Prim.Addr#
   {- HasNoCafRefs, Unfolding: ("+"#) -}
-6cc03b52d406e89f0fd1bcbe98593a4d
+0ce144d4cdf4272dba5da6b05e51f1de
   operaattorit43 ::
     [Control.Monad.Combinators.Expr.Operator
        Messer.Parser Messer.Maaritelma]
@@ -9350,7 +9315,7 @@ e1cbe3cad3a9b7e8b7756f1ed2fde918
                         Messer.Parser Messer.Maaritelma)
                    Messer.operaattorit49
                    Messer.operaattorit44) -}
-228b9c919cc47b2fa97466cc0791043d
+323e47b528c5c6371cd2442e7b840dcf
   operaattorit44 ::
     [Control.Monad.Combinators.Expr.Operator
        Messer.Parser Messer.Maaritelma]
@@ -9362,7 +9327,7 @@ e1cbe3cad3a9b7e8b7756f1ed2fde918
                    (GHC.Types.[]
                       @ (Control.Monad.Combinators.Expr.Operator
                            Messer.Parser Messer.Maaritelma))) -}
-d6d9dd9106e6b4b3cc6c91e80c7d47d4
+a5e0f70abcb4400465e4d44ae05b5899
   operaattorit45 ::
     Control.Monad.Combinators.Expr.Operator
       (Text.Megaparsec.Internal.ParsecT
@@ -9381,7 +9346,7 @@ d6d9dd9106e6b4b3cc6c91e80c7d47d4
                              <Data.Functor.Identity.Identity>_R
                              <Messer.Maaritelma
                               -> Messer.Maaritelma -> Messer.Maaritelma>_R))) -}
-54d7182fe6936b6364e04da829659f71
+c7807841fefc70fd597279e0c03ceb04
   operaattorit46 ::
     Text.Megaparsec.State.State [GHC.Types.Char]
     -> ((Messer.Maaritelma -> Messer.Maaritelma -> Messer.Maaritelma)
@@ -9428,14 +9393,14 @@ d6d9dd9106e6b4b3cc6c91e80c7d47d4
                             -> Text.Megaparsec.State.State [GHC.Types.Char]
                             -> Data.Functor.Identity.Identity b1) ->
                  let {
-                   lvl46 :: Text.Megaparsec.State.State [GHC.Types.Char]
+                   lvl48 :: Text.Megaparsec.State.State [GHC.Types.Char]
                             -> Text.Megaparsec.Internal.Hints
                                  (Text.Megaparsec.Stream.Token [GHC.Types.Char])
                             -> Data.Functor.Identity.Identity b1
                    = eta4 Messer.operaattorit_x8
                  } in
                  let {
-                   lvl47 :: Text.Megaparsec.State.State [GHC.Types.Char]
+                   lvl49 :: Text.Megaparsec.State.State [GHC.Types.Char]
                             -> Text.Megaparsec.Internal.Hints
                                  (Text.Megaparsec.Stream.Token [GHC.Types.Char])
                             -> Data.Functor.Identity.Identity b1
@@ -9447,7 +9412,7 @@ d6d9dd9106e6b4b3cc6c91e80c7d47d4
                    (Sub (Sym (Text.Megaparsec.Stream.D:R:Tokens[][0])))
                    @ b1
                    eta1
-                   (\ (x1 :: GHC.Base.String) -> lvl47)
+                   (\ (x1 :: GHC.Base.String) -> lvl49)
                      `cast`
                    (Nth:2
                         (Nth:3
@@ -9472,7 +9437,7 @@ d6d9dd9106e6b4b3cc6c91e80c7d47d4
                                      -> Data.Functor.Identity.Identity b1)
                                     -> Data.Functor.Identity.Identity b1>_R)))
                    eta3
-                   (\ (x1 :: GHC.Base.String) -> lvl46)
+                   (\ (x1 :: GHC.Base.String) -> lvl48)
                      `cast`
                    (Nth:2
                         (Nth:3
@@ -9507,7 +9472,7 @@ f3a7f43a4213c48a98e1963052bf194c
 9445824f224c2345e603e371c4249569
   operaattorit48 :: GHC.Prim.Addr#
   {- HasNoCafRefs, Unfolding: ("/"#) -}
-471a7effdbe7806c04de0198d5977f71
+2eb81238885a16d8ac4f09d543deba1b
   operaattorit49 ::
     Control.Monad.Combinators.Expr.Operator
       (Text.Megaparsec.Internal.ParsecT
@@ -9526,7 +9491,7 @@ f3a7f43a4213c48a98e1963052bf194c
                              <Data.Functor.Identity.Identity>_R
                              <Messer.Maaritelma
                               -> Messer.Maaritelma -> Messer.Maaritelma>_R))) -}
-14633bc6d95b85d9949688f603775cfb
+82efcc536d9b2c3a9f13145ece4815a3
   operaattorit5 ::
     [Control.Monad.Combinators.Expr.Operator
        Messer.Parser Messer.Maaritelma]
@@ -9536,7 +9501,7 @@ f3a7f43a4213c48a98e1963052bf194c
                         Messer.Parser Messer.Maaritelma)
                    Messer.operaattorit21
                    Messer.operaattorit6) -}
-127b6cec99dda78dd4478362ce33c1e8
+4eb615edaf2db738b7d873009defb707
   operaattorit50 ::
     Text.Megaparsec.State.State [GHC.Types.Char]
     -> ((Messer.Maaritelma -> Messer.Maaritelma -> Messer.Maaritelma)
@@ -9583,14 +9548,14 @@ f3a7f43a4213c48a98e1963052bf194c
                             -> Text.Megaparsec.State.State [GHC.Types.Char]
                             -> Data.Functor.Identity.Identity b1) ->
                  let {
-                   lvl46 :: Text.Megaparsec.State.State [GHC.Types.Char]
+                   lvl48 :: Text.Megaparsec.State.State [GHC.Types.Char]
                             -> Text.Megaparsec.Internal.Hints
                                  (Text.Megaparsec.Stream.Token [GHC.Types.Char])
                             -> Data.Functor.Identity.Identity b1
                    = eta4 Messer.operaattorit_x9
                  } in
                  let {
-                   lvl47 :: Text.Megaparsec.State.State [GHC.Types.Char]
+                   lvl49 :: Text.Megaparsec.State.State [GHC.Types.Char]
                             -> Text.Megaparsec.Internal.Hints
                                  (Text.Megaparsec.Stream.Token [GHC.Types.Char])
                             -> Data.Functor.Identity.Identity b1
@@ -9602,7 +9567,7 @@ f3a7f43a4213c48a98e1963052bf194c
                    (Sub (Sym (Text.Megaparsec.Stream.D:R:Tokens[][0])))
                    @ b1
                    eta1
-                   (\ (x1 :: GHC.Base.String) -> lvl47)
+                   (\ (x1 :: GHC.Base.String) -> lvl49)
                      `cast`
                    (Nth:2
                         (Nth:3
@@ -9627,7 +9592,7 @@ f3a7f43a4213c48a98e1963052bf194c
                                      -> Data.Functor.Identity.Identity b1)
                                     -> Data.Functor.Identity.Identity b1>_R)))
                    eta3
-                   (\ (x1 :: GHC.Base.String) -> lvl46)
+                   (\ (x1 :: GHC.Base.String) -> lvl48)
                      `cast`
                    (Nth:2
                         (Nth:3
@@ -9662,7 +9627,7 @@ f3a7f43a4213c48a98e1963052bf194c
 aee257b567809a7733801e7e58b83fe1
   operaattorit52 :: GHC.Prim.Addr#
   {- HasNoCafRefs, Unfolding: ("*"#) -}
-befa52284fde3133b33355f7fd36a890
+f1a48a8ef31a09013f5e81fbd825e80c
   operaattorit6 ::
     [Control.Monad.Combinators.Expr.Operator
        Messer.Parser Messer.Maaritelma]
@@ -9672,7 +9637,7 @@ befa52284fde3133b33355f7fd36a890
                         Messer.Parser Messer.Maaritelma)
                    Messer.operaattorit17
                    Messer.operaattorit7) -}
-14da5868c6f7ced4b47d08714ee8e7a3
+6029a9af341ffe030ad8686235cdcc34
   operaattorit7 ::
     [Control.Monad.Combinators.Expr.Operator
        Messer.Parser Messer.Maaritelma]
@@ -9682,7 +9647,7 @@ befa52284fde3133b33355f7fd36a890
                         Messer.Parser Messer.Maaritelma)
                    Messer.operaattorit13
                    Messer.operaattorit8) -}
-b92f136808016e4b10e1926281b197f3
+355dd87226f088dff594214ea5852ee8
   operaattorit8 ::
     [Control.Monad.Combinators.Expr.Operator
        Messer.Parser Messer.Maaritelma]
@@ -9694,7 +9659,7 @@ b92f136808016e4b10e1926281b197f3
                    (GHC.Types.[]
                       @ (Control.Monad.Combinators.Expr.Operator
                            Messer.Parser Messer.Maaritelma))) -}
-a01e73dc33941219e0d04ec44d8c04a4
+82301c0e56c0ce1f7024cf1a16618e8f
   operaattorit9 ::
     Control.Monad.Combinators.Expr.Operator
       (Text.Megaparsec.Internal.ParsecT
@@ -9713,57 +9678,57 @@ a01e73dc33941219e0d04ec44d8c04a4
                              <Data.Functor.Identity.Identity>_R
                              <Messer.Maaritelma
                               -> Messer.Maaritelma -> Messer.Maaritelma>_R))) -}
-0cde8dd5f725869f6e30cba3c1fb5169
+00c91e9bb4ed080ea867e1d598b3cb7e
   operaattorit_x ::
     Messer.Maaritelma -> Messer.Maaritelma -> Messer.Maaritelma
   {- Arity: 2, HasNoCafRefs,
      Unfolding: (Messer.Vertailu Messer.Erisuuri) -}
-662db700c4848467c26ef0aae698385c
+3189793964022bc5d1164af75363b5b6
   operaattorit_x1 ::
     Messer.Maaritelma -> Messer.Maaritelma -> Messer.Maaritelma
   {- Arity: 2, HasNoCafRefs,
      Unfolding: (Messer.Vertailu Messer.Yhtasuuri) -}
-1289cd055eca73e83fe04db51a7a8931
+c0fc2731ab5083627d31dddeee35a7a7
   operaattorit_x2 ::
     Messer.Maaritelma -> Messer.Maaritelma -> Messer.Maaritelma
   {- Arity: 2, HasNoCafRefs,
      Unfolding: (Messer.Vertailu Messer.Suurempi) -}
-e7567bf5b28b7674300e042c7f122142
+08c12fa082526980be0e95012b23bfda
   operaattorit_x3 ::
     Messer.Maaritelma -> Messer.Maaritelma -> Messer.Maaritelma
   {- Arity: 2, HasNoCafRefs,
      Unfolding: (Messer.Vertailu Messer.Pienempi) -}
-c46701b55e63af7c9d2a6da6215d5e86
+2bd27a66aebde924c857cb9850e83511
   operaattorit_x4 ::
     Messer.Maaritelma -> Messer.Maaritelma -> Messer.Maaritelma
   {- Arity: 2, HasNoCafRefs,
      Unfolding: (Messer.Vertailu Messer.SuurempiYhtasuuri) -}
-185dfbdb6059f69071e7b924e50d0f72
+d269a69d3bcbe61a0c34924119073d1c
   operaattorit_x5 ::
     Messer.Maaritelma -> Messer.Maaritelma -> Messer.Maaritelma
   {- Arity: 2, HasNoCafRefs,
      Unfolding: (Messer.Vertailu Messer.PienempiYhtasuuri) -}
-a8f1127247741c8f702fe9b337bff631
+ff7e058291ec7d85b7a9054add61994d
   operaattorit_x6 ::
     Messer.Maaritelma -> Messer.Maaritelma -> Messer.Maaritelma
   {- Arity: 2, HasNoCafRefs,
      Unfolding: (Messer.Aritmeettinen Messer.Miinus) -}
-766af59e2456e64039bd6060a16c3f70
+482eae37ae3c5597f116e6904fc74384
   operaattorit_x7 ::
     Messer.Maaritelma -> Messer.Maaritelma -> Messer.Maaritelma
   {- Arity: 2, HasNoCafRefs,
      Unfolding: (Messer.Aritmeettinen Messer.Plus) -}
-cce93ee1e903689601cda616e7c87ffe
+8b041a41e2930c5255b30c125e809bdf
   operaattorit_x8 ::
     Messer.Maaritelma -> Messer.Maaritelma -> Messer.Maaritelma
   {- Arity: 2, HasNoCafRefs,
      Unfolding: (Messer.Aritmeettinen Messer.Jako) -}
-dce237bb31b65824c45f14e040b7a144
+06f83c044882a556ff49dabfa93f5fb0
   operaattorit_x9 ::
     Messer.Maaritelma -> Messer.Maaritelma -> Messer.Maaritelma
   {- Arity: 2, HasNoCafRefs,
      Unfolding: (Messer.Aritmeettinen Messer.Kerto) -}
-0b1a3cbe891a7962bd52ad976ebfb35b
+e7c61282b86a0618dfb232e872bdc54e
   palautus :: Messer.Parser Messer.Lauseke
   {- Arity: 5,
      Strictness: <L,U><L,C(C1(C1(U)))><L,U><L,C(C1(C1(U)))><L,U>,
@@ -9775,7 +9740,7 @@ dce237bb31b65824c45f14e040b7a144
                           <[GHC.Types.Char]>_N
                           <Data.Functor.Identity.Identity>_R
                           <Messer.Lauseke>_R)) -}
-f5a4fa7cdece1f29e7e413a1839b630c
+c40e1a12e29a6b6e0e0088d63adb3176
   palautus1 ::
     Text.Megaparsec.State.State [GHC.Types.Char]
     -> (Messer.Lauseke
@@ -9870,7 +9835,7 @@ f5a4fa7cdece1f29e7e413a1839b630c
                          hs
                          eerr))
                    eerr) -}
-df89076ca9df51b96741d86ec593abf9
+12b52a8e2eccc83dfd972161fb41fa7c
   palautus2 ::
     Text.Megaparsec.State.State [GHC.Types.Char]
     -> (Messer.Lauseke
@@ -9958,7 +9923,7 @@ ac46cf1e9bff28d3e41848c7e356cb76
 dc9ff59a3c46ad70a4a7bf254bfdfe8b
   palautus5 :: GHC.Prim.Addr#
   {- HasNoCafRefs, Unfolding: ("return"#) -}
-706ce436a13e4fac78da8877845abe67
+0a0d18cefcd0ec93b3afe7694b1be502
   palautustietotyyppi :: Messer.Parser Messer.Palautustyyppi
   {- Arity: 5,
      Strictness: <L,U><L,C(C1(C1(U)))><L,U><L,C(C1(C1(U)))><L,C(C1(U))>,
@@ -9970,7 +9935,7 @@ dc9ff59a3c46ad70a4a7bf254bfdfe8b
                           <[GHC.Types.Char]>_N
                           <Data.Functor.Identity.Identity>_R
                           <Messer.Palautustyyppi>_R)) -}
-4e3300d973864f2f6c326b44d04e814b
+12cc7e98ec6e76ae202d8b23f451f557
   palautustietotyyppi1 ::
     Text.Megaparsec.State.State [GHC.Types.Char]
     -> (Messer.Palautustyyppi
@@ -10029,7 +9994,7 @@ dc9ff59a3c46ad70a4a7bf254bfdfe8b
                                (Text.Megaparsec.Stream.Token [GHC.Types.Char]))[OneShot] ->
                     eok (Messer.Palautustyyppi x) s' hs)
                    eerr) -}
-bb7be57931a0380146f1a09416ec40ac
+ce45e7de24850e8b42dc2d0f7d1b9bb2
   palautustietotyyppi2 ::
     Text.Megaparsec.State.State [GHC.Types.Char]
     -> (Messer.Tietotyyppi
@@ -10053,7 +10018,7 @@ bb7be57931a0380146f1a09416ec40ac
     -> Data.Functor.Identity.Identity b
   {- Arity: 5,
      Strictness: <L,U><L,C(C1(C1(U)))><L,U><L,C(C1(C1(U)))><L,C(C1(U))> -}
-fa2cd029d8949bd98c17c8ffaf6c154d
+bdab097ce21da9194eb2b90cf81379f2
   palautustyyppi :: Messer.Parser Messer.Palautustyyppi
   {- Arity: 5,
      Strictness: <L,U><L,C(C1(C1(U)))><L,U><L,C(C1(C1(U)))><L,C(C1(U))>,
@@ -10065,7 +10030,7 @@ fa2cd029d8949bd98c17c8ffaf6c154d
                           <[GHC.Types.Char]>_N
                           <Data.Functor.Identity.Identity>_R
                           <Messer.Palautustyyppi>_R)) -}
-a5f7c89ac804dd6efda6f6e78e5e31af
+0c678209484392b620021e81b92adc23
   palautusvoid :: Messer.Parser Messer.Palautustyyppi
   {- Arity: 5,
      Strictness: <L,U><L,C(C1(C1(U)))><L,U><L,C(C1(C1(U)))><L,U>,
@@ -10077,7 +10042,7 @@ a5f7c89ac804dd6efda6f6e78e5e31af
                           <[GHC.Types.Char]>_N
                           <Data.Functor.Identity.Identity>_R
                           <Messer.Palautustyyppi>_R)) -}
-33748186949f876643d22abf6813d8ca
+22c6d92544be216c0b058e8bf142410b
   palautusvoid1 ::
     Text.Megaparsec.State.State [GHC.Types.Char]
     -> (Messer.Palautustyyppi
@@ -10165,7 +10130,7 @@ a5f7c89ac804dd6efda6f6e78e5e31af
 b1e5c49b3200c2e6d6d06e5889cbe132
   palautusvoid4 :: GHC.Prim.Addr#
   {- HasNoCafRefs, Unfolding: ("void"#) -}
-32308185196a79dc4b245aa16826ffd3
+fbe021e2e3d899bbd8032eebee1d9071
   parametri :: Messer.Parser Messer.Parametri
   {- Arity: 5,
      Strictness: <L,U><L,C(C1(C1(U)))><L,U><L,C(C1(C1(U)))><L,C(U)>,
@@ -10177,7 +10142,7 @@ b1e5c49b3200c2e6d6d06e5889cbe132
                           <[GHC.Types.Char]>_N
                           <Data.Functor.Identity.Identity>_R
                           <Messer.Parametri>_R)) -}
-25d62fb0434eafd0c3864fc7ab695c0f
+b815ff0831a9475c165f54dfa8246dc6
   parametri1 ::
     Text.Megaparsec.State.State [GHC.Types.Char]
     -> (Messer.Parametri
@@ -10274,7 +10239,7 @@ b1e5c49b3200c2e6d6d06e5889cbe132
                          hs
                          eerr))
                    eerr) -}
-888b3840223447404ac14ec8ccf1e872
+7bdfaa8faffd377d1c588a74b4d40729
   parametri2 ::
     Messer.Tietotyyppi
     -> forall b.
@@ -10356,7 +10321,7 @@ b1e5c49b3200c2e6d6d06e5889cbe132
                                (Text.Megaparsec.Stream.Token [GHC.Types.Char]))[OneShot] ->
                     eta3 (Messer.Parametri tyyppi x) s' hs)
                    eta4) -}
-8f0d0818d13c294058cb86a091676f99
+91443b89f56c6994fddb465c2d0c163a
   parametrit :: Messer.Parser [Messer.Parametri]
   {- Arity: 5,
      Strictness: <L,U(U,U,U)><L,C(C1(C1(U)))><L,U><L,C(C1(C1(U)))><L,A>,
@@ -10368,7 +10333,7 @@ b1e5c49b3200c2e6d6d06e5889cbe132
                           <[GHC.Types.Char]>_N
                           <Data.Functor.Identity.Identity>_R
                           <[Messer.Parametri]>_R)) -}
-e97cd146b30fd61156451330b4fa6642
+ba5d121a2ae827dfb34c8aece6a907d4
   parametrit1 ::
     Text.Megaparsec.State.State [GHC.Types.Char]
     -> ([Messer.Parametri]
@@ -10459,7 +10424,7 @@ e97cd146b30fd61156451330b4fa6642
 ca264aafda0fcc7809c4e45436c899ed
   semi3 :: GHC.Prim.Addr#
   {- HasNoCafRefs, Unfolding: (";"#) -}
-79f1fd2c4f33d7445421e699409c6869
+ebd7f3472a256769ecaa96a78a42a4a9
   silmukka :: Messer.Parser Messer.Lauseke
   {- Arity: 5,
      Strictness: <L,U><L,C(C1(C1(U)))><L,U><L,C(C1(C1(U)))><L,U>,
@@ -10471,7 +10436,7 @@ ca264aafda0fcc7809c4e45436c899ed
                           <[GHC.Types.Char]>_N
                           <Data.Functor.Identity.Identity>_R
                           <Messer.Lauseke>_R)) -}
-46586633bc40fe288a6f69f2d07c6e97
+5af77b4a43ff71da1684976efb43a237
   silmukka1 ::
     Text.Megaparsec.State.State [GHC.Types.Char]
     -> (Messer.Lauseke
@@ -10566,7 +10531,7 @@ ca264aafda0fcc7809c4e45436c899ed
                          hs
                          eerr))
                    eerr) -}
-1574f78279cb8f8fb6d1a5bdf1e94662
+5be3ad170881381711e53a51f6fae7e2
   silmukka2 ::
     Text.Megaparsec.State.State [GHC.Types.Char]
     -> (Messer.Lauseke
@@ -10683,7 +10648,7 @@ ca264aafda0fcc7809c4e45436c899ed
                          hs
                          eerr))
                    eerr) -}
-51be393db6b329515942c40123fbe8e9
+8f00aaea9147b1d42cdf738c8972bf46
   silmukka3 ::
     Messer.Maaritelma
     -> forall b.
@@ -10794,7 +10759,7 @@ ca264aafda0fcc7809c4e45436c899ed
 ce5683015d118ff88985787d35f1c11a
   silmukka6 :: GHC.Prim.Addr#
   {- HasNoCafRefs, Unfolding: ("while"#) -}
-ee42e2e0334cc344947bfe50935d057a
+b257755ebb44ea64b2da8f1f16e733d9
   stringi :: Messer.Parser Messer.Tietotyyppi
   {- Arity: 5,
      Strictness: <L,U><L,C(C1(C1(U)))><L,U><L,C(C1(C1(U)))><L,U>,
@@ -10806,7 +10771,7 @@ ee42e2e0334cc344947bfe50935d057a
                           <[GHC.Types.Char]>_N
                           <Data.Functor.Identity.Identity>_R
                           <Messer.Tietotyyppi>_R)) -}
-501cc91ce0c6d00e5d580b0bcb0bd78a
+e83406a0237208259c6fc4f28c3b7fe5
   stringi1 ::
     Text.Megaparsec.State.State [GHC.Types.Char]
     -> (Messer.Tietotyyppi
@@ -10900,7 +10865,7 @@ ee42e2e0334cc344947bfe50935d057a
                                <[GHC.Types.Char]>_N
                                <Data.Functor.Identity.Identity>_R
                                (Sub (Sym (Text.Megaparsec.Stream.D:R:Tokens[][0]))))) -}
-4fadd190441c7003fcddfd28055d37b8
+e094851cec6b11b57f0d16b1c4ccf80f
   testaaTiedosto ::
     GHC.Base.String -> GHC.Types.IO (GHC.Maybe.Maybe Messer.Luokka)
   {- Arity: 2, Strictness: <L,U><S,U>,
@@ -10909,7 +10874,7 @@ ee42e2e0334cc344947bfe50935d057a
                   `cast`
                 (<GHC.Base.String>_R
                  ->_R Sym (GHC.Types.N:IO[0] <GHC.Maybe.Maybe Messer.Luokka>_R)) -}
-9ef588f9f8116e21a422193c58a891e6
+1ba3f6f485db90ad3f1db63bb552e35c
   testaaTiedosto1 ::
     GHC.Base.String
     -> GHC.Prim.State# GHC.Prim.RealWorld
@@ -10939,7 +10904,7 @@ ee42e2e0334cc344947bfe50935d057a
                                 <Data.Functor.Identity.Identity>_R
                                 <Messer.Luokka>_R))
                       ipv3 #) } }) -}
-4b2c4199de2e174e6c51c7234c36dbac
+fcdb950874fe924435f2401e3be2c2ae
   tietotyyppi :: Messer.Parser Messer.Tietotyyppi
   {- Arity: 5,
      Strictness: <L,U><L,C(C1(C1(U)))><L,U><L,C(C1(C1(U)))><L,C(C1(U))>,
@@ -10951,7 +10916,7 @@ ee42e2e0334cc344947bfe50935d057a
                           <[GHC.Types.Char]>_N
                           <Data.Functor.Identity.Identity>_R
                           <Messer.Tietotyyppi>_R)) -}
-458afc8adbdb2a6af62621eb1036bab3
+3b59cf2197077897edb6b3d17a726558
   tulostus :: Messer.Parser Messer.Lauseke
   {- Arity: 5,
      Strictness: <L,U><L,C(C1(C1(U)))><L,U><L,C(C1(C1(U)))><L,U>,
@@ -10963,7 +10928,7 @@ ee42e2e0334cc344947bfe50935d057a
                           <[GHC.Types.Char]>_N
                           <Data.Functor.Identity.Identity>_R
                           <Messer.Lauseke>_R)) -}
-d55f854bc70f94284b590038ac32093d
+54cc15111360ce4d5e49b08970d96454
   tulostus1 ::
     Text.Megaparsec.State.State [GHC.Types.Char]
     -> (Messer.Lauseke
@@ -11058,7 +11023,7 @@ d55f854bc70f94284b590038ac32093d
                          hs
                          eerr))
                    eerr) -}
-93f515341bbf71732b51ad23c2c2fc9d
+9aba5a06f918db94f4ef6c389a799785
   tulostus2 ::
     Text.Megaparsec.State.State [GHC.Types.Char]
     -> (Messer.Lauseke
@@ -11146,7 +11111,7 @@ d55f854bc70f94284b590038ac32093d
 b6177369653aae953d8a56abb6a8b768
   tulostus5 :: GHC.Prim.Addr#
   {- HasNoCafRefs, Unfolding: ("print"#) -}
-ca4040c0f5912934007689d8da1fb374
+2826029b595b8f893c4a1e19f925f557
   uusisijoitus :: Messer.Parser Messer.Lauseke
   {- Arity: 5,
      Strictness: <L,U><L,C(C1(C1(U)))><L,U><L,C(C1(C1(U)))><L,C(U)>,
@@ -11158,7 +11123,7 @@ ca4040c0f5912934007689d8da1fb374
                           <[GHC.Types.Char]>_N
                           <Data.Functor.Identity.Identity>_R
                           <Messer.Lauseke>_R)) -}
-611d34eff3b330ba586322c0037faffa
+612230a0efe5d3465825d2ff5294a515
   uusisijoitus1 ::
     Text.Megaparsec.State.State [GHC.Types.Char]
     -> (Messer.Lauseke
@@ -11255,7 +11220,7 @@ ca4040c0f5912934007689d8da1fb374
                          hs
                          eerr))
                    eerr) -}
-c0c004a5e5f74cc467bbf1aa65d51683
+3498abc747c94661ed96a4c9b3c965aa
   uusisijoitus2 ::
     Messer.Tietotyyppi
     -> forall b.
@@ -11281,7 +11246,7 @@ c0c004a5e5f74cc467bbf1aa65d51683
        -> Data.Functor.Identity.Identity b
   {- Arity: 6,
      Strictness: <L,U><L,U><L,C(C1(C1(U)))><L,U><L,C(C1(C1(U)))><L,U> -}
-c009d66fcb8b6a7906c03bc0527b8c48
+3a2bd577ffda0439e74cd42fe1e61562
   vanhasijoitus :: Messer.Id -> Messer.Parser Messer.Lauseke
   {- Arity: 6,
      Strictness: <L,U><L,U><L,C(C1(C1(U)))><L,U><L,C(C1(C1(U)))><L,U>,
@@ -11294,7 +11259,7 @@ c009d66fcb8b6a7906c03bc0527b8c48
                                <[GHC.Types.Char]>_N
                                <Data.Functor.Identity.Identity>_R
                                <Messer.Lauseke>_R)) -}
-818198dfe69f740e9b63b849bfd3f5a8
+d4e3c08494082f310f10bad184ded145
   vanhasijoitus1 ::
     Messer.Id
     -> forall b.
@@ -11630,6 +11595,8 @@ fa7bc2fd18bf1354079f7aa5fd38db52
                           <GHC.Base.String>_N
                           <Data.Functor.Identity.Identity>_R
                           <()>_R)) -}
+instance GHC.Classes.Eq [Messer.Tietotyyppi]
+  = Messer.$fEqTietotyyppi
 instance GHC.Show.Show [Messer.AKutsu] = Messer.$fShowAKutsu
 instance GHC.Show.Show [Messer.Aliohjelma]
   = Messer.$fShowAliohjelma
