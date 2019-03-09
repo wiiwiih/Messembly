@@ -29,12 +29,12 @@ version :: Version
 version = Version [0,1,0,0] []
 bindir, libdir, dynlibdir, datadir, libexecdir, sysconfdir :: FilePath
 
-bindir     = "C:\\Users\\Vilma\\Documents\\GitHub\\Messembly\\LexerParser\\Messer\\.stack-work\\install\\4ce01a7c\\bin"
-libdir     = "C:\\Users\\Vilma\\Documents\\GitHub\\Messembly\\LexerParser\\Messer\\.stack-work\\install\\4ce01a7c\\lib\\x86_64-windows-ghc-8.6.3\\Messer-0.1.0.0-Gm7rgtTydiEHjGrkrFaboT-Messer"
-dynlibdir  = "C:\\Users\\Vilma\\Documents\\GitHub\\Messembly\\LexerParser\\Messer\\.stack-work\\install\\4ce01a7c\\lib\\x86_64-windows-ghc-8.6.3"
-datadir    = "C:\\Users\\Vilma\\Documents\\GitHub\\Messembly\\LexerParser\\Messer\\.stack-work\\install\\4ce01a7c\\share\\x86_64-windows-ghc-8.6.3\\Messer-0.1.0.0"
-libexecdir = "C:\\Users\\Vilma\\Documents\\GitHub\\Messembly\\LexerParser\\Messer\\.stack-work\\install\\4ce01a7c\\libexec\\x86_64-windows-ghc-8.6.3\\Messer-0.1.0.0"
-sysconfdir = "C:\\Users\\Vilma\\Documents\\GitHub\\Messembly\\LexerParser\\Messer\\.stack-work\\install\\4ce01a7c\\etc"
+bindir     = "C:\\Users\\vijulapp\\Documents\\GitHub\\Messembly\\LexerParser\\Messer\\.stack-work\\install\\4ce01a7c\\bin"
+libdir     = "C:\\Users\\vijulapp\\Documents\\GitHub\\Messembly\\LexerParser\\Messer\\.stack-work\\install\\4ce01a7c\\lib\\x86_64-windows-ghc-8.6.3\\Messer-0.1.0.0-Gm7rgtTydiEHjGrkrFaboT-Messer"
+dynlibdir  = "C:\\Users\\vijulapp\\Documents\\GitHub\\Messembly\\LexerParser\\Messer\\.stack-work\\install\\4ce01a7c\\lib\\x86_64-windows-ghc-8.6.3"
+datadir    = "C:\\Users\\vijulapp\\Documents\\GitHub\\Messembly\\LexerParser\\Messer\\.stack-work\\install\\4ce01a7c\\share\\x86_64-windows-ghc-8.6.3\\Messer-0.1.0.0"
+libexecdir = "C:\\Users\\vijulapp\\Documents\\GitHub\\Messembly\\LexerParser\\Messer\\.stack-work\\install\\4ce01a7c\\libexec\\x86_64-windows-ghc-8.6.3\\Messer-0.1.0.0"
+sysconfdir = "C:\\Users\\vijulapp\\Documents\\GitHub\\Messembly\\LexerParser\\Messer\\.stack-work\\install\\4ce01a7c\\etc"
 
 getBinDir, getLibDir, getDynLibDir, getDataDir, getLibexecDir, getSysconfDir :: IO FilePath
 getBinDir = catchIO (getEnv "Messer_bindir") (\_ -> return bindir)

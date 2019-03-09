@@ -99,39 +99,86 @@ aLausekkeet = undefined
 
 aLauseke :: Lauseke -> AMuuttujat -> Aliohjelmat -> (Lauseke, [AVirhe], AMuuttujat)
 aLauseke (LTulostus maar) m _ = (LTulostus maar, [], m) -- Tulostus toimii kaikille tyypeille suoraan aina
-aLauseke (LSijoitus (UusiSijoitus t (Id id) maar)) m a =let tyyppi = aMaaritelma maar m a  
-                                                            virhe = case Map.lookup id m of 
+aLauseke (LSijoitus (UusiSijoitus t (Id id) maar)) m a =let (tyyppi, umaar, virhe1) = aMaaritelma maar m a  
+                                                            virhe2 = case Map.lookup id m of 
                                                                 Just _ -> ["Muuttuja " ++ id ++ " on jo määritelty"]
                                                                 Nothing -> []
-                                                        in if (tyyppi == t)
-                                                            then (LSijoitus (UusiSijoitus t (Id id) maar), virhe, m)
-                                                            else (LSijoitus (UusiSijoitus t (Id id) maar), virhe ++ ["Muuttujan " ++ id ++ " piti olla " ++ show t ++ ", mutta oli " ++ show tyyppi ++ "."], m)
-aLauseke (LSijoitus (VanhaSijoitus (Id id) maar)) m a = let tyyppi = aMaaritelma maar m a
-                                                            rLauseke = LSijoitus (VanhaSijoitus (Id id) maar)
+                                                        in case tyyppi of
+                                                            Just tyyppiJust -> if (tyyppiJust == t)
+                                                                then (LSijoitus (UusiSijoitus t (Id id) umaar), virhe1++virhe2, m)
+                                                                else (LSijoitus (UusiSijoitus t (Id id) umaar), virhe1++virhe2++["Muuttujan " ++ id ++ " piti olla " ++ show t ++ ", mutta oli " ++ show tyyppi ++ "."], m)
+                                                            Nothing -> (LSijoitus (UusiSijoitus t (Id id) umaar), virhe1++virhe2, m)
+aLauseke (LSijoitus (VanhaSijoitus (Id id) maar)) m a = let (tyyppi, umaar, virhe1) = aMaaritelma maar m a
+                                                            rLauseke = LSijoitus (VanhaSijoitus (Id id) umaar)
                                                             in case Map.lookup id m of
-                                                                Just (I intti) -> if(tyyppi == TTInt)
-                                                                                    then (rLauseke, [], m)
-                                                                                    else (rLauseke, ["Muuttujan " ++ id ++ " tyyppi on \"Int\", mutta siihen yritettiin sijoittaa " ++ show tyyppi ++"."], m)
-                                                                Just (B booli) ->if(tyyppi == TTBool)
-                                                                                    then (rLauseke, [], m)
-                                                                                    else (rLauseke, ["Muuttujan " ++ id ++ " tyyppi on \"Bool\", mutta siihen yritettiin sijoittaa " ++ show tyyppi ++"."], m)
-                                                                Just (S stringi) ->if(tyyppi == TTString)
-                                                                                    then (rLauseke, [], m)
-                                                                                    else (rLauseke, ["Muuttujan " ++ id ++ " tyyppi on \"String\", mutta siihen yritettiin sijoittaa " ++ show tyyppi ++"."], m)
-                                                                Just AVoid -> if(tyyppi == TTInt)
-                                                                                    then (rLauseke, [], m)
-                                                                                    else (rLauseke, ["Muuttujan " ++ id ++ " tyyppi on \"Void\", mutta siihen yritettiin sijoittaa " ++ show tyyppi ++". Jotain on pahasti pielessä o__O"], m)
-                                                                Nothing -> (rLauseke, ["Muuttujaa " ++ id ++ " ei ole määritelty."], m)
+                                                                Just (I intti) -> if(tyyppi == Just TTInt)
+                                                                                    then (rLauseke, virhe1, m)
+                                                                                    else (rLauseke, virhe1++["Muuttujan " ++ id ++ " tyyppi on \"Int\", mutta siihen yritettiin sijoittaa " ++ show tyyppi ++"."], m)
+                                                                Just (B booli) ->if(tyyppi == Just TTBool)
+                                                                                    then (rLauseke, virhe1, m)
+                                                                                    else (rLauseke, virhe1++["Muuttujan " ++ id ++ " tyyppi on \"Bool\", mutta siihen yritettiin sijoittaa " ++ show tyyppi ++"."], m)
+                                                                Just (S stringi) ->if(tyyppi == Just TTString)
+                                                                                    then (rLauseke, virhe1, m)
+                                                                                    else (rLauseke, virhe1++["Muuttujan " ++ id ++ " tyyppi on \"String\", mutta siihen yritettiin sijoittaa " ++ show tyyppi ++"."], m)
+                                                                Just AVoid -> (rLauseke, virhe1++["Muuttujan " ++ id ++ " tyyppi on \"Void\", mutta siihen yritettiin sijoittaa " ++ show tyyppi ++". Jotain on pahasti pielessä o__O"], m)
+                                                                Nothing -> (rLauseke, virhe1++["Muuttujaa " ++ id ++ " ei ole määritelty."], m)
 aLauseke (LPalautus maar) m a = let 
-                                virhe = case Map.lookup "return" m of
+                                virhe1 = case Map.lookup "return" m of
                                             Just _ -> ["Aliohjelmassa voi olla vain yksi palautuslause."]
                                             Nothing -> []
-                                in case aMaaritelma maar m a of
-                                    TTInt -> (LPalautus maar, virhe, Map.singleton "return" (I 0)<>m)
-                                    TTBool -> (LPalautus maar, virhe, Map.singleton "return" (B False)<>m)
-                                    TTString -> (LPalautus maar, virhe, Map.singleton "return" (S ""))
+                                (t, umaar, virhe2) = aMaaritelma maar m a
+                                in case t of
+                                    Just TTInt -> (LPalautus umaar, virhe1++virhe2, Map.singleton "return" (I 0)<>m)
+                                    Just TTBool -> (LPalautus umaar, virhe1++virhe2, Map.singleton "return" (B False)<>m)
+                                    Just TTString -> (LPalautus umaar, virhe1++virhe2, Map.singleton "return" (S ""))
+                                    _ -> (LPalautus umaar, virhe1++virhe2++["Aliohjelmasta ei voi palauttaa void-tyyppistä arvoa"], Map.singleton "return" (AVoid))
+aLauseke (LEhto (If maar xs)) m a = let
+                                (tyyppi, umaar, virhe1) = aMaaritelma maar m a
+                                virhe2 = case tyyppi of
+                                    Just TTBool -> []
+                                    _ -> ["If-lauseen ehdon tulee tuottaa Bool"]
+                                (uxs, virheet, um) = aLausekkeet xs m a
+                                in (LEhto (If umaar uxs), virhe1++virhe2++virheet, um) --mikä ympäristö eteenpäin?
+aLauseke (LEhto (IfElse maar xs ys)) m a = let
+                                (tyyppi, umaar, virhe1) = aMaaritelma maar m a
+                                virhe2 = case tyyppi of
+                                    Just TTBool -> []
+                                    _ -> ["If-lauseen ehdon tulee tuottaa Bool"]
+                                (uxs, virheet1, um1) = aLausekkeet xs m a
+                                (uys, virheet2, um2) = aLausekkeet ys m a
+                                in (LEhto (IfElse umaar uxs uys), virhe1++virhe2++virheet1++virheet2, Map.union um1 um2) --mikä/mitkä ympäristöt eteenpäin?
+aLauseke (LSilmukka maar xs) m a = let
+                                (tyyppi, umaar, virhe1) = aMaaritelma maar m a
+                                virhe2 = case tyyppi of
+                                    Just TTBool -> []
+                                    _ -> ["Silmukan ehdon tulee tuottaa Bool"]
+                                (uxs, virheet, um) = aLausekkeet xs m a
+                                in (LSilmukka umaar uxs, virhe1++virhe2++virheet, um)
+aLauseke (LAKutsu (AKutsu (Id id) xs)) m a = case Map.lookup id a of
+                                Just _ -> (LAKutsu (AKutsu (Id id) xs), [], m)
+
 
 --data AArvo = I Int | B Bool | S String | AVoid deriving (Show)
 
-aMaaritelma :: Maaritelma -> AMuuttujat -> Aliohjelmat -> Tietotyyppi                                                           
-aMaaritelma = undefined                    
+aMaaritelma :: Maaritelma -> AMuuttujat -> Aliohjelmat -> (Maybe Tietotyyppi, Maaritelma, [AVirhe])                                                           
+aMaaritelma (MId (Id id)) m a = case Map.lookup id m of
+                            Just (I _) -> (Just TTInt, MId (Id id), [])   
+                            Just (B _) -> (Just TTBool, MId (Id id), [])    
+                            Just (S _) -> (Just TTString, MId (Id id), []) 
+                            Just AVoid -> (Nothing, MId (Id id), ["Muuttujan " ++ id ++ " tyyppi on void, tämän ei pitäisi olla sallittua"])
+                            Nothing    -> (Nothing, MId (Id id), ["Muuttuja " ++ id ++ " ei ole määritelty"])
+aMaaritelma (MArvo arvo) m a = case arvo of
+                            ArvoInt _ -> (Just TTInt, MArvo arvo, []) 
+                            ArvoString _ -> (Just TTString, MArvo arvo, [])  
+                            ArvoBool _ -> (Just TTBool, MArvo arvo, [])
+aMaaritelma (Aritmeettinen op (MArvo (ArvoInt luku1)) (MArvo (ArvoInt luku2))) m a = case op of
+                            Plus -> (Just TTInt, MArvo (ArvoInt (luku1+luku2)), [])       
+                            Miinus -> (Just TTInt, MArvo (ArvoInt (luku1-luku2)), [])  
+                            Kerto -> (Just TTInt, MArvo (ArvoInt (luku1*luku2)), [])  
+                            Jako -> (Just TTInt, MArvo (ArvoInt (div luku1 luku2)), [])           
+aMaaritelma (Aritmeettinen op maar1 maar2) m a = let
+                            (tyyppi1, umaar1, virhe1) = aMaaritelma maar1 m a
+                            (tyyppi2, umaar2, virhe2) = aMaaritelma maar2 m a
+                            in if (tyyppi1 == Just TTInt && tyyppi2 == Just TTInt)
+                                    then (Just TTInt, Aritmeettinen op umaar1 umaar2, virhe1++virhe2)
+                                    else (Nothing, Aritmeettinen op umaar1 umaar2, virhe1++virhe2++["Aritmeettisia operaatioita voi suorittaa vain luvuille"])
