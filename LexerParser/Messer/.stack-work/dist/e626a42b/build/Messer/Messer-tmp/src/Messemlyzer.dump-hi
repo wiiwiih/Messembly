@@ -1,9 +1,9 @@
 
 ==================== FINAL INTERFACE ====================
-2019-03-11 15:20:35.3975856 UTC
+2019-03-11 17:22:57.688087 UTC
 
 interface main:Messemlyzer 8063
-  interface hash: 40c3eb7c350a478e38adb38048faab82
+  interface hash: 3aa14c66a8fe7684d6fb338e64980e57
   ABI hash: a2f0a904dd515acce4cfa5f55a27b589
   export-list hash: 1ed80bce1a87a6b081b6f3ba3fb4b3af
   orphan hash: 60f27ed359ea4ad0a454919e9df71fef
@@ -82,6 +82,7 @@ import  -/  Messer e1f88e828dd5e13e6dc757211349c899
   ArvoBool daea4fb2b5aa783b243fc98b36d8c8cd
   ArvoInt 1c46658729c19ac660817da145aac84a
   ArvoString 4bbe16ef07879a67daedba60ad49cd3c
+  Erisuuri 8171fd78ef3e7292da90e806df9e2bbc
   Id d78631d083b8ede42d51e70eafbf7de0
   Id b8fb69268f765c3ef225c661dc5360de
   If 0cef250a6b2f48f5d321ce643024ecca
@@ -108,7 +109,11 @@ import  -/  Messer e1f88e828dd5e13e6dc757211349c899
   Palautustyyppi 34c02ede3d9961458594ae2e3e82e002
   Parametri 921e794e49ffe9faa3d22dee476adede
   Parametri 3da2d94919361cdb400e175048f0ba4d
+  Pienempi 26ea671db924e241e84451281099e1a0
+  PienempiYhtasuuri b0983f9b55de5257b403af70c2c94b07
   Plus 507edfff22260490c324f99136998a92
+  Suurempi 061e56268f492989a8f96153916b4885
+  SuurempiYhtasuuri 23fa5de2ed0e893282eabcbc986375ce
   TTBool 55b565619df9fbb976ba6712fefc3744
   TTInt cc6a82539248dbad234c7fccff13c960
   TTString 9dfa60b93aeb64a8e3bac9510068d823
@@ -117,6 +122,7 @@ import  -/  Messer e1f88e828dd5e13e6dc757211349c899
   VanhaSijoitus ba79738bd896b7cc369085d876f07c0b
   Vertailu 308a7d4fec066fc9bc1d8934dc1c24dc
   Void d585c62109a942e8dd72f56bf442d61f
+  Yhtasuuri d4fbbbfbb5c160f6d9655f086f68c1c0
 c9add3cab0645efc0329afdeea320f99
   $fShowAArvo :: GHC.Show.Show Messemlyzer.AArvo
   DFunId

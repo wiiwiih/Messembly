@@ -1,11 +1,11 @@
 
 ==================== FINAL INTERFACE ====================
-2019-03-11 14:59:00.9034289 UTC
+2019-03-11 17:54:14.4186368 UTC
 
 interface main:Main 8063
-  interface hash: 1a73563d4ee18f1f12482a9ffd05a087
-  ABI hash: e56a8fcc341e782df71f5a48dea06661
-  export-list hash: 9a140310786b0d3c58b1dceabc4e1578
+  interface hash: 08035be7f6db29c92c930e1d3be22dcc
+  ABI hash: 5838cbb1378f5c9d9f1edaa7dcf486fe
+  export-list hash: 6fa53145bbd4125fa082aeeaefd4910c
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
   flag hash: 3d908edbd55ea1cb74445d368a011ff0
   opt_hash: 6faf2de08de32d19db9870899d88e59a
@@ -15,6 +15,7 @@ interface main:Main 8063
   used TH splices: False
   where
 exports:
+  Main.analyzeInterpret
   Main.main
 module dependencies: Interpreter Messemlyzer Messer MesserTests
 package dependencies: Win32-2.6.1.0 ansi-terminal-0.8.2
@@ -34,9 +35,10 @@ orphans: stm-2.5.0.0:Control.Monad.STM
          time-1.8.0.2:Data.Time.LocalTime.Internal.ZonedTime
          time-1.8.0.2:Data.Time.LocalTime.Internal.LocalTime
          time-1.8.0.2:Data.Time.Calendar.Gregorian colour-2.3.4:Data.Colour
+         hashable-1.2.7.0:Data.Hashable.Generic
          transformers-0.5.5.0:Control.Monad.Trans.Error
-         hashable-1.2.7.0:Data.Hashable.Generic text-1.2.3.1:Data.Text.Lazy
-         text-1.2.3.1:Data.Text binary-0.8.6.0:Data.Binary.Generic
+         text-1.2.3.1:Data.Text.Lazy text-1.2.3.1:Data.Text
+         binary-0.8.6.0:Data.Binary.Generic
          bytestring-0.10.8.2:Data.ByteString.Builder
          text-1.2.3.1:Data.Text.Show base-4.12.0.0:GHC.Float
          base-4.12.0.0:GHC.Base
@@ -64,21 +66,26 @@ family instance modules: base-4.12.0.0:Control.Applicative
                          tasty-1.2:Test.Tasty.Core text-1.2.3.1:Data.Text
                          text-1.2.3.1:Data.Text.Lazy
 import  -/  base-4.12.0.0:Data.Either b81d41b5f4255f0a7c195f59e02f5b66
+import  -/  base-4.12.0.0:Data.Functor d76c001d92d0a1adf6f6220faa8ca3e5
 import  -/  base-4.12.0.0:Data.Maybe f4c6afc48ee9ed1cd2fb5a451772b4fb
+import  -/  base-4.12.0.0:Data.OldList 24846e178a59de48205721317f115c08
 import  -/  base-4.12.0.0:Prelude b1ccc486556b171042710ef6f2d1a539
 import  -/  base-4.12.0.0:System.IO c4f9b4edbf0d6a7a9a49fe16b71318d4
 import  -/  ghc-prim-0.5.3:GHC.Types 57064c9f957b09bc2e360061ad5cae0b
 import  -/  Interpreter dc82356539edbb5cf8dd51fea6aee923
   exports: 47a8a381c661d23c290fec9cfaf581dc
   interpret 027b4898e44f88651b46e412e60b1602
-import  -/  Messemlyzer a59a4a13620af893b93db18dd5748e76
+import  -/  Messemlyzer a2f0a904dd515acce4cfa5f55a27b589
   exports: 1ed80bce1a87a6b081b6f3ba3fb4b3af
   analysoi 5d7720382c942bec47058e0bf5b57edc
 import  -/  Messer e1f88e828dd5e13e6dc757211349c899
   exports: eedbb4c9b519f3ec35d949e301366b6f
-  testaaTiedosto e094851cec6b11b57f0d16b1c4ccf80f
+  Luokka e7cb6c20637ed95ce0cae1a22331cd3d
+  jasennin d994bc7a75b7773eb39d2d598e88a60d
 import  -/  MesserTests c0aa858c7d907ba527ea3408a3461a0c
   exports: e35b28a1c19fe6eb222ed752d8a861b0
+import  -/  megaparsec-7.0.4:Text.Megaparsec 7df8dafd569bbec3b9e4461882f5d1f8
+import  -/  megaparsec-7.0.4:Text.Megaparsec.Error ae4537c895f9e85ef8486eb6ee5eacb2
 be86c9d078d3acbf19ba91fe74a24273
   $trModule :: GHC.Types.Module
   {- HasNoCafRefs, Strictness: m,
@@ -97,79 +104,263 @@ e5875966b74dad2d29772660b8a75e33
 d026be77cb9ced20e35a61514e0458aa
   $trModule4 :: GHC.Prim.Addr#
   {- HasNoCafRefs, Unfolding: ("main"#) -}
-9d0b06c9b51a3b5ee67217f48497c55b
+09a83b7fef034f65a93ffd847ba311b2
+  $wanalyzeInterpret ::
+    Messer.Id
+    -> Messer.MainOhjelma
+    -> [Messer.Aliohjelma]
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 4, Strictness: <L,U><L,1*U(1*U(U,1*U(U)),1*U)><S,U><S,U>,
+     Inline: [2],
+     Unfolding: (\ (ww :: Messer.Id)
+                   (ww1 :: Messer.MainOhjelma)
+                   (ww2 :: [Messer.Aliohjelma])
+                   (w :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 case Messemlyzer.$wanalysoi ww ww1 ww2 of wild {
+                   Data.Either.Left x -> Interpreter.interpret1 x w
+                   Data.Either.Right y
+                   -> (GHC.IO.Handle.Text.hPutStr'
+                         GHC.IO.Handle.FD.stdout
+                         (Data.OldList.unlines y)
+                         GHC.Types.False)
+                        `cast`
+                      (GHC.Types.N:IO[0] <()>_R)
+                        w }) -}
+2f4aa1058158983baf8c6dffb02ccfc3
+  analyzeInterpret :: Messer.Luokka -> GHC.Types.IO ()
+  {- Arity: 2,
+     Strictness: <S(LLS),1*U(U,1*U(1*U(U,1*U(U)),1*U),U)><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.analyzeInterpret1
+                  `cast`
+                (<Messer.Luokka>_R ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
+cd2058ace20b4c6afe70fcd6d7acfdbf
+  analyzeInterpret1 ::
+    Messer.Luokka
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 2,
+     Strictness: <S(LLS),1*U(U,1*U(1*U(U,1*U(U)),1*U),U)><S,U>,
+     Inline: [2],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: Messer.Luokka)
+                   (w1 :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 case w of ww { Messer.Luokka ww1 ww2 ww3 ->
+                 Main.$wanalyzeInterpret ww1 ww2 ww3 w1 }) -}
+74414f794cb57515ef6fed3d845a49f3
   main :: GHC.Types.IO ()
   {- Arity: 1, Strictness: <S,U>,
      Unfolding: InlineRule (0, True, True)
                 Main.main1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
-79b1022a938b72ce7abcf198e4313f2f
+0a1a03cf72557a7a609d0c803fcfdb99
   main1 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
   {- Arity: 1, Strictness: <S,U>,
      Unfolding: (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld) ->
                  case GHC.IO.Handle.FD.openFile1
-                        Main.main5
+                        Main.main_name
                         GHC.IO.IOMode.ReadMode
                         s of ds1 { (#,#) ipv ipv1 ->
                  case GHC.IO.Handle.Text.hGetContents1
                         ipv1
                         ipv of ds { (#,#) ipv2 ipv3 ->
-                 case Text.Megaparsec.$wparseMaybe
-                        @ Data.Void.Void
-                        @ GHC.Base.String
-                        @ Messer.Luokka
-                        Text.Megaparsec.Stream.$fStream[]
-                        Messer.jasennin1
-                          `cast`
-                        (Sym (Text.Megaparsec.Internal.N:ParsecT[0]
-                                  <Data.Void.Void>_N
-                                  <[GHC.Types.Char]>_N
-                                  <Data.Functor.Identity.Identity>_R
-                                  <Messer.Luokka>_R))
-                        ipv3 of wild {
-                   GHC.Maybe.Nothing
+                 case (Text.Megaparsec.Internal.$fApplicativeParsecT1
+                         @ [GHC.Types.Char]
+                         @ Data.Void.Void
+                         @ Data.Functor.Identity.Identity
+                         Text.Megaparsec.Stream.$fStream[]
+                         @ Messer.Luokka
+                         @ ()
+                         Messer.jasennin4
+                           `cast`
+                         (Sym (Text.Megaparsec.Internal.N:ParsecT[0]
+                                   <Data.Void.Void>_N
+                                   <[GHC.Types.Char]>_N
+                                   <Data.Functor.Identity.Identity>_R
+                                   <Messer.Luokka>_R))
+                         Messer.jasennin2
+                           `cast`
+                         (Sym (Text.Megaparsec.Internal.N:ParsecT[0]
+                                   <Data.Void.Void>_N
+                                   <[GHC.Types.Char]>_N
+                                   <Data.Functor.Identity.Identity>_R
+                                   <()>_R))
+                         @ (Text.Megaparsec.Internal.Reply
+                              Data.Void.Void GHC.Base.String Messer.Luokka)
+                         (Text.Megaparsec.State.State
+                            @ GHC.Base.String
+                            ipv3
+                            0#
+                            (Text.Megaparsec.State.PosState
+                               @ GHC.Base.String
+                               ipv3
+                               0#
+                               Main.main_s2
+                               Text.Megaparsec.Pos.defaultTabWidth_a
+                                 `cast`
+                               (Sym (Text.Megaparsec.Pos.N:Pos[0]))
+                               (GHC.Types.[] @ GHC.Types.Char)))
+                         Main.main5
+                           `cast`
+                         (<Messer.Luokka>_R
+                          ->_R <Text.Megaparsec.State.State GHC.Base.String>_R
+                          ->_R <Text.Megaparsec.Internal.Hints
+                                  (Text.Megaparsec.Stream.Token GHC.Base.String)>_R
+                          ->_R Sym (Data.Functor.Identity.N:Identity[0]
+                                        <Text.Megaparsec.Internal.Reply
+                                           Data.Void.Void GHC.Base.String Messer.Luokka>_R))
+                         Main.main4
+                           `cast`
+                         (<Text.Megaparsec.Error.ParseError
+                             GHC.Base.String Data.Void.Void>_R
+                          ->_R <Text.Megaparsec.State.State GHC.Base.String>_R
+                          ->_R Sym (Data.Functor.Identity.N:Identity[0]
+                                        <Text.Megaparsec.Internal.Reply
+                                           Data.Void.Void GHC.Base.String Messer.Luokka>_R))
+                         Main.main3
+                           `cast`
+                         (<Messer.Luokka>_R
+                          ->_R <Text.Megaparsec.State.State GHC.Base.String>_R
+                          ->_R <Text.Megaparsec.Internal.Hints
+                                  (Text.Megaparsec.Stream.Token GHC.Base.String)>_R
+                          ->_R Sym (Data.Functor.Identity.N:Identity[0]
+                                        <Text.Megaparsec.Internal.Reply
+                                           Data.Void.Void GHC.Base.String Messer.Luokka>_R))
+                         Main.main2
+                           `cast`
+                         (<Text.Megaparsec.Error.ParseError
+                             GHC.Base.String Data.Void.Void>_R
+                          ->_R <Text.Megaparsec.State.State GHC.Base.String>_R
+                          ->_R Sym (Data.Functor.Identity.N:Identity[0]
+                                        <Text.Megaparsec.Internal.Reply
+                                           Data.Void.Void GHC.Base.String Messer.Luokka>_R)))
+                        `cast`
+                      (Data.Functor.Identity.N:Identity[0]
+                           <Text.Megaparsec.Internal.Reply
+                              Data.Void.Void
+                              GHC.Base.String
+                              Messer.Luokka>_R) of wild { Text.Megaparsec.Internal.Reply s' ds2 result ->
+                 case result of wild1 {
+                   Text.Megaparsec.Internal.OK x -> Main.analyzeInterpret1 x ipv2
+                   Text.Megaparsec.Internal.Error e1
                    -> (GHC.IO.Handle.Text.hPutStr'
                          GHC.IO.Handle.FD.stdout
-                         Main.main2
-                         GHC.Types.True)
+                         (Text.Megaparsec.Error.$werrorBundlePretty
+                            @ GHC.Base.String
+                            @ Data.Void.Void
+                            Text.Megaparsec.Stream.$fStream[]
+                            Text.Megaparsec.Error.$fShowErrorComponentVoid
+                            e1
+                            (GHC.Types.[]
+                               @ (Text.Megaparsec.Error.ParseError
+                                    GHC.Base.String Data.Void.Void))
+                            ipv3
+                            0#
+                            Main.main_s2
+                            Text.Megaparsec.Pos.defaultTabWidth_a
+                              `cast`
+                            (Sym (Text.Megaparsec.Pos.N:Pos[0]))
+                            (GHC.Types.[] @ GHC.Types.Char))
+                         GHC.Types.False)
                         `cast`
                       (GHC.Types.N:IO[0] <()>_R)
-                        ipv2
-                   GHC.Maybe.Just ipv4
-                   -> case ipv4 of ww { Messer.Luokka ww1 ww2 ww3 ->
-                      case Messemlyzer.$wanalysoi ww1 ww2 ww3 of wild1 {
-                        Data.Either.Left x -> Interpreter.interpret1 x ipv2
-                        Data.Either.Right y
-                        -> (GHC.IO.Handle.Text.hPutStr'
-                              GHC.IO.Handle.FD.stdout
-                              (GHC.Show.$fShow[]_$s$cshow2 y)
-                              GHC.Types.True)
-                             `cast`
-                           (GHC.Types.N:IO[0] <()>_R)
-                             ipv2 } } } } }) -}
-cc2fad9e8c297dd02948e8e6149013a4
-  main2 :: [GHC.Types.Char]
-  {- Strictness: m2,
-     Unfolding: (GHC.Types.:
-                   @ GHC.Types.Char
-                   GHC.Show.$fShow(,)3
-                   Main.main3) -}
-313726bdf38197e37bbd272a3826aa88
-  main3 :: GHC.Base.String
-  {- Unfolding: (GHC.Show.showLitString
-                   (GHC.CString.unpackCString# Main.main4)
-                   GHC.Show.$fShow[]1) -}
-5a064977357d93ec61d4074576a9b179
-  main4 :: GHC.Prim.Addr#
-  {- HasNoCafRefs, Unfolding: ("rip"#) -}
-818a902440124ee71e803f52cae1f0a7
-  main5 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString# Main.main6) -}
+                        ipv2 } } } }) -}
+21169f173a4bb5d9b8e400f68a5bb337
+  main2 ::
+    Text.Megaparsec.Error.ParseError GHC.Base.String Data.Void.Void
+    -> Text.Megaparsec.State.State GHC.Base.String
+    -> Text.Megaparsec.Internal.Reply
+         Data.Void.Void GHC.Base.String Messer.Luokka
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,U><L,U>m,
+     Unfolding: (\ (err :: Text.Megaparsec.Error.ParseError
+                             GHC.Base.String Data.Void.Void)
+                   (s' :: Text.Megaparsec.State.State GHC.Base.String) ->
+                 Text.Megaparsec.Internal.Reply
+                   @ Data.Void.Void
+                   @ GHC.Base.String
+                   @ Messer.Luokka
+                   s'
+                   Text.Megaparsec.Internal.Virgin
+                   (Text.Megaparsec.Internal.Error
+                      @ GHC.Base.String
+                      @ Data.Void.Void
+                      @ Messer.Luokka
+                      err)) -}
+ae7416231a22d7e925f80f6ea87e2f21
+  main3 ::
+    Messer.Luokka
+    -> Text.Megaparsec.State.State GHC.Base.String
+    -> Text.Megaparsec.Internal.Hints
+         (Text.Megaparsec.Stream.Token GHC.Base.String)
+    -> Text.Megaparsec.Internal.Reply
+         Data.Void.Void GHC.Base.String Messer.Luokka
+  {- Arity: 3, HasNoCafRefs, Strictness: <L,U><L,U><L,A>m,
+     Unfolding: (\ (a1 :: Messer.Luokka)
+                   (s' :: Text.Megaparsec.State.State GHC.Base.String)[OneShot]
+                   (ds :: Text.Megaparsec.Internal.Hints
+                            (Text.Megaparsec.Stream.Token GHC.Base.String))[OneShot] ->
+                 Text.Megaparsec.Internal.Reply
+                   @ Data.Void.Void
+                   @ GHC.Base.String
+                   @ Messer.Luokka
+                   s'
+                   Text.Megaparsec.Internal.Virgin
+                   (Text.Megaparsec.Internal.OK
+                      @ GHC.Base.String
+                      @ Data.Void.Void
+                      @ Messer.Luokka
+                      a1)) -}
+5a119a73f4da2d2f262b8ed403be18f7
+  main4 ::
+    Text.Megaparsec.Error.ParseError GHC.Base.String Data.Void.Void
+    -> Text.Megaparsec.State.State GHC.Base.String
+    -> Text.Megaparsec.Internal.Reply
+         Data.Void.Void GHC.Base.String Messer.Luokka
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,U><L,U>m,
+     Unfolding: (\ (err :: Text.Megaparsec.Error.ParseError
+                             GHC.Base.String Data.Void.Void)
+                   (s' :: Text.Megaparsec.State.State GHC.Base.String) ->
+                 Text.Megaparsec.Internal.Reply
+                   @ Data.Void.Void
+                   @ GHC.Base.String
+                   @ Messer.Luokka
+                   s'
+                   Text.Megaparsec.Internal.Consumed
+                   (Text.Megaparsec.Internal.Error
+                      @ GHC.Base.String
+                      @ Data.Void.Void
+                      @ Messer.Luokka
+                      err)) -}
+6d4319e5af669264606dbdf1e68c0293
+  main5 ::
+    Messer.Luokka
+    -> Text.Megaparsec.State.State GHC.Base.String
+    -> Text.Megaparsec.Internal.Hints
+         (Text.Megaparsec.Stream.Token GHC.Base.String)
+    -> Text.Megaparsec.Internal.Reply
+         Data.Void.Void GHC.Base.String Messer.Luokka
+  {- Arity: 3, HasNoCafRefs, Strictness: <L,U><L,U><L,A>m,
+     Unfolding: (\ (a1 :: Messer.Luokka)
+                   (s' :: Text.Megaparsec.State.State GHC.Base.String)[OneShot]
+                   (ds :: Text.Megaparsec.Internal.Hints
+                            (Text.Megaparsec.Stream.Token GHC.Base.String))[OneShot] ->
+                 Text.Megaparsec.Internal.Reply
+                   @ Data.Void.Void
+                   @ GHC.Base.String
+                   @ Messer.Luokka
+                   s'
+                   Text.Megaparsec.Internal.Consumed
+                   (Text.Megaparsec.Internal.OK
+                      @ GHC.Base.String
+                      @ Data.Void.Void
+                      @ Messer.Luokka
+                      a1)) -}
 41bfc29f7126a2e9022e6bf2a816ce5f
   main6 :: GHC.Prim.Addr#
   {- HasNoCafRefs, Unfolding: ("test.mess"#) -}
-1e693520c1144e9f4bd26c5b8f153e34
+3661cddb7b0e172dfb42ba532f9fac8f
   main7 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
@@ -177,6 +368,13 @@ cc2fad9e8c297dd02948e8e6149013a4
      Unfolding: (GHC.TopHandler.runMainIO1
                    @ ()
                    Main.main1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R))) -}
+363dcac9c4ee50c2540552600abefc1a
+  main_name :: GHC.Base.String
+  {- Unfolding: (GHC.CString.unpackCString# Main.main6) -}
+6f70079f466fb609361d98dc17aa6e24
+  main_s2 :: Text.Megaparsec.Pos.SourcePos
+  {- Strictness: m,
+     Unfolding: (Text.Megaparsec.Pos.SourcePos Main.main_name 1# 1#) -}
 trusted: none
 require own pkg trusted: False
 module header:

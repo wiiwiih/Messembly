@@ -193,6 +193,13 @@ aMaaritelma (Aritmeettinen op maar1 maar2) m a = let
                             in if (tyyppi1 == Just TTInt && tyyppi2 == Just TTInt)
                                     then (Just TTInt, Aritmeettinen op umaar1 umaar2, virhe1++virhe2)
                                     else (Nothing, Aritmeettinen op umaar1 umaar2, virhe1++virhe2++["Aritmeettisia operaatioita voi suorittaa vain luvuille"])
+aMaaritelma (Vertailu op (MArvo (ArvoInt luku1)) (MArvo (ArvoInt luku2))) m a = case op of
+                            Pienempi -> (Just TTBool, MArvo (ArvoBool (luku1 < luku2)), [])       
+                            Suurempi -> (Just TTBool, MArvo (ArvoBool (luku1 > luku2)), [])  
+                            PienempiYhtasuuri -> (Just TTBool, MArvo (ArvoBool (luku1 <= luku2)), [])  
+                            SuurempiYhtasuuri -> (Just TTBool, MArvo (ArvoBool (luku1 >= luku2)), [])    
+                            Yhtasuuri -> (Just TTBool, MArvo (ArvoBool (luku1 == luku2)), [])     
+                            Erisuuri -> (Just TTBool, MArvo (ArvoBool (luku1 /= luku2)), [])      
 aMaaritelma (Vertailu op maar1 maar2) m a = let
                             (tyyppi1, umaar1, virhe1) = aMaaritelma maar1 m a
                             (tyyppi2, umaar2, virhe2) = aMaaritelma maar2 m a
