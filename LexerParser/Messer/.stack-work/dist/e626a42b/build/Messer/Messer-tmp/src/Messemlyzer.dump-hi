@@ -1,12 +1,12 @@
 
 ==================== FINAL INTERFACE ====================
-2019-03-09 19:04:27.5625531 UTC
+2019-03-11 15:20:35.3975856 UTC
 
 interface main:Messemlyzer 8063
-  interface hash: 53fd5d7f576b431a68b3fd47d94969ba
-  ABI hash: 906509bfc50864d4fab264a8d81dda96
-  export-list hash: cff7a23a858d2e1ac03060c395b89fce
-  orphan hash: 192ac8a8488deacfbea01cf15d610673
+  interface hash: 40c3eb7c350a478e38adb38048faab82
+  ABI hash: a2f0a904dd515acce4cfa5f55a27b589
+  export-list hash: 1ed80bce1a87a6b081b6f3ba3fb4b3af
+  orphan hash: 60f27ed359ea4ad0a454919e9df71fef
   flag hash: 8346313dc06e16ebefba9f23d6444d37
   opt_hash: 6faf2de08de32d19db9870899d88e59a
   hpc_hash: 93b885adfe0da089cdf634904fd59f71
@@ -20,6 +20,7 @@ exports:
   Messemlyzer.aLausekkeet
   Messemlyzer.aMaaritelma
   Messemlyzer.aMain
+  Messemlyzer.aParametrit
   Messemlyzer.analysoi
   Messemlyzer.mapAliohj
   Messemlyzer.uYmparisto
@@ -64,7 +65,6 @@ family instance modules: base-4.12.0.0:Control.Applicative
                          text-1.2.3.1:Data.Text.Lazy
 import  -/  base-4.12.0.0:Data.Either b81d41b5f4255f0a7c195f59e02f5b66
 import  -/  base-4.12.0.0:GHC.Base b0f6eed6c4b57b0a2f7c7570f245848b
-import  -/  base-4.12.0.0:GHC.Err c251e53993cbac856ae26ac9d3d737b6
 import  -/  base-4.12.0.0:GHC.Num 6054c1c23a1433b06aa5321ae01f13b2
 import  -/  base-4.12.0.0:GHC.Real 11a06d7fcd7db99538ab6d6f2b048af9
 import  -/  base-4.12.0.0:GHC.Show 5c4c5ac15ef4d7749e0e6f06242c812a
@@ -97,6 +97,7 @@ import  -/  Messer e1f88e828dd5e13e6dc757211349c899
   Lauseke 1c899e862121308cd4f91402a82ba3f9
   Luokka 96aaad7c4eac0cb961fde19017e07b38
   Luokka e7cb6c20637ed95ce0cae1a22331cd3d
+  MAKutsu f8930763ae36b65b34a951fd7b2eadfe
   MArvo f55ccd5f76451238c75f6f4750308fb8
   MId adbf1cadfbd5b2bf212682e6b2713b2d
   Maaritelma ea67a20a6ff998dcfcbb33a0a151c225
@@ -114,6 +115,7 @@ import  -/  Messer e1f88e828dd5e13e6dc757211349c899
   Tietotyyppi e9c807259680593d625496093d974d4b
   UusiSijoitus a27a4c2845449030206723666c04affc
   VanhaSijoitus ba79738bd896b7cc369085d876f07c0b
+  Vertailu 308a7d4fec066fc9bc1d8934dc1c24dc
   Void d585c62109a942e8dd72f56bf442d61f
 c9add3cab0645efc0329afdeea320f99
   $fShowAArvo :: GHC.Show.Show Messemlyzer.AArvo
@@ -288,6 +290,175 @@ c9add3cab0645efc0329afdeea320f99
                                             eta))))) } }
                    Messemlyzer.AVoid
                    -> GHC.Base.++ @ GHC.Types.Char Messemlyzer.$fShowAArvo3 eta }) -}
+e2a09adee24d5f19a9995ddde2d978ee
+  $fShowALuokka :: GHC.Show.Show Messemlyzer.ALuokka
+  DFunId
+  {- Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ Messemlyzer.ALuokka
+                  Messemlyzer.$fShowALuokka_$cshowsPrec
+                  Messemlyzer.$fShowALuokka_$cshow
+                  Messemlyzer.$fShowALuokka_$cshowList -}
+e2a09adee24d5f19a9995ddde2d978ee
+  $fShowALuokka1 :: Messemlyzer.ALuokka -> GHC.Show.ShowS
+  {- Arity: 1, Strictness: <S,1*U(U(U),U(U(U,U(U)),U),1*U)>,
+     Unfolding: (\ (w :: Messemlyzer.ALuokka) ->
+                 case w of ww { Messemlyzer.ALuokka ww1 ww2 ww3 ->
+                 Messemlyzer.$w$cshowsPrec 0# ww1 ww2 ww3 }) -}
+a8f4b86d4ebd26bb01b6602dc21f8965
+  $fShowALuokka2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   Messemlyzer.$fShowALuokka3) -}
+20bca406199a3819f5262bc1cfbde9cb
+  $fShowALuokka3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("ALuokka "#) -}
+e2a09adee24d5f19a9995ddde2d978ee
+  $fShowALuokka_$cshow :: Messemlyzer.ALuokka -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U(U(U),U(U(U,U(U)),U),1*U)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: Messemlyzer.ALuokka) ->
+                 Messemlyzer.$fShowALuokka_$cshowsPrec
+                   Messemlyzer.$fShowAArvo2
+                   x
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+e2a09adee24d5f19a9995ddde2d978ee
+  $fShowALuokka_$cshowList :: [Messemlyzer.ALuokka] -> GHC.Show.ShowS
+  {- Arity: 2, Strictness: <S,1*U><L,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (ls :: [Messemlyzer.ALuokka]) (s :: GHC.Base.String) ->
+                 GHC.Show.showList__
+                   @ Messemlyzer.ALuokka
+                   Messemlyzer.$fShowALuokka1
+                   ls
+                   s) -}
+e2a09adee24d5f19a9995ddde2d978ee
+  $fShowALuokka_$cshowsPrec ::
+    GHC.Types.Int -> Messemlyzer.ALuokka -> GHC.Show.ShowS
+  {- Arity: 2,
+     Strictness: <S(S),1*U(U)><S,1*U(U(U),U(U(U,U(U)),U),1*U)>,
+     Inline: [2],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: GHC.Types.Int) (w1 :: Messemlyzer.ALuokka) ->
+                 case w of ww { GHC.Types.I# ww1 ->
+                 case w1 of ww2 { Messemlyzer.ALuokka ww3 ww4 ww5 ->
+                 Messemlyzer.$w$cshowsPrec ww1 ww3 ww4 ww5 } }) -}
+67c64ab66e05285b6fb98d48426f3398
+  $fShowALuokka_$s$fShow(,,) ::
+    GHC.Show.Show
+      (Messer.Palautustyyppi, [Messer.Parametri], [Messer.Lauseke])
+  {- Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ (Messer.Palautustyyppi, [Messer.Parametri], [Messer.Lauseke])
+                  (GHC.Show.$fShow(,,)_$cshowsPrec
+                     @ Messer.Palautustyyppi
+                     @ [Messer.Parametri]
+                     @ [Messer.Lauseke]
+                     Messer.$fShowPalautustyyppi
+                     Messemlyzer.$fShowALuokka_$s$fShow[]1
+                     Messemlyzer.$fShowALuokka_$s$fShow[])
+                  (\ (x :: (Messer.Palautustyyppi, [Messer.Parametri],
+                            [Messer.Lauseke])) ->
+                   GHC.Show.$fShow(,,)_$cshowsPrec
+                     @ Messer.Palautustyyppi
+                     @ [Messer.Parametri]
+                     @ [Messer.Lauseke]
+                     Messer.$fShowPalautustyyppi
+                     Messemlyzer.$fShowALuokka_$s$fShow[]1
+                     Messemlyzer.$fShowALuokka_$s$fShow[]
+                     GHC.Show.$fShow(,)1
+                     x
+                     (GHC.Types.[] @ GHC.Types.Char))
+                  (\ (ls :: [(Messer.Palautustyyppi, [Messer.Parametri],
+                              [Messer.Lauseke])])
+                     (s :: GHC.Base.String) ->
+                   GHC.Show.showList__
+                     @ (Messer.Palautustyyppi, [Messer.Parametri], [Messer.Lauseke])
+                     (GHC.Show.$fShow(,,)_$cshowsPrec
+                        @ Messer.Palautustyyppi
+                        @ [Messer.Parametri]
+                        @ [Messer.Lauseke]
+                        Messer.$fShowPalautustyyppi
+                        Messemlyzer.$fShowALuokka_$s$fShow[]1
+                        Messemlyzer.$fShowALuokka_$s$fShow[]
+                        GHC.Show.$fShow(,)1)
+                     ls
+                     s) -}
+c979102392c2b8408aea6dfaa5dd6332
+  $fShowALuokka_$s$fShow[] :: GHC.Show.Show [Messer.Lauseke]
+  {- Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ [Messer.Lauseke]
+                  (\ (ds :: GHC.Types.Int) -> Messer.$fShowLauseke_$cshowList)
+                  (\ (x :: [Messer.Lauseke]) ->
+                   GHC.Show.showList__
+                     @ Messer.Lauseke
+                     Messer.$fShowLauseke1
+                     x
+                     (GHC.Types.[] @ GHC.Types.Char))
+                  (\ (ls :: [[Messer.Lauseke]]) (s :: GHC.Base.String) ->
+                   GHC.Show.showList__
+                     @ [Messer.Lauseke]
+                     Messer.$fShowLauseke_$cshowList
+                     ls
+                     s) -}
+fa260836dc198c85c864c2aab7fe270d
+  $fShowALuokka_$s$fShow[]1 :: GHC.Show.Show [Messer.Parametri]
+  {- Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ [Messer.Parametri]
+                  (\ (ds :: GHC.Types.Int) -> Messer.$fShowParametri_$cshowList)
+                  (\ (x :: [Messer.Parametri]) ->
+                   GHC.Show.showList__
+                     @ Messer.Parametri
+                     Messer.$fShowParametri1
+                     x
+                     (GHC.Types.[] @ GHC.Types.Char))
+                  (\ (ls :: [[Messer.Parametri]]) (s :: GHC.Base.String) ->
+                   GHC.Show.showList__
+                     @ [Messer.Parametri]
+                     Messer.$fShowParametri_$cshowList
+                     ls
+                     s) -}
+282ad671fad7d5d24cb0e24c7b620cbf
+  $s$fShow[]_$cshow :: [Messer.Lauseke] -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: [Messer.Lauseke]) ->
+                 GHC.Show.showList__
+                   @ Messer.Lauseke
+                   Messer.$fShowLauseke1
+                   x
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+2f7bae73e524c6876c8db955eb3c31e8
+  $s$fShow[]_$cshow1 :: [Messer.Parametri] -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: [Messer.Parametri]) ->
+                 GHC.Show.showList__
+                   @ Messer.Parametri
+                   Messer.$fShowParametri1
+                   x
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+c031309284030ca92853309c54fc1cd3
+  $s$fShow[]_$cshowList :: [[Messer.Lauseke]] -> GHC.Show.ShowS
+  {- Arity: 2, Strictness: <S,1*U><L,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (ls :: [[Messer.Lauseke]]) (s :: GHC.Base.String) ->
+                 GHC.Show.showList__
+                   @ [Messer.Lauseke]
+                   Messer.$fShowLauseke_$cshowList
+                   ls
+                   s) -}
+1d12415bc433df2f889b7128476d885d
+  $s$fShow[]_$cshowList1 :: [[Messer.Parametri]] -> GHC.Show.ShowS
+  {- Arity: 2, Strictness: <S,1*U><L,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (ls :: [[Messer.Parametri]]) (s :: GHC.Base.String) ->
+                 GHC.Show.showList__
+                   @ [Messer.Parametri]
+                   Messer.$fShowParametri_$cshowList
+                   ls
+                   s) -}
 9d545decc8e21b7a0878340d70b88655
   $sinsertR_$sgo13 ::
     [GHC.Types.Char]
@@ -304,6 +475,13 @@ c9add3cab0645efc0329afdeea320f99
     -> Data.Map.Internal.Map [GHC.Types.Char] a1
     -> Data.Map.Internal.Map [GHC.Types.Char] a1
   {- Arity: 4, Strictness: <L,U><S,1*U><L,U><S,1*U> -}
+30ff18f66a135c38f7df567f2401d3a0
+  $sinsert_$sgo8 ::
+    GHC.Base.String
+    -> a1
+    -> Data.Map.Internal.Map GHC.Base.String a1
+    -> Data.Map.Internal.Map GHC.Base.String a1
+  {- Arity: 3, Strictness: <S,1*U><S,1*U><S,1*U> -}
 47c83dff2f346d836697d729bb24d5f1
   $slookup1 ::
     [GHC.Types.Char]
@@ -469,60 +647,192 @@ ed4b6206ec301a17cb4ac93a7bbf2461
 71f647d49633d913a060877dd9f1b871
   $trModule4 :: GHC.Prim.Addr#
   {- HasNoCafRefs, Unfolding: ("main"#) -}
+c33b0d0cc9e1224bf2713df54becce3b
+  $w$cshowsPrec ::
+    GHC.Prim.Int#
+    -> Messer.Id
+    -> Messer.MainOhjelma
+    -> Messemlyzer.Aliohjelmat
+    -> GHC.Show.ShowS
+  {- Arity: 4, Strictness: <S,U><L,U(U)><L,U(U(U,U(U)),U)><L,1*U>,
+     Inline: [2],
+     Unfolding: (\ (ww :: GHC.Prim.Int#)
+                   (ww1 :: Messer.Id)
+                   (ww2 :: Messer.MainOhjelma)
+                   (ww3 :: Messemlyzer.Aliohjelmat) ->
+                 let {
+                   g :: GHC.Base.String -> GHC.Base.String
+                   = Data.Map.Internal.$w$cshowsPrec
+                       @ [GHC.Types.Char]
+                       @ (Messer.Palautustyyppi, [Messer.Parametri], [Messer.Lauseke])
+                       GHC.Show.$fShow[]_$s$fShow[]1
+                       Messemlyzer.$fShowALuokka_$s$fShow(,,)
+                       11#
+                       ww3
+                 } in
+                 let {
+                   g1 :: GHC.Base.String -> GHC.Base.String
+                     {- Arity: 1, Strictness: <L,U> -}
+                   = \ (x :: GHC.Base.String) ->
+                     case ww1 of ww4 { Messer.Id ww5 ->
+                     Messer.$w$cshowsPrec2
+                       11#
+                       ww5
+                       (GHC.Types.:
+                          @ GHC.Types.Char
+                          GHC.Show.showSpace1
+                          (case ww2 of ww6 { Messer.MainOhjelma ww7 ww8 ->
+                           Messer.$w$cshowsPrec8
+                             11#
+                             ww7
+                             ww8
+                             (GHC.Types.: @ GHC.Types.Char GHC.Show.showSpace1 (g x)) })) }
+                 } in
+                 case GHC.Prim.>=# ww 11# of lwild {
+                   DEFAULT
+                   -> \ (x :: GHC.Base.String) ->
+                      GHC.Base.++ @ GHC.Types.Char Messemlyzer.$fShowALuokka2 (g1 x)
+                   1#
+                   -> \ (x :: GHC.Base.String) ->
+                      GHC.Types.:
+                        @ GHC.Types.Char
+                        GHC.Show.$fShow(,)4
+                        (GHC.Base.++
+                           @ GHC.Types.Char
+                           Messemlyzer.$fShowALuokka2
+                           (g1 (GHC.Types.: @ GHC.Types.Char GHC.Show.$fShow(,)2 x))) }) -}
 9b0e24256ea1e311f907e79d8cfba3ad
   $waAliohjelmat ::
     [Messer.Aliohjelma]
     -> Messemlyzer.Aliohjelmat
     -> (# Messemlyzer.Aliohjelmat, [Messemlyzer.AVirhe] #)
   {- Arity: 2, Strictness: <S,1*U><L,U>, Inline: [2] -}
-c18896b85d40d3b85391086b01b98051
+986cec64a28dd81d9595f9e92d70ce67
   $waLauseke ::
     Messer.Lauseke
     -> Messemlyzer.AMuuttujat
     -> Messemlyzer.Aliohjelmat
     -> (# Messer.Lauseke, [Messemlyzer.AVirhe],
           Messemlyzer.AMuuttujat #)
-  {- Arity: 3, Strictness: <S,1*U><L,U><L,1*U>, Inline: [2] -}
-d04e2a5148ae7e60dfadd606cc3370a5
+  {- Arity: 3, Strictness: <S,1*U><L,U><L,U>, Inline: [2] -}
+dbcfb45e8b62a4657e029cc7e5b04b90
+  $waLausekkeet ::
+    [Messer.Lauseke]
+    -> Messemlyzer.AMuuttujat
+    -> Messemlyzer.Aliohjelmat
+    -> (# [Messer.Lauseke], [Messemlyzer.AVirhe],
+          Messemlyzer.AMuuttujat #)
+  {- Arity: 3, Strictness: <S,1*U><L,U><L,U>, Inline: [2] -}
+d46dda9e655c93b5dca35b150f165c99
   $waMaaritelma ::
     Messer.Maaritelma
     -> Messemlyzer.AMuuttujat
+    -> Messemlyzer.Aliohjelmat
     -> (# GHC.Maybe.Maybe Messer.Tietotyyppi, Messer.Maaritelma,
           [Messemlyzer.AVirhe] #)
-  {- Arity: 2, Strictness: <S,1*U><L,U>, Inline: [2] -}
-1c4bba4902eed5fcf6f6e9ba33de2f02
+  {- Arity: 3, Strictness: <S,1*U><L,U><L,U>, Inline: [2] -}
+2333baacf59905cdc22b042dd0a21709
+  $waMain ::
+    Messer.Tietotyyppi
+    -> GHC.Base.String
+    -> [Messer.Lauseke]
+    -> Messemlyzer.Aliohjelmat
+    -> (# Messer.MainOhjelma, [Messemlyzer.AVirhe] #)
+  {- Arity: 4, Strictness: <L,U><L,U><L,1*U><L,U>, Inline: [2],
+     Unfolding: (\ (ww :: Messer.Tietotyyppi)
+                   (ww1 :: GHC.Base.String)
+                   (ww2 :: [Messer.Lauseke])
+                   (w :: Messemlyzer.Aliohjelmat) ->
+                 let {
+                   ds :: ([Messer.Lauseke], [Messemlyzer.AVirhe],
+                          Messemlyzer.AMuuttujat)
+                   = case Messemlyzer.$waLausekkeet
+                            ww2
+                            (case ww of wild {
+                               Messer.TTInt
+                               -> case ww1 of dt { DEFAULT ->
+                                  Data.Map.Internal.Bin
+                                    @ GHC.Base.String
+                                    @ Messemlyzer.AArvo
+                                    1#
+                                    dt
+                                    Messemlyzer.aMain3
+                                    (Data.Map.Internal.Tip @ GHC.Base.String @ Messemlyzer.AArvo)
+                                    (Data.Map.Internal.Tip @ GHC.Base.String @ Messemlyzer.AArvo) }
+                               Messer.TTBool
+                               -> case ww1 of dt { DEFAULT ->
+                                  Data.Map.Internal.Bin
+                                    @ GHC.Base.String
+                                    @ Messemlyzer.AArvo
+                                    1#
+                                    dt
+                                    Messemlyzer.aMain2
+                                    (Data.Map.Internal.Tip @ GHC.Base.String @ Messemlyzer.AArvo)
+                                    (Data.Map.Internal.Tip @ GHC.Base.String @ Messemlyzer.AArvo) }
+                               Messer.TTString
+                               -> case ww1 of dt { DEFAULT ->
+                                  Data.Map.Internal.Bin
+                                    @ GHC.Base.String
+                                    @ Messemlyzer.AArvo
+                                    1#
+                                    dt
+                                    Messemlyzer.aMain1
+                                    (Data.Map.Internal.Tip @ GHC.Base.String @ Messemlyzer.AArvo)
+                                    (Data.Map.Internal.Tip
+                                       @ GHC.Base.String
+                                       @ Messemlyzer.AArvo) } })
+                            w of ww3 { (#,,#) ww4 ww5 ww6 ->
+                     (ww4, ww5, ww6) }
+                 } in
+                 (# Messer.MainOhjelma
+                      (Messer.Parametri ww (Messer.Id ww1))
+                      (case ds of wild { (,,) lausekkeet virheet ds1 -> lausekkeet }),
+                    case ds of wild { (,,) lausekkeet virheet ds1 -> virheet } #)) -}
+4f6676db60180da05a70715dbdd3c950
   $wanalysoi ::
     Messer.Id
     -> Messer.MainOhjelma
     -> [Messer.Aliohjelma]
     -> Data.Either.Either Messemlyzer.ALuokka [Messemlyzer.AVirhe]
-  {- Arity: 3, Strictness: <L,U><L,U(U(U,U),A)><S,U>, Inline: [2],
+  {- Arity: 3, Strictness: <L,U><L,1*U(1*U(U,1*U(U)),1*U)><S,U>,
+     Inline: [2],
      Unfolding: (\ (ww :: Messer.Id)
                    (ww1 :: Messer.MainOhjelma)
                    (ww2 :: [Messer.Aliohjelma]) ->
                  case Messemlyzer.$waAliohjelmat
                         ww2
                         (Messemlyzer.mapAliohj ww2) of ww3 { (#,#) ww4 ww5 ->
+                 let {
+                   ds :: (Messer.MainOhjelma, [Messemlyzer.AVirhe])
+                   = case ww1 of ww6 { Messer.MainOhjelma ww7 ww8 ->
+                     case ww7 of ww9 { Messer.Parametri ww10 ww11 ->
+                     case ww11 of ww12 { Messer.Id ww13 ->
+                     case Messemlyzer.$waMain
+                            ww10
+                            ww13
+                            ww8
+                            ww4 of ww14 { (#,#) ww15 ww16 ->
+                     (ww15, ww16) } } } }
+                 } in
+                 let {
+                   virheet :: [Messemlyzer.AVirhe]
+                   = case ds of wild { (,) uusiMain virheet1 -> virheet1 }
+                 } in
                  case GHC.Classes.$fEq[]_$s$c==1
-                        (GHC.Base.++ @ [GHC.Types.Char] ww5 (Messemlyzer.analysoi1 ww1))
+                        (GHC.Base.++ @ [GHC.Types.Char] ww5 virheet)
                         (GHC.Types.[] @ Messemlyzer.AVirhe) of wild {
                    GHC.Types.False
                    -> Data.Either.Right
                         @ Messemlyzer.ALuokka
                         @ [Messemlyzer.AVirhe]
-                        (Messemlyzer.analysoi1 ww1)
+                        virheet
                    GHC.Types.True
                    -> Data.Either.Left
                         @ Messemlyzer.ALuokka
                         @ [Messemlyzer.AVirhe]
                         (Messemlyzer.ALuokka
                            ww
-                           (case ww1 of wild1 { Messer.MainOhjelma ds xs ->
-                            case ds of wild2 { Messer.Parametri t ds1 ->
-                            case ds1 of wild3 { Messer.Id id ->
-                            Messer.MainOhjelma
-                              wild2
-                              (case Messemlyzer.aLausekkeet ret_ty [Messer.Lauseke] of {}) } } })
+                           (case ds of wild1 { (,) uusiMain virheet1 -> uusiMain })
                            ww4) } }) -}
 0f2aea7b8d71a11859e1e3360e5199ce
   $wpoly_go13 ::
@@ -534,7 +844,7 @@ d04e2a5148ae7e60dfadd606cc3370a5
 c9add3cab0645efc0329afdeea320f99
   data AArvo
     = I GHC.Types.Int | B GHC.Types.Bool | S GHC.Base.String | AVoid
-58e21e7599866c38e9dc6dbd67b91472
+e2a09adee24d5f19a9995ddde2d978ee
   data ALuokka
     = ALuokka Messer.Id Messer.MainOhjelma Messemlyzer.Aliohjelmat
 a0d476564700027c38d2e4ba7c160caa
@@ -557,70 +867,97 @@ cfde6a4fc963fca275460cf9a1a3a9fb
                 (\ (w :: [Messer.Aliohjelma]) (w1 :: Messemlyzer.Aliohjelmat) ->
                  case Messemlyzer.$waAliohjelmat w w1 of ww { (#,#) ww1 ww2 ->
                  (ww1, ww2) }) -}
-fd5e5aebca3a54c317643598928ff5e6
+3cabf15e40e2a66f4413a0b4293fee34
   aLauseke ::
     Messer.Lauseke
     -> Messemlyzer.AMuuttujat
     -> Messemlyzer.Aliohjelmat
     -> (Messer.Lauseke, [Messemlyzer.AVirhe], Messemlyzer.AMuuttujat)
-  {- Arity: 3, Strictness: <S,1*U><L,U><L,1*U>m, Inline: [2],
+  {- Arity: 3, Strictness: <S,1*U><L,U><L,U>m, Inline: [2],
      Unfolding: InlineRule (3, True, False)
                 (\ (w :: Messer.Lauseke)
                    (w1 :: Messemlyzer.AMuuttujat)
                    (w2 :: Messemlyzer.Aliohjelmat) ->
                  case Messemlyzer.$waLauseke w w1 w2 of ww { (#,,#) ww1 ww2 ww3 ->
                  (ww1, ww2, ww3) }) -}
-ee6971284440f0f0394a8390c73d7fad
+91e8734d3e7ba6a541fde86be492df7a
   aLausekkeet ::
     [Messer.Lauseke]
     -> Messemlyzer.AMuuttujat
     -> Messemlyzer.Aliohjelmat
     -> ([Messer.Lauseke], [Messemlyzer.AVirhe], Messemlyzer.AMuuttujat)
-  {- Strictness: x -}
-0af624d74d5bf3aaa025c2069de0b158
+  {- Arity: 3, Strictness: <S,1*U><L,U><L,U>m, Inline: [2],
+     Unfolding: InlineRule (3, True, False)
+                (\ (w :: [Messer.Lauseke])
+                   (w1 :: Messemlyzer.AMuuttujat)
+                   (w2 :: Messemlyzer.Aliohjelmat) ->
+                 case Messemlyzer.$waLausekkeet
+                        w
+                        w1
+                        w2 of ww { (#,,#) ww1 ww2 ww3 ->
+                 (ww1, ww2, ww3) }) -}
+812d79b11211519f82177f3781bd313c
   aMaaritelma ::
     Messer.Maaritelma
     -> Messemlyzer.AMuuttujat
     -> Messemlyzer.Aliohjelmat
     -> (GHC.Maybe.Maybe Messer.Tietotyyppi, Messer.Maaritelma,
         [Messemlyzer.AVirhe])
-  {- Arity: 3, Strictness: <S,1*U><L,U><L,A>m, Inline: [2],
+  {- Arity: 3, Strictness: <S,1*U><L,U><L,U>m, Inline: [2],
      Unfolding: InlineRule (3, True, False)
                 (\ (w :: Messer.Maaritelma)
                    (w1 :: Messemlyzer.AMuuttujat)
                    (w2 :: Messemlyzer.Aliohjelmat) ->
-                 case Messemlyzer.$waMaaritelma w w1 of ww { (#,,#) ww1 ww2 ww3 ->
+                 case Messemlyzer.$waMaaritelma
+                        w
+                        w1
+                        w2 of ww { (#,,#) ww1 ww2 ww3 ->
                  (ww1, ww2, ww3) }) -}
-1fdd81c7c9d6fdec5130a510088712f0
+998b230f5706caf67acdb96887bd4a1a
   aMain ::
     Messer.MainOhjelma
     -> Messemlyzer.Aliohjelmat
     -> (Messer.MainOhjelma, [Messemlyzer.AVirhe])
-  {- Arity: 2, Strictness: <S(S(LS)L),1*U(1*U(U,U),A)><L,A>m,
+  {- Arity: 2, Strictness: <S(S(LS)L),1*U(1*U(U,1*U(U)),1*U)><L,U>m,
+     Inline: [2],
      Unfolding: InlineRule (2, True, False)
-                (\ (ds :: Messer.MainOhjelma) (a :: Messemlyzer.Aliohjelmat) ->
-                 case ds of wild { Messer.MainOhjelma ds1 xs ->
-                 case ds1 of wild1 { Messer.Parametri t ds2 ->
-                 case ds2 of wild2 { Messer.Id id ->
-                 (Messer.MainOhjelma
-                    (Messer.Parametri t (Messer.Id id))
-                    (case Messemlyzer.aLausekkeet ret_ty [Messer.Lauseke] of {}),
-                  case Messemlyzer.aLausekkeet
-                  ret_ty [Messemlyzer.AVirhe]
-                  of {}) } } }) -}
-896858b2a4233e4d2f7ea7a1ddb16910
+                (\ (w :: Messer.MainOhjelma) (w1 :: Messemlyzer.Aliohjelmat) ->
+                 case w of ww { Messer.MainOhjelma ww1 ww2 ->
+                 case ww1 of ww3 { Messer.Parametri ww4 ww5 ->
+                 case ww5 of ww6 { Messer.Id ww7 ->
+                 case Messemlyzer.$waMain ww4 ww7 ww2 w1 of ww8 { (#,#) ww9 ww10 ->
+                 (ww9, ww10) } } } }) -}
+2690493ee5d8e995048c35733789bda9
+  aMain1 :: Messemlyzer.AArvo
+  {- HasNoCafRefs, Strictness: m3,
+     Unfolding: (Messemlyzer.S (GHC.Types.[] @ GHC.Types.Char)) -}
+466614cc9debbb75c3f8404abd017c37
+  aMain2 :: Messemlyzer.AArvo
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (Messemlyzer.B GHC.Types.False) -}
+14d79f1bb4e405ff4ba3d809920021a3
+  aMain3 :: Messemlyzer.AArvo
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (Messemlyzer.I Messemlyzer.$fShowAArvo2) -}
+01bbb8f855f68f418e74d1458914f7ed
+  aParametrit ::
+    GHC.Base.String
+    -> [Messer.Maaritelma]
+    -> [Messer.Parametri]
+    -> Messemlyzer.AMuuttujat
+    -> Messemlyzer.Aliohjelmat
+    -> [Messemlyzer.AVirhe]
+  {- Arity: 5, Strictness: <L,U><S,1*U><S,1*U><L,U><L,U> -}
+5d7720382c942bec47058e0bf5b57edc
   analysoi ::
     Messer.Luokka
     -> Data.Either.Either Messemlyzer.ALuokka [Messemlyzer.AVirhe]
-  {- Arity: 1, Strictness: <S(LLS),1*U(U,U(U(U,U),A),U)>,
+  {- Arity: 1, Strictness: <S(LLS),1*U(U,1*U(1*U(U,1*U(U)),1*U),U)>,
      Inline: [2],
      Unfolding: InlineRule (1, True, False)
                 (\ (w :: Messer.Luokka) ->
                  case w of ww { Messer.Luokka ww1 ww2 ww3 ->
                  Messemlyzer.$wanalysoi ww1 ww2 ww3 }) -}
-2c59cf1c4dae13c9689321befd565382
-  analysoi1 :: Messer.MainOhjelma -> [Messemlyzer.AVirhe]
-  {- Arity: 1, Strictness: <B,1*U(1*U(A,1*H),A)>b -}
 072768f22d3f22b706bad52fb7942d9a
   mapAliohj :: [Messer.Aliohjelma] -> Messemlyzer.Aliohjelmat
   {- Arity: 1, Strictness: <S,1*U> -}
@@ -629,6 +966,45 @@ a71f4bc29e81a5ba340f8b2daf9ef4c2
   {- Arity: 1, Strictness: <S,1*U> -}
 instance GHC.Show.Show [Messemlyzer.AArvo]
   = Messemlyzer.$fShowAArvo
+instance GHC.Show.Show [Messemlyzer.ALuokka]
+  = Messemlyzer.$fShowALuokka
+"SPEC/Messemlyzer $fShow(,,) @ Palautustyyppi @ [Parametri] @ [Lauseke]" [orphan] forall (v2 :: GHC.Show.Show
+                                                                                                  [Messer.Lauseke])
+                                                                                         (v1 :: GHC.Show.Show
+                                                                                                  [Messer.Parametri])
+                                                                                         (v :: GHC.Show.Show
+                                                                                                 Messer.Palautustyyppi)
+  GHC.Show.$fShow(,,) @ Messer.Palautustyyppi
+                      @ [Messer.Parametri]
+                      @ [Messer.Lauseke]
+                      v
+                      v1
+                      v2
+  = Messemlyzer.$fShowALuokka_$s$fShow(,,)
+"SPEC/Messemlyzer $fShow[] @ Lauseke" [orphan] forall (v :: GHC.Show.Show
+                                                              Messer.Lauseke)
+  GHC.Show.$fShow[] @ Messer.Lauseke v
+  = Messemlyzer.$fShowALuokka_$s$fShow[]
+"SPEC/Messemlyzer $fShow[] @ Parametri" [orphan] forall (v :: GHC.Show.Show
+                                                                Messer.Parametri)
+  GHC.Show.$fShow[] @ Messer.Parametri v
+  = Messemlyzer.$fShowALuokka_$s$fShow[]1
+"SPEC/Messemlyzer $fShow[]_$cshow @ Lauseke" [orphan] forall ($dShow :: GHC.Show.Show
+                                                                          Messer.Lauseke)
+  GHC.Show.$fShow[]_$cshow @ Messer.Lauseke $dShow
+  = Messemlyzer.$s$fShow[]_$cshow
+"SPEC/Messemlyzer $fShow[]_$cshow @ Parametri" [orphan] forall ($dShow :: GHC.Show.Show
+                                                                            Messer.Parametri)
+  GHC.Show.$fShow[]_$cshow @ Messer.Parametri $dShow
+  = Messemlyzer.$s$fShow[]_$cshow1
+"SPEC/Messemlyzer $fShow[]_$cshowList @ Lauseke" [orphan] forall ($dShow :: GHC.Show.Show
+                                                                              Messer.Lauseke)
+  GHC.Show.$fShow[]_$cshowList @ Messer.Lauseke $dShow
+  = Messemlyzer.$s$fShow[]_$cshowList
+"SPEC/Messemlyzer $fShow[]_$cshowList @ Parametri" [orphan] forall ($dShow :: GHC.Show.Show
+                                                                                Messer.Parametri)
+  GHC.Show.$fShow[]_$cshowList @ Messer.Parametri $dShow
+  = Messemlyzer.$s$fShow[]_$cshowList1
 "SPEC/Messemlyzer union @ [Char] _" [orphan] forall @ a
                                                     ($dOrd :: GHC.Classes.Ord [GHC.Types.Char])
   Data.Map.Internal.union @ [GHC.Types.Char] @ a $dOrd

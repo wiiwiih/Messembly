@@ -1,9 +1,10 @@
 class Fibonacci {
     
     main(string[] args){
-        print fib(true)?
+        int a = 1?
+        a = fib(4)?
         #yolo
-        
+        print a?
     };
     
     int fib(int a) {

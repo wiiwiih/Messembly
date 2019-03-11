@@ -3,7 +3,7 @@ module Messemlyzer where
 import Messer 
 import qualified Data.Map.Strict as Map
 
-data ALuokka = ALuokka Id MainOhjelma Aliohjelmat
+data ALuokka = ALuokka Id MainOhjelma Aliohjelmat deriving (Show)
 
 type AVirhe = String
 
@@ -95,19 +95,29 @@ aMain (MainOhjelma (Parametri t (Id id)) xs) a = (MainOhjelma (Parametri t (Id i
 -- palauttaa lausekkeet joita yksinkertaistaa, virheet ja muuttujaympäristön,
 -- joka sisältää paluuarvon jos sellainen on
 aLausekkeet :: [Lauseke] -> AMuuttujat -> Aliohjelmat -> ([Lauseke], [AVirhe], AMuuttujat)
-aLausekkeet = undefined
+aLausekkeet [] m a = ([], [], m)
+aLausekkeet (x:xs) m a = let
+                (lauseke, virheet1, um) = aLauseke x m a
+                (ulausekkeet, virheet2, uum) = aLausekkeet xs um a
+                in (lauseke:ulausekkeet, virheet1 <> virheet2, uum) 
 
 aLauseke :: Lauseke -> AMuuttujat -> Aliohjelmat -> (Lauseke, [AVirhe], AMuuttujat)
-aLauseke (LTulostus maar) m _ = (LTulostus maar, [], m) -- Tulostus toimii kaikille tyypeille suoraan aina
-aLauseke (LSijoitus (UusiSijoitus t (Id id) maar)) m a =let (tyyppi, umaar, virhe1) = aMaaritelma maar m a  
+aLauseke (LTulostus maar) m a = let
+                    (_, umaar, virheet) = aMaaritelma maar m a
+                    in (LTulostus umaar, virheet, m) 
+aLauseke (LSijoitus (UusiSijoitus t (Id id) maar)) m a =let (tyyppi, umaar, virhe1) = aMaaritelma maar m a
+                                                            uusim = case t of
+                                                                TTInt -> Map.insert id (I 0) m
+                                                                TTBool -> Map.insert id (B False) m
+                                                                TTString -> Map.insert id (S "") m
                                                             virhe2 = case Map.lookup id m of 
                                                                 Just _ -> ["Muuttuja " ++ id ++ " on jo määritelty"]
                                                                 Nothing -> []
                                                         in case tyyppi of
                                                             Just tyyppiJust -> if (tyyppiJust == t)
-                                                                then (LSijoitus (UusiSijoitus t (Id id) umaar), virhe1++virhe2, m)
-                                                                else (LSijoitus (UusiSijoitus t (Id id) umaar), virhe1++virhe2++["Muuttujan " ++ id ++ " piti olla " ++ show t ++ ", mutta oli " ++ show tyyppi ++ "."], m)
-                                                            Nothing -> (LSijoitus (UusiSijoitus t (Id id) umaar), virhe1++virhe2, m)
+                                                                then (LSijoitus (UusiSijoitus t (Id id) umaar), virhe1++virhe2, uusim)
+                                                                else (LSijoitus (UusiSijoitus t (Id id) umaar), virhe1++virhe2++["Muuttujan " ++ id ++ " piti olla " ++ show t ++ ", mutta oli " ++ show tyyppiJust ++ "."], uusim)
+                                                            Nothing -> (LSijoitus (UusiSijoitus t (Id id) umaar), virhe1++virhe2++["Muuttujaan "++ id ++" sijoitettavan arvon tyyppiä ei voitu määrittää. Onko se void?"], uusim)
 aLauseke (LSijoitus (VanhaSijoitus (Id id) maar)) m a = let (tyyppi, umaar, virhe1) = aMaaritelma maar m a
                                                             rLauseke = LSijoitus (VanhaSijoitus (Id id) umaar)
                                                             in case Map.lookup id m of
@@ -155,7 +165,8 @@ aLauseke (LSilmukka maar xs) m a = let
                                 (uxs, virheet, um) = aLausekkeet xs m a
                                 in (LSilmukka umaar uxs, virhe1++virhe2++virheet, um)
 aLauseke (LAKutsu (AKutsu (Id id) xs)) m a = case Map.lookup id a of
-                                Just _ -> (LAKutsu (AKutsu (Id id) xs), [], m)
+                                Just (_, params, _) -> (LAKutsu (AKutsu (Id id) xs), aParametrit id xs params m a, m)
+                                Nothing -> (LAKutsu (AKutsu (Id id) xs), ["Aliohjelmaa "++id++" ei ole määritelty"], m)
 
 
 --data AArvo = I Int | B Bool | S String | AVoid deriving (Show)
@@ -182,3 +193,28 @@ aMaaritelma (Aritmeettinen op maar1 maar2) m a = let
                             in if (tyyppi1 == Just TTInt && tyyppi2 == Just TTInt)
                                     then (Just TTInt, Aritmeettinen op umaar1 umaar2, virhe1++virhe2)
                                     else (Nothing, Aritmeettinen op umaar1 umaar2, virhe1++virhe2++["Aritmeettisia operaatioita voi suorittaa vain luvuille"])
+aMaaritelma (Vertailu op maar1 maar2) m a = let
+                            (tyyppi1, umaar1, virhe1) = aMaaritelma maar1 m a
+                            (tyyppi2, umaar2, virhe2) = aMaaritelma maar2 m a
+                            in if (tyyppi1 == Just TTInt && tyyppi2 == Just TTInt)
+                                    then (Just TTBool, Vertailu op umaar1 umaar2, virhe1++virhe2)
+                                    else (Nothing, Vertailu op umaar1 umaar2, virhe1++virhe2++["Vertailuoperaatioita voi suorittaa vain luvuille"])
+aMaaritelma (MAKutsu (AKutsu (Id id) xs)) m a = let
+                            palautus = MAKutsu (AKutsu (Id id) xs)
+                            in case Map.lookup id a of
+                                Just (tyyppi, params, _) -> case tyyppi of
+                                    Void -> (Nothing, palautus, aParametrit id xs params m a)
+                                    Palautustyyppi t -> (Just t, palautus, aParametrit id xs params m a)
+                                Nothing -> (Nothing, palautus, ["Aliohjelmaa "++id++" ei ole määritelty"])
+
+aParametrit :: String -> [Maaritelma] -> [Parametri] -> AMuuttujat -> Aliohjelmat -> [AVirhe]
+aParametrit id [] [] m a = []
+aParametrit id [] (y:ys) m a = ["Aliohjelma "++id++" tarvitsee enemmän parametreja"]
+aParametrit id (x:xs) [] m a = ["Aliohjelmalle "++id++" annetaan liikaa parametreja"]
+aParametrit id (x:xs) ((Parametri tyyppi1 (Id pid)):ys) m a = let
+                        (tyyppi2, umaar, virheet1) = aMaaritelma x m a
+                        in case tyyppi2 of
+                            Just t -> if t == tyyppi1
+                                        then aParametrit id xs ys m a
+                                        else ("Aliohjelman "++id++" parametrin "++pid++" tyypin piti olla "++show tyyppi1++" mutta oli "++show t):aParametrit id xs ys m a
+                            Nothing -> ("Aliohjelman "++id++" parametrin "++pid++" tyypin piti olla "++show tyyppi1++" mutta sitä ei voitu määrittää"):aParametrit id xs ys m a
