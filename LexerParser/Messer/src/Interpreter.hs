@@ -1,4 +1,4 @@
-
+-- Tulkkaa Messerin antamat rakenteet
 module Interpreter where
 
 import Messer
@@ -6,16 +6,12 @@ import Messemlyzer hiding (AArvo, I, B, S)
 import Data.Maybe
 import qualified Data.Map.Strict as Map
 
-
-
-
-
 data IArvo = I Int | B Bool | S String | Void deriving (Show)
 
 type Muuttujat = Map.Map String IArvo
 
-interpret :: ALuokka -> IO ()
-interpret (ALuokka _ main amap) = iMain main amap
+interpret :: [String] -> ALuokka -> IO () -- ei käytetä vielä argumentteja
+interpret args (ALuokka _ main amap) = iMain main amap
 
 iMain :: MainOhjelma -> Aliohjelmat -> IO()
 iMain (MainOhjelma (Parametri t (Id id)) xs) a = do
@@ -23,12 +19,7 @@ iMain (MainOhjelma (Parametri t (Id id)) xs) a = do
                     lausekkeet xs m a
                     print "Ohjelman suoritus onnistui"
 
-
--- Tekee aliohjelmalistasta aliohjelma Mapin
---mapAliohj :: [Aliohjelma] -> Aliohjelmat
---mapAliohj [] = Map.empty
---mapAliohj ((Aliohjelma (Id id) t p l):xs) = Map.singleton id (t, p, l) <> mapAliohj xs
-
+-- Suorittaa lausekkeet 
 exec :: Lauseke -> Muuttujat -> Aliohjelmat -> IO Muuttujat
 exec (LTulostus x) m a = do
                 evalehto <- eval x m a
@@ -38,7 +29,6 @@ exec (LTulostus x) m a = do
                     S s -> print s
                     Interpreter.Void -> return ()
                 return m
---tyyppejä ei tarkasteta vielä
 exec (LSijoitus x) m a = case x of
                 UusiSijoitus t (Id id) y -> do
                                     arvo <- eval y m a
@@ -61,7 +51,7 @@ exec (LEhto lause) m a = case lause of
                                     if b 
                                         then lausekkeet xs m a
                                         else return m
-                                _ -> error ("Ei bool, rip")
+                                _ -> error ("Ehdon tyyppi ei ollut bool")
                 IfElse ehto xs ys -> do
                                 -- Muuten sama kuin yllä, mutta jos ehto on epätosi,
                                 -- suoritetaan toiset lausekkeet 
@@ -71,7 +61,7 @@ exec (LEhto lause) m a = case lause of
                                         if b 
                                             then lausekkeet xs m a
                                             else lausekkeet ys m a
-                                    _ -> error ("Ei bool, rip")
+                                    _ -> error ("Ehdon tyyppi ei ollut bool")
 exec (LSilmukka ehto xs) m a = do
                 evalehto <- eval ehto m a
                 case evalehto of
@@ -82,7 +72,7 @@ exec (LSilmukka ehto xs) m a = do
                                 exec (LSilmukka ehto xs) uusiM a
                             else 
                                 return m
-                    _ -> error ("Ei bool, rip")
+                    _ -> error ("Ehdon tyyppi ei ollut bool")
 exec (LAKutsu (AKutsu (Id id) xs)) m a = case Map.lookup id a of
                         Nothing -> error ("Aliohjelmaa ei löydy :(")
                         Just (t, param, ys) -> do
@@ -91,7 +81,7 @@ exec (LAKutsu (AKutsu (Id id) xs)) m a = case Map.lookup id a of
                                     return m
 
 
-                                
+-- Kutsuu lausekkeen suoritusta yksi kerrallaan kaikille listassa oleville
 lausekkeet :: [Lauseke] -> Muuttujat -> Aliohjelmat -> IO Muuttujat
 lausekkeet [] m a = return m
 lausekkeet (x:xs) m a = do
@@ -161,7 +151,7 @@ eval (MAKutsu (AKutsu (Id id) xs)) m a = case Map.lookup id a of
                                         Just arvo -> return arvo
 
 
---tekee parametreista uuden muuttujaympäristön aliohjelmaa varten                                    
+--tekee parametreista uuden muuttujaympäristön aliohjelmaa varten
 params :: [Maaritelma] -> [Parametri] -> Muuttujat -> Aliohjelmat -> Muuttujat -> IO Muuttujat
 params [] [] am a um = return um
 params (x:xs) ((Parametri t (Id id)):ys) am a um = do

@@ -7,22 +7,16 @@ import Messemlyzer
 import Data.Maybe
 import Data.Either
 import Text.Megaparsec
+import System.Environment
 
 main :: IO ()
 main = do
-    --ajaTestit
-    --iTest
-    --ast <- testaaTiedosto "test.mess"
-    ast <- runParser jasennin "test.mess" <$> readFile "test.mess"
-    either (putStr <$> errorBundlePretty) analyzeInterpret ast
-    {-if isRight ast 
-        then do
-            let ast2 = analysoi (fromRight ast)
-            either interpret print ast2
+    args <- getArgs
+    ast <- runParser jasennin (head args) <$> readFile (head args)
+    either (putStr <$> errorBundlePretty) (analyzeInterpret (drop 1 args)) ast
+    --ajaTestit -- tällä ajetaan testit tiedostosta MesserTests.hs
 
-        else print (fromLeft ast)-}
-
-analyzeInterpret :: Luokka -> IO()
-analyzeInterpret luokka = do
+analyzeInterpret :: [String] -> Luokka -> IO()
+analyzeInterpret args luokka = do
     let ast = analysoi luokka
-    either interpret (putStr <$> unlines) ast
+    either (interpret args) (putStr <$> unlines) ast

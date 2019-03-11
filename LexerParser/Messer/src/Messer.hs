@@ -99,7 +99,7 @@ vsl :: [String]
 vsl = ["if","else","while","class","void","int","string","bool","true","false",
     "print", "return", "main"]
 
--- pilkkoo id:t syötteetstä
+-- pilkkoo id:t syötteestä
 identifier :: Parser Id
 identifier = (lekseemi . try) (p >>= check)
     where
@@ -107,6 +107,10 @@ identifier = (lekseemi . try) (p >>= check)
         check x = if elem x vsl 
                     then fail $ "avainsanaa " ++ show x ++ " ei voi käyttää, koska siltä tuntuu"
                     else return (Id x)
+
+-- Seuraavaksi määritellään kieliopin mukaisesti eri osien parsiminen
+-- käytännössä nämä toteutaan niin, että parsitaan kieliopin mukaisesti
+-- osa kerrallaan kaikki tarvittava esimerkiksi pääohjelmaan
 
 jMain :: Parser MainOhjelma
 jMain = do
@@ -136,6 +140,9 @@ jAliohjelma' = do
 lauseke :: Parser [Lauseke]
 lauseke = sepEndBy lauseke' km
 
+-- Tässä tarvitaan erillinen "idAlku", koska useampi rakenne voi alkaa id:llä
+-- eikä <|> -operaatio osaa palautua, jos rakenteen toinen sananen ei toimikaan
+-- ensimmäisellä yritetyllä parserilla.
 lauseke' :: Parser Lauseke
 lauseke' =  idAlku
         <|> uusisijoitus
@@ -150,9 +157,12 @@ idAlku = do
     loppu <- idLoppu id
     return loppu
 
+-- tässä hoidetaan loppuosan parsiminen uudelle <|> -operaatiolla
+-- koska ei ole enää samankaltaisia alkuosia jäljelle jäävissä syötteissä
 idLoppu :: Id -> Parser Lauseke
 idLoppu id = lakutsu id <|> vanhasijoitus id
 
+-- aliohjelma kutsun jäsennys
 lakutsu :: Id -> Parser Lauseke
 lakutsu id = do
     symboli "("
@@ -167,21 +177,13 @@ makutsu id = do
     symboli ")"
     return (MAKutsu (AKutsu id maaritelmat))
 
-akutsu :: Parser AKutsu
-akutsu = do
-    id <- identifier
-    symboli "("
-    maaritelmat <- sepBy maaritelma (symboli ",")
-    symboli ")"
-    return (AKutsu id maaritelmat)
-
 tulostus :: Parser Lauseke
 tulostus = do
     vsana "print"
     maaritelma <- maaritelma
     return (LTulostus maaritelma)
 
-    
+-- Kun määritellään uusi muuttuja ja annetaan sille arvo    
 uusisijoitus :: Parser Lauseke
 uusisijoitus = do
     tyyppi <- tietotyyppi 
@@ -190,6 +192,7 @@ uusisijoitus = do
     maaritelma <- maaritelma
     return (LSijoitus (UusiSijoitus tyyppi id maaritelma))
 
+-- Kun sijoitetaan vanhaan muuttujaan uusiarvo
 vanhasijoitus :: Id -> Parser Lauseke
 vanhasijoitus id = do
     symboli "="
@@ -255,10 +258,6 @@ maaritelma = oMaaritelma
          <|> mjono
          <|> boolTosi
          <|> boolEtosi
---         <|> idAlkuM
---         <|> luku
---         <|> mid
---         <|> makutsu
 
 idAlkuM :: Parser Maaritelma
 idAlkuM = do
@@ -346,20 +345,6 @@ luokka = do
     symboli "}"
     return (Luokka luokanNimi maini aliohjelmat)
 
+-- Käytetään MesserTests.hs:ssä testien ajamiseen
 testaaTiedosto :: String -> IO (Maybe Luokka)
 testaaTiedosto tiedosto = parseMaybe jasennin <$> readFile tiedosto
-
-{-main :: IO ()
-main = do
-    ioInput <- readFile "test.mess"
-    parseTest jasennin ioInput-}
-
-
-
-
-
-
-
-
-
-
