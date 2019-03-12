@@ -1,5 +1,4 @@
 -- Lexer ja parser Messemblylle MegaParsecilla toteutettuna
--- HUOM! WIP
 -- Apuna käytetty Mark Karpovin tutoriaalia: https://markkarpov.com/megaparsec/parsing-simple-imperative-language.html
 module Messer where
 
@@ -116,13 +115,11 @@ jMain :: Parser MainOhjelma
 jMain = do
     vsana "main"
     symboli "("
-    vsana "string"
-    symboli "[]"
-    parametriNimi <- identifier
+    parametrit <- parametrit
     symboli ")"
     lausekkeet <- asulut lauseke
     symboli ";"
-    return (MainOhjelma (Parametri TTString parametriNimi) lausekkeet)
+    return (MainOhjelma (head parametrit) lausekkeet)
 
 jAliohjelma :: Parser [Aliohjelma]
 jAliohjelma = sepEndBy jAliohjelma' semi
