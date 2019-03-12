@@ -12,7 +12,7 @@ import qualified Text.Megaparsec.Char.Lexer as L
 
 data Luokka = Luokka Id MainOhjelma [Aliohjelma] deriving (Show)
 
-data MainOhjelma = MainOhjelma Parametri [Lauseke] deriving (Show)
+data MainOhjelma = MainOhjelma [Parametri] [Lauseke] deriving (Show)
 
 data Aliohjelma = Aliohjelma Id Palautustyyppi [Parametri] [Lauseke] deriving (Show)
 
@@ -119,7 +119,7 @@ jMain = do
     symboli ")"
     lausekkeet <- asulut lauseke
     symboli ";"
-    return (MainOhjelma (head parametrit) lausekkeet)
+    return (MainOhjelma parametrit lausekkeet)
 
 jAliohjelma :: Parser [Aliohjelma]
 jAliohjelma = sepEndBy jAliohjelma' semi
@@ -203,23 +203,20 @@ palautus = do
     return (LPalautus maaritelma)
 
 ehtolause :: Parser Lauseke
-ehtolause = elsellinen <|> elseton
-
-elsellinen :: Parser Lauseke
-elsellinen = do
+ehtolause = do
     vsana "if"
     ehto <- sulut maaritelma
-    lausekkeet1 <- asulut lauseke
+    lausekkeet <- asulut lauseke
+    elsellinen ehto lausekkeet <|> elseton ehto lausekkeet
+
+elsellinen :: Maaritelma -> [Lauseke] -> Parser Lauseke
+elsellinen ehto lausekkeet1 = do
     vsana "else"
     lausekkeet2 <- asulut lauseke
     return (LEhto (IfElse ehto lausekkeet1 lausekkeet2))
 
-elseton :: Parser Lauseke
-elseton = do
-    vsana "if"
-    ehto <- sulut maaritelma
-    lausekkeet <- asulut lauseke
-    return (LEhto (If ehto lausekkeet))
+elseton :: Maaritelma -> [Lauseke] -> Parser Lauseke
+elseton ehto lausekkeet = return (LEhto (If ehto lausekkeet))
 
 silmukka :: Parser Lauseke
 silmukka = do

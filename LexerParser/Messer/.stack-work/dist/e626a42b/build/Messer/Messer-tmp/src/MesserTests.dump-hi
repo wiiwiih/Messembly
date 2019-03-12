@@ -1,10 +1,10 @@
 
 ==================== FINAL INTERFACE ====================
-2019-03-12 18:54:52.9352631 UTC
+2019-03-12 21:19:51.8157531 UTC
 
 interface main:MesserTests 8063
-  interface hash: 8be35bc26cb9d8f9b49f4ff66e7fa4ad
-  ABI hash: a01259985b58e6ad3cf82582b504751f
+  interface hash: 839b20290fb51da9e0215b4a066dddbd
+  ABI hash: 2a062e94850e4b3ed6b9e49eff8c4741
   export-list hash: e35b28a1c19fe6eb222ed752d8a861b0
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
   flag hash: 8346313dc06e16ebefba9f23d6444d37
@@ -76,9 +76,9 @@ import  -/  base-4.12.0.0:Prelude b1ccc486556b171042710ef6f2d1a539
 import  -/  directory-1.3.3.0:System.Directory f8b884860478f4114f6736c1024e8261
 import  -/  ghc-prim-0.5.3:GHC.Classes 555218a5f891dab16ebc6e6e04763e77
 import  -/  ghc-prim-0.5.3:GHC.Types 57064c9f957b09bc2e360061ad5cae0b
-import  -/  Messer e38f15305afca136ddf97467f90fd3c3
+import  -/  Messer c8351d058a6aa40cc50b279f11d94745
   exports: 074c6398dfe19dd25eed8799effd875b
-  testaaTiedosto 04d17f6961080c49d46b2c0c40d4b060
+  testaaTiedosto d3536b9c5fb371b07293daac4adf9025
 import  -/  tasty-1.2:Test.Tasty c22fcdb4c8b1fcac6b62bbb378995a7a
 import  -/  tasty-1.2:Test.Tasty.Core ae8841dc1ffc182b40a128efea66bb90
 import  -/  tasty-hunit-0.10.0.1:Test.Tasty.HUnit 451a5ebe1ff5e16a6403f8dfb84a2d22
@@ -188,7 +188,7 @@ d9eb2cc1b7630d5334629bd922bffaf5
                         ipv of ds1 { (#,#) ipv2 ipv3 ->
                  (# ipv2,
                     Test.Tasty.Core.TestGroup MesserTests.ajaTestit2 ipv3 #) } }) -}
-29756f0f5275d9a45d834733077e3324
+b2494f3cdd8ee4eda8978d25e5a1167d
   tTiedosto :: [GHC.Types.Char] -> GHC.Types.IO GHC.Types.Bool
   {- Arity: 2, Strictness: <L,1*U><S,U>,
      Unfolding: InlineRule (0, True, True)
@@ -196,7 +196,7 @@ d9eb2cc1b7630d5334629bd922bffaf5
                   `cast`
                 (<[GHC.Types.Char]>_R
                  ->_R Sym (GHC.Types.N:IO[0] <GHC.Types.Bool>_R)) -}
-a91c55e2595079bb650dc32994c40d9b
+35fb80ec98fe00faa05a2aa924173bfd
   tTiedosto1 ::
     [GHC.Types.Char]
     -> GHC.Prim.State# GHC.Prim.RealWorld

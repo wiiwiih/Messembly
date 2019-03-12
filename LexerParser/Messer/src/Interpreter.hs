@@ -15,24 +15,27 @@ interpret :: [String] -> ALuokka -> IO () -- ei käytetä vielä argumentteja
 interpret args (ALuokka _ main amap) = iMain args main amap
 
 iMain :: [String] -> MainOhjelma -> Aliohjelmat -> IO()
-iMain args (MainOhjelma (Parametri t (Id id)) xs) a = do
-                    let m = Map.empty -- Tässä lisättäisiin komentoriviparametrien arvot ympäristöön
-                    let param = head args
-                    let abc = case t of
-                                TTInt -> case readMaybe param :: Maybe Int of
-                                        Just a -> Map.insert id (I a) m
-                                        _ -> error("Komentorivi parametrin "++ id ++ " piti olla tyyppiä Int, mutta ei ollut")
-                                TTBool -> case readMaybe param :: Maybe Bool of
-                                        Just a -> Map.insert id (B a) m
-                                        _ -> error("Komentorivi parametrin "++ id ++ " piti olla tyyppiä Bool, mutta ei ollut")
-                                TTString -> Map.insert id (S param) m
-                    lausekkeet xs abc a	
+iMain args (MainOhjelma params xs) a = do
+                    let m = mainParams params args
+                    lausekkeet xs m a	
                     print "Ohjelman suoritus onnistui"
 -- pitää tutkia ovatko args listan sisältämät asiat saman tyyppisiä kuin mainin parametrit
 -- jos ovat -> OK
 -- jos eivät --> homma seis
 -- Mainin parametrit  ovat missä
 
+mainParams :: [Parametri] -> [String] -> Muuttujat
+mainParams [] [] = Map.empty
+mainParams (x:xs) [] = error "Ohjelma tarvitsee enemmän komentoriviparametreja"
+mainParams [] (y:ys) = error "Ohjelmalle on annettu liikaa komentoriviparametreja"
+mainParams ((Parametri t (Id id)):xs) (y:ys) = case t of
+                                TTInt -> case readMaybe y :: Maybe Int of
+                                        Just a -> Map.singleton id (I a) <> mainParams xs ys
+                                        _ -> error("Komentoriviparametrin "++ id ++ " piti olla tyyppiä Int, mutta ei ollut")
+                                TTBool -> case readMaybe y :: Maybe Bool of
+                                        Just a -> Map.singleton id (B a) <> mainParams xs ys
+                                        _ -> error("Komentoriviparametrin "++ id ++ " piti olla tyyppiä Bool, mutta ei ollut")
+                                TTString -> Map.singleton id (S y) <> mainParams xs ys
 
 
 -- Suorittaa lausekkeet 

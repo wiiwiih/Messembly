@@ -59,14 +59,10 @@ uYmparisto ((Parametri tt (Id id)):ps) = Map.singleton id arvo <> uYmparisto ps
                       
 
 aMain :: MainOhjelma -> Aliohjelmat -> (MainOhjelma, [AVirhe])
-aMain (MainOhjelma (Parametri t (Id id)) xs) a = (MainOhjelma (Parametri t (Id id)) lausekkeet, virheet)
+aMain (MainOhjelma params xs) a = (MainOhjelma params lausekkeet, virheet)
                             where
                                 (lausekkeet, virheet, _) = aLausekkeet xs m a
-                                arvo  = case t of
-                                    TTInt -> AInt
-                                    TTBool -> ABool
-                                    TTString -> AString
-                                m = Map.singleton id arvo
+                                m = uYmparisto params
 
 -- Tarkistaa lausekkeiden tyyppien paikkansapitävyydet
 -- palauttaa lausekkeet joita yksinkertaistaa, virheet ja muuttujaympäristön,

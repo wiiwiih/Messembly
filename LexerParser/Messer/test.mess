@@ -1,15 +1,13 @@
 class Fibonacci {
     
-    main(string args){
+    main(string args, int x, bool y){
         int a = 1?
         a = fib(4)?
         #yolo
-        int b = 2?
-        if(1<2){b = 3?}
-        else {}?
-        print b?
         print a?
         print args?
+        print x?
+        print y?
     };
     
     int fib(int a) {

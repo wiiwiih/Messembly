@@ -1,10 +1,10 @@
 
 ==================== FINAL INTERFACE ====================
-2019-03-12 18:47:08.8288993 UTC
+2019-03-12 21:18:09.464399 UTC
 
 interface main:Messer 8063
-  interface hash: c3bbdc1f67352dc7a6e62d99931cbcb3
-  ABI hash: e38f15305afca136ddf97467f90fd3c3
+  interface hash: a5e4d3722dbd60a95b47d36af0e3a753
+  ABI hash: c8351d058a6aa40cc50b279f11d94745
   export-list hash: 074c6398dfe19dd25eed8799effd875b
   orphan hash: 4361e17c2c4b34b9d50ba3a67e9a0257
   flag hash: 8346313dc06e16ebefba9f23d6444d37
@@ -472,7 +472,7 @@ b8fb69268f765c3ef225c661dc5360de
                    (w2 :: GHC.Base.String) ->
                  case w of ww { GHC.Types.I# ww1 ->
                  Messer.$w$cshowsPrec6 ww1 w1 w2 }) -}
-e7cb6c20637ed95ce0cae1a22331cd3d
+fc5a6c009ce899225c2da24c4d07724d
   $fShowLuokka :: GHC.Show.Show Messer.Luokka
   DFunId
   {- Strictness: m, Inline: CONLIKE,
@@ -481,10 +481,9 @@ e7cb6c20637ed95ce0cae1a22331cd3d
                   Messer.$fShowLuokka_$cshowsPrec
                   Messer.$fShowLuokka_$cshow
                   Messer.$fShowLuokka_$cshowList -}
-e7cb6c20637ed95ce0cae1a22331cd3d
+fc5a6c009ce899225c2da24c4d07724d
   $fShowLuokka1 :: Messer.Luokka -> GHC.Show.ShowS
-  {- Arity: 2,
-     Strictness: <S,1*U(1*U(1*U),1*U(1*U(1*U,1*U(1*U)),1*U),1*U)><L,U>,
+  {- Arity: 2, Strictness: <S,1*U(1*U(1*U),1*U(1*U,1*U),1*U)><L,U>,
      Unfolding: (\ (w :: Messer.Luokka) (w1 :: GHC.Base.String) ->
                  case w of ww { Messer.Luokka ww1 ww2 ww3 ->
                  Messer.$w$cshowsPrec7 0# ww1 ww2 ww3 w1 }) -}
@@ -518,27 +517,26 @@ f66615b3a9dc9fdd1638f65c6511dc2c
 84156a1105ab9f08ed70870fcda6a9d2
   $fShowLuokka9 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# Messer.$fShowLuokka10) -}
-e7cb6c20637ed95ce0cae1a22331cd3d
+fc5a6c009ce899225c2da24c4d07724d
   $fShowLuokka_$cshow :: Messer.Luokka -> GHC.Base.String
-  {- Arity: 1,
-     Strictness: <S,1*U(1*U(1*U),1*U(1*U(1*U,1*U(1*U)),1*U),1*U)>,
+  {- Arity: 1, Strictness: <S,1*U(1*U(1*U),1*U(1*U,1*U),1*U)>,
      Unfolding: InlineRule (1, True, False)
                 (\ (x :: Messer.Luokka) ->
                  Messer.$fShowLuokka_$cshowsPrec
                    Messer.$fShowAKutsu4
                    x
                    (GHC.Types.[] @ GHC.Types.Char)) -}
-e7cb6c20637ed95ce0cae1a22331cd3d
+fc5a6c009ce899225c2da24c4d07724d
   $fShowLuokka_$cshowList :: [Messer.Luokka] -> GHC.Show.ShowS
   {- Arity: 2, Strictness: <S,1*U><L,U>,
      Unfolding: InlineRule (2, True, False)
                 (\ (ls :: [Messer.Luokka]) (s :: GHC.Base.String) ->
                  GHC.Show.showList__ @ Messer.Luokka Messer.$fShowLuokka1 ls s) -}
-e7cb6c20637ed95ce0cae1a22331cd3d
+fc5a6c009ce899225c2da24c4d07724d
   $fShowLuokka_$cshowsPrec ::
     GHC.Types.Int -> Messer.Luokka -> GHC.Show.ShowS
   {- Arity: 3,
-     Strictness: <S(S),1*U(U)><S,1*U(1*U(1*U),1*U(1*U(1*U,1*U(1*U)),1*U),1*U)><L,U>,
+     Strictness: <S(S),1*U(U)><S,1*U(1*U(1*U),1*U(1*U,1*U),1*U)><L,U>,
      Inline: [2],
      Unfolding: InlineRule (3, True, False)
                 (\ (w :: GHC.Types.Int)
@@ -591,7 +589,7 @@ ea67a20a6ff998dcfcbb33a0a151c225
                    (w2 :: GHC.Base.String) ->
                  case w of ww { GHC.Types.I# ww1 ->
                  Messer.$w$cshowsPrec1 ww1 w1 w2 }) -}
-76f67d672f2abe8d4a26760b75255aa7
+fbd3fc3bebebafc8e4d5f10f0ba43b6f
   $fShowMainOhjelma :: GHC.Show.Show Messer.MainOhjelma
   DFunId
   {- Strictness: m, Inline: CONLIKE,
@@ -600,22 +598,22 @@ ea67a20a6ff998dcfcbb33a0a151c225
                   Messer.$fShowMainOhjelma_$cshowsPrec
                   Messer.$fShowMainOhjelma_$cshow
                   Messer.$fShowMainOhjelma_$cshowList -}
-76f67d672f2abe8d4a26760b75255aa7
+fbd3fc3bebebafc8e4d5f10f0ba43b6f
   $fShowMainOhjelma1 :: Messer.MainOhjelma -> GHC.Show.ShowS
-  {- Arity: 2, Strictness: <S,1*U(1*U(1*U,1*U(1*U)),1*U)><L,U>,
+  {- Arity: 2, Strictness: <S,1*U(1*U,1*U)><L,U>,
      Unfolding: (\ (w :: Messer.MainOhjelma) (w1 :: GHC.Base.String) ->
                  case w of ww { Messer.MainOhjelma ww1 ww2 ->
                  Messer.$w$cshowsPrec8 0# ww1 ww2 w1 }) -}
-76f67d672f2abe8d4a26760b75255aa7
+fbd3fc3bebebafc8e4d5f10f0ba43b6f
   $fShowMainOhjelma_$cshow :: Messer.MainOhjelma -> GHC.Base.String
-  {- Arity: 1, Strictness: <S,1*U(1*U(1*U,1*U(1*U)),1*U)>,
+  {- Arity: 1, Strictness: <S,1*U(1*U,1*U)>,
      Unfolding: InlineRule (1, True, False)
                 (\ (x :: Messer.MainOhjelma) ->
                  Messer.$fShowMainOhjelma_$cshowsPrec
                    Messer.$fShowAKutsu4
                    x
                    (GHC.Types.[] @ GHC.Types.Char)) -}
-76f67d672f2abe8d4a26760b75255aa7
+fbd3fc3bebebafc8e4d5f10f0ba43b6f
   $fShowMainOhjelma_$cshowList ::
     [Messer.MainOhjelma] -> GHC.Show.ShowS
   {- Arity: 2, Strictness: <S,1*U><L,U>,
@@ -626,11 +624,10 @@ ea67a20a6ff998dcfcbb33a0a151c225
                    Messer.$fShowMainOhjelma1
                    ls
                    s) -}
-76f67d672f2abe8d4a26760b75255aa7
+fbd3fc3bebebafc8e4d5f10f0ba43b6f
   $fShowMainOhjelma_$cshowsPrec ::
     GHC.Types.Int -> Messer.MainOhjelma -> GHC.Show.ShowS
-  {- Arity: 3,
-     Strictness: <S(S),1*U(U)><S,1*U(1*U(1*U,1*U(1*U)),1*U)><L,U>,
+  {- Arity: 3, Strictness: <S(S),1*U(U)><S,1*U(1*U,1*U)><L,U>,
      Inline: [2],
      Unfolding: InlineRule (3, True, False)
                 (\ (w :: GHC.Types.Int)
@@ -2974,7 +2971,7 @@ bf41d4de4b56175748014be3792dcb5b
     GHC.Prim.Int#
     -> Messer.Lauseke -> GHC.Base.String -> GHC.Base.String
   {- Arity: 3, Strictness: <S,U><S,1*U><L,U>, Inline: [2] -}
-381cb69cea4f9c1da6f2eed2933c2e03
+485bc7d8188ff4111341c1b4db415bc4
   $w$cshowsPrec7 ::
     GHC.Prim.Int#
     -> Messer.Id
@@ -2983,7 +2980,7 @@ bf41d4de4b56175748014be3792dcb5b
     -> GHC.Base.String
     -> GHC.Base.String
   {- Arity: 5,
-     Strictness: <S,U><L,1*U(1*U)><L,1*U(1*U(1*U,1*U(1*U)),1*U)><L,1*U><L,U>,
+     Strictness: <S,U><L,1*U(1*U)><L,1*U(1*U,1*U)><L,1*U><L,U>,
      Inline: [2],
      Unfolding: (\ (ww :: GHC.Prim.Int#)
                    (ww1 :: Messer.Id)
@@ -3021,17 +3018,16 @@ bf41d4de4b56175748014be3792dcb5b
                            @ GHC.Types.Char
                            Messer.$fShowLuokka2
                            (g (GHC.Types.: @ GHC.Types.Char GHC.Show.$fShow(,)2 w))) }) -}
-e81d0f267a7b26f685122fc49ef691fb
+fb0e292dda445eeb4edd7dcb07ea84e1
   $w$cshowsPrec8 ::
     GHC.Prim.Int#
-    -> Messer.Parametri
+    -> [Messer.Parametri]
     -> [Messer.Lauseke]
     -> GHC.Base.String
     -> GHC.Base.String
-  {- Arity: 4, Strictness: <S,U><L,1*U(1*U,1*U(1*U))><L,1*U><L,U>,
-     Inline: [2],
+  {- Arity: 4, Strictness: <S,U><L,1*U><L,1*U><L,U>, Inline: [2],
      Unfolding: (\ (ww :: GHC.Prim.Int#)
-                   (ww1 :: Messer.Parametri)
+                   (ww1 :: [Messer.Parametri])
                    (ww2 :: [Messer.Lauseke])
                    (w :: GHC.Base.String) ->
                  let {
@@ -3039,40 +3035,68 @@ e81d0f267a7b26f685122fc49ef691fb
                    = \ (x :: GHC.Base.String)[OneShot] ->
                      GHC.CString.unpackAppendCString#
                        Messer.$fShowLuokka11
-                       (case ww1 of ww3 { Messer.Parametri ww4 ww5 ->
-                        Messer.$w$cshowsPrec9
-                          11#
-                          ww4
-                          ww5
-                          (GHC.Types.:
-                             @ GHC.Types.Char
-                             GHC.Show.showSpace1
-                             (case ww2 of wild {
-                                [] -> GHC.CString.unpackAppendCString# GHC.Show.showList__4 x
-                                : x1 xs
-                                -> GHC.Types.:
-                                     @ GHC.Types.Char
-                                     GHC.Show.showList__3
-                                     (Messer.$w$cshowsPrec6
-                                        0#
-                                        x1
-                                        (let {
-                                           lvl48 :: [GHC.Types.Char]
-                                           = GHC.Types.: @ GHC.Types.Char GHC.Show.showList__2 x
-                                         } in
-                                         letrec {
-                                           showl :: [Messer.Lauseke] -> GHC.Base.String
-                                             {- Arity: 1, Strictness: <S,1*U> -}
-                                           = \ (ds2 :: [Messer.Lauseke]) ->
-                                             case ds2 of wild1 {
-                                               [] -> lvl48
-                                               : y ys
-                                               -> GHC.Types.:
-                                                    @ GHC.Types.Char
-                                                    GHC.Show.showList__1
-                                                    (Messer.$w$cshowsPrec6 0# y (showl ys)) }
-                                         } in
-                                         showl xs)) })) })
+                       (let {
+                          s :: GHC.Base.String
+                          = case ww2 of wild {
+                              [] -> GHC.CString.unpackAppendCString# GHC.Show.showList__4 x
+                              : x1 xs
+                              -> GHC.Types.:
+                                   @ GHC.Types.Char
+                                   GHC.Show.showList__3
+                                   (Messer.$w$cshowsPrec6
+                                      0#
+                                      x1
+                                      (let {
+                                         lvl48 :: [GHC.Types.Char]
+                                         = GHC.Types.: @ GHC.Types.Char GHC.Show.showList__2 x
+                                       } in
+                                       letrec {
+                                         showl :: [Messer.Lauseke] -> GHC.Base.String
+                                           {- Arity: 1, Strictness: <S,1*U> -}
+                                         = \ (ds2 :: [Messer.Lauseke]) ->
+                                           case ds2 of wild1 {
+                                             [] -> lvl48
+                                             : y ys
+                                             -> GHC.Types.:
+                                                  @ GHC.Types.Char
+                                                  GHC.Show.showList__1
+                                                  (Messer.$w$cshowsPrec6 0# y (showl ys)) }
+                                       } in
+                                       showl xs)) }
+                        } in
+                        let {
+                          s1 :: GHC.Base.String
+                          = GHC.Types.: @ GHC.Types.Char GHC.Show.showSpace1 s
+                        } in
+                        case ww1 of wild {
+                          [] -> GHC.CString.unpackAppendCString# GHC.Show.showList__4 s1
+                          : x1 xs
+                          -> GHC.Types.:
+                               @ GHC.Types.Char
+                               GHC.Show.showList__3
+                               (case x1 of ww3 { Messer.Parametri ww4 ww5 ->
+                                Messer.$w$cshowsPrec9
+                                  0#
+                                  ww4
+                                  ww5
+                                  (let {
+                                     lvl48 :: [GHC.Types.Char]
+                                     = GHC.Types.: @ GHC.Types.Char GHC.Show.showList__2 s1
+                                   } in
+                                   letrec {
+                                     showl :: [Messer.Parametri] -> GHC.Base.String
+                                       {- Arity: 1, Strictness: <S,1*U> -}
+                                     = \ (ds2 :: [Messer.Parametri]) ->
+                                       case ds2 of wild1 {
+                                         [] -> lvl48
+                                         : y ys
+                                         -> GHC.Types.:
+                                              @ GHC.Types.Char
+                                              GHC.Show.showList__1
+                                              (case y of ww6 { Messer.Parametri ww7 ww8 ->
+                                               Messer.$w$cshowsPrec9 0# ww7 ww8 (showl ys) }) }
+                                   } in
+                                   showl xs) }) })
                  } in
                  case GHC.Prim.>=# ww 11# of lwild {
                    DEFAULT -> p w
@@ -3608,7 +3632,7 @@ b8fb69268f765c3ef225c661dc5360de
     | LEhto Messer.Ehtolause
     | LSilmukka Messer.Maaritelma [Messer.Lauseke]
     | LAKutsu Messer.AKutsu
-e7cb6c20637ed95ce0cae1a22331cd3d
+fc5a6c009ce899225c2da24c4d07724d
   data Luokka
     = Luokka Messer.Id Messer.MainOhjelma [Messer.Aliohjelma]
 ea67a20a6ff998dcfcbb33a0a151c225
@@ -3618,8 +3642,8 @@ ea67a20a6ff998dcfcbb33a0a151c225
     | Aritmeettinen Messer.Op Messer.Maaritelma Messer.Maaritelma
     | Vertailu Messer.VOp Messer.Maaritelma Messer.Maaritelma
     | MAKutsu Messer.AKutsu
-76f67d672f2abe8d4a26760b75255aa7
-  data MainOhjelma = MainOhjelma Messer.Parametri [Messer.Lauseke]
+fbd3fc3bebebafc8e4d5f10f0ba43b6f
+  data MainOhjelma = MainOhjelma [Messer.Parametri] [Messer.Lauseke]
 bde17f79e23430487e427b810bff59a0
   data Op = Plus | Miinus | Kerto | Jako
 34c02ede3d9961458594ae2e3e82e002
@@ -4134,10 +4158,10 @@ a2acfcf77b6898ccc3487640f1c588bc
 b78ce732d90d8d7e2fd6ae4c661f5556
   booli4 :: GHC.Prim.Addr#
   {- HasNoCafRefs, Unfolding: ("bool"#) -}
-abfe58fcfc1f699279901f15ab51f347
+5f4ada39edc1ffa468d05316d1ce5e7c
   ehtolause :: Messer.Parser Messer.Lauseke
   {- Arity: 5,
-     Strictness: <L,U><L,C(C1(C1(U)))><L,U><L,C(C1(C1(U)))><L,C(C1(U))>,
+     Strictness: <L,U><L,C(C1(C1(U)))><L,U><L,C(C1(C1(U)))><L,U>,
      Unfolding: InlineRule (0, True, True)
                 Messer.ehtolause1
                   `cast`
@@ -4146,49 +4170,13 @@ abfe58fcfc1f699279901f15ab51f347
                           <[GHC.Types.Char]>_N
                           <Data.Functor.Identity.Identity>_R
                           <Messer.Lauseke>_R)) -}
-17a274c873224d6d15fcf192f99bc931
+ad03b35224043a1b17a8e01667a958f0
   ehtolause1 ::
     Text.Megaparsec.State.State [GHC.Types.Char]
     -> (Messer.Lauseke
         -> Text.Megaparsec.State.State [GHC.Types.Char]
         -> Text.Megaparsec.Internal.Hints
              (Text.Megaparsec.Stream.Token [GHC.Types.Char])
-        -> Data.Functor.Identity.Identity b)
-    -> (Text.Megaparsec.Error.ParseError
-          [GHC.Types.Char] Data.Void.Void
-        -> Text.Megaparsec.State.State [GHC.Types.Char]
-        -> Data.Functor.Identity.Identity b)
-    -> (Messer.Lauseke
-        -> Text.Megaparsec.State.State [GHC.Types.Char]
-        -> Text.Megaparsec.Internal.Hints
-             (Text.Megaparsec.Stream.Token [GHC.Types.Char])
-        -> Data.Functor.Identity.Identity b)
-    -> (Text.Megaparsec.Error.ParseError
-          [GHC.Types.Char] Data.Void.Void
-        -> Text.Megaparsec.State.State [GHC.Types.Char]
-        -> Data.Functor.Identity.Identity b)
-    -> Data.Functor.Identity.Identity b
-  {- Arity: 5,
-     Strictness: <L,U><L,C(C1(C1(U)))><L,U><L,C(C1(C1(U)))><L,C(C1(U))> -}
-c0efc531f2356e852f08acb7ce436c1f
-  elsellinen :: Messer.Parser Messer.Lauseke
-  {- Arity: 5,
-     Strictness: <L,U><L,C(C1(C1(U)))><L,U><L,C(C1(C1(U)))><L,U>,
-     Unfolding: InlineRule (0, True, True)
-                Messer.elsellinen1
-                  `cast`
-                (Sym (Text.Megaparsec.Internal.N:ParsecT[0]
-                          <Data.Void.Void>_N
-                          <[GHC.Types.Char]>_N
-                          <Data.Functor.Identity.Identity>_R
-                          <Messer.Lauseke>_R)) -}
-94ff676e8027afe5a306671ab5e239d2
-  elsellinen1 ::
-    Text.Megaparsec.State.State [GHC.Types.Char]
-    -> (Messer.Lauseke
-        -> Text.Megaparsec.State.State [GHC.Types.Char]
-        -> Text.Megaparsec.Internal.Hints
-             (Text.Megaparsec.Stream.Token [GHC.Types.Char])
         -> Data.Functor.Identity.Identity b1)
     -> (Text.Megaparsec.Error.ParseError
           [GHC.Types.Char] Data.Void.Void
@@ -4226,14 +4214,14 @@ c0efc531f2356e852f08acb7ce436c1f
                               [GHC.Types.Char] Data.Void.Void
                             -> Text.Megaparsec.State.State [GHC.Types.Char]
                             -> Data.Functor.Identity.Identity b1) ->
-                 Messer.elsellinen12
+                 Messer.ehtolause18
                    @ b1
                    s1
                    (\ (x :: ())
                       (s' :: Text.Megaparsec.State.State [GHC.Types.Char])
                       (hs :: Text.Megaparsec.Internal.Hints
                                (Text.Megaparsec.Stream.Token [GHC.Types.Char])) ->
-                    Messer.elsellinen2
+                    Messer.ehtolause2
                       @ b1
                       s'
                       cok
@@ -4257,7 +4245,7 @@ c0efc531f2356e852f08acb7ce436c1f
                       (s' :: Text.Megaparsec.State.State [GHC.Types.Char])
                       (hs :: Text.Megaparsec.Internal.Hints
                                (Text.Megaparsec.Stream.Token [GHC.Types.Char])) ->
-                    Messer.elsellinen2
+                    Messer.ehtolause2
                       @ b1
                       s'
                       cok
@@ -4277,186 +4265,8 @@ c0efc531f2356e852f08acb7ce436c1f
                          hs
                          eerr))
                    eerr) -}
-8bde785fcf3aabf7155e6483865dbdf7
-  elsellinen10 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString# Messer.elsellinen11) -}
-4ce4126cd6b4de6f3ef890d9370cd532
-  elsellinen11 :: GHC.Prim.Addr#
-  {- HasNoCafRefs, Unfolding: ("("#) -}
-bf44683538b4cb21e808c9600138f2f9
-  elsellinen12 ::
-    Text.Megaparsec.State.State [GHC.Types.Char]
-    -> (()
-        -> Text.Megaparsec.State.State [GHC.Types.Char]
-        -> Text.Megaparsec.Internal.Hints
-             (Text.Megaparsec.Stream.Token [GHC.Types.Char])
-        -> Data.Functor.Identity.Identity b1)
-    -> (Text.Megaparsec.Error.ParseError
-          [GHC.Types.Char] Data.Void.Void
-        -> Text.Megaparsec.State.State [GHC.Types.Char]
-        -> Data.Functor.Identity.Identity b1)
-    -> (()
-        -> Text.Megaparsec.State.State [GHC.Types.Char]
-        -> Text.Megaparsec.Internal.Hints
-             (Text.Megaparsec.Stream.Token [GHC.Types.Char])
-        -> Data.Functor.Identity.Identity b1)
-    -> (Text.Megaparsec.Error.ParseError
-          [GHC.Types.Char] Data.Void.Void
-        -> Text.Megaparsec.State.State [GHC.Types.Char]
-        -> Data.Functor.Identity.Identity b1)
-    -> Data.Functor.Identity.Identity b1
-  {- Unfolding: (Messer.boolEtosi6 Messer.elsellinen13) -}
-da3815c516be87ecaf36275fcbc76ce8
-  elsellinen13 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString# Messer.elsellinen14) -}
-796d48d3e9b2fe72eb512740a27a7beb
-  elsellinen14 :: GHC.Prim.Addr#
-  {- HasNoCafRefs, Unfolding: ("if"#) -}
-90c00bffed678b98a4444f8f6a5b5df3
-  elsellinen2 ::
-    Text.Megaparsec.State.State [GHC.Types.Char]
-    -> (Messer.Lauseke
-        -> Text.Megaparsec.State.State [GHC.Types.Char]
-        -> Text.Megaparsec.Internal.Hints
-             (Text.Megaparsec.Stream.Token [GHC.Types.Char])
-        -> Data.Functor.Identity.Identity b1)
-    -> (Text.Megaparsec.Error.ParseError
-          [GHC.Types.Char] Data.Void.Void
-        -> Text.Megaparsec.State.State [GHC.Types.Char]
-        -> Data.Functor.Identity.Identity b1)
-    -> (Messer.Lauseke
-        -> Text.Megaparsec.State.State [GHC.Types.Char]
-        -> Text.Megaparsec.Internal.Hints
-             (Text.Megaparsec.Stream.Token [GHC.Types.Char])
-        -> Data.Functor.Identity.Identity b1)
-    -> (Text.Megaparsec.Error.ParseError
-          [GHC.Types.Char] Data.Void.Void
-        -> Text.Megaparsec.State.State [GHC.Types.Char]
-        -> Data.Functor.Identity.Identity b1)
-    -> Data.Functor.Identity.Identity b1
-  {- Arity: 5,
-     Strictness: <L,U><L,C(C1(C1(U)))><L,U><L,C(C1(C1(U)))><L,U>,
-     Unfolding: (\ @ b1
-                   (s1 :: Text.Megaparsec.State.State [GHC.Types.Char])
-                   (cok :: Messer.Lauseke
-                           -> Text.Megaparsec.State.State [GHC.Types.Char]
-                           -> Text.Megaparsec.Internal.Hints
-                                (Text.Megaparsec.Stream.Token [GHC.Types.Char])
-                           -> Data.Functor.Identity.Identity b1)
-                   (cerr :: Text.Megaparsec.Error.ParseError
-                              [GHC.Types.Char] Data.Void.Void
-                            -> Text.Megaparsec.State.State [GHC.Types.Char]
-                            -> Data.Functor.Identity.Identity b1)
-                   (eok :: Messer.Lauseke
-                           -> Text.Megaparsec.State.State [GHC.Types.Char]
-                           -> Text.Megaparsec.Internal.Hints
-                                (Text.Megaparsec.Stream.Token [GHC.Types.Char])
-                           -> Data.Functor.Identity.Identity b1)
-                   (eerr :: Text.Megaparsec.Error.ParseError
-                              [GHC.Types.Char] Data.Void.Void
-                            -> Text.Megaparsec.State.State [GHC.Types.Char]
-                            -> Data.Functor.Identity.Identity b1) ->
-                 Text.Megaparsec.Internal.$fApplicativeParsecT1
-                   @ [GHC.Types.Char]
-                   @ Data.Void.Void
-                   @ Data.Functor.Identity.Identity
-                   Text.Megaparsec.Stream.$fStream[]
-                   @ Messer.Maaritelma
-                   @ GHC.Base.String
-                   Messer.elsellinen7
-                     `cast`
-                   (Sym (Text.Megaparsec.Internal.N:ParsecT[0]
-                             <Data.Void.Void>_N
-                             <[GHC.Types.Char]>_N
-                             <Data.Functor.Identity.Identity>_R
-                             <Messer.Maaritelma>_R))
-                   Messer.elsellinen4
-                     `cast`
-                   (Sym (Text.Megaparsec.Internal.N:ParsecT[0]
-                             <Data.Void.Void>_N
-                             <[GHC.Types.Char]>_N
-                             <Data.Functor.Identity.Identity>_R
-                             (Sub (Sym (Text.Megaparsec.Stream.D:R:Tokens[][0])))))
-                   @ b1
-                   s1
-                   (\ (x :: Messer.Maaritelma)
-                      (s' :: Text.Megaparsec.State.State [GHC.Types.Char])[OneShot]
-                      (hs :: Text.Megaparsec.Internal.Hints
-                               (Text.Megaparsec.Stream.Token [GHC.Types.Char]))[OneShot] ->
-                    Messer.elsellinen3
-                      x
-                      @ b1
-                      s'
-                      cok
-                      cerr
-                      (Text.Megaparsec.Internal.accHints
-                         @ (Text.Megaparsec.Stream.Token [GHC.Types.Char])
-                         @ Messer.Lauseke
-                         @ [GHC.Types.Char]
-                         @ Data.Functor.Identity.Identity
-                         @ b1
-                         hs
-                         cok)
-                      (Messer.$s$fAlternativeParsecT_$swithHints
-                         @ Data.Void.Void
-                         @ Data.Functor.Identity.Identity
-                         @ b1
-                         hs
-                         cerr))
-                   cerr
-                   (\ (x :: Messer.Maaritelma)
-                      (s' :: Text.Megaparsec.State.State [GHC.Types.Char])[OneShot]
-                      (hs :: Text.Megaparsec.Internal.Hints
-                               (Text.Megaparsec.Stream.Token [GHC.Types.Char]))[OneShot] ->
-                    Messer.elsellinen3
-                      x
-                      @ b1
-                      s'
-                      cok
-                      cerr
-                      (Text.Megaparsec.Internal.accHints
-                         @ (Text.Megaparsec.Stream.Token [GHC.Types.Char])
-                         @ Messer.Lauseke
-                         @ [GHC.Types.Char]
-                         @ Data.Functor.Identity.Identity
-                         @ b1
-                         hs
-                         eok)
-                      (Messer.$s$fAlternativeParsecT_$swithHints
-                         @ Data.Void.Void
-                         @ Data.Functor.Identity.Identity
-                         @ b1
-                         hs
-                         eerr))
-                   eerr) -}
-eace723cc5e449d7337f2f5756907c3d
-  elsellinen3 ::
-    Messer.Maaritelma
-    -> forall b.
-       Text.Megaparsec.State.State [GHC.Types.Char]
-       -> (Messer.Lauseke
-           -> Text.Megaparsec.State.State [GHC.Types.Char]
-           -> Text.Megaparsec.Internal.Hints
-                (Text.Megaparsec.Stream.Token [GHC.Types.Char])
-           -> Data.Functor.Identity.Identity b)
-       -> (Text.Megaparsec.Error.ParseError
-             [GHC.Types.Char] Data.Void.Void
-           -> Text.Megaparsec.State.State [GHC.Types.Char]
-           -> Data.Functor.Identity.Identity b)
-       -> (Messer.Lauseke
-           -> Text.Megaparsec.State.State [GHC.Types.Char]
-           -> Text.Megaparsec.Internal.Hints
-                (Text.Megaparsec.Stream.Token [GHC.Types.Char])
-           -> Data.Functor.Identity.Identity b)
-       -> (Text.Megaparsec.Error.ParseError
-             [GHC.Types.Char] Data.Void.Void
-           -> Text.Megaparsec.State.State [GHC.Types.Char]
-           -> Data.Functor.Identity.Identity b)
-       -> Data.Functor.Identity.Identity b
-  {- Arity: 6,
-     Strictness: <L,U><L,U><L,C(C1(C1(U)))><L,U><L,C(C1(C1(U)))><L,U> -}
-a86d6036c4482345e9f470ec97be12c0
-  elsellinen4 ::
+eb7d5023cfb6cb043e9c6f59f2f3e514
+  ehtolause10 ::
     Text.Megaparsec.State.State [GHC.Types.Char]
     -> (Text.Megaparsec.Stream.Tokens [GHC.Types.Char]
         -> Text.Megaparsec.State.State [GHC.Types.Char]
@@ -4479,17 +4289,17 @@ a86d6036c4482345e9f470ec97be12c0
     -> Data.Functor.Identity.Identity b1
   {- Arity: 5,
      Unfolding: (Messer.asulut4
-                   Messer.elsellinen5
+                   Messer.ehtolause11
                      `cast`
                    (Sub (Sym (Text.Megaparsec.Stream.D:R:Tokens[][0])))) -}
-efcaee30cb9781fdb06a678a0221d81b
-  elsellinen5 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString# Messer.elsellinen6) -}
-e8eb1826bf36fb8df0f3d15dadb2a873
-  elsellinen6 :: GHC.Prim.Addr#
+33ba8870a2f42c60ed62b9e205a9bef6
+  ehtolause11 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Messer.ehtolause12) -}
+ccb9846e1b44d22e7a75dca6bae2a588
+  ehtolause12 :: GHC.Prim.Addr#
   {- HasNoCafRefs, Unfolding: (")"#) -}
-105a6ea34c5849c95a54f65c4d07628c
-  elsellinen7 ::
+e3e62b454309be678b77f5cb50a5c9cc
+  ehtolause13 ::
     Text.Megaparsec.State.State [GHC.Types.Char]
     -> (Messer.Maaritelma
         -> Text.Megaparsec.State.State [GHC.Types.Char]
@@ -4518,22 +4328,22 @@ e8eb1826bf36fb8df0f3d15dadb2a873
                    Text.Megaparsec.Stream.$fStream[]
                    @ GHC.Base.String
                    @ Messer.Maaritelma
-                   Messer.elsellinen9
+                   Messer.ehtolause15
                      `cast`
                    (Sym (Text.Megaparsec.Internal.N:ParsecT[0]
                              <Data.Void.Void>_N
                              <[GHC.Types.Char]>_N
                              <Data.Functor.Identity.Identity>_R
                              (Sub (Sym (Text.Megaparsec.Stream.D:R:Tokens[][0])))))
-                   Messer.elsellinen8
+                   Messer.ehtolause14
                      `cast`
                    (Sym (Text.Megaparsec.Internal.N:ParsecT[0]
                              <Data.Void.Void>_N
                              <[GHC.Types.Char]>_N
                              <Data.Functor.Identity.Identity>_R
                              <Messer.Maaritelma>_R))) -}
-3b47cf7047c699d1e7d41a3bb78911aa
-  elsellinen8 ::
+2ffe6e6c206005804dce969439e82f53
+  ehtolause14 ::
     Text.Megaparsec.State.State [GHC.Types.Char]
     -> (Messer.Maaritelma
         -> Text.Megaparsec.State.State [GHC.Types.Char]
@@ -4555,8 +4365,8 @@ e8eb1826bf36fb8df0f3d15dadb2a873
         -> Data.Functor.Identity.Identity b)
     -> Data.Functor.Identity.Identity b
   {- Arity: 5, Strictness: <L,U><L,U><L,U><L,U><L,C(C1(U))> -}
-dec6f120a12a77609008ac830d7b05df
-  elsellinen9 ::
+aadb606cde034492f8f202bf8f003965
+  ehtolause15 ::
     Text.Megaparsec.State.State [GHC.Types.Char]
     -> (Text.Megaparsec.Stream.Tokens [GHC.Types.Char]
         -> Text.Megaparsec.State.State [GHC.Types.Char]
@@ -4579,25 +4389,19 @@ dec6f120a12a77609008ac830d7b05df
     -> Data.Functor.Identity.Identity b1
   {- Arity: 5,
      Unfolding: (Messer.asulut4
-                   Messer.elsellinen10
+                   Messer.ehtolause16
                      `cast`
                    (Sub (Sym (Text.Megaparsec.Stream.D:R:Tokens[][0])))) -}
-8dda0a4dc81310ee1f6606a6f0c70529
-  elseton :: Messer.Parser Messer.Lauseke
-  {- Arity: 5,
-     Strictness: <L,U><L,C(C1(C1(U)))><L,U><L,C(C1(C1(U)))><L,U>,
-     Unfolding: InlineRule (0, True, True)
-                Messer.elseton1
-                  `cast`
-                (Sym (Text.Megaparsec.Internal.N:ParsecT[0]
-                          <Data.Void.Void>_N
-                          <[GHC.Types.Char]>_N
-                          <Data.Functor.Identity.Identity>_R
-                          <Messer.Lauseke>_R)) -}
-7bd0367cf5a1d8fbeeec124c4a11b146
-  elseton1 ::
+b57e0742ab0b2f80dd9776710ce5fe3e
+  ehtolause16 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Messer.ehtolause17) -}
+8b46c4df808c71544a5bbd299e0f7149
+  ehtolause17 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("("#) -}
+53c99b3b7830014fb3f3bf06f79dec87
+  ehtolause18 ::
     Text.Megaparsec.State.State [GHC.Types.Char]
-    -> (Messer.Lauseke
+    -> (()
         -> Text.Megaparsec.State.State [GHC.Types.Char]
         -> Text.Megaparsec.Internal.Hints
              (Text.Megaparsec.Stream.Token [GHC.Types.Char])
@@ -4606,7 +4410,7 @@ dec6f120a12a77609008ac830d7b05df
           [GHC.Types.Char] Data.Void.Void
         -> Text.Megaparsec.State.State [GHC.Types.Char]
         -> Data.Functor.Identity.Identity b1)
-    -> (Messer.Lauseke
+    -> (()
         -> Text.Megaparsec.State.State [GHC.Types.Char]
         -> Text.Megaparsec.Internal.Hints
              (Text.Megaparsec.Stream.Token [GHC.Types.Char])
@@ -4616,81 +4420,12 @@ dec6f120a12a77609008ac830d7b05df
         -> Text.Megaparsec.State.State [GHC.Types.Char]
         -> Data.Functor.Identity.Identity b1)
     -> Data.Functor.Identity.Identity b1
-  {- Arity: 5,
-     Strictness: <L,U><L,C(C1(C1(U)))><L,U><L,C(C1(C1(U)))><L,U>,
-     Unfolding: (\ @ b1
-                   (s1 :: Text.Megaparsec.State.State [GHC.Types.Char])
-                   (cok :: Messer.Lauseke
-                           -> Text.Megaparsec.State.State [GHC.Types.Char]
-                           -> Text.Megaparsec.Internal.Hints
-                                (Text.Megaparsec.Stream.Token [GHC.Types.Char])
-                           -> Data.Functor.Identity.Identity b1)
-                   (cerr :: Text.Megaparsec.Error.ParseError
-                              [GHC.Types.Char] Data.Void.Void
-                            -> Text.Megaparsec.State.State [GHC.Types.Char]
-                            -> Data.Functor.Identity.Identity b1)
-                   (eok :: Messer.Lauseke
-                           -> Text.Megaparsec.State.State [GHC.Types.Char]
-                           -> Text.Megaparsec.Internal.Hints
-                                (Text.Megaparsec.Stream.Token [GHC.Types.Char])
-                           -> Data.Functor.Identity.Identity b1)
-                   (eerr :: Text.Megaparsec.Error.ParseError
-                              [GHC.Types.Char] Data.Void.Void
-                            -> Text.Megaparsec.State.State [GHC.Types.Char]
-                            -> Data.Functor.Identity.Identity b1) ->
-                 Messer.elsellinen12
-                   @ b1
-                   s1
-                   (\ (x :: ())
-                      (s' :: Text.Megaparsec.State.State [GHC.Types.Char])
-                      (hs :: Text.Megaparsec.Internal.Hints
-                               (Text.Megaparsec.Stream.Token [GHC.Types.Char])) ->
-                    Messer.elseton2
-                      @ b1
-                      s'
-                      cok
-                      cerr
-                      (Text.Megaparsec.Internal.accHints
-                         @ (Text.Megaparsec.Stream.Token [GHC.Types.Char])
-                         @ Messer.Lauseke
-                         @ [GHC.Types.Char]
-                         @ Data.Functor.Identity.Identity
-                         @ b1
-                         hs
-                         cok)
-                      (Messer.$s$fAlternativeParsecT_$swithHints
-                         @ Data.Void.Void
-                         @ Data.Functor.Identity.Identity
-                         @ b1
-                         hs
-                         cerr))
-                   cerr
-                   (\ (x :: ())
-                      (s' :: Text.Megaparsec.State.State [GHC.Types.Char])
-                      (hs :: Text.Megaparsec.Internal.Hints
-                               (Text.Megaparsec.Stream.Token [GHC.Types.Char])) ->
-                    Messer.elseton2
-                      @ b1
-                      s'
-                      cok
-                      cerr
-                      (Text.Megaparsec.Internal.accHints
-                         @ (Text.Megaparsec.Stream.Token [GHC.Types.Char])
-                         @ Messer.Lauseke
-                         @ [GHC.Types.Char]
-                         @ Data.Functor.Identity.Identity
-                         @ b1
-                         hs
-                         eok)
-                      (Messer.$s$fAlternativeParsecT_$swithHints
-                         @ Data.Void.Void
-                         @ Data.Functor.Identity.Identity
-                         @ b1
-                         hs
-                         eerr))
-                   eerr) -}
-413a65bc83844adba57d27c79c98a453
-  elseton2 ::
+  {- Unfolding: (Messer.boolEtosi6 Messer.ehtolause19) -}
+2bb3cfa5710dc5d7c6854730a6888456
+  ehtolause19 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Messer.ehtolause20) -}
+e8edfe76e4deddfd15e721616ec7f476
+  ehtolause2 ::
     Text.Megaparsec.State.State [GHC.Types.Char]
     -> (Messer.Lauseke
         -> Text.Megaparsec.State.State [GHC.Types.Char]
@@ -4740,14 +4475,14 @@ dec6f120a12a77609008ac830d7b05df
                    Text.Megaparsec.Stream.$fStream[]
                    @ Messer.Maaritelma
                    @ GHC.Base.String
-                   Messer.elsellinen7
+                   Messer.ehtolause13
                      `cast`
                    (Sym (Text.Megaparsec.Internal.N:ParsecT[0]
                              <Data.Void.Void>_N
                              <[GHC.Types.Char]>_N
                              <Data.Functor.Identity.Identity>_R
                              <Messer.Maaritelma>_R))
-                   Messer.elsellinen4
+                   Messer.ehtolause10
                      `cast`
                    (Sym (Text.Megaparsec.Internal.N:ParsecT[0]
                              <Data.Void.Void>_N
@@ -4760,7 +4495,7 @@ dec6f120a12a77609008ac830d7b05df
                       (s' :: Text.Megaparsec.State.State [GHC.Types.Char])[OneShot]
                       (hs :: Text.Megaparsec.Internal.Hints
                                (Text.Megaparsec.Stream.Token [GHC.Types.Char]))[OneShot] ->
-                    Messer.elseton3
+                    Messer.ehtolause3
                       x
                       @ b1
                       s'
@@ -4785,7 +4520,7 @@ dec6f120a12a77609008ac830d7b05df
                       (s' :: Text.Megaparsec.State.State [GHC.Types.Char])[OneShot]
                       (hs :: Text.Megaparsec.Internal.Hints
                                (Text.Megaparsec.Stream.Token [GHC.Types.Char]))[OneShot] ->
-                    Messer.elseton3
+                    Messer.ehtolause3
                       x
                       @ b1
                       s'
@@ -4806,8 +4541,11 @@ dec6f120a12a77609008ac830d7b05df
                          hs
                          eerr))
                    eerr) -}
-88ced43ecb6bd339f854708014570758
-  elseton3 ::
+c21134a73beafb80a5732a591b7792c8
+  ehtolause20 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("if"#) -}
+aca2904bc2ff12f813463e6a4ffaab80
+  ehtolause3 ::
     Messer.Maaritelma
     -> forall b.
        Text.Megaparsec.State.State [GHC.Types.Char]
@@ -4853,6 +4591,115 @@ dec6f120a12a77609008ac830d7b05df
                               [GHC.Types.Char] Data.Void.Void
                             -> Text.Megaparsec.State.State [GHC.Types.Char]
                             -> Data.Functor.Identity.Identity b) ->
+                 let {
+                   $wk :: [Messer.Lauseke]
+                          -> forall b1.
+                             Text.Megaparsec.State.State [GHC.Types.Char]
+                             -> (Messer.Lauseke
+                                 -> Text.Megaparsec.State.State [GHC.Types.Char]
+                                 -> Text.Megaparsec.Internal.Hints
+                                      (Text.Megaparsec.Stream.Token [GHC.Types.Char])
+                                 -> Data.Functor.Identity.Identity b1)
+                             -> (Text.Megaparsec.Error.ParseError
+                                   [GHC.Types.Char] Data.Void.Void
+                                 -> Text.Megaparsec.State.State [GHC.Types.Char]
+                                 -> Data.Functor.Identity.Identity b1)
+                             -> (Messer.Lauseke
+                                 -> Text.Megaparsec.State.State [GHC.Types.Char]
+                                 -> Text.Megaparsec.Internal.Hints
+                                      (Text.Megaparsec.Stream.Token [GHC.Types.Char])
+                                 -> Data.Functor.Identity.Identity b1)
+                             -> Data.Functor.Identity.Identity b1
+                     {- Arity: 5,
+                        Strictness: <L,U><L,U(U,U,U)><L,C(C1(C1(U)))><L,U><L,C(C1(C1(U)))>,
+                        Inline: [2] -}
+                   = \ (w :: [Messer.Lauseke])
+                       @ b1
+                       (w1 :: Text.Megaparsec.State.State [GHC.Types.Char])[OneShot]
+                       (w2 :: Messer.Lauseke
+                              -> Text.Megaparsec.State.State [GHC.Types.Char]
+                              -> Text.Megaparsec.Internal.Hints
+                                   (Text.Megaparsec.Stream.Token [GHC.Types.Char])
+                              -> Data.Functor.Identity.Identity b1)[OneShot]
+                       (w3 :: Text.Megaparsec.Error.ParseError
+                                [GHC.Types.Char] Data.Void.Void
+                              -> Text.Megaparsec.State.State [GHC.Types.Char]
+                              -> Data.Functor.Identity.Identity b1)[OneShot]
+                       (w4 :: Messer.Lauseke
+                              -> Text.Megaparsec.State.State [GHC.Types.Char]
+                              -> Text.Megaparsec.Internal.Hints
+                                   (Text.Megaparsec.Stream.Token [GHC.Types.Char])
+                              -> Data.Functor.Identity.Identity b1)[OneShot] ->
+                     let {
+                       lvl48 :: Messer.Ehtolause = Messer.If ehto w
+                     } in
+                     let {
+                       lvl49 :: Messer.Lauseke = Messer.LEhto lvl48
+                     } in
+                     Messer.ehtolause6
+                       ehto
+                       w
+                       @ b1
+                       w1
+                       w2
+                       w3
+                       w4
+                       (\ (err :: Text.Megaparsec.Error.ParseError
+                                    [GHC.Types.Char] Data.Void.Void)
+                          (ms :: Text.Megaparsec.State.State [GHC.Types.Char]) ->
+                        w4
+                          lvl49
+                          w1
+                          (case err of wild {
+                             Text.Megaparsec.Error.TrivialError errOffset ds ps
+                             -> case w1 of wild1 { Text.Megaparsec.State.State ds1 dt ds2 ->
+                                case errOffset of wild2 { GHC.Types.I# y ->
+                                case GHC.Prim.==# dt y of lwild {
+                                  DEFAULT
+                                  -> (GHC.Types.[]
+                                        @ (Data.Set.Internal.Set
+                                             (Text.Megaparsec.Error.ErrorItem
+                                                (Text.Megaparsec.Stream.Token [GHC.Types.Char]))))
+                                       `cast`
+                                     (Sym (Text.Megaparsec.Internal.N:Hints[0]
+                                               <Text.Megaparsec.Stream.Token [GHC.Types.Char]>_N))
+                                  1#
+                                  -> case ps of wild3 {
+                                       Data.Set.Internal.Bin dt1 ds4 ds5 ds3
+                                       -> (GHC.Types.:
+                                             @ (Data.Set.Internal.Set
+                                                  (Text.Megaparsec.Error.ErrorItem
+                                                     (Text.Megaparsec.Stream.Token
+                                                        [GHC.Types.Char])))
+                                             wild3
+                                             (GHC.Types.[]
+                                                @ (Data.Set.Internal.Set
+                                                     (Text.Megaparsec.Error.ErrorItem
+                                                        (Text.Megaparsec.Stream.Token
+                                                           [GHC.Types.Char])))))
+                                            `cast`
+                                          (Sym (Text.Megaparsec.Internal.N:Hints[0]
+                                                    <Text.Megaparsec.Stream.Token
+                                                       [GHC.Types.Char]>_N))
+                                       Data.Set.Internal.Tip
+                                       -> (GHC.Types.[]
+                                             @ (Data.Set.Internal.Set
+                                                  (Text.Megaparsec.Error.ErrorItem
+                                                     (Text.Megaparsec.Stream.Token
+                                                        [GHC.Types.Char]))))
+                                            `cast`
+                                          (Sym (Text.Megaparsec.Internal.N:Hints[0]
+                                                    <Text.Megaparsec.Stream.Token
+                                                       [GHC.Types.Char]>_N)) } } } }
+                             Text.Megaparsec.Error.FancyError ds ds1
+                             -> (GHC.Types.[]
+                                   @ (Data.Set.Internal.Set
+                                        (Text.Megaparsec.Error.ErrorItem
+                                           (Text.Megaparsec.Stream.Token [GHC.Types.Char]))))
+                                  `cast`
+                                (Sym (Text.Megaparsec.Internal.N:Hints[0]
+                                          <Text.Megaparsec.Stream.Token [GHC.Types.Char]>_N)) }))
+                 } in
                  Text.Megaparsec.Internal.$fApplicativeParsecT1
                    @ [GHC.Types.Char]
                    @ Data.Void.Void
@@ -4860,7 +4707,7 @@ dec6f120a12a77609008ac830d7b05df
                    Text.Megaparsec.Stream.$fStream[]
                    @ [Messer.Lauseke]
                    @ GHC.Base.String
-                   Messer.elseton4
+                   Messer.ehtolause4
                      `cast`
                    (Sym (Text.Megaparsec.Internal.N:ParsecT[0]
                              <Data.Void.Void>_N
@@ -4880,16 +4727,42 @@ dec6f120a12a77609008ac830d7b05df
                       (s' :: Text.Megaparsec.State.State [GHC.Types.Char])[OneShot]
                       (hs :: Text.Megaparsec.Internal.Hints
                                (Text.Megaparsec.Stream.Token [GHC.Types.Char]))[OneShot] ->
-                    eta1 (Messer.LEhto (Messer.If ehto x)) s' hs)
+                    $wk
+                      x
+                      @ b
+                      s'
+                      eta1
+                      eta2
+                      (Text.Megaparsec.Internal.accHints
+                         @ (Text.Megaparsec.Stream.Token [GHC.Types.Char])
+                         @ Messer.Lauseke
+                         @ [GHC.Types.Char]
+                         @ Data.Functor.Identity.Identity
+                         @ b
+                         hs
+                         eta1))
                    eta2
                    (\ (x :: [Messer.Lauseke])
                       (s' :: Text.Megaparsec.State.State [GHC.Types.Char])[OneShot]
                       (hs :: Text.Megaparsec.Internal.Hints
                                (Text.Megaparsec.Stream.Token [GHC.Types.Char]))[OneShot] ->
-                    eta3 (Messer.LEhto (Messer.If ehto x)) s' hs)
+                    $wk
+                      x
+                      @ b
+                      s'
+                      eta1
+                      eta2
+                      (Text.Megaparsec.Internal.accHints
+                         @ (Text.Megaparsec.Stream.Token [GHC.Types.Char])
+                         @ Messer.Lauseke
+                         @ [GHC.Types.Char]
+                         @ Data.Functor.Identity.Identity
+                         @ b
+                         hs
+                         eta3))
                    eta4) -}
-1944a5c2097ec0d87cff6acab04446ae
-  elseton4 ::
+cd22d682ee43eda4a7ea3e8abea1ea1e
+  ehtolause4 ::
     Text.Megaparsec.State.State [GHC.Types.Char]
     -> ([Messer.Lauseke]
         -> Text.Megaparsec.State.State [GHC.Types.Char]
@@ -4925,15 +4798,15 @@ dec6f120a12a77609008ac830d7b05df
                              <[GHC.Types.Char]>_N
                              <Data.Functor.Identity.Identity>_R
                              (Sub (Sym (Text.Megaparsec.Stream.D:R:Tokens[][0])))))
-                   Messer.elseton5
+                   Messer.ehtolause5
                      `cast`
                    (Sym (Text.Megaparsec.Internal.N:ParsecT[0]
                              <Data.Void.Void>_N
                              <[GHC.Types.Char]>_N
                              <Data.Functor.Identity.Identity>_R
                              <[Messer.Lauseke]>_R))) -}
-b52a4c7c171561ad478959ed3ff98d5a
-  elseton5 ::
+75a5bbdb17de5ccbffc25b9a251eb66b
+  ehtolause5 ::
     Text.Megaparsec.State.State [GHC.Types.Char]
     -> ([Messer.Lauseke]
         -> Text.Megaparsec.State.State [GHC.Types.Char]
@@ -4977,6 +4850,305 @@ b52a4c7c171561ad478959ed3ff98d5a
                           -> Text.Megaparsec.State.State [GHC.Types.Char]
                           -> Data.Functor.Identity.Identity b) ->
                  Messer.$wgo1 (GHC.Base.id @ [Messer.Lauseke]) @ b w w1 w2 w3) -}
+4f079a70261643c1e9598aa3c0ea2afe
+  ehtolause6 ::
+    Messer.Maaritelma
+    -> [Messer.Lauseke]
+    -> forall b.
+       Text.Megaparsec.State.State [GHC.Types.Char]
+       -> (Messer.Lauseke
+           -> Text.Megaparsec.State.State [GHC.Types.Char]
+           -> Text.Megaparsec.Internal.Hints
+                (Text.Megaparsec.Stream.Token [GHC.Types.Char])
+           -> Data.Functor.Identity.Identity b)
+       -> (Text.Megaparsec.Error.ParseError
+             [GHC.Types.Char] Data.Void.Void
+           -> Text.Megaparsec.State.State [GHC.Types.Char]
+           -> Data.Functor.Identity.Identity b)
+       -> (Messer.Lauseke
+           -> Text.Megaparsec.State.State [GHC.Types.Char]
+           -> Text.Megaparsec.Internal.Hints
+                (Text.Megaparsec.Stream.Token [GHC.Types.Char])
+           -> Data.Functor.Identity.Identity b)
+       -> (Text.Megaparsec.Error.ParseError
+             [GHC.Types.Char] Data.Void.Void
+           -> Text.Megaparsec.State.State [GHC.Types.Char]
+           -> Data.Functor.Identity.Identity b)
+       -> Data.Functor.Identity.Identity b
+  {- Arity: 7,
+     Strictness: <L,U><L,U><L,U><L,C(C1(C1(U)))><L,U><L,C(C1(C1(U)))><L,U>,
+     Unfolding: (\ (ehto :: Messer.Maaritelma)
+                   (lausekkeet1 :: [Messer.Lauseke])
+                   @ b
+                   (eta :: Text.Megaparsec.State.State [GHC.Types.Char])
+                   (eta1 :: Messer.Lauseke
+                            -> Text.Megaparsec.State.State [GHC.Types.Char]
+                            -> Text.Megaparsec.Internal.Hints
+                                 (Text.Megaparsec.Stream.Token [GHC.Types.Char])
+                            -> Data.Functor.Identity.Identity b)
+                   (eta2 :: Text.Megaparsec.Error.ParseError
+                              [GHC.Types.Char] Data.Void.Void
+                            -> Text.Megaparsec.State.State [GHC.Types.Char]
+                            -> Data.Functor.Identity.Identity b)
+                   (eta3 :: Messer.Lauseke
+                            -> Text.Megaparsec.State.State [GHC.Types.Char]
+                            -> Text.Megaparsec.Internal.Hints
+                                 (Text.Megaparsec.Stream.Token [GHC.Types.Char])
+                            -> Data.Functor.Identity.Identity b)
+                   (eta4 :: Text.Megaparsec.Error.ParseError
+                              [GHC.Types.Char] Data.Void.Void
+                            -> Text.Megaparsec.State.State [GHC.Types.Char]
+                            -> Data.Functor.Identity.Identity b) ->
+                 let {
+                   k :: forall b1.
+                        Text.Megaparsec.State.State [GHC.Types.Char]
+                        -> (Messer.Lauseke
+                            -> Text.Megaparsec.State.State [GHC.Types.Char]
+                            -> Text.Megaparsec.Internal.Hints
+                                 (Text.Megaparsec.Stream.Token [GHC.Types.Char])
+                            -> Data.Functor.Identity.Identity b1)
+                        -> (Text.Megaparsec.Error.ParseError
+                              [GHC.Types.Char] Data.Void.Void
+                            -> Text.Megaparsec.State.State [GHC.Types.Char]
+                            -> Data.Functor.Identity.Identity b1)
+                        -> (Messer.Lauseke
+                            -> Text.Megaparsec.State.State [GHC.Types.Char]
+                            -> Text.Megaparsec.Internal.Hints
+                                 (Text.Megaparsec.Stream.Token [GHC.Types.Char])
+                            -> Data.Functor.Identity.Identity b1)
+                        -> (Text.Megaparsec.Error.ParseError
+                              [GHC.Types.Char] Data.Void.Void
+                            -> Text.Megaparsec.State.State [GHC.Types.Char]
+                            -> Data.Functor.Identity.Identity b1)
+                        -> Data.Functor.Identity.Identity b1
+                     {- Arity: 5,
+                        Strictness: <L,U><L,C(C1(C1(U)))><L,U><L,C(C1(C1(U)))><L,U> -}
+                   = \ @ b1
+                       (s1 :: Text.Megaparsec.State.State [GHC.Types.Char])
+                       (cok :: Messer.Lauseke
+                               -> Text.Megaparsec.State.State [GHC.Types.Char]
+                               -> Text.Megaparsec.Internal.Hints
+                                    (Text.Megaparsec.Stream.Token [GHC.Types.Char])
+                               -> Data.Functor.Identity.Identity b1)[OneShot]
+                       (cerr :: Text.Megaparsec.Error.ParseError
+                                  [GHC.Types.Char] Data.Void.Void
+                                -> Text.Megaparsec.State.State [GHC.Types.Char]
+                                -> Data.Functor.Identity.Identity b1)[OneShot]
+                       (eok :: Messer.Lauseke
+                               -> Text.Megaparsec.State.State [GHC.Types.Char]
+                               -> Text.Megaparsec.Internal.Hints
+                                    (Text.Megaparsec.Stream.Token [GHC.Types.Char])
+                               -> Data.Functor.Identity.Identity b1)[OneShot]
+                       (eerr :: Text.Megaparsec.Error.ParseError
+                                  [GHC.Types.Char] Data.Void.Void
+                                -> Text.Megaparsec.State.State [GHC.Types.Char]
+                                -> Data.Functor.Identity.Identity b1)[OneShot] ->
+                     Text.Megaparsec.Internal.$fApplicativeParsecT1
+                       @ [GHC.Types.Char]
+                       @ Data.Void.Void
+                       @ Data.Functor.Identity.Identity
+                       Text.Megaparsec.Stream.$fStream[]
+                       @ [Messer.Lauseke]
+                       @ GHC.Base.String
+                       Messer.ehtolause4
+                         `cast`
+                       (Sym (Text.Megaparsec.Internal.N:ParsecT[0]
+                                 <Data.Void.Void>_N
+                                 <[GHC.Types.Char]>_N
+                                 <Data.Functor.Identity.Identity>_R
+                                 <[Messer.Lauseke]>_R))
+                       Messer.asulut1
+                         `cast`
+                       (Sym (Text.Megaparsec.Internal.N:ParsecT[0]
+                                 <Data.Void.Void>_N
+                                 <[GHC.Types.Char]>_N
+                                 <Data.Functor.Identity.Identity>_R
+                                 (Sub (Sym (Text.Megaparsec.Stream.D:R:Tokens[][0])))))
+                       @ b1
+                       s1
+                       (\ (x :: [Messer.Lauseke])
+                          (s' :: Text.Megaparsec.State.State [GHC.Types.Char])[OneShot]
+                          (hs :: Text.Megaparsec.Internal.Hints
+                                   (Text.Megaparsec.Stream.Token [GHC.Types.Char]))[OneShot] ->
+                        cok (Messer.LEhto (Messer.IfElse ehto lausekkeet1 x)) s' hs)
+                       cerr
+                       (\ (x :: [Messer.Lauseke])
+                          (s' :: Text.Megaparsec.State.State [GHC.Types.Char])[OneShot]
+                          (hs :: Text.Megaparsec.Internal.Hints
+                                   (Text.Megaparsec.Stream.Token [GHC.Types.Char]))[OneShot] ->
+                        eok (Messer.LEhto (Messer.IfElse ehto lausekkeet1 x)) s' hs)
+                       eerr
+                 } in
+                 Messer.ehtolause7
+                   @ b
+                   eta
+                   (\ (x :: ())
+                      (s' :: Text.Megaparsec.State.State [GHC.Types.Char])
+                      (hs :: Text.Megaparsec.Internal.Hints
+                               (Text.Megaparsec.Stream.Token [GHC.Types.Char])) ->
+                    k @ b
+                      s'
+                      eta1
+                      eta2
+                      (Text.Megaparsec.Internal.accHints
+                         @ (Text.Megaparsec.Stream.Token [GHC.Types.Char])
+                         @ Messer.Lauseke
+                         @ [GHC.Types.Char]
+                         @ Data.Functor.Identity.Identity
+                         @ b
+                         hs
+                         eta1)
+                      (Messer.$s$fAlternativeParsecT_$swithHints
+                         @ Data.Void.Void
+                         @ Data.Functor.Identity.Identity
+                         @ b
+                         hs
+                         eta2))
+                   eta2
+                   (\ (x :: ())
+                      (s' :: Text.Megaparsec.State.State [GHC.Types.Char])
+                      (hs :: Text.Megaparsec.Internal.Hints
+                               (Text.Megaparsec.Stream.Token [GHC.Types.Char])) ->
+                    k @ b
+                      s'
+                      eta1
+                      eta2
+                      (Text.Megaparsec.Internal.accHints
+                         @ (Text.Megaparsec.Stream.Token [GHC.Types.Char])
+                         @ Messer.Lauseke
+                         @ [GHC.Types.Char]
+                         @ Data.Functor.Identity.Identity
+                         @ b
+                         hs
+                         eta3)
+                      (Messer.$s$fAlternativeParsecT_$swithHints
+                         @ Data.Void.Void
+                         @ Data.Functor.Identity.Identity
+                         @ b
+                         hs
+                         eta4))
+                   eta4) -}
+f65e287cb7245fe7039b34b32cb77126
+  ehtolause7 ::
+    Text.Megaparsec.State.State [GHC.Types.Char]
+    -> (()
+        -> Text.Megaparsec.State.State [GHC.Types.Char]
+        -> Text.Megaparsec.Internal.Hints
+             (Text.Megaparsec.Stream.Token [GHC.Types.Char])
+        -> Data.Functor.Identity.Identity b1)
+    -> (Text.Megaparsec.Error.ParseError
+          [GHC.Types.Char] Data.Void.Void
+        -> Text.Megaparsec.State.State [GHC.Types.Char]
+        -> Data.Functor.Identity.Identity b1)
+    -> (()
+        -> Text.Megaparsec.State.State [GHC.Types.Char]
+        -> Text.Megaparsec.Internal.Hints
+             (Text.Megaparsec.Stream.Token [GHC.Types.Char])
+        -> Data.Functor.Identity.Identity b1)
+    -> (Text.Megaparsec.Error.ParseError
+          [GHC.Types.Char] Data.Void.Void
+        -> Text.Megaparsec.State.State [GHC.Types.Char]
+        -> Data.Functor.Identity.Identity b1)
+    -> Data.Functor.Identity.Identity b1
+  {- Unfolding: (Messer.boolEtosi6 Messer.ehtolause8) -}
+e1cd44a23c0d1f4c961825b5b97e6d5d
+  ehtolause8 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Messer.ehtolause9) -}
+82e4b21c01692901dfd19dce5d623fb0
+  ehtolause9 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("else"#) -}
+b5295a84e5eea0faccef136e41117e4f
+  elsellinen ::
+    Messer.Maaritelma
+    -> [Messer.Lauseke] -> Messer.Parser Messer.Lauseke
+  {- Arity: 7,
+     Strictness: <L,U><L,U><L,U><L,C(C1(C1(U)))><L,U><L,C(C1(C1(U)))><L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Messer.ehtolause6
+                  `cast`
+                (<Messer.Maaritelma>_R
+                 ->_R <[Messer.Lauseke]>_R
+                 ->_R Sym (Text.Megaparsec.Internal.N:ParsecT[0]
+                               <Data.Void.Void>_N
+                               <[GHC.Types.Char]>_N
+                               <Data.Functor.Identity.Identity>_R
+                               <Messer.Lauseke>_R)) -}
+5ce84982383d686bb533ef7a32d50abe
+  elseton ::
+    Messer.Maaritelma
+    -> [Messer.Lauseke] -> Messer.Parser Messer.Lauseke
+  {- Arity: 7, HasNoCafRefs,
+     Strictness: <L,U><L,U><L,U><L,A><L,A><C(C(C(S))),1*C1(C1(C1(U)))><L,A>,
+     Unfolding: InlineRule (0, True, True)
+                Messer.elseton1
+                  `cast`
+                (<Messer.Maaritelma>_R
+                 ->_R <[Messer.Lauseke]>_R
+                 ->_R Sym (Text.Megaparsec.Internal.N:ParsecT[0]
+                               <Data.Void.Void>_N
+                               <[GHC.Types.Char]>_N
+                               <Data.Functor.Identity.Identity>_R
+                               <Messer.Lauseke>_R)) -}
+b18894a83fc85447f491058fdec4546d
+  elseton1 ::
+    Messer.Maaritelma
+    -> [Messer.Lauseke]
+    -> forall b.
+       Text.Megaparsec.State.State [GHC.Types.Char]
+       -> (Messer.Lauseke
+           -> Text.Megaparsec.State.State [GHC.Types.Char]
+           -> Text.Megaparsec.Internal.Hints
+                (Text.Megaparsec.Stream.Token [GHC.Types.Char])
+           -> Data.Functor.Identity.Identity b)
+       -> (Text.Megaparsec.Error.ParseError
+             [GHC.Types.Char] Data.Void.Void
+           -> Text.Megaparsec.State.State [GHC.Types.Char]
+           -> Data.Functor.Identity.Identity b)
+       -> (Messer.Lauseke
+           -> Text.Megaparsec.State.State [GHC.Types.Char]
+           -> Text.Megaparsec.Internal.Hints
+                (Text.Megaparsec.Stream.Token [GHC.Types.Char])
+           -> Data.Functor.Identity.Identity b)
+       -> (Text.Megaparsec.Error.ParseError
+             [GHC.Types.Char] Data.Void.Void
+           -> Text.Megaparsec.State.State [GHC.Types.Char]
+           -> Data.Functor.Identity.Identity b)
+       -> Data.Functor.Identity.Identity b
+  {- Arity: 7, HasNoCafRefs,
+     Strictness: <L,U><L,U><L,U><L,A><L,A><C(C(C(S))),1*C1(C1(C1(U)))><L,A>,
+     Unfolding: InlineRule (7, True, False)
+                (\ (ehto :: Messer.Maaritelma)
+                   (lausekkeet :: [Messer.Lauseke])
+                   @ b
+                   (eta :: Text.Megaparsec.State.State [GHC.Types.Char])
+                   (eta1 :: Messer.Lauseke
+                            -> Text.Megaparsec.State.State [GHC.Types.Char]
+                            -> Text.Megaparsec.Internal.Hints
+                                 (Text.Megaparsec.Stream.Token [GHC.Types.Char])
+                            -> Data.Functor.Identity.Identity b)
+                   (eta2 :: Text.Megaparsec.Error.ParseError
+                              [GHC.Types.Char] Data.Void.Void
+                            -> Text.Megaparsec.State.State [GHC.Types.Char]
+                            -> Data.Functor.Identity.Identity b)
+                   (eta3 :: Messer.Lauseke
+                            -> Text.Megaparsec.State.State [GHC.Types.Char]
+                            -> Text.Megaparsec.Internal.Hints
+                                 (Text.Megaparsec.Stream.Token [GHC.Types.Char])
+                            -> Data.Functor.Identity.Identity b)
+                   (eta4 :: Text.Megaparsec.Error.ParseError
+                              [GHC.Types.Char] Data.Void.Void
+                            -> Text.Megaparsec.State.State [GHC.Types.Char]
+                            -> Data.Functor.Identity.Identity b) ->
+                 eta3
+                   (Messer.LEhto (Messer.If ehto lausekkeet))
+                   eta
+                   (GHC.Types.[]
+                      @ (Data.Set.Internal.Set
+                           (Text.Megaparsec.Error.ErrorItem
+                              (Text.Megaparsec.Stream.Token [GHC.Types.Char]))))
+                     `cast`
+                   (Sym (Text.Megaparsec.Internal.N:Hints[0]
+                             <Text.Megaparsec.Stream.Token [GHC.Types.Char]>_N))) -}
 ee0c0a91e03b682ac05e64de7e29bd85
   idAlku :: Messer.Parser Messer.Lauseke
   {- Arity: 5,
@@ -6112,7 +6284,7 @@ a4e85ae4ef78184cc75272227f338303
                           -> Text.Megaparsec.State.State [GHC.Types.Char]
                           -> Data.Functor.Identity.Identity b) ->
                  Messer.$wgo2 (GHC.Base.id @ [Messer.Aliohjelma]) @ b w w1 w2 w3) -}
-8a5fedb4daaa1afc47821fe1860f9cbb
+14841f89f7ca790e505bb0ed0e379da8
   jMain :: Messer.Parser Messer.MainOhjelma
   {- Arity: 5,
      Strictness: <L,U><L,C(C1(C1(U)))><L,U><L,C(C1(C1(U)))><L,U>,
@@ -6124,7 +6296,7 @@ a4e85ae4ef78184cc75272227f338303
                           <[GHC.Types.Char]>_N
                           <Data.Functor.Identity.Identity>_R
                           <Messer.MainOhjelma>_R)) -}
-daecd17b5d59d90d915a4a32da3bd118
+9f9909d546d4e188cfcd2a041900e358
   jMain1 ::
     Text.Megaparsec.State.State [GHC.Types.Char]
     -> (Messer.MainOhjelma
@@ -6168,7 +6340,7 @@ daecd17b5d59d90d915a4a32da3bd118
                               [GHC.Types.Char] Data.Void.Void
                             -> Text.Megaparsec.State.State [GHC.Types.Char]
                             -> Data.Functor.Identity.Identity b1) ->
-                 Messer.jMain12
+                 Messer.jMain5
                    @ b1
                    s1
                    (\ (x :: ())
@@ -6219,39 +6391,7 @@ daecd17b5d59d90d915a4a32da3bd118
                          hs
                          eerr))
                    eerr) -}
-3986f9c59110404473b083ac657c3e22
-  jMain10 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString# Messer.jMain11) -}
-fe81c345485fe6b8c5f686c6d662bd95
-  jMain11 :: GHC.Prim.Addr#
-  {- HasNoCafRefs, Unfolding: ("string"#) -}
-f323fc5670da7f68480db1e59fb7a10a
-  jMain12 ::
-    Text.Megaparsec.State.State [GHC.Types.Char]
-    -> (()
-        -> Text.Megaparsec.State.State [GHC.Types.Char]
-        -> Text.Megaparsec.Internal.Hints
-             (Text.Megaparsec.Stream.Token [GHC.Types.Char])
-        -> Data.Functor.Identity.Identity b1)
-    -> (Text.Megaparsec.Error.ParseError
-          [GHC.Types.Char] Data.Void.Void
-        -> Text.Megaparsec.State.State [GHC.Types.Char]
-        -> Data.Functor.Identity.Identity b1)
-    -> (()
-        -> Text.Megaparsec.State.State [GHC.Types.Char]
-        -> Text.Megaparsec.Internal.Hints
-             (Text.Megaparsec.Stream.Token [GHC.Types.Char])
-        -> Data.Functor.Identity.Identity b1)
-    -> (Text.Megaparsec.Error.ParseError
-          [GHC.Types.Char] Data.Void.Void
-        -> Text.Megaparsec.State.State [GHC.Types.Char]
-        -> Data.Functor.Identity.Identity b1)
-    -> Data.Functor.Identity.Identity b1
-  {- Unfolding: (Messer.boolEtosi6 Messer.jMain13) -}
-a987ee3e00ead453a1839e97b05824c4
-  jMain13 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString# Messer.$trModule4) -}
-6dc2e40befad945c9523c5a051f25916
+0fa8d97e246f533569e5136320055b92
   jMain2 ::
     Text.Megaparsec.State.State [GHC.Types.Char]
     -> (Messer.MainOhjelma
@@ -6296,7 +6436,7 @@ a987ee3e00ead453a1839e97b05824c4
                             -> Text.Megaparsec.State.State [GHC.Types.Char]
                             -> Data.Functor.Identity.Identity b1) ->
                  Messer.asulut4
-                   Messer.elsellinen10
+                   Messer.ehtolause16
                      `cast`
                    (Sub (Sym (Text.Megaparsec.Stream.D:R:Tokens[][0])))
                    @ b1
@@ -6399,7 +6539,7 @@ a987ee3e00ead453a1839e97b05824c4
                                                -> Data.Functor.Identity.Identity b1)
                                               -> Data.Functor.Identity.Identity b1>_R)))))
                    eerr) -}
-ad51deadf25eb3eb1acee0509eb598e1
+feec3df19a44f26d1b2e731b33bfe3c4
   jMain3 ::
     Text.Megaparsec.State.State [GHC.Types.Char]
     -> (Messer.MainOhjelma
@@ -6422,7 +6562,7 @@ ad51deadf25eb3eb1acee0509eb598e1
         -> Data.Functor.Identity.Identity b1)
     -> Data.Functor.Identity.Identity b1
   {- Arity: 5,
-     Strictness: <L,U><L,C(C1(C1(U)))><L,U><L,C(C1(C1(U)))><L,U>,
+     Strictness: <L,U(U,U,U)><L,C(C1(C1(U)))><L,U><L,C(C1(C1(U)))><L,C(U)>,
      Unfolding: (\ @ b1
                    (s1 :: Text.Megaparsec.State.State [GHC.Types.Char])
                    (cok :: Messer.MainOhjelma
@@ -6443,14 +6583,15 @@ ad51deadf25eb3eb1acee0509eb598e1
                               [GHC.Types.Char] Data.Void.Void
                             -> Text.Megaparsec.State.State [GHC.Types.Char]
                             -> Data.Functor.Identity.Identity b1) ->
-                 Messer.jMain9
+                 Messer.$wparametrit
                    @ b1
                    s1
-                   (\ (x :: ())
-                      (s' :: Text.Megaparsec.State.State [GHC.Types.Char])
+                   (\ (x :: [Messer.Parametri])
+                      (s' :: Text.Megaparsec.State.State [GHC.Types.Char])[OneShot]
                       (hs :: Text.Megaparsec.Internal.Hints
-                               (Text.Megaparsec.Stream.Token [GHC.Types.Char])) ->
+                               (Text.Megaparsec.Stream.Token [GHC.Types.Char]))[OneShot] ->
                     Messer.jMain4
+                      x
                       @ b1
                       s'
                       cok
@@ -6470,11 +6611,12 @@ ad51deadf25eb3eb1acee0509eb598e1
                          hs
                          cerr))
                    cerr
-                   (\ (x :: ())
-                      (s' :: Text.Megaparsec.State.State [GHC.Types.Char])
+                   (\ (x :: [Messer.Parametri])
+                      (s' :: Text.Megaparsec.State.State [GHC.Types.Char])[OneShot]
                       (hs :: Text.Megaparsec.Internal.Hints
-                               (Text.Megaparsec.Stream.Token [GHC.Types.Char])) ->
+                               (Text.Megaparsec.Stream.Token [GHC.Types.Char]))[OneShot] ->
                     Messer.jMain4
+                      x
                       @ b1
                       s'
                       cok
@@ -6492,276 +6634,10 @@ ad51deadf25eb3eb1acee0509eb598e1
                          @ Data.Functor.Identity.Identity
                          @ b1
                          hs
-                         eerr))
-                   eerr) -}
-e452ccefd28c6bd92c97c95f4ad356a8
+                         eerr))) -}
+2aa341e297d07bbe54fb1b8c8188c379
   jMain4 ::
-    Text.Megaparsec.State.State [GHC.Types.Char]
-    -> (Messer.MainOhjelma
-        -> Text.Megaparsec.State.State [GHC.Types.Char]
-        -> Text.Megaparsec.Internal.Hints
-             (Text.Megaparsec.Stream.Token [GHC.Types.Char])
-        -> Data.Functor.Identity.Identity b1)
-    -> (Text.Megaparsec.Error.ParseError
-          [GHC.Types.Char] Data.Void.Void
-        -> Text.Megaparsec.State.State [GHC.Types.Char]
-        -> Data.Functor.Identity.Identity b1)
-    -> (Messer.MainOhjelma
-        -> Text.Megaparsec.State.State [GHC.Types.Char]
-        -> Text.Megaparsec.Internal.Hints
-             (Text.Megaparsec.Stream.Token [GHC.Types.Char])
-        -> Data.Functor.Identity.Identity b1)
-    -> (Text.Megaparsec.Error.ParseError
-          [GHC.Types.Char] Data.Void.Void
-        -> Text.Megaparsec.State.State [GHC.Types.Char]
-        -> Data.Functor.Identity.Identity b1)
-    -> Data.Functor.Identity.Identity b1
-  {- Arity: 5,
-     Strictness: <L,U><L,C(C1(C1(U)))><L,U><L,C(C1(C1(U)))><L,U>,
-     Unfolding: (\ @ b1
-                   (s1 :: Text.Megaparsec.State.State [GHC.Types.Char])
-                   (cok :: Messer.MainOhjelma
-                           -> Text.Megaparsec.State.State [GHC.Types.Char]
-                           -> Text.Megaparsec.Internal.Hints
-                                (Text.Megaparsec.Stream.Token [GHC.Types.Char])
-                           -> Data.Functor.Identity.Identity b1)
-                   (cerr :: Text.Megaparsec.Error.ParseError
-                              [GHC.Types.Char] Data.Void.Void
-                            -> Text.Megaparsec.State.State [GHC.Types.Char]
-                            -> Data.Functor.Identity.Identity b1)
-                   (eok :: Messer.MainOhjelma
-                           -> Text.Megaparsec.State.State [GHC.Types.Char]
-                           -> Text.Megaparsec.Internal.Hints
-                                (Text.Megaparsec.Stream.Token [GHC.Types.Char])
-                           -> Data.Functor.Identity.Identity b1)
-                   (eerr :: Text.Megaparsec.Error.ParseError
-                              [GHC.Types.Char] Data.Void.Void
-                            -> Text.Megaparsec.State.State [GHC.Types.Char]
-                            -> Data.Functor.Identity.Identity b1) ->
-                 Messer.asulut4
-                   Messer.jMain7
-                     `cast`
-                   (Sub (Sym (Text.Megaparsec.Stream.D:R:Tokens[][0])))
-                   @ b1
-                   s1
-                   (\ (x :: GHC.Base.String)
-                      (s' :: Text.Megaparsec.State.State [GHC.Types.Char])[OneShot]
-                      (hs :: Text.Megaparsec.Internal.Hints
-                               (Text.Megaparsec.Stream.Token [GHC.Types.Char]))[OneShot] ->
-                    Messer.jMain5
-                      @ b1
-                      s'
-                      cok
-                      cerr
-                      (Text.Megaparsec.Internal.accHints
-                         @ (Text.Megaparsec.Stream.Token [GHC.Types.Char])
-                         @ Messer.MainOhjelma
-                         @ [GHC.Types.Char]
-                         @ Data.Functor.Identity.Identity
-                         @ b1
-                         hs
-                         cok)
-                      (Messer.$s$fAlternativeParsecT_$swithHints
-                         @ Data.Void.Void
-                         @ Data.Functor.Identity.Identity
-                         @ b1
-                         hs
-                         cerr))
-                     `cast`
-                   (Nth:2
-                        (Nth:3
-                             (<Text.Megaparsec.State.State [GHC.Types.Char]>_R
-                              ->_R (Sub (Sym (Text.Megaparsec.Stream.D:R:Tokens[][0]))
-                                    ->_R <Text.Megaparsec.State.State [GHC.Types.Char]
-                                          -> Text.Megaparsec.Internal.Hints
-                                               (Text.Megaparsec.Stream.Token [GHC.Types.Char])
-                                          -> Data.Functor.Identity.Identity b1>_R)
-                              ->_R <Text.Megaparsec.Error.ParseError
-                                      [GHC.Types.Char] Data.Void.Void
-                                    -> Text.Megaparsec.State.State [GHC.Types.Char]
-                                    -> Data.Functor.Identity.Identity b1>_R
-                              ->_R (Sub (Sym (Text.Megaparsec.Stream.D:R:Tokens[][0]))
-                                    ->_R <Text.Megaparsec.State.State [GHC.Types.Char]
-                                          -> Text.Megaparsec.Internal.Hints
-                                               (Text.Megaparsec.Stream.Token [GHC.Types.Char])
-                                          -> Data.Functor.Identity.Identity b1>_R)
-                              ->_R <(Text.Megaparsec.Error.ParseError
-                                       [GHC.Types.Char] Data.Void.Void
-                                     -> Text.Megaparsec.State.State [GHC.Types.Char]
-                                     -> Data.Functor.Identity.Identity b1)
-                                    -> Data.Functor.Identity.Identity b1>_R)))
-                   cerr
-                   (\ (x :: GHC.Base.String)
-                      (s' :: Text.Megaparsec.State.State [GHC.Types.Char])[OneShot]
-                      (hs :: Text.Megaparsec.Internal.Hints
-                               (Text.Megaparsec.Stream.Token [GHC.Types.Char]))[OneShot] ->
-                    Messer.jMain5
-                      @ b1
-                      s'
-                      cok
-                      cerr
-                      (Text.Megaparsec.Internal.accHints
-                         @ (Text.Megaparsec.Stream.Token [GHC.Types.Char])
-                         @ Messer.MainOhjelma
-                         @ [GHC.Types.Char]
-                         @ Data.Functor.Identity.Identity
-                         @ b1
-                         hs
-                         eok)
-                      (Messer.$s$fAlternativeParsecT_$swithHints
-                         @ Data.Void.Void
-                         @ Data.Functor.Identity.Identity
-                         @ b1
-                         hs
-                         eerr))
-                     `cast`
-                   (Nth:2
-                        (Nth:3
-                             (Nth:3
-                                  (Nth:3
-                                       (<Text.Megaparsec.State.State [GHC.Types.Char]>_R
-                                        ->_R (Sub (Sym (Text.Megaparsec.Stream.D:R:Tokens[][0]))
-                                              ->_R <Text.Megaparsec.State.State [GHC.Types.Char]
-                                                    -> Text.Megaparsec.Internal.Hints
-                                                         (Text.Megaparsec.Stream.Token
-                                                            [GHC.Types.Char])
-                                                    -> Data.Functor.Identity.Identity b1>_R)
-                                        ->_R <Text.Megaparsec.Error.ParseError
-                                                [GHC.Types.Char] Data.Void.Void
-                                              -> Text.Megaparsec.State.State [GHC.Types.Char]
-                                              -> Data.Functor.Identity.Identity b1>_R
-                                        ->_R (Sub (Sym (Text.Megaparsec.Stream.D:R:Tokens[][0]))
-                                              ->_R <Text.Megaparsec.State.State [GHC.Types.Char]
-                                                    -> Text.Megaparsec.Internal.Hints
-                                                         (Text.Megaparsec.Stream.Token
-                                                            [GHC.Types.Char])
-                                                    -> Data.Functor.Identity.Identity b1>_R)
-                                        ->_R <(Text.Megaparsec.Error.ParseError
-                                                 [GHC.Types.Char] Data.Void.Void
-                                               -> Text.Megaparsec.State.State [GHC.Types.Char]
-                                               -> Data.Functor.Identity.Identity b1)
-                                              -> Data.Functor.Identity.Identity b1>_R)))))
-                   eerr) -}
-eefa5dbc3615a38a7a40f5891542f9df
-  jMain5 ::
-    Text.Megaparsec.State.State [GHC.Types.Char]
-    -> (Messer.MainOhjelma
-        -> Text.Megaparsec.State.State [GHC.Types.Char]
-        -> Text.Megaparsec.Internal.Hints
-             (Text.Megaparsec.Stream.Token [GHC.Types.Char])
-        -> Data.Functor.Identity.Identity b1)
-    -> (Text.Megaparsec.Error.ParseError
-          [GHC.Types.Char] Data.Void.Void
-        -> Text.Megaparsec.State.State [GHC.Types.Char]
-        -> Data.Functor.Identity.Identity b1)
-    -> (Messer.MainOhjelma
-        -> Text.Megaparsec.State.State [GHC.Types.Char]
-        -> Text.Megaparsec.Internal.Hints
-             (Text.Megaparsec.Stream.Token [GHC.Types.Char])
-        -> Data.Functor.Identity.Identity b1)
-    -> (Text.Megaparsec.Error.ParseError
-          [GHC.Types.Char] Data.Void.Void
-        -> Text.Megaparsec.State.State [GHC.Types.Char]
-        -> Data.Functor.Identity.Identity b1)
-    -> Data.Functor.Identity.Identity b1
-  {- Arity: 5,
-     Strictness: <L,U><L,C(C1(C1(U)))><L,U><L,C(C1(C1(U)))><L,U>,
-     Unfolding: (\ @ b1
-                   (s1 :: Text.Megaparsec.State.State [GHC.Types.Char])
-                   (cok :: Messer.MainOhjelma
-                           -> Text.Megaparsec.State.State [GHC.Types.Char]
-                           -> Text.Megaparsec.Internal.Hints
-                                (Text.Megaparsec.Stream.Token [GHC.Types.Char])
-                           -> Data.Functor.Identity.Identity b1)
-                   (cerr :: Text.Megaparsec.Error.ParseError
-                              [GHC.Types.Char] Data.Void.Void
-                            -> Text.Megaparsec.State.State [GHC.Types.Char]
-                            -> Data.Functor.Identity.Identity b1)
-                   (eok :: Messer.MainOhjelma
-                           -> Text.Megaparsec.State.State [GHC.Types.Char]
-                           -> Text.Megaparsec.Internal.Hints
-                                (Text.Megaparsec.Stream.Token [GHC.Types.Char])
-                           -> Data.Functor.Identity.Identity b1)
-                   (eerr :: Text.Megaparsec.Error.ParseError
-                              [GHC.Types.Char] Data.Void.Void
-                            -> Text.Megaparsec.State.State [GHC.Types.Char]
-                            -> Data.Functor.Identity.Identity b1) ->
-                 Text.Megaparsec.Internal.$fApplicativeParsecT1
-                   @ [GHC.Types.Char]
-                   @ Data.Void.Void
-                   @ Data.Functor.Identity.Identity
-                   Text.Megaparsec.Stream.$fStream[]
-                   @ Messer.Id
-                   @ ()
-                   Messer.idAlku15
-                     `cast`
-                   (Sym (Text.Megaparsec.Internal.N:ParsecT[0]
-                             <Data.Void.Void>_N
-                             <[GHC.Types.Char]>_N
-                             <Data.Functor.Identity.Identity>_R
-                             <Messer.Id>_R))
-                   Messer.idAlku3
-                     `cast`
-                   (Sym (Text.Megaparsec.Internal.N:ParsecT[0]
-                             <Data.Void.Void>_N
-                             <GHC.Base.String>_N
-                             <Data.Functor.Identity.Identity>_R
-                             <()>_R))
-                   @ b1
-                   s1
-                   (\ (x :: Messer.Id)
-                      (s' :: Text.Megaparsec.State.State [GHC.Types.Char])[OneShot]
-                      (hs :: Text.Megaparsec.Internal.Hints
-                               (Text.Megaparsec.Stream.Token [GHC.Types.Char]))[OneShot] ->
-                    Messer.jMain6
-                      x
-                      @ b1
-                      s'
-                      cok
-                      cerr
-                      (Text.Megaparsec.Internal.accHints
-                         @ (Text.Megaparsec.Stream.Token [GHC.Types.Char])
-                         @ Messer.MainOhjelma
-                         @ [GHC.Types.Char]
-                         @ Data.Functor.Identity.Identity
-                         @ b1
-                         hs
-                         cok)
-                      (Messer.$s$fAlternativeParsecT_$swithHints
-                         @ Data.Void.Void
-                         @ Data.Functor.Identity.Identity
-                         @ b1
-                         hs
-                         cerr))
-                   cerr
-                   (\ (x :: Messer.Id)
-                      (s' :: Text.Megaparsec.State.State [GHC.Types.Char])[OneShot]
-                      (hs :: Text.Megaparsec.Internal.Hints
-                               (Text.Megaparsec.Stream.Token [GHC.Types.Char]))[OneShot] ->
-                    Messer.jMain6
-                      x
-                      @ b1
-                      s'
-                      cok
-                      cerr
-                      (Text.Megaparsec.Internal.accHints
-                         @ (Text.Megaparsec.Stream.Token [GHC.Types.Char])
-                         @ Messer.MainOhjelma
-                         @ [GHC.Types.Char]
-                         @ Data.Functor.Identity.Identity
-                         @ b1
-                         hs
-                         eok)
-                      (Messer.$s$fAlternativeParsecT_$swithHints
-                         @ Data.Void.Void
-                         @ Data.Functor.Identity.Identity
-                         @ b1
-                         hs
-                         eerr))
-                   eerr) -}
-58e33b85a4f3bc30df0a04437daa03fd
-  jMain6 ::
-    Messer.Id
+    [Messer.Parametri]
     -> forall b.
        Text.Megaparsec.State.State [GHC.Types.Char]
        -> (Messer.MainOhjelma
@@ -6785,14 +6661,8 @@ eefa5dbc3615a38a7a40f5891542f9df
        -> Data.Functor.Identity.Identity b
   {- Arity: 6,
      Strictness: <L,U><L,U><L,C(C1(C1(U)))><L,U><L,C(C1(C1(U)))><L,U> -}
-ed6ec415284919cf395ff572d8307451
-  jMain7 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString# Messer.jMain8) -}
-1621ccb870857aba465d9791117c0165
-  jMain8 :: GHC.Prim.Addr#
-  {- HasNoCafRefs, Unfolding: ("[]"#) -}
-3c1f95e0dd98f14d1181bde445587363
-  jMain9 ::
+a3ca998a4e0032615590a1b4df5f3a23
+  jMain5 ::
     Text.Megaparsec.State.State [GHC.Types.Char]
     -> (()
         -> Text.Megaparsec.State.State [GHC.Types.Char]
@@ -6813,8 +6683,11 @@ ed6ec415284919cf395ff572d8307451
         -> Text.Megaparsec.State.State [GHC.Types.Char]
         -> Data.Functor.Identity.Identity b1)
     -> Data.Functor.Identity.Identity b1
-  {- Unfolding: (Messer.boolEtosi6 Messer.jMain10) -}
-e77a2bdc1096abe50b8a2d9c0ea83b65
+  {- Unfolding: (Messer.boolEtosi6 Messer.jMain6) -}
+1269085ed80f91664de1c515793278c3
+  jMain6 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Messer.$trModule4) -}
+60ab85f73c5b00915574998b87300b5f
   jasennin :: Messer.Parser Messer.Luokka
   {- Arity: 5,
      Unfolding: InlineRule (0, True, True)
@@ -6825,7 +6698,7 @@ e77a2bdc1096abe50b8a2d9c0ea83b65
                           <[GHC.Types.Char]>_N
                           <Data.Functor.Identity.Identity>_R
                           <Messer.Luokka>_R)) -}
-bcc53004ca314febb6dab5f5bb4a0073
+5ab2e2c498650546ecb84d222f715c24
   jasennin1 ::
     Text.Megaparsec.State.State [GHC.Types.Char]
     -> (Messer.Luokka
@@ -6938,7 +6811,7 @@ af3157c6b7c3877be1afe0ba53c8a265
                    (Data.Set.Internal.Tip
                       @ (Text.Megaparsec.Error.ErrorItem
                            (Text.Megaparsec.Stream.Token [GHC.Types.Char])))) -}
-fe39aac7673d47b4d48ad067a8e2449c
+3899fb5029c728dd7bb13b6f837a2da5
   jasennin4 ::
     Text.Megaparsec.State.State [GHC.Types.Char]
     -> (Messer.Luokka
@@ -6982,7 +6855,7 @@ fe39aac7673d47b4d48ad067a8e2449c
                              <[GHC.Types.Char]>_N
                              <Data.Functor.Identity.Identity>_R
                              <Messer.Luokka>_R))) -}
-abaefe650b95e300c8decc519d71fe52
+70c6843687d8edeb2aa33957bc40156c
   jasennin5 ::
     Text.Megaparsec.State.State [GHC.Types.Char]
     -> (Messer.Luokka
@@ -7077,7 +6950,7 @@ abaefe650b95e300c8decc519d71fe52
                          hs
                          eerr))
                    eerr) -}
-0e53a6000a69da3e108610f19a26df05
+037d9082b7fab2f50d4bf1f1f793d661
   jasennin6 ::
     Text.Megaparsec.State.State [GHC.Types.Char]
     -> (Messer.Luokka
@@ -7194,7 +7067,7 @@ abaefe650b95e300c8decc519d71fe52
                          hs
                          eerr))
                    eerr) -}
-11e0f96ad70d5cebfeb8f48c10a798d2
+15a6c7bed9423d99b5df333dc34cc36c
   jasennin7 ::
     Messer.Id
     -> forall b.
@@ -7329,12 +7202,12 @@ e906226bb947a7a1b914c29594d8d822
        -> Data.Functor.Identity.Identity b
   {- Arity: 6,
      Strictness: <L,U><L,U><L,C(C1(C1(U)))><L,U><L,C(C1(C1(U)))><L,U> -}
-13f2dcb2a67d23f7d756b7f87c1fb32a
+cd1d94168c1f34ef3b733ef08684bf6d
   lauseke :: Messer.Parser [Messer.Lauseke]
   {- Arity: 5,
      Strictness: <L,U(U,U,U)><L,C(C1(C1(U)))><L,U><L,C(C1(C1(U)))><L,A>,
      Unfolding: InlineRule (0, True, True)
-                Messer.elseton5
+                Messer.ehtolause5
                   `cast`
                 (Sym (Text.Megaparsec.Internal.N:ParsecT[0]
                           <Data.Void.Void>_N
@@ -7527,7 +7400,7 @@ a84af8fd45bd3edef3aa31a4e3e22704
                                (Text.Megaparsec.Stream.Token [GHC.Types.Char]))[OneShot] ->
                     eok (Messer.MArvo (Messer.ArvoInt x)) s' hs)
                    eerr) -}
-23c7044e941d9981c31dd029ca4c3404
+f878ccb65409b865be9ae4b61a4ead5d
   luokka :: Messer.Parser Messer.Luokka
   {- Arity: 5,
      Strictness: <L,U><L,C(C1(C1(U)))><L,U><L,C(C1(C1(U)))><L,U>,
@@ -7539,11 +7412,11 @@ a84af8fd45bd3edef3aa31a4e3e22704
                           <[GHC.Types.Char]>_N
                           <Data.Functor.Identity.Identity>_R
                           <Messer.Luokka>_R)) -}
-239a226132c7b90f8c1ee4ce235c2472
+784324470d4c3070254fa80f2dd6d35d
   maaritelma :: Messer.Parser Messer.Maaritelma
   {- Arity: 5, Strictness: <L,U><L,U><L,U><L,U><L,C(C1(U))>,
      Unfolding: InlineRule (0, True, True)
-                Messer.elsellinen8
+                Messer.ehtolause14
                   `cast`
                 (Sym (Text.Megaparsec.Internal.N:ParsecT[0]
                           <Data.Void.Void>_N
@@ -9572,7 +9445,7 @@ ff7e058291ec7d85b7a9054add61994d
     Messer.Maaritelma -> Messer.Maaritelma -> Messer.Maaritelma
   {- Arity: 2, HasNoCafRefs,
      Unfolding: (Messer.Aritmeettinen Messer.Kerto) -}
-e7c61282b86a0618dfb232e872bdc54e
+306cc9e0ee7188367f0f97451f1ebb86
   palautus :: Messer.Parser Messer.Lauseke
   {- Arity: 5,
      Strictness: <L,U><L,C(C1(C1(U)))><L,U><L,C(C1(C1(U)))><L,U>,
@@ -9584,7 +9457,7 @@ e7c61282b86a0618dfb232e872bdc54e
                           <[GHC.Types.Char]>_N
                           <Data.Functor.Identity.Identity>_R
                           <Messer.Lauseke>_R)) -}
-c40e1a12e29a6b6e0e0088d63adb3176
+5ee83604691a29b9a605e53de75bd6e6
   palautus1 ::
     Text.Megaparsec.State.State [GHC.Types.Char]
     -> (Messer.Lauseke
@@ -9679,7 +9552,7 @@ c40e1a12e29a6b6e0e0088d63adb3176
                          hs
                          eerr))
                    eerr) -}
-12b52a8e2eccc83dfd972161fb41fa7c
+98bb423a4bce824198d874cd820c561f
   palautus2 ::
     Text.Megaparsec.State.State [GHC.Types.Char]
     -> (Messer.Lauseke
@@ -9723,7 +9596,7 @@ c40e1a12e29a6b6e0e0088d63adb3176
                               [GHC.Types.Char] Data.Void.Void
                             -> Text.Megaparsec.State.State [GHC.Types.Char]
                             -> Data.Functor.Identity.Identity b1) ->
-                 Messer.elsellinen8
+                 Messer.ehtolause14
                    @ b1
                    s1
                    (\ (x :: Messer.Maaritelma)
@@ -10268,7 +10141,7 @@ ba5d121a2ae827dfb34c8aece6a907d4
 ca264aafda0fcc7809c4e45436c899ed
   semi3 :: GHC.Prim.Addr#
   {- HasNoCafRefs, Unfolding: (";"#) -}
-ebd7f3472a256769ecaa96a78a42a4a9
+001868873af5d52f0e5de3051a1b83d2
   silmukka :: Messer.Parser Messer.Lauseke
   {- Arity: 5,
      Strictness: <L,U><L,C(C1(C1(U)))><L,U><L,C(C1(C1(U)))><L,U>,
@@ -10280,7 +10153,7 @@ ebd7f3472a256769ecaa96a78a42a4a9
                           <[GHC.Types.Char]>_N
                           <Data.Functor.Identity.Identity>_R
                           <Messer.Lauseke>_R)) -}
-5af77b4a43ff71da1684976efb43a237
+eb8ab6decc697a21d1f28ec3580de4c9
   silmukka1 ::
     Text.Megaparsec.State.State [GHC.Types.Char]
     -> (Messer.Lauseke
@@ -10375,7 +10248,7 @@ ebd7f3472a256769ecaa96a78a42a4a9
                          hs
                          eerr))
                    eerr) -}
-5be3ad170881381711e53a51f6fae7e2
+11e6cbc23b17b072fef3130e5d291f9a
   silmukka2 ::
     Text.Megaparsec.State.State [GHC.Types.Char]
     -> (Messer.Lauseke
@@ -10426,14 +10299,14 @@ ebd7f3472a256769ecaa96a78a42a4a9
                    Text.Megaparsec.Stream.$fStream[]
                    @ Messer.Maaritelma
                    @ GHC.Base.String
-                   Messer.elsellinen7
+                   Messer.ehtolause13
                      `cast`
                    (Sym (Text.Megaparsec.Internal.N:ParsecT[0]
                              <Data.Void.Void>_N
                              <[GHC.Types.Char]>_N
                              <Data.Functor.Identity.Identity>_R
                              <Messer.Maaritelma>_R))
-                   Messer.elsellinen4
+                   Messer.ehtolause10
                      `cast`
                    (Sym (Text.Megaparsec.Internal.N:ParsecT[0]
                              <Data.Void.Void>_N
@@ -10492,7 +10365,7 @@ ebd7f3472a256769ecaa96a78a42a4a9
                          hs
                          eerr))
                    eerr) -}
-8f00aaea9147b1d42cdf738c8972bf46
+4cc47585e0b8d3a504d60f8ca90330ec
   silmukka3 ::
     Messer.Maaritelma
     -> forall b.
@@ -10546,7 +10419,7 @@ ebd7f3472a256769ecaa96a78a42a4a9
                    Text.Megaparsec.Stream.$fStream[]
                    @ [Messer.Lauseke]
                    @ GHC.Base.String
-                   Messer.elseton4
+                   Messer.ehtolause4
                      `cast`
                    (Sym (Text.Megaparsec.Internal.N:ParsecT[0]
                              <Data.Void.Void>_N
@@ -10603,7 +10476,7 @@ ebd7f3472a256769ecaa96a78a42a4a9
 ce5683015d118ff88985787d35f1c11a
   silmukka6 :: GHC.Prim.Addr#
   {- HasNoCafRefs, Unfolding: ("while"#) -}
-b257755ebb44ea64b2da8f1f16e733d9
+0983bc3c5072efff27167b175f9091ab
   stringi :: Messer.Parser Messer.Tietotyyppi
   {- Arity: 5,
      Strictness: <L,U><L,C(C1(C1(U)))><L,U><L,C(C1(C1(U)))><L,U>,
@@ -10615,7 +10488,7 @@ b257755ebb44ea64b2da8f1f16e733d9
                           <[GHC.Types.Char]>_N
                           <Data.Functor.Identity.Identity>_R
                           <Messer.Tietotyyppi>_R)) -}
-e83406a0237208259c6fc4f28c3b7fe5
+73ed7863fc79196b4bdcbb1fb6e44444
   stringi1 ::
     Text.Megaparsec.State.State [GHC.Types.Char]
     -> (Messer.Tietotyyppi
@@ -10659,7 +10532,7 @@ e83406a0237208259c6fc4f28c3b7fe5
                               [GHC.Types.Char] Data.Void.Void
                             -> Text.Megaparsec.State.State [GHC.Types.Char]
                             -> Data.Functor.Identity.Identity b1) ->
-                 Messer.jMain9
+                 Messer.stringi2
                    @ b1
                    s1
                    (\ (x :: ())
@@ -10674,7 +10547,36 @@ e83406a0237208259c6fc4f28c3b7fe5
                                (Text.Megaparsec.Stream.Token [GHC.Types.Char])) ->
                     eok Messer.TTString s' hs)
                    eerr) -}
-432b44442cb3931b9a4c4379bee05f45
+9e197d59d1bae77263f7ac01e6e61361
+  stringi2 ::
+    Text.Megaparsec.State.State [GHC.Types.Char]
+    -> (()
+        -> Text.Megaparsec.State.State [GHC.Types.Char]
+        -> Text.Megaparsec.Internal.Hints
+             (Text.Megaparsec.Stream.Token [GHC.Types.Char])
+        -> Data.Functor.Identity.Identity b1)
+    -> (Text.Megaparsec.Error.ParseError
+          [GHC.Types.Char] Data.Void.Void
+        -> Text.Megaparsec.State.State [GHC.Types.Char]
+        -> Data.Functor.Identity.Identity b1)
+    -> (()
+        -> Text.Megaparsec.State.State [GHC.Types.Char]
+        -> Text.Megaparsec.Internal.Hints
+             (Text.Megaparsec.Stream.Token [GHC.Types.Char])
+        -> Data.Functor.Identity.Identity b1)
+    -> (Text.Megaparsec.Error.ParseError
+          [GHC.Types.Char] Data.Void.Void
+        -> Text.Megaparsec.State.State [GHC.Types.Char]
+        -> Data.Functor.Identity.Identity b1)
+    -> Data.Functor.Identity.Identity b1
+  {- Unfolding: (Messer.boolEtosi6 Messer.stringi3) -}
+67dd76d5a51361d1295aa4a9de138dfe
+  stringi3 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Messer.stringi4) -}
+62f5f1bf5138914164bde7046826ac3c
+  stringi4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("string"#) -}
+f443974520abf738c270e42bccaea67c
   sulut :: Messer.Parser a -> Messer.Parser a
   {- Arity: 6,
      Unfolding: (\ @ a ->
@@ -10682,14 +10584,14 @@ e83406a0237208259c6fc4f28c3b7fe5
                    @ [GHC.Types.Char]
                    @ [GHC.Types.Char]
                    @ a
-                   Messer.elsellinen9
+                   Messer.ehtolause15
                      `cast`
                    (Sym (Text.Megaparsec.Internal.N:ParsecT[0]
                              <Data.Void.Void>_N
                              <[GHC.Types.Char]>_N
                              <Data.Functor.Identity.Identity>_R
                              (Sub (Sym (Text.Megaparsec.Stream.D:R:Tokens[][0])))))
-                   Messer.elsellinen4
+                   Messer.ehtolause10
                      `cast`
                    (Sym (Text.Megaparsec.Internal.N:ParsecT[0]
                              <Data.Void.Void>_N
@@ -10709,7 +10611,7 @@ e83406a0237208259c6fc4f28c3b7fe5
                                <[GHC.Types.Char]>_N
                                <Data.Functor.Identity.Identity>_R
                                (Sub (Sym (Text.Megaparsec.Stream.D:R:Tokens[][0]))))) -}
-04d17f6961080c49d46b2c0c40d4b060
+d3536b9c5fb371b07293daac4adf9025
   testaaTiedosto ::
     GHC.Base.String -> GHC.Types.IO (GHC.Maybe.Maybe Messer.Luokka)
   {- Arity: 2, Strictness: <L,U><S,U>,
@@ -10718,7 +10620,7 @@ e83406a0237208259c6fc4f28c3b7fe5
                   `cast`
                 (<GHC.Base.String>_R
                  ->_R Sym (GHC.Types.N:IO[0] <GHC.Maybe.Maybe Messer.Luokka>_R)) -}
-59fa7af31f069517414b38bbdda3b0c6
+61b200032f1c06cdf358224149272acf
   testaaTiedosto1 ::
     GHC.Base.String
     -> GHC.Prim.State# GHC.Prim.RealWorld
@@ -10760,7 +10662,7 @@ fcdb950874fe924435f2401e3be2c2ae
                           <[GHC.Types.Char]>_N
                           <Data.Functor.Identity.Identity>_R
                           <Messer.Tietotyyppi>_R)) -}
-3b59cf2197077897edb6b3d17a726558
+70ae6d9ce0f469391de51a8e9ae4c637
   tulostus :: Messer.Parser Messer.Lauseke
   {- Arity: 5,
      Strictness: <L,U><L,C(C1(C1(U)))><L,U><L,C(C1(C1(U)))><L,U>,
@@ -10772,7 +10674,7 @@ fcdb950874fe924435f2401e3be2c2ae
                           <[GHC.Types.Char]>_N
                           <Data.Functor.Identity.Identity>_R
                           <Messer.Lauseke>_R)) -}
-54cc15111360ce4d5e49b08970d96454
+60e62749f2e9948657df4221ce9e29fc
   tulostus1 ::
     Text.Megaparsec.State.State [GHC.Types.Char]
     -> (Messer.Lauseke
@@ -10867,7 +10769,7 @@ fcdb950874fe924435f2401e3be2c2ae
                          hs
                          eerr))
                    eerr) -}
-9aba5a06f918db94f4ef6c389a799785
+3b3d1c8e91e5b02754e8902e7f12e61a
   tulostus2 ::
     Text.Megaparsec.State.State [GHC.Types.Char]
     -> (Messer.Lauseke
@@ -10911,7 +10813,7 @@ fcdb950874fe924435f2401e3be2c2ae
                               [GHC.Types.Char] Data.Void.Void
                             -> Text.Megaparsec.State.State [GHC.Types.Char]
                             -> Data.Functor.Identity.Identity b1) ->
-                 Messer.elsellinen8
+                 Messer.ehtolause14
                    @ b1
                    s1
                    (\ (x :: Messer.Maaritelma)
@@ -11090,7 +10992,7 @@ b6177369653aae953d8a56abb6a8b768
        -> Data.Functor.Identity.Identity b
   {- Arity: 6,
      Strictness: <L,U><L,U><L,C(C1(C1(U)))><L,U><L,C(C1(C1(U)))><L,U> -}
-3a2bd577ffda0439e74cd42fe1e61562
+727ea5dc56ce21ecf8e6e2ed03627d36
   vanhasijoitus :: Messer.Id -> Messer.Parser Messer.Lauseke
   {- Arity: 6,
      Strictness: <L,U><L,U><L,C(C1(C1(U)))><L,U><L,C(C1(C1(U)))><L,U>,
@@ -11103,7 +11005,7 @@ b6177369653aae953d8a56abb6a8b768
                                <[GHC.Types.Char]>_N
                                <Data.Functor.Identity.Identity>_R
                                <Messer.Lauseke>_R)) -}
-d4e3c08494082f310f10bad184ded145
+e09d320515666ecb399ee765620450dc
   vanhasijoitus1 ::
     Messer.Id
     -> forall b.
@@ -11194,7 +11096,7 @@ d4e3c08494082f310f10bad184ded145
                                   [GHC.Types.Char] Data.Void.Void
                                 -> Text.Megaparsec.State.State [GHC.Types.Char]
                                 -> Data.Functor.Identity.Identity b1)[OneShot] ->
-                     Messer.elsellinen8
+                     Messer.ehtolause14
                        @ b1
                        s1
                        (\ (x :: Messer.Maaritelma)
@@ -11330,97 +11232,91 @@ e3284f3034e3f19e8f259394558b35a5
                                <[GHC.Types.Char]>_N
                                <Data.Functor.Identity.Identity>_R
                                <()>_R)) -}
-f4d18c318eea1feb14f55683a17ec478
+5424d9e70dd33fbd19c40723661e75d6
   vsl :: [GHC.Base.String]
   {- Strictness: m2,
      Unfolding: (GHC.Types.:
                    @ GHC.Base.String
-                   Messer.elsellinen13
+                   Messer.ehtolause19
                    Messer.vsl1) -}
-41512491fa509bbff6be3cfcc560f3eb
+57b86f54bf833c28b2da93a45c573e69
   vsl1 :: [GHC.Base.String]
   {- Strictness: m2,
      Unfolding: (GHC.Types.:
                    @ GHC.Base.String
-                   Messer.vsl13
+                   Messer.ehtolause8
                    Messer.vsl2) -}
-7b25c1fa92141e6e101838cfe3824ed8
+858a41a332c77e52e3e86d2c3a72bf2b
   vsl10 :: [GHC.Base.String]
   {- Strictness: m2,
      Unfolding: (GHC.Types.:
                    @ GHC.Base.String
                    Messer.tulostus4
                    Messer.vsl11) -}
-32c336fd504aef50fa9990df526935ee
+dadaae55bcf0dfa0cb14e4d210772a79
   vsl11 :: [GHC.Base.String]
   {- Strictness: m2,
      Unfolding: (GHC.Types.:
                    @ GHC.Base.String
                    Messer.palautus4
                    Messer.vsl12) -}
-2a3d6aa98ab38098e3306925c25e16f8
+7f2f16541112e97b31e4a166c6b58a09
   vsl12 :: [GHC.Base.String]
   {- Strictness: m2,
      Unfolding: (GHC.Types.:
                    @ GHC.Base.String
-                   Messer.jMain13
+                   Messer.jMain6
                    (GHC.Types.[] @ GHC.Base.String)) -}
-52cbc8695855516ce190657bb4d34788
-  vsl13 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString# Messer.vsl14) -}
-dc8717fbd63954e698e6a03cd58b75e3
-  vsl14 :: GHC.Prim.Addr#
-  {- HasNoCafRefs, Unfolding: ("else"#) -}
-ca9fadbbdd3de2a8b58aae8e77db5f11
+3bbdd096f956a84e8a8a1f9d7fc8f749
   vsl2 :: [GHC.Base.String]
   {- Strictness: m2,
      Unfolding: (GHC.Types.:
                    @ GHC.Base.String
                    Messer.silmukka5
                    Messer.vsl3) -}
-75e76b0f17459ab354c7b5ff0b46b6e0
+991e623e5489fd56e56c3126931d9d98
   vsl3 :: [GHC.Base.String]
   {- Strictness: m2,
      Unfolding: (GHC.Types.:
                    @ GHC.Base.String
                    Messer.jasennin9
                    Messer.vsl4) -}
-28213a72a4e4fa0a3dd3a80706683e7e
+70d195f654dc915e969e47a0654b4680
   vsl4 :: [GHC.Base.String]
   {- Strictness: m2,
      Unfolding: (GHC.Types.:
                    @ GHC.Base.String
                    Messer.palautusvoid3
                    Messer.vsl5) -}
-307d1b1f582fe1e53f9d3f4b694b9590
+54a73b5a4e4341624590892a0dce5968
   vsl5 :: [GHC.Base.String]
   {- Strictness: m2,
      Unfolding: (GHC.Types.:
                    @ GHC.Base.String
                    Messer.intti3
                    Messer.vsl6) -}
-f0651fb0f380b62d865a6ea9fd95e734
+871f4ceaac1bbe8a1da79cb551b8da32
   vsl6 :: [GHC.Base.String]
   {- Strictness: m2,
      Unfolding: (GHC.Types.:
                    @ GHC.Base.String
-                   Messer.jMain10
+                   Messer.stringi3
                    Messer.vsl7) -}
-4880fe68af0f2282bc46ba18407aa51d
+e7aa7aab83beb42309e74f53200dc370
   vsl7 :: [GHC.Base.String]
   {- Strictness: m2,
      Unfolding: (GHC.Types.:
                    @ GHC.Base.String
                    Messer.booli3
                    Messer.vsl8) -}
-17d6451925b3a3bcf5c87fda7eb57383
+1a04bd50ebccfc0db2d1ab4ca89fa80e
   vsl8 :: [GHC.Base.String]
   {- Strictness: m2,
      Unfolding: (GHC.Types.:
                    @ GHC.Base.String
                    Messer.boolTosi4
                    Messer.vsl9) -}
-7ba2975d54826142df3df96124197b10
+e80279ed5eba7f4a28d4e5f4cf155441
   vsl9 :: [GHC.Base.String]
   {- Strictness: m2,
      Unfolding: (GHC.Types.:

@@ -1,12 +1,12 @@
 
 ==================== FINAL INTERFACE ====================
-2019-03-12 19:06:34.7875186 UTC
+2019-03-12 21:30:09.7922947 UTC
 
 interface main:Interpreter 8063
-  interface hash: c9192087afaceaff1a175976d770b83e
-  ABI hash: 044a045afaf6aa9759f950db21ff0e79
-  export-list hash: 47a8a381c661d23c290fec9cfaf581dc
-  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  interface hash: 8971167854523f8a2b8f4513ac214517
+  ABI hash: 8421c4d4a5f27ce6aa2d882a26e76aef
+  export-list hash: aad803d9783d0e0ed590d2714b29d56b
+  orphan hash: 8209c7bd0b9dbff858502e1af5e1dd6e
   flag hash: 8346313dc06e16ebefba9f23d6444d37
   opt_hash: 6faf2de08de32d19db9870899d88e59a
   hpc_hash: 93b885adfe0da089cdf634904fd59f71
@@ -21,6 +21,7 @@ exports:
   Interpreter.iluku
   Interpreter.interpret
   Interpreter.lausekkeet
+  Interpreter.mainParams
   Interpreter.params
   Interpreter.testt
   Interpreter.IArvo{Interpreter.B Interpreter.I Interpreter.S Interpreter.Void}
@@ -67,17 +68,18 @@ import  -/  base-4.12.0.0:GHC.Real 11a06d7fcd7db99538ab6d6f2b048af9
 import  -/  base-4.12.0.0:GHC.Show 5c4c5ac15ef4d7749e0e6f06242c812a
 import  -/  base-4.12.0.0:Prelude b1ccc486556b171042710ef6f2d1a539
 import  -/  base-4.12.0.0:System.IO c4f9b4edbf0d6a7a9a49fe16b71318d4
+import  -/  base-4.12.0.0:Text.Read 33530f2e153dad6d763c63d56fee7d6b
 import  -/  containers-0.6.0.1:Data.Map.Internal 809c18d4f1d0560a3f1f838f411341b9
 import  -/  containers-0.6.0.1:Data.Map.Strict 862f7498e42e3aea305e0ee4cce1d01a
 import  -/  containers-0.6.0.1:Data.Map.Strict.Internal f5a5f5ea9db0644dd801e65e72083886
 import  -/  ghc-prim-0.5.3:GHC.Classes 555218a5f891dab16ebc6e6e04763e77
 import  -/  ghc-prim-0.5.3:GHC.Types 57064c9f957b09bc2e360061ad5cae0b
-import  -/  Messemlyzer b297c38af49e6407486ad002925e5fa9
+import  -/  Messemlyzer 6f9c05b5c45508ae3aa1a8fca47f01f1
   exports: 81abbb5b47d25546500e425908823983
-  ALuokka 3506a811b904f46eb50a0c8b0b8fbc60
-  ALuokka 76b2fffeee2d3892d14cc300fc7a8005
+  ALuokka f4a85b0b15bff6d8245601065319dec3
+  ALuokka 70dd043d62f6680439da9147411f52b4
   Aliohjelmat 0341a522c50717da24edaba8c68dd704
-import  -/  Messer e38f15305afca136ddf97467f90fd3c3
+import  -/  Messer c8351d058a6aa40cc50b279f11d94745
   exports: 074c6398dfe19dd25eed8799effd875b
   AKutsu 3c442870e02d5bf9feed93c2e572f9af
   Aritmeettinen 6a29a995a425e9131e2fe8391a4e0004
@@ -101,8 +103,8 @@ import  -/  Messer e38f15305afca136ddf97467f90fd3c3
   MArvo f55ccd5f76451238c75f6f4750308fb8
   MId adbf1cadfbd5b2bf212682e6b2713b2d
   Maaritelma ea67a20a6ff998dcfcbb33a0a151c225
-  MainOhjelma 64827bc2510906d3c6f23026a016f94a
-  MainOhjelma 76f67d672f2abe8d4a26760b75255aa7
+  MainOhjelma 3c6e3f35f25afd863f6201e07b7c1cdd
+  MainOhjelma fbd3fc3bebebafc8e4d5f10f0ba43b6f
   Miinus 92f36f9e9bbcf8ef6323f436df8bb93b
   Parametri 921e794e49ffe9faa3d22dee476adede
   Parametri 3da2d94919361cdb400e175048f0ba4d
@@ -111,6 +113,9 @@ import  -/  Messer e38f15305afca136ddf97467f90fd3c3
   Plus 507edfff22260490c324f99136998a92
   Suurempi 061e56268f492989a8f96153916b4885
   SuurempiYhtasuuri 23fa5de2ed0e893282eabcbc986375ce
+  TTBool 55b565619df9fbb976ba6712fefc3744
+  TTInt cc6a82539248dbad234c7fccff13c960
+  TTString 9dfa60b93aeb64a8e3bac9510068d823
   UusiSijoitus a27a4c2845449030206723666c04affc
   VanhaSijoitus ba79738bd896b7cc369085d876f07c0b
   Vertailu 308a7d4fec066fc9bc1d8934dc1c24dc
@@ -288,6 +293,22 @@ ba548f1ff7f30f99032035a89da44029
                                             eta))))) } }
                    Interpreter.Void
                    -> GHC.Base.++ @ GHC.Types.Char Interpreter.$fShowIArvo3 eta }) -}
+465d934d678d42dff2f65c626ffed28e
+  $sinsertR_$sgo13 ::
+    [GHC.Types.Char]
+    -> [GHC.Types.Char]
+    -> a1
+    -> Data.Map.Internal.Map [GHC.Types.Char] a1
+    -> Data.Map.Internal.Map [GHC.Types.Char] a1
+  {- Arity: 4, Strictness: <L,U><S,1*U><L,U><S,1*U> -}
+f3f5e2fef00478f8ed27a2581f9d6abb
+  $sinsert_$sgo13 ::
+    [GHC.Types.Char]
+    -> [GHC.Types.Char]
+    -> a1
+    -> Data.Map.Internal.Map [GHC.Types.Char] a1
+    -> Data.Map.Internal.Map [GHC.Types.Char] a1
+  {- Arity: 4, Strictness: <L,U><S,1*U><L,U><S,1*U> -}
 846b01ec13cd0906982eab86a32fc56c
   $sinsert_$sgo8 ::
     GHC.Base.String
@@ -300,6 +321,12 @@ ba548f1ff7f30f99032035a89da44029
     [GHC.Types.Char]
     -> Data.Map.Internal.Map [GHC.Types.Char] a -> GHC.Maybe.Maybe a
   {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U> -}
+d9e3bd7827481e0b9cbda62be84ebec9
+  $sunion ::
+    Data.Map.Internal.Map [GHC.Types.Char] a
+    -> Data.Map.Internal.Map [GHC.Types.Char] a
+    -> Data.Map.Internal.Map [GHC.Types.Char] a
+  {- Arity: 2, Strictness: <S,1*U><S,1*U>, Inline: [~] -}
 1d51945fd187fd8d814fb6d1a437dc18
   $tc'B :: GHC.Types.TyCon
   {- HasNoCafRefs, Strictness: m,
@@ -417,6 +444,40 @@ eab790c7d6507909f07f5ecb61c47f1e
 e19ff7ce4cc5f49334e2aa02d91a6ea5
   $trModule4 :: GHC.Prim.Addr#
   {- HasNoCafRefs, Unfolding: ("main"#) -}
+98b4214923a0653cd1bab47b07a13f3f
+  $wiMain ::
+    [GHC.Base.String]
+    -> [Messer.Parametri]
+    -> [Messer.Lauseke]
+    -> Messemlyzer.Aliohjelmat
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 5, Strictness: <L,1*U><L,1*U><S,1*U><L,U><S,U>,
+     Inline: [2],
+     Unfolding: (\ (w :: [GHC.Base.String])
+                   (ww :: [Messer.Parametri])
+                   (ww1 :: [Messer.Lauseke])
+                   (w1 :: Messemlyzer.Aliohjelmat)
+                   (w2 :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 case Interpreter.iMain5
+                        ww1
+                        (Interpreter.mainParams ww w)
+                        w1
+                        w2 of ds1 { (#,#) ipv ipv1 ->
+                 (GHC.IO.Handle.Text.hPutStr'
+                    GHC.IO.Handle.FD.stdout
+                    Interpreter.iMain2
+                    GHC.Types.True)
+                   `cast`
+                 (GHC.Types.N:IO[0] <()>_R)
+                   ipv }) -}
+70b468c9e3de883ed9826d8838518f66
+  $wpoly_go13 ::
+    [GHC.Types.Char]
+    -> Data.Map.Internal.Map [GHC.Types.Char] a
+    -> (# Data.Map.Internal.Map [GHC.Types.Char] a,
+          Data.Map.Internal.Map [GHC.Types.Char] a #)
+  {- Arity: 2, Strictness: <L,U><S,1*U>, Inline: [2] -}
 ba548f1ff7f30f99032035a89da44029
   data IArvo
     = I GHC.Types.Int | B GHC.Types.Bool | S GHC.Base.String | Void
@@ -467,43 +528,34 @@ d6ad3c4c9cf91b670246753e91aa6870
     -> GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, Interpreter.Muuttujat #)
   {- Arity: 4, Strictness: <S,1*U><L,U><L,U><S,U> -}
-f9247ce2484c9a96840bef028103c3d0
+6234117a4f370a8ca16e32221d493e81
   iMain ::
-    Messer.MainOhjelma -> Messemlyzer.Aliohjelmat -> GHC.Types.IO ()
-  {- Arity: 3, Strictness: <S(S(LS)S),1*U(1*U(A,1*H),1*U)><L,U><S,U>,
+    [GHC.Base.String]
+    -> Messer.MainOhjelma -> Messemlyzer.Aliohjelmat -> GHC.Types.IO ()
+  {- Arity: 4, Strictness: <L,1*U><S(LS),1*U(1*U,1*U)><L,U><S,U>,
      Unfolding: InlineRule (0, True, True)
                 Interpreter.iMain1
                   `cast`
-                (<Messer.MainOhjelma>_R
+                (<[GHC.Base.String]>_R
+                 ->_R <Messer.MainOhjelma>_R
                  ->_R <Messemlyzer.Aliohjelmat>_R
                  ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
-e3e2647d4346d8294a812f0f5b03f47b
+e96515f21c055666256d70d88818bd15
   iMain1 ::
-    Messer.MainOhjelma
+    [GHC.Base.String]
+    -> Messer.MainOhjelma
     -> Messemlyzer.Aliohjelmat
     -> GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
-  {- Arity: 3, Strictness: <S(S(LS)S),1*U(1*U(A,1*H),1*U)><L,U><S,U>,
+  {- Arity: 4, Strictness: <L,1*U><S(LS),1*U(1*U,1*U)><L,U><S,U>,
      Inline: [2],
-     Unfolding: InlineRule (3, True, False)
-                (\ (w :: Messer.MainOhjelma)
-                   (w1 :: Messemlyzer.Aliohjelmat)
-                   (w2 :: GHC.Prim.State# GHC.Prim.RealWorld) ->
-                 case w of ww { Messer.MainOhjelma ww1 ww2 ->
-                 case ww1 of ww3 { Messer.Parametri ww4 ww5 ->
-                 case ww5 of ww6 { Messer.Id ipv ->
-                 case Interpreter.iMain5
-                        ww2
-                        (Data.Map.Internal.Tip @ GHC.Base.String @ Interpreter.IArvo)
-                        w1
-                        w2 of ds1 { (#,#) ipv1 ipv2 ->
-                 (GHC.IO.Handle.Text.hPutStr'
-                    GHC.IO.Handle.FD.stdout
-                    Interpreter.iMain2
-                    GHC.Types.True)
-                   `cast`
-                 (GHC.Types.N:IO[0] <()>_R)
-                   ipv1 } } } }) -}
+     Unfolding: InlineRule (4, True, False)
+                (\ (w :: [GHC.Base.String])
+                   (w1 :: Messer.MainOhjelma)
+                   (w2 :: Messemlyzer.Aliohjelmat)
+                   (w3 :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 case w1 of ww { Messer.MainOhjelma ww1 ww2 ->
+                 Interpreter.$wiMain w ww1 ww2 w2 w3 }) -}
 8687d18d8563a690a68a4de08c13e35e
   iMain2 :: [GHC.Types.Char]
   {- Strictness: m2,
@@ -537,31 +589,31 @@ e3e2647d4346d8294a812f0f5b03f47b
 4ffb3f74ed8cf768ca093413298b9e07
   iluku1 :: Interpreter.IArvo -> GHC.Types.Int
   {- Arity: 1, Strictness: <B,1*U>x -}
-0088bc4cca615fb1816d628da5d85211
+4b97fc99549c95e8b69c7228d2297f0a
   interpret ::
     [GHC.Base.String] -> Messemlyzer.ALuokka -> GHC.Types.IO ()
   {- Arity: 3,
-     Strictness: <L,A><S(LS(S(LS)S)L),1*U(A,1*U(1*U(A,1*H),1*U),U)><S,U>,
+     Strictness: <L,1*U><S(LS(LS)L),1*U(A,1*U(1*U,1*U),U)><S,U>,
      Unfolding: InlineRule (0, True, True)
                 Interpreter.interpret1
                   `cast`
                 (<[GHC.Base.String]>_R
                  ->_R <Messemlyzer.ALuokka>_R
                  ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
-5322626ea333ec63cc4dd36d9dec5501
+2c7c692beeef20b1b24361c1bb2c771c
   interpret1 ::
     [GHC.Base.String]
     -> Messemlyzer.ALuokka
     -> GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
   {- Arity: 3,
-     Strictness: <L,A><S(LS(S(LS)S)L),1*U(A,1*U(1*U(A,1*H),1*U),U)><S,U>,
+     Strictness: <L,1*U><S(LS(LS)L),1*U(A,1*U(1*U,1*U),U)><S,U>,
      Unfolding: InlineRule (3, True, False)
                 (\ (args :: [GHC.Base.String])
                    (ds :: Messemlyzer.ALuokka)
                    (eta :: GHC.Prim.State# GHC.Prim.RealWorld) ->
                  case ds of wild { Messemlyzer.ALuokka ds1 main amap ->
-                 Interpreter.iMain1 main amap eta }) -}
+                 Interpreter.iMain1 args main amap eta }) -}
 c5df30f379059aac2647713658d370e8
   lausekkeet ::
     [Messer.Lauseke]
@@ -576,6 +628,10 @@ c5df30f379059aac2647713658d370e8
                  ->_R <Interpreter.Muuttujat>_R
                  ->_R <Messemlyzer.Aliohjelmat>_R
                  ->_R Sym (GHC.Types.N:IO[0] <Interpreter.Muuttujat>_R)) -}
+c7b4b30161dc29fc7a440c67e73f9552
+  mainParams ::
+    [Messer.Parametri] -> [GHC.Base.String] -> Interpreter.Muuttujat
+  {- Arity: 2, Strictness: <S,1*U><S,1*U> -}
 85cd20f6578a496661b1f9ac0800f65e
   params ::
     [Messer.Maaritelma]
@@ -653,6 +709,10 @@ ff9a6eeb3aae7431c0962f325a993fc4
      Unfolding: (Messer.ArvoInt Interpreter.testt10) -}
 instance GHC.Show.Show [Interpreter.IArvo]
   = Interpreter.$fShowIArvo
+"SPEC/Interpreter union @ [Char] _" [orphan] forall @ a
+                                                    ($dOrd :: GHC.Classes.Ord [GHC.Types.Char])
+  Data.Map.Internal.union @ [GHC.Types.Char] @ a $dOrd
+  = Interpreter.$sunion @ a
 trusted: none
 require own pkg trusted: False
 module header:
