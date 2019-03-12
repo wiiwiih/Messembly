@@ -9,7 +9,7 @@ type AVirhe = String
 
 type Aliohjelmat = Map.Map String (Palautustyyppi, [Parametri], [Lauseke])
 
-data AArvo = I Int | B Bool | S String | AVoid deriving (Show)
+data AArvo = AInt | ABool | AString | AVoid deriving (Show, Eq)
 
 type AMuuttujat = Map.Map String AArvo
 
@@ -21,7 +21,7 @@ analysoi (Luokka id main xs) = let
                         (uusiMain, virheet) = aMain main uusiYmp
                         in if (avirheet ++ virheet) == [] 
                                 then Left (ALuokka id uusiMain uusiYmp)
-                                else Right virheet
+                                else Right (avirheet++virheet)
 
 -- Tekee aliohjelmalistasta aliohjelma Mapin
 mapAliohj :: [Aliohjelma] -> Aliohjelmat
@@ -32,38 +32,15 @@ mapAliohj ((Aliohjelma (Id id) t ps ls):xs) = (Map.singleton id (t, ps, ls)) <> 
 aAliohjelmat :: [Aliohjelma] -> Aliohjelmat -> (Aliohjelmat, [AVirhe])
 aAliohjelmat [] a = (a, [])
 aAliohjelmat ((Aliohjelma (Id id) t ps ls):xs) a = let
-                                        uusiYmp = uYmparisto ps
-                                        (lausekkeet, avirheet, palautusYmp) = aLausekkeet ls uusiYmp a                                        
-                                        onkoPalautus = Map.lookup "return" palautusYmp
+                                        palautustyyppi = case t of
+                                            Void -> AVoid
+                                            Palautustyyppi TTInt -> AInt
+                                            Palautustyyppi TTBool -> ABool
+                                            Palautustyyppi TTString -> AString
+                                        uusiYmp = uYmparisto ps <> Map.singleton "1return" palautustyyppi
+                                        (lausekkeet, avirheet, palautusYmp) = aLausekkeet ls uusiYmp a   
                                         aotPalautus = Map.singleton id (t, ps, lausekkeet)
-                                        virhelista = case onkoPalautus of
-                                            Nothing -> case t of 
-                                                        Void ->  [] 
-                                                        (Palautustyyppi TTInt) -> ["Aliohjelman " ++ id ++  "palautustyyppi piti olla \"Void\", mutta oli \"Int\""]
-                                                        (Palautustyyppi TTBool) -> ["Aliohjelman " ++ id ++  "palautustyyppi piti olla \"Void\", mutta oli \"Bool\""]
-                                                        (Palautustyyppi TTString) -> ["Aliohjelman " ++ id ++  "palautustyyppi piti olla \"Void\", mutta oli \"String\""]  
-                                            Just mapArvo -> case mapArvo of
-                                                I intti -> case t of
-                                                        (Palautustyyppi TTInt) -> []
-                                                        Void ->  ["Aliohjelman " ++ id ++  "palautustyyppi piti olla \"Int\", mutta oli \"Void\""]
-                                                        (Palautustyyppi TTBool) -> ["Aliohjelman " ++ id ++  "palautustyyppi piti olla \"Int\", mutta oli \"Bool\""]
-                                                        (Palautustyyppi TTString) -> ["Aliohjelman " ++ id ++  "palautustyyppi piti olla \"Int\", mutta oli \"String\""]  
-                                           
-
-                                                B booli
-                                                        -> case t of 
-                                                        (Palautustyyppi TTBool) -> []
-                                                        (Palautustyyppi TTInt) -> ["Aliohjelman " ++ id ++  "palautustyyppi piti olla \"Bool\", mutta oli \"Int\""]
-                                                        Void ->  ["Aliohjelman " ++ id ++  "palautustyyppi piti olla \"Bool\", mutta oli \"Void\""]
-                                                        (Palautustyyppi TTString) -> ["Aliohjelman " ++ id ++  "palautustyyppi piti olla \"Bool\", mutta oli \"String\""]
-                                                S stringi
-                                                        -> case t of 
-                                                        (Palautustyyppi TTString) -> []
-                                                        (Palautustyyppi TTBool) -> ["Aliohjelman " ++ id ++  "palautustyyppi piti olla \"String\", mutta oli \"Bool\""]
-                                                        (Palautustyyppi TTInt) -> ["Aliohjelman " ++ id ++  "palautustyyppi piti olla \"String\", mutta oli \"Int\""]
-                                                        Void ->  ["Aliohjelman " ++ id ++  "palautustyyppi piti olla \"String\", mutta oli \"Void\""]
-                                                AVoid -> ["Palautustyypin ei pitäisi voida olla Void, muuta jos tähän päästään niin rip"]
-                                        in (aotPalautus, avirheet ++ virhelista) <> aAliohjelmat xs a
+                                        in (aotPalautus, avirheet) <> aAliohjelmat xs a
 
 
 
@@ -76,9 +53,9 @@ uYmparisto [] =  Map.empty
 uYmparisto ((Parametri tt (Id id)):ps) = Map.singleton id arvo <> uYmparisto ps
                             where  
                                 arvo  = case tt of
-                                    TTInt -> I 0
-                                    TTBool -> B False
-                                    TTString -> S ""  
+                                    TTInt -> AInt
+                                    TTBool -> ABool
+                                    TTString -> AString  
                       
 
 aMain :: MainOhjelma -> Aliohjelmat -> (MainOhjelma, [AVirhe])
@@ -86,9 +63,9 @@ aMain (MainOhjelma (Parametri t (Id id)) xs) a = (MainOhjelma (Parametri t (Id i
                             where
                                 (lausekkeet, virheet, _) = aLausekkeet xs m a
                                 arvo  = case t of
-                                    TTInt -> I 0
-                                    TTBool -> B False
-                                    TTString -> S ""
+                                    TTInt -> AInt
+                                    TTBool -> ABool
+                                    TTString -> AString
                                 m = Map.singleton id arvo
 
 -- Tarkistaa lausekkeiden tyyppien paikkansapitävyydet
@@ -96,9 +73,37 @@ aMain (MainOhjelma (Parametri t (Id id)) xs) a = (MainOhjelma (Parametri t (Id i
 -- joka sisältää paluuarvon jos sellainen on
 aLausekkeet :: [Lauseke] -> AMuuttujat -> Aliohjelmat -> ([Lauseke], [AVirhe], AMuuttujat)
 aLausekkeet [] m a = ([], [], m)
-aLausekkeet (x:xs) m a = let
+aLausekkeet ((LEhto (If maar xs)):rest) m a = let
+                                (tyyppi, umaar, virhe1) = aMaaritelma maar m a
+                                virhe2 = case tyyppi of
+                                    Just TTBool -> []
+                                    _ -> ["If-lauseen ehdon tulee tuottaa Bool"]
+                                (uxs, virheet, um) = aLausekkeet xs m a
+                                (truelausekkeet, truevirheet, truem) = aLausekkeet rest um a
+                                (falselausekkeet, falsevirheet, falsem) = aLausekkeet rest m a
+                                in ((LEhto (If umaar uxs)):truelausekkeet, virhe1++virhe2++virheet++truevirheet++falsevirheet, truem)
+aLausekkeet ((LEhto (IfElse maar xs ys)):rest) m a = let
+                                (tyyppi, umaar, virhe1) = aMaaritelma maar m a
+                                virhe2 = case tyyppi of
+                                    Just TTBool -> []
+                                    _ -> ["If-lauseen ehdon tulee tuottaa Bool"]
+                                (uxs, virheet1, um1) = aLausekkeet xs m a
+                                (uys, virheet2, um2) = aLausekkeet ys m a
+                                (truelausekkeet, truevirheet, truem) = aLausekkeet rest um1 a
+                                (falselausekkeet, falsevirheet, falsem) = aLausekkeet rest um2 a
+                                in ((LEhto (IfElse umaar uxs uys)):truelausekkeet, virhe1++virhe2++virheet1++virheet2++truevirheet++falsevirheet, truem) 
+aLausekkeet ((LSilmukka maar xs):rest) m a = let
+                                (tyyppi, umaar, virhe1) = aMaaritelma maar m a
+                                virhe2 = case tyyppi of
+                                    Just TTBool -> []
+                                    _ -> ["Silmukan ehdon tulee tuottaa Bool"]
+                                (uxs, virheet, um) = aLausekkeet xs m a
+                                (truelausekkeet, truevirheet, truem) = aLausekkeet rest um a
+                                (falselausekkeet, falsevirheet, falsem) = aLausekkeet rest m a
+                                in ((LSilmukka umaar uxs):truelausekkeet, virhe1++virhe2++virheet++truevirheet++falsevirheet, truem)
+aLausekkeet (x:rest) m a = let
                 (lauseke, virheet1, um) = aLauseke x m a
-                (ulausekkeet, virheet2, uum) = aLausekkeet xs um a
+                (ulausekkeet, virheet2, uum) = aLausekkeet rest um a
                 in (lauseke:ulausekkeet, virheet1 <> virheet2, uum) 
 
 aLauseke :: Lauseke -> AMuuttujat -> Aliohjelmat -> (Lauseke, [AVirhe], AMuuttujat)
@@ -107,9 +112,9 @@ aLauseke (LTulostus maar) m a = let
                     in (LTulostus umaar, virheet, m) 
 aLauseke (LSijoitus (UusiSijoitus t (Id id) maar)) m a =let (tyyppi, umaar, virhe1) = aMaaritelma maar m a
                                                             uusim = case t of
-                                                                TTInt -> Map.insert id (I 0) m
-                                                                TTBool -> Map.insert id (B False) m
-                                                                TTString -> Map.insert id (S "") m
+                                                                TTInt -> Map.insert id (AInt) m
+                                                                TTBool -> Map.insert id (ABool) m
+                                                                TTString -> Map.insert id (AString) m
                                                             virhe2 = case Map.lookup id m of 
                                                                 Just _ -> ["Muuttuja " ++ id ++ " on jo määritelty"]
                                                                 Nothing -> []
@@ -121,13 +126,13 @@ aLauseke (LSijoitus (UusiSijoitus t (Id id) maar)) m a =let (tyyppi, umaar, virh
 aLauseke (LSijoitus (VanhaSijoitus (Id id) maar)) m a = let (tyyppi, umaar, virhe1) = aMaaritelma maar m a
                                                             rLauseke = LSijoitus (VanhaSijoitus (Id id) umaar)
                                                             in case Map.lookup id m of
-                                                                Just (I intti) -> if(tyyppi == Just TTInt)
+                                                                Just (AInt) -> if(tyyppi == Just TTInt)
                                                                                     then (rLauseke, virhe1, m)
                                                                                     else (rLauseke, virhe1++["Muuttujan " ++ id ++ " tyyppi on \"Int\", mutta siihen yritettiin sijoittaa " ++ show tyyppi ++"."], m)
-                                                                Just (B booli) ->if(tyyppi == Just TTBool)
+                                                                Just (ABool) ->if(tyyppi == Just TTBool)
                                                                                     then (rLauseke, virhe1, m)
                                                                                     else (rLauseke, virhe1++["Muuttujan " ++ id ++ " tyyppi on \"Bool\", mutta siihen yritettiin sijoittaa " ++ show tyyppi ++"."], m)
-                                                                Just (S stringi) ->if(tyyppi == Just TTString)
+                                                                Just (AString) ->if(tyyppi == Just TTString)
                                                                                     then (rLauseke, virhe1, m)
                                                                                     else (rLauseke, virhe1++["Muuttujan " ++ id ++ " tyyppi on \"String\", mutta siihen yritettiin sijoittaa " ++ show tyyppi ++"."], m)
                                                                 Just AVoid -> (rLauseke, virhe1++["Muuttujan " ++ id ++ " tyyppi on \"Void\", mutta siihen yritettiin sijoittaa " ++ show tyyppi ++". Jotain on pahasti pielessä o__O"], m)
@@ -137,33 +142,16 @@ aLauseke (LPalautus maar) m a = let
                                             Just _ -> ["Aliohjelmassa voi olla vain yksi palautuslause."]
                                             Nothing -> []
                                 (t, umaar, virhe2) = aMaaritelma maar m a
-                                in case t of
-                                    Just TTInt -> (LPalautus umaar, virhe1++virhe2, Map.singleton "return" (I 0)<>m)
-                                    Just TTBool -> (LPalautus umaar, virhe1++virhe2, Map.singleton "return" (B False)<>m)
-                                    Just TTString -> (LPalautus umaar, virhe1++virhe2, Map.singleton "return" (S ""))
-                                    _ -> (LPalautus umaar, virhe1++virhe2++["Aliohjelmasta ei voi palauttaa void-tyyppistä arvoa"], Map.singleton "return" (AVoid))
-aLauseke (LEhto (If maar xs)) m a = let
-                                (tyyppi, umaar, virhe1) = aMaaritelma maar m a
-                                virhe2 = case tyyppi of
-                                    Just TTBool -> []
-                                    _ -> ["If-lauseen ehdon tulee tuottaa Bool"]
-                                (uxs, virheet, um) = aLausekkeet xs m a
-                                in (LEhto (If umaar uxs), virhe1++virhe2++virheet, um) --mikä ympäristö eteenpäin?
-aLauseke (LEhto (IfElse maar xs ys)) m a = let
-                                (tyyppi, umaar, virhe1) = aMaaritelma maar m a
-                                virhe2 = case tyyppi of
-                                    Just TTBool -> []
-                                    _ -> ["If-lauseen ehdon tulee tuottaa Bool"]
-                                (uxs, virheet1, um1) = aLausekkeet xs m a
-                                (uys, virheet2, um2) = aLausekkeet ys m a
-                                in (LEhto (IfElse umaar uxs uys), virhe1++virhe2++virheet1++virheet2, Map.union um1 um2) --mikä/mitkä ympäristöt eteenpäin?
-aLauseke (LSilmukka maar xs) m a = let
-                                (tyyppi, umaar, virhe1) = aMaaritelma maar m a
-                                virhe2 = case tyyppi of
-                                    Just TTBool -> []
-                                    _ -> ["Silmukan ehdon tulee tuottaa Bool"]
-                                (uxs, virheet, um) = aLausekkeet xs m a
-                                in (LSilmukka umaar uxs, virhe1++virhe2++virheet, um)
+                                tyyppi = case t of
+                                    Just TTInt -> AInt
+                                    Just TTString -> AString
+                                    Just TTBool -> ABool
+                                virhe3 = case Map.lookup "1return" m of
+                                            Just r ->  if (r == tyyppi)
+                                                        then []
+                                                        else ["Aliohjelman palautustyyppi on "++show r++" mutta yritettiin palauttaa "++show tyyppi]
+                                            Nothing -> ["Main-ohjelmasta ei voi palauttaa mitään"]
+                                in (LPalautus umaar, virhe1++virhe2++virhe3, Map.singleton "return" tyyppi <> m)
 aLauseke (LAKutsu (AKutsu (Id id) xs)) m a = case Map.lookup id a of
                                 Just (_, params, _) -> (LAKutsu (AKutsu (Id id) xs), aParametrit id xs params m a, m)
                                 Nothing -> (LAKutsu (AKutsu (Id id) xs), ["Aliohjelmaa "++id++" ei ole määritelty"], m)
@@ -173,9 +161,9 @@ aLauseke (LAKutsu (AKutsu (Id id) xs)) m a = case Map.lookup id a of
 
 aMaaritelma :: Maaritelma -> AMuuttujat -> Aliohjelmat -> (Maybe Tietotyyppi, Maaritelma, [AVirhe])                                                           
 aMaaritelma (MId (Id id)) m a = case Map.lookup id m of
-                            Just (I _) -> (Just TTInt, MId (Id id), [])   
-                            Just (B _) -> (Just TTBool, MId (Id id), [])    
-                            Just (S _) -> (Just TTString, MId (Id id), []) 
+                            Just AInt -> (Just TTInt, MId (Id id), [])   
+                            Just ABool -> (Just TTBool, MId (Id id), [])    
+                            Just AString -> (Just TTString, MId (Id id), []) 
                             Just AVoid -> (Nothing, MId (Id id), ["Muuttujan " ++ id ++ " tyyppi on void, tämän ei pitäisi olla sallittua"])
                             Nothing    -> (Nothing, MId (Id id), ["Muuttuja " ++ id ++ " ei ole määritelty"])
 aMaaritelma (MArvo arvo) m a = case arvo of

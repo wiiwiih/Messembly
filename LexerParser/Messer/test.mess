@@ -4,6 +4,10 @@ class Fibonacci {
         int a = 1?
         a = fib(4)?
         #yolo
+        int b = 2?
+        if(1<2){b = 3?}
+        else {}?
+        print b?
         print a?
     };
     

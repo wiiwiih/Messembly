@@ -1,10 +1,10 @@
 
 ==================== FINAL INTERFACE ====================
-2019-03-11 17:54:14.4186368 UTC
+2019-03-12 20:17:34.7462228 UTC
 
 interface main:Main 8063
-  interface hash: 08035be7f6db29c92c930e1d3be22dcc
-  ABI hash: 5838cbb1378f5c9d9f1edaa7dcf486fe
+  interface hash: 63a475b1620472c131a74a6b3ada93e3
+  ABI hash: be110fe42b020e43d23851e0f3f73b78
   export-list hash: 6fa53145bbd4125fa082aeeaefd4910c
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
   flag hash: 3d908edbd55ea1cb74445d368a011ff0
@@ -69,20 +69,23 @@ import  -/  base-4.12.0.0:Data.Either b81d41b5f4255f0a7c195f59e02f5b66
 import  -/  base-4.12.0.0:Data.Functor d76c001d92d0a1adf6f6220faa8ca3e5
 import  -/  base-4.12.0.0:Data.Maybe f4c6afc48ee9ed1cd2fb5a451772b4fb
 import  -/  base-4.12.0.0:Data.OldList 24846e178a59de48205721317f115c08
+import  -/  base-4.12.0.0:GHC.Base b0f6eed6c4b57b0a2f7c7570f245848b
+import  -/  base-4.12.0.0:GHC.List fa3cdff2fbdd06bd1298029e4f282dd8
 import  -/  base-4.12.0.0:Prelude b1ccc486556b171042710ef6f2d1a539
+import  -/  base-4.12.0.0:System.Environment bcc34f39dde4af0802e32f60eca79a62
 import  -/  base-4.12.0.0:System.IO c4f9b4edbf0d6a7a9a49fe16b71318d4
 import  -/  ghc-prim-0.5.3:GHC.Types 57064c9f957b09bc2e360061ad5cae0b
-import  -/  Interpreter dc82356539edbb5cf8dd51fea6aee923
+import  -/  Interpreter 044a045afaf6aa9759f950db21ff0e79
   exports: 47a8a381c661d23c290fec9cfaf581dc
-  interpret 027b4898e44f88651b46e412e60b1602
-import  -/  Messemlyzer a2f0a904dd515acce4cfa5f55a27b589
-  exports: 1ed80bce1a87a6b081b6f3ba3fb4b3af
-  analysoi 5d7720382c942bec47058e0bf5b57edc
-import  -/  Messer e1f88e828dd5e13e6dc757211349c899
-  exports: eedbb4c9b519f3ec35d949e301366b6f
+  interpret 0088bc4cca615fb1816d628da5d85211
+import  -/  Messemlyzer a7d87cfe15b3d5f2f7f238d4fcd42c7d
+  exports: 81abbb5b47d25546500e425908823983
+  analysoi 660f87b1d08c9116023910ac258666ae
+import  -/  Messer e38f15305afca136ddf97467f90fd3c3
+  exports: 074c6398dfe19dd25eed8799effd875b
   Luokka e7cb6c20637ed95ce0cae1a22331cd3d
-  jasennin d994bc7a75b7773eb39d2d598e88a60d
-import  -/  MesserTests c0aa858c7d907ba527ea3408a3461a0c
+  jasennin e77a2bdc1096abe50b8a2d9c0ea83b65
+import  -/  MesserTests a01259985b58e6ad3cf82582b504751f
   exports: e35b28a1c19fe6eb222ed752d8a861b0
 import  -/  megaparsec-7.0.4:Text.Megaparsec 7df8dafd569bbec3b9e4461882f5d1f8
 import  -/  megaparsec-7.0.4:Text.Megaparsec.Error ae4537c895f9e85ef8486eb6ee5eacb2
@@ -104,7 +107,7 @@ e5875966b74dad2d29772660b8a75e33
 d026be77cb9ced20e35a61514e0458aa
   $trModule4 :: GHC.Prim.Addr#
   {- HasNoCafRefs, Unfolding: ("main"#) -}
-09a83b7fef034f65a93ffd847ba311b2
+6e5ef719cdc82238908945cb9930f0a9
   $wanalyzeInterpret ::
     Messer.Id
     -> Messer.MainOhjelma
@@ -118,7 +121,9 @@ d026be77cb9ced20e35a61514e0458aa
                    (ww2 :: [Messer.Aliohjelma])
                    (w :: GHC.Prim.State# GHC.Prim.RealWorld) ->
                  case Messemlyzer.$wanalysoi ww ww1 ww2 of wild {
-                   Data.Either.Left x -> Interpreter.interpret1 x w
+                   Data.Either.Left x
+                   -> case x of wild1 { Messemlyzer.ALuokka ds1 main7 amap ->
+                      Interpreter.iMain1 main7 amap w }
                    Data.Either.Right y
                    -> (GHC.IO.Handle.Text.hPutStr'
                          GHC.IO.Handle.FD.stdout
@@ -127,45 +132,71 @@ d026be77cb9ced20e35a61514e0458aa
                         `cast`
                       (GHC.Types.N:IO[0] <()>_R)
                         w }) -}
-2f4aa1058158983baf8c6dffb02ccfc3
-  analyzeInterpret :: Messer.Luokka -> GHC.Types.IO ()
-  {- Arity: 2,
-     Strictness: <S(LLS),1*U(U,1*U(1*U(U,1*U(U)),1*U),U)><S,U>,
+141befbc343c9fe48222e8d1a89d2975
+  analyzeInterpret ::
+    [GHC.Base.String] -> Messer.Luokka -> GHC.Types.IO ()
+  {- Arity: 3,
+     Strictness: <L,A><S(LLS),1*U(U,1*U(1*U(U,1*U(U)),1*U),U)><S,U>,
      Unfolding: InlineRule (0, True, True)
                 Main.analyzeInterpret1
                   `cast`
-                (<Messer.Luokka>_R ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
-cd2058ace20b4c6afe70fcd6d7acfdbf
+                (<[GHC.Base.String]>_R
+                 ->_R <Messer.Luokka>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
+9fddcb6f1eed26ed9e263c270161f573
   analyzeInterpret1 ::
-    Messer.Luokka
+    [GHC.Base.String]
+    -> Messer.Luokka
     -> GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
-  {- Arity: 2,
-     Strictness: <S(LLS),1*U(U,1*U(1*U(U,1*U(U)),1*U),U)><S,U>,
+  {- Arity: 3,
+     Strictness: <L,A><S(LLS),1*U(U,1*U(1*U(U,1*U(U)),1*U),U)><S,U>,
      Inline: [2],
-     Unfolding: InlineRule (2, True, False)
-                (\ (w :: Messer.Luokka)
-                   (w1 :: GHC.Prim.State# GHC.Prim.RealWorld) ->
-                 case w of ww { Messer.Luokka ww1 ww2 ww3 ->
-                 Main.$wanalyzeInterpret ww1 ww2 ww3 w1 }) -}
-74414f794cb57515ef6fed3d845a49f3
+     Unfolding: InlineRule (3, True, False)
+                (\ (w :: [GHC.Base.String])
+                   (w1 :: Messer.Luokka)
+                   (w2 :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 case w1 of ww { Messer.Luokka ww1 ww2 ww3 ->
+                 Main.$wanalyzeInterpret ww1 ww2 ww3 w2 }) -}
+762f04adafb741ec64363521fd2906ae
   main :: GHC.Types.IO ()
   {- Arity: 1, Strictness: <S,U>,
      Unfolding: InlineRule (0, True, True)
                 Main.main1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
-0a1a03cf72557a7a609d0c803fcfdb99
+f2e8f02016afc605a7b9f5bb55e2a2cb
   main1 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
   {- Arity: 1, Strictness: <S,U>,
      Unfolding: (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld) ->
-                 case GHC.IO.Handle.FD.openFile1
-                        Main.main_name
-                        GHC.IO.IOMode.ReadMode
+                 case (Foreign.Marshal.Alloc.allocaBytesAligned
+                         @ Foreign.C.Types.CInt
+                         @ [GHC.Base.String]
+                         Foreign.Storable.$fStorableBool7
+                         Foreign.Storable.$fStorableBool7
+                         System.Environment.getArgs1
+                           `cast`
+                         (<GHC.Ptr.Ptr Foreign.C.Types.CInt>_R
+                          ->_R Sym (GHC.Types.N:IO[0] <[GHC.Base.String]>_R)))
+                        `cast`
+                      (GHC.Types.N:IO[0] <[GHC.Base.String]>_R)
                         s of ds1 { (#,#) ipv ipv1 ->
+                 case GHC.IO.Handle.FD.openFile1
+                        (GHC.List.head @ GHC.Base.String ipv1)
+                        GHC.IO.IOMode.ReadMode
+                        ipv of ds2 { (#,#) ipv2 ipv3 ->
                  case GHC.IO.Handle.Text.hGetContents1
-                        ipv1
-                        ipv of ds { (#,#) ipv2 ipv3 ->
+                        ipv3
+                        ipv2 of ds { (#,#) ipv4 ipv5 ->
+                 let {
+                   name :: GHC.Base.String
+                   = case ipv1 of wild {
+                       [] -> GHC.List.badHead @ GHC.Base.String : x ds3 -> x }
+                 } in
+                 let {
+                   s2 :: Text.Megaparsec.Pos.SourcePos
+                   = Text.Megaparsec.Pos.SourcePos name 1# 1#
+                 } in
                  case (Text.Megaparsec.Internal.$fApplicativeParsecT1
                          @ [GHC.Types.Char]
                          @ Data.Void.Void
@@ -191,13 +222,13 @@ cd2058ace20b4c6afe70fcd6d7acfdbf
                               Data.Void.Void GHC.Base.String Messer.Luokka)
                          (Text.Megaparsec.State.State
                             @ GHC.Base.String
-                            ipv3
+                            ipv5
                             0#
                             (Text.Megaparsec.State.PosState
                                @ GHC.Base.String
-                               ipv3
+                               ipv5
                                0#
-                               Main.main_s2
+                               s2
                                Text.Megaparsec.Pos.defaultTabWidth_a
                                  `cast`
                                (Sym (Text.Megaparsec.Pos.N:Pos[0]))
@@ -241,9 +272,11 @@ cd2058ace20b4c6afe70fcd6d7acfdbf
                            <Text.Megaparsec.Internal.Reply
                               Data.Void.Void
                               GHC.Base.String
-                              Messer.Luokka>_R) of wild { Text.Megaparsec.Internal.Reply s' ds2 result ->
+                              Messer.Luokka>_R) of wild { Text.Megaparsec.Internal.Reply s' ds3 result ->
                  case result of wild1 {
-                   Text.Megaparsec.Internal.OK x -> Main.analyzeInterpret1 x ipv2
+                   Text.Megaparsec.Internal.OK x
+                   -> case x of ww { Messer.Luokka ww1 ww2 ww3 ->
+                      Main.$wanalyzeInterpret ww1 ww2 ww3 ipv4 }
                    Text.Megaparsec.Internal.Error e1
                    -> (GHC.IO.Handle.Text.hPutStr'
                          GHC.IO.Handle.FD.stdout
@@ -256,9 +289,9 @@ cd2058ace20b4c6afe70fcd6d7acfdbf
                             (GHC.Types.[]
                                @ (Text.Megaparsec.Error.ParseError
                                     GHC.Base.String Data.Void.Void))
-                            ipv3
+                            ipv5
                             0#
-                            Main.main_s2
+                            s2
                             Text.Megaparsec.Pos.defaultTabWidth_a
                               `cast`
                             (Sym (Text.Megaparsec.Pos.N:Pos[0]))
@@ -266,7 +299,7 @@ cd2058ace20b4c6afe70fcd6d7acfdbf
                          GHC.Types.False)
                         `cast`
                       (GHC.Types.N:IO[0] <()>_R)
-                        ipv2 } } } }) -}
+                        ipv4 } } } } }) -}
 21169f173a4bb5d9b8e400f68a5bb337
   main2 ::
     Text.Megaparsec.Error.ParseError GHC.Base.String Data.Void.Void
@@ -357,24 +390,14 @@ ae7416231a22d7e925f80f6ea87e2f21
                       @ Data.Void.Void
                       @ Messer.Luokka
                       a1)) -}
-41bfc29f7126a2e9022e6bf2a816ce5f
-  main6 :: GHC.Prim.Addr#
-  {- HasNoCafRefs, Unfolding: ("test.mess"#) -}
-3661cddb7b0e172dfb42ba532f9fac8f
-  main7 ::
+091127af0d4b2be5fd3efec4451a9936
+  main6 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
   {- Arity: 1,
      Unfolding: (GHC.TopHandler.runMainIO1
                    @ ()
                    Main.main1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R))) -}
-363dcac9c4ee50c2540552600abefc1a
-  main_name :: GHC.Base.String
-  {- Unfolding: (GHC.CString.unpackCString# Main.main6) -}
-6f70079f466fb609361d98dc17aa6e24
-  main_s2 :: Text.Megaparsec.Pos.SourcePos
-  {- Strictness: m,
-     Unfolding: (Text.Megaparsec.Pos.SourcePos Main.main_name 1# 1#) -}
 trusted: none
 require own pkg trusted: False
 module header:
