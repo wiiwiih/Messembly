@@ -1,6 +1,6 @@
 class Fibonacci {
     
-    main(string[] args){
+    main(string args){
         int a = 1?
         a = fib(4)?
         #yolo
@@ -9,6 +9,7 @@ class Fibonacci {
         else {}?
         print b?
         print a?
+        print args?
     };
     
     int fib(int a) {
