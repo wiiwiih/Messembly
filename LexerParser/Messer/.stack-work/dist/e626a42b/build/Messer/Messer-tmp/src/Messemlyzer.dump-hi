@@ -1,11 +1,11 @@
 
 ==================== FINAL INTERFACE ====================
-2019-03-11 17:22:57.688087 UTC
+2019-03-12 20:17:10.3867186 UTC
 
 interface main:Messemlyzer 8063
-  interface hash: 3aa14c66a8fe7684d6fb338e64980e57
-  ABI hash: a2f0a904dd515acce4cfa5f55a27b589
-  export-list hash: 1ed80bce1a87a6b081b6f3ba3fb4b3af
+  interface hash: 80ebe38b9725a23b1f10011a6f1d691a
+  ABI hash: a7d87cfe15b3d5f2f7f238d4fcd42c7d
+  export-list hash: 81abbb5b47d25546500e425908823983
   orphan hash: 60f27ed359ea4ad0a454919e9df71fef
   flag hash: 8346313dc06e16ebefba9f23d6444d37
   opt_hash: 6faf2de08de32d19db9870899d88e59a
@@ -24,7 +24,7 @@ exports:
   Messemlyzer.analysoi
   Messemlyzer.mapAliohj
   Messemlyzer.uYmparisto
-  Messemlyzer.AArvo{Messemlyzer.AVoid Messemlyzer.B Messemlyzer.I Messemlyzer.S}
+  Messemlyzer.AArvo{Messemlyzer.ABool Messemlyzer.AInt Messemlyzer.AString Messemlyzer.AVoid}
   Messemlyzer.ALuokka{Messemlyzer.ALuokka}
   Messemlyzer.AMuuttujat
   Messemlyzer.AVirhe
@@ -73,8 +73,8 @@ import  -/  containers-0.6.0.1:Data.Map.Internal 809c18d4f1d0560a3f1f838f411341b
 import  -/  containers-0.6.0.1:Data.Map.Strict 862f7498e42e3aea305e0ee4cce1d01a
 import  -/  containers-0.6.0.1:Data.Map.Strict.Internal f5a5f5ea9db0644dd801e65e72083886
 import  -/  ghc-prim-0.5.3:GHC.Classes 555218a5f891dab16ebc6e6e04763e77
-import  -/  Messer e1f88e828dd5e13e6dc757211349c899
-  exports: eedbb4c9b519f3ec35d949e301366b6f
+import  -/  Messer e38f15305afca136ddf97467f90fd3c3
+  exports: 074c6398dfe19dd25eed8799effd875b
   AKutsu 3c442870e02d5bf9feed93c2e572f9af
   Aliohjelma 8382b386e263b4f186da179152d06ec1
   Aliohjelma f616844a16ec6006fac1a1627820eb52
@@ -123,7 +123,56 @@ import  -/  Messer e1f88e828dd5e13e6dc757211349c899
   Vertailu 308a7d4fec066fc9bc1d8934dc1c24dc
   Void d585c62109a942e8dd72f56bf442d61f
   Yhtasuuri d4fbbbfbb5c160f6d9655f086f68c1c0
-c9add3cab0645efc0329afdeea320f99
+3887efbedcf73755d71d9a1f20dca752
+  $fEqAArvo :: GHC.Classes.Eq Messemlyzer.AArvo
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ Messemlyzer.AArvo
+                  Messemlyzer.$fEqAArvo_$c==
+                  Messemlyzer.$fEqAArvo_$c/= -}
+3887efbedcf73755d71d9a1f20dca752
+  $fEqAArvo_$c/= ::
+    Messemlyzer.AArvo -> Messemlyzer.AArvo -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Inline: (sat-args=2),
+     Unfolding: InlineRule (2, False, False)
+                (\ (x :: Messemlyzer.AArvo) (y :: Messemlyzer.AArvo) ->
+                 case x of wild {
+                   Messemlyzer.AInt
+                   -> case y of wild1 {
+                        DEFAULT -> GHC.Types.True Messemlyzer.AInt -> GHC.Types.False }
+                   Messemlyzer.ABool
+                   -> case y of wild1 {
+                        DEFAULT -> GHC.Types.True Messemlyzer.ABool -> GHC.Types.False }
+                   Messemlyzer.AString
+                   -> case y of wild1 {
+                        DEFAULT -> GHC.Types.True Messemlyzer.AString -> GHC.Types.False }
+                   Messemlyzer.AVoid
+                   -> case y of wild1 {
+                        DEFAULT -> GHC.Types.True
+                        Messemlyzer.AVoid -> GHC.Types.False } }) -}
+3887efbedcf73755d71d9a1f20dca752
+  $fEqAArvo_$c== ::
+    Messemlyzer.AArvo -> Messemlyzer.AArvo -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: (\ (ds :: Messemlyzer.AArvo)
+                   (ds1 :: Messemlyzer.AArvo) ->
+                 case ds of wild {
+                   Messemlyzer.AInt
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False Messemlyzer.AInt -> GHC.Types.True }
+                   Messemlyzer.ABool
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False Messemlyzer.ABool -> GHC.Types.True }
+                   Messemlyzer.AString
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False Messemlyzer.AString -> GHC.Types.True }
+                   Messemlyzer.AVoid
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False
+                        Messemlyzer.AVoid -> GHC.Types.True } }) -}
+3887efbedcf73755d71d9a1f20dca752
   $fShowAArvo :: GHC.Show.Show Messemlyzer.AArvo
   DFunId
   {- Strictness: m, Inline: CONLIKE,
@@ -132,171 +181,64 @@ c9add3cab0645efc0329afdeea320f99
                   Messemlyzer.$fShowAArvo_$cshowsPrec
                   Messemlyzer.$fShowAArvo_$cshow
                   Messemlyzer.$fShowAArvo_$cshowList -}
-c9add3cab0645efc0329afdeea320f99
-  $fShowAArvo1 :: Messemlyzer.AArvo -> GHC.Show.ShowS
-  {- Arity: 2,
-     Unfolding: (Messemlyzer.$fShowAArvo_$cshowsPrec
+0ad39b46a2c894f49cc0962e565730d1
+  $fShowAArvo1 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
                    Messemlyzer.$fShowAArvo2) -}
-2acfdb1cbe4bfba4f62eb70de4c4252c
-  $fShowAArvo2 :: GHC.Types.Int
-  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 0#) -}
-56eb91107780767ea0d21d4348219973
+47047d2d2d9337e168e4fa7d0818f8d6
+  $fShowAArvo2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("AVoid"#) -}
+d489c954fdaa917b0c8eadaf6f7eb14b
   $fShowAArvo3 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString#
                    Messemlyzer.$fShowAArvo4) -}
-b321e0df88d1f24b24ee29df3447f546
+f427bf78b254b8db67ac56f94f451b76
   $fShowAArvo4 :: GHC.Prim.Addr#
-  {- HasNoCafRefs, Unfolding: ("AVoid"#) -}
-9953e497982c8ceb6c172b7812e95de8
-  $fShowAArvo5 :: GHC.Prim.Addr#
-  {- HasNoCafRefs, Unfolding: ("S "#) -}
-1a48304ea6565346a24ff16093a252d1
+  {- HasNoCafRefs, Unfolding: ("AString"#) -}
+f8284eadc55b9e9f53438d8ebba14d44
+  $fShowAArvo5 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   Messemlyzer.$fShowAArvo6) -}
+38c1e3774790ce56c1975f51cca159a3
   $fShowAArvo6 :: GHC.Prim.Addr#
-  {- HasNoCafRefs, Unfolding: ("B "#) -}
-d9fec4a4e24c9d6157ab66f3658cd520
-  $fShowAArvo7 :: GHC.Prim.Addr#
-  {- HasNoCafRefs, Unfolding: ("I "#) -}
-dee97c37075b9f338721ccbdd7440ac9
-  $fShowAArvo8 :: [GHC.Types.Char]
-  {- HasNoCafRefs, Strictness: m2,
-     Unfolding: (GHC.Types.:
-                   @ GHC.Types.Char
-                   GHC.Show.$fShow(,)3
-                   (GHC.Types.[] @ GHC.Types.Char)) -}
-c9add3cab0645efc0329afdeea320f99
+  {- HasNoCafRefs, Unfolding: ("ABool"#) -}
+3377e45d51b2e51f95682944e925ee42
+  $fShowAArvo7 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   Messemlyzer.$fShowAArvo8) -}
+1784f987297da54cd9de5c4f37299463
+  $fShowAArvo8 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("AInt"#) -}
+3887efbedcf73755d71d9a1f20dca752
   $fShowAArvo_$cshow :: Messemlyzer.AArvo -> GHC.Base.String
   {- Arity: 1, Strictness: <S,1*U>,
-     Unfolding: (\ (x :: Messemlyzer.AArvo) ->
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: Messemlyzer.AArvo) ->
                  case x of wild {
-                   Messemlyzer.I b1
-                   -> GHC.CString.unpackAppendCString#
-                        Messemlyzer.$fShowAArvo7
-                        (case b1 of ww2 { GHC.Types.I# ww3 ->
-                         case GHC.Show.$wshowSignedInt
-                                11#
-                                ww3
-                                (GHC.Types.[] @ GHC.Types.Char) of ww4 { (#,#) ww5 ww6 ->
-                         GHC.Types.: @ GHC.Types.Char ww5 ww6 } })
-                   Messemlyzer.B b1
-                   -> GHC.CString.unpackAppendCString#
-                        Messemlyzer.$fShowAArvo6
-                        (case b1 of wild1 {
-                           GHC.Types.False -> GHC.Show.$fShowBool4
-                           GHC.Types.True -> GHC.Show.$fShowBool2 })
-                   Messemlyzer.S b1
-                   -> GHC.CString.unpackAppendCString#
-                        Messemlyzer.$fShowAArvo5
-                        (GHC.Types.:
-                           @ GHC.Types.Char
-                           GHC.Show.$fShow(,)3
-                           (GHC.Show.showLitString b1 Messemlyzer.$fShowAArvo8))
-                   Messemlyzer.AVoid -> Messemlyzer.$fShowAArvo3 }) -}
-c9add3cab0645efc0329afdeea320f99
+                   Messemlyzer.AInt -> Messemlyzer.$fShowAArvo7
+                   Messemlyzer.ABool -> Messemlyzer.$fShowAArvo5
+                   Messemlyzer.AString -> Messemlyzer.$fShowAArvo3
+                   Messemlyzer.AVoid -> Messemlyzer.$fShowAArvo1 }) -}
+3887efbedcf73755d71d9a1f20dca752
   $fShowAArvo_$cshowList :: [Messemlyzer.AArvo] -> GHC.Show.ShowS
   {- Arity: 2, Strictness: <S,1*U><L,U>,
      Unfolding: InlineRule (2, True, False)
                 (\ (ls :: [Messemlyzer.AArvo]) (s :: GHC.Base.String) ->
                  GHC.Show.showList__
                    @ Messemlyzer.AArvo
-                   Messemlyzer.$fShowAArvo1
+                   Messemlyzer.$w$cshowsPrec
                    ls
                    s) -}
-c9add3cab0645efc0329afdeea320f99
+3887efbedcf73755d71d9a1f20dca752
   $fShowAArvo_$cshowsPrec ::
     GHC.Types.Int -> Messemlyzer.AArvo -> GHC.Show.ShowS
-  {- Arity: 3, Strictness: <L,1*U(U)><S,1*U><L,U>,
-     Unfolding: (\ (a :: GHC.Types.Int)
-                   (ds :: Messemlyzer.AArvo)
-                   (eta :: GHC.Base.String) ->
-                 case ds of wild {
-                   Messemlyzer.I b1
-                   -> case a of wild1 { GHC.Types.I# x ->
-                      case GHC.Prim.>=# x 11# of lwild {
-                        DEFAULT
-                        -> GHC.CString.unpackAppendCString#
-                             Messemlyzer.$fShowAArvo7
-                             (case b1 of ww2 { GHC.Types.I# ww3 ->
-                              case GHC.Show.$wshowSignedInt 11# ww3 eta of ww4 { (#,#) ww5 ww6 ->
-                              GHC.Types.: @ GHC.Types.Char ww5 ww6 } })
-                        1#
-                        -> GHC.Types.:
-                             @ GHC.Types.Char
-                             GHC.Show.$fShow(,)4
-                             (GHC.CString.unpackAppendCString#
-                                Messemlyzer.$fShowAArvo7
-                                (case b1 of ww2 { GHC.Types.I# ww3 ->
-                                 case GHC.Show.$wshowSignedInt
-                                        11#
-                                        ww3
-                                        (GHC.Types.:
-                                           @ GHC.Types.Char
-                                           GHC.Show.$fShow(,)2
-                                           eta) of ww4 { (#,#) ww5 ww6 ->
-                                 GHC.Types.: @ GHC.Types.Char ww5 ww6 } })) } }
-                   Messemlyzer.B b1
-                   -> case a of wild1 { GHC.Types.I# x ->
-                      case GHC.Prim.>=# x 11# of lwild {
-                        DEFAULT
-                        -> GHC.CString.unpackAppendCString#
-                             Messemlyzer.$fShowAArvo6
-                             (case b1 of wild2 {
-                                GHC.Types.False
-                                -> GHC.Base.++ @ GHC.Types.Char GHC.Show.$fShowBool4 eta
-                                GHC.Types.True
-                                -> GHC.Base.++ @ GHC.Types.Char GHC.Show.$fShowBool2 eta })
-                        1#
-                        -> GHC.Types.:
-                             @ GHC.Types.Char
-                             GHC.Show.$fShow(,)4
-                             (GHC.CString.unpackAppendCString#
-                                Messemlyzer.$fShowAArvo6
-                                (case b1 of wild2 {
-                                   GHC.Types.False
-                                   -> GHC.Base.++
-                                        @ GHC.Types.Char
-                                        GHC.Show.$fShowBool4
-                                        (GHC.Types.: @ GHC.Types.Char GHC.Show.$fShow(,)2 eta)
-                                   GHC.Types.True
-                                   -> GHC.Base.++
-                                        @ GHC.Types.Char
-                                        GHC.Show.$fShowBool2
-                                        (GHC.Types.:
-                                           @ GHC.Types.Char
-                                           GHC.Show.$fShow(,)2
-                                           eta) })) } }
-                   Messemlyzer.S b1
-                   -> case a of wild1 { GHC.Types.I# x ->
-                      case GHC.Prim.>=# x 11# of lwild {
-                        DEFAULT
-                        -> GHC.CString.unpackAppendCString#
-                             Messemlyzer.$fShowAArvo5
-                             (GHC.Types.:
-                                @ GHC.Types.Char
-                                GHC.Show.$fShow(,)3
-                                (GHC.Show.showLitString
-                                   b1
-                                   (GHC.Types.: @ GHC.Types.Char GHC.Show.$fShow(,)3 eta)))
-                        1#
-                        -> GHC.Types.:
-                             @ GHC.Types.Char
-                             GHC.Show.$fShow(,)4
-                             (GHC.CString.unpackAppendCString#
-                                Messemlyzer.$fShowAArvo5
-                                (GHC.Types.:
-                                   @ GHC.Types.Char
-                                   GHC.Show.$fShow(,)3
-                                   (GHC.Show.showLitString
-                                      b1
-                                      (GHC.Types.:
-                                         @ GHC.Types.Char
-                                         GHC.Show.$fShow(,)3
-                                         (GHC.Types.:
-                                            @ GHC.Types.Char
-                                            GHC.Show.$fShow(,)2
-                                            eta))))) } }
-                   Messemlyzer.AVoid
-                   -> GHC.Base.++ @ GHC.Types.Char Messemlyzer.$fShowAArvo3 eta }) -}
-e2a09adee24d5f19a9995ddde2d978ee
+  {- Arity: 3, Strictness: <L,A><S,1*U><L,1*U>, Inline: [2],
+     Unfolding: InlineRule (3, True, True)
+                (\ (w :: GHC.Types.Int)
+                   (w1 :: Messemlyzer.AArvo)
+                   (w2 :: GHC.Base.String) ->
+                 Messemlyzer.$w$cshowsPrec w1 w2) -}
+76b2fffeee2d3892d14cc300fc7a8005
   $fShowALuokka :: GHC.Show.Show Messemlyzer.ALuokka
   DFunId
   {- Strictness: m, Inline: CONLIKE,
@@ -305,12 +247,12 @@ e2a09adee24d5f19a9995ddde2d978ee
                   Messemlyzer.$fShowALuokka_$cshowsPrec
                   Messemlyzer.$fShowALuokka_$cshow
                   Messemlyzer.$fShowALuokka_$cshowList -}
-e2a09adee24d5f19a9995ddde2d978ee
+76b2fffeee2d3892d14cc300fc7a8005
   $fShowALuokka1 :: Messemlyzer.ALuokka -> GHC.Show.ShowS
   {- Arity: 1, Strictness: <S,1*U(U(U),U(U(U,U(U)),U),1*U)>,
      Unfolding: (\ (w :: Messemlyzer.ALuokka) ->
                  case w of ww { Messemlyzer.ALuokka ww1 ww2 ww3 ->
-                 Messemlyzer.$w$cshowsPrec 0# ww1 ww2 ww3 }) -}
+                 Messemlyzer.$w$cshowsPrec1 0# ww1 ww2 ww3 }) -}
 a8f4b86d4ebd26bb01b6602dc21f8965
   $fShowALuokka2 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString#
@@ -318,16 +260,19 @@ a8f4b86d4ebd26bb01b6602dc21f8965
 20bca406199a3819f5262bc1cfbde9cb
   $fShowALuokka3 :: GHC.Prim.Addr#
   {- HasNoCafRefs, Unfolding: ("ALuokka "#) -}
-e2a09adee24d5f19a9995ddde2d978ee
+937cc857323197f829668eb70086f155
+  $fShowALuokka4 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 0#) -}
+76b2fffeee2d3892d14cc300fc7a8005
   $fShowALuokka_$cshow :: Messemlyzer.ALuokka -> GHC.Base.String
   {- Arity: 1, Strictness: <S,1*U(U(U),U(U(U,U(U)),U),1*U)>,
      Unfolding: InlineRule (1, True, False)
                 (\ (x :: Messemlyzer.ALuokka) ->
                  Messemlyzer.$fShowALuokka_$cshowsPrec
-                   Messemlyzer.$fShowAArvo2
+                   Messemlyzer.$fShowALuokka4
                    x
                    (GHC.Types.[] @ GHC.Types.Char)) -}
-e2a09adee24d5f19a9995ddde2d978ee
+76b2fffeee2d3892d14cc300fc7a8005
   $fShowALuokka_$cshowList :: [Messemlyzer.ALuokka] -> GHC.Show.ShowS
   {- Arity: 2, Strictness: <S,1*U><L,U>,
      Unfolding: InlineRule (2, True, False)
@@ -337,7 +282,7 @@ e2a09adee24d5f19a9995ddde2d978ee
                    Messemlyzer.$fShowALuokka1
                    ls
                    s) -}
-e2a09adee24d5f19a9995ddde2d978ee
+76b2fffeee2d3892d14cc300fc7a8005
   $fShowALuokka_$cshowsPrec ::
     GHC.Types.Int -> Messemlyzer.ALuokka -> GHC.Show.ShowS
   {- Arity: 2,
@@ -347,7 +292,7 @@ e2a09adee24d5f19a9995ddde2d978ee
                 (\ (w :: GHC.Types.Int) (w1 :: Messemlyzer.ALuokka) ->
                  case w of ww { GHC.Types.I# ww1 ->
                  case w1 of ww2 { Messemlyzer.ALuokka ww3 ww4 ww5 ->
-                 Messemlyzer.$w$cshowsPrec ww1 ww3 ww4 ww5 } }) -}
+                 Messemlyzer.$w$cshowsPrec1 ww1 ww3 ww4 ww5 } }) -}
 67c64ab66e05285b6fb98d48426f3398
   $fShowALuokka_$s$fShow(,,) ::
     GHC.Show.Show
@@ -488,10 +433,10 @@ c031309284030ca92853309c54fc1cd3
     -> Data.Map.Internal.Map GHC.Base.String a1
     -> Data.Map.Internal.Map GHC.Base.String a1
   {- Arity: 3, Strictness: <S,1*U><S,1*U><S,1*U> -}
-47c83dff2f346d836697d729bb24d5f1
+5b1fc5ff10f8155359ebdd035bdb0e93
   $slookup1 ::
-    [GHC.Types.Char]
-    -> Data.Map.Internal.Map [GHC.Types.Char] a -> GHC.Maybe.Maybe a
+    GHC.Base.String
+    -> Data.Map.Internal.Map GHC.Base.String a -> GHC.Maybe.Maybe a
   {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U> -}
 379464880604d3809866fafa9af88a0f
   $sunion ::
@@ -499,6 +444,43 @@ c031309284030ca92853309c54fc1cd3
     -> Data.Map.Internal.Map [GHC.Types.Char] a
     -> Data.Map.Internal.Map [GHC.Types.Char] a
   {- Arity: 2, Strictness: <S,1*U><S,1*U>, Inline: [~] -}
+ea5afb35d1658174e71971096a54f658
+  $tc'ABool :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   18247854020847778697##
+                   9025208270982699306##
+                   Messemlyzer.$trModule
+                   Messemlyzer.$tc'ABool2
+                   0#
+                   Messemlyzer.$tc'ABool1) -}
+4751c05160ad748b7dcdef144db4da52
+  $tc'ABool1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m1, Inline: [~] -}
+99919dc7f855874521fe140abe26ab3c
+  $tc'ABool2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Messemlyzer.$tc'ABool3) -}
+745383687e258f4215f8fa1279daebd3
+  $tc'ABool3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'ABool"#) -}
+33fa1e6a04de5c24af1ae475c4cd838d
+  $tc'AInt :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   8797990424688794970##
+                   12479389473706505514##
+                   Messemlyzer.$trModule
+                   Messemlyzer.$tc'AInt1
+                   0#
+                   Messemlyzer.$tc'ABool1) -}
+9d9387ef5e1d3a81f9953735640d65ff
+  $tc'AInt1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Messemlyzer.$tc'AInt2) -}
+5a8017eb052eb46d364e786687789db9
+  $tc'AInt2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'AInt"#) -}
 22bb6031b9e9d3747e7ce46d9366697a
   $tc'ALuokka :: GHC.Types.TyCon
   {- HasNoCafRefs, Strictness: m,
@@ -519,86 +501,40 @@ da7fa4d19d683454a6a76e60c2d67665
 f32930edfe6db766908ecdc673bcf8cc
   $tc'ALuokka3 :: GHC.Prim.Addr#
   {- HasNoCafRefs, Unfolding: ("'ALuokka"#) -}
-e228d4b1934aecb9ea4e63c361100684
+2c733004c8c720d650503f2d2c2bcaf5
+  $tc'AString :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   1019261245444382371##
+                   556703356644764292##
+                   Messemlyzer.$trModule
+                   Messemlyzer.$tc'AString1
+                   0#
+                   Messemlyzer.$tc'ABool1) -}
+adfdee92f54b18e8e8b49534f6ac18fa
+  $tc'AString1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Messemlyzer.$tc'AString2) -}
+c71d7fad3a5c06c700e98b8ca880a8a2
+  $tc'AString2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'AString"#) -}
+0cb84fbb5d54c82e0d7418867bea4c7e
   $tc'AVoid :: GHC.Types.TyCon
   {- HasNoCafRefs, Strictness: m,
      Unfolding: (GHC.Types.TyCon
                    769795051744147495##
                    11268315386244248179##
                    Messemlyzer.$trModule
-                   Messemlyzer.$tc'AVoid2
+                   Messemlyzer.$tc'AVoid1
                    0#
-                   Messemlyzer.$tc'AVoid1) -}
-7ebaf7bbcaeb7b1b7d75eb2dc67f5379
-  $tc'AVoid1 :: GHC.Types.KindRep
-  {- HasNoCafRefs, Strictness: m1, Inline: [~] -}
-3ae476a29830a909f026428adf031b1d
-  $tc'AVoid2 :: GHC.Types.TrName
+                   Messemlyzer.$tc'ABool1) -}
+a58b71885f0dac95cd5dd513fcac1df6
+  $tc'AVoid1 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
-     Unfolding: (GHC.Types.TrNameS Messemlyzer.$tc'AVoid3) -}
-e4e568caf52bfb3cefe02422681c242b
-  $tc'AVoid3 :: GHC.Prim.Addr#
+     Unfolding: (GHC.Types.TrNameS Messemlyzer.$tc'AVoid2) -}
+3d52237aa2ab02050a5f985baf2024a8
+  $tc'AVoid2 :: GHC.Prim.Addr#
   {- HasNoCafRefs, Unfolding: ("'AVoid"#) -}
-6c0776ec8513596e04fa05db05cad9b1
-  $tc'B :: GHC.Types.TyCon
-  {- HasNoCafRefs, Strictness: m,
-     Unfolding: (GHC.Types.TyCon
-                   11891088270852708188##
-                   17629952793220048345##
-                   Messemlyzer.$trModule
-                   Messemlyzer.$tc'B2
-                   0#
-                   Messemlyzer.$tc'B1) -}
-4162b9cc83911b5326b456d13b578e8d
-  $tc'B1 :: GHC.Types.KindRep
-  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
-c6c42ec24ed47bfe76f525b1a3852381
-  $tc'B2 :: GHC.Types.TrName
-  {- HasNoCafRefs, Strictness: m1,
-     Unfolding: (GHC.Types.TrNameS Messemlyzer.$tc'B3) -}
-48b8453c667ac6701fbf5cdf6141a3b9
-  $tc'B3 :: GHC.Prim.Addr#
-  {- HasNoCafRefs, Unfolding: ("'B"#) -}
-202bafbfbde8a7bf3919e7bfa668f879
-  $tc'I :: GHC.Types.TyCon
-  {- HasNoCafRefs, Strictness: m,
-     Unfolding: (GHC.Types.TyCon
-                   4682442608533730047##
-                   17861813027476098472##
-                   Messemlyzer.$trModule
-                   Messemlyzer.$tc'I2
-                   0#
-                   Messemlyzer.$tc'I1) -}
-2d07ccacf31b945a7aff991e709ff6ab
-  $tc'I1 :: GHC.Types.KindRep
-  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
-3af6310488fcf49927309d0e0e2e47e6
-  $tc'I2 :: GHC.Types.TrName
-  {- HasNoCafRefs, Strictness: m1,
-     Unfolding: (GHC.Types.TrNameS Messemlyzer.$tc'I3) -}
-0fe95eb7d909a91db118e93106fd2519
-  $tc'I3 :: GHC.Prim.Addr#
-  {- HasNoCafRefs, Unfolding: ("'I"#) -}
-8819cedf0fbe50256f2e6c711441566d
-  $tc'S :: GHC.Types.TyCon
-  {- HasNoCafRefs, Strictness: m,
-     Unfolding: (GHC.Types.TyCon
-                   1092535153501780969##
-                   13065754103578773958##
-                   Messemlyzer.$trModule
-                   Messemlyzer.$tc'S2
-                   0#
-                   Messemlyzer.$tc'S1) -}
-ab1c90bea23fe1499b880dc57378f016
-  $tc'S1 :: GHC.Types.KindRep
-  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
-9687bf4c10f98a1100983a7da4646a3b
-  $tc'S2 :: GHC.Types.TrName
-  {- HasNoCafRefs, Strictness: m1,
-     Unfolding: (GHC.Types.TrNameS Messemlyzer.$tc'S3) -}
-2eecce5fa0f48891420650a6d9de0eeb
-  $tc'S3 :: GHC.Prim.Addr#
-  {- HasNoCafRefs, Unfolding: ("'S"#) -}
 7247c7ff0ade6227f2005d4bd44a9f51
   $tcAArvo :: GHC.Types.TyCon
   {- HasNoCafRefs, Strictness: m,
@@ -653,8 +589,22 @@ ed4b6206ec301a17cb4ac93a7bbf2461
 71f647d49633d913a060877dd9f1b871
   $trModule4 :: GHC.Prim.Addr#
   {- HasNoCafRefs, Unfolding: ("main"#) -}
-c33b0d0cc9e1224bf2713df54becce3b
+3887efbedcf73755d71d9a1f20dca752
   $w$cshowsPrec ::
+    Messemlyzer.AArvo -> GHC.Base.String -> GHC.Base.String
+  {- Arity: 2, Strictness: <S,1*U><L,1*U>, Inline: [2],
+     Unfolding: (\ (w :: Messemlyzer.AArvo) (w1 :: GHC.Base.String) ->
+                 case w of wild {
+                   Messemlyzer.AInt
+                   -> GHC.Base.++ @ GHC.Types.Char Messemlyzer.$fShowAArvo7 w1
+                   Messemlyzer.ABool
+                   -> GHC.Base.++ @ GHC.Types.Char Messemlyzer.$fShowAArvo5 w1
+                   Messemlyzer.AString
+                   -> GHC.Base.++ @ GHC.Types.Char Messemlyzer.$fShowAArvo3 w1
+                   Messemlyzer.AVoid
+                   -> GHC.Base.++ @ GHC.Types.Char Messemlyzer.$fShowAArvo1 w1 }) -}
+8d52e35b8ebc1407f7cb181dc8f315fd
+  $w$cshowsPrec1 ::
     GHC.Prim.Int#
     -> Messer.Id
     -> Messer.MainOhjelma
@@ -713,7 +663,7 @@ c33b0d0cc9e1224bf2713df54becce3b
     -> Messemlyzer.Aliohjelmat
     -> (# Messemlyzer.Aliohjelmat, [Messemlyzer.AVirhe] #)
   {- Arity: 2, Strictness: <S,1*U><L,U>, Inline: [2] -}
-986cec64a28dd81d9595f9e92d70ce67
+7d508f527cd6c385997e3367cd1ae2a8
   $waLauseke ::
     Messer.Lauseke
     -> Messemlyzer.AMuuttujat
@@ -721,7 +671,7 @@ c33b0d0cc9e1224bf2713df54becce3b
     -> (# Messer.Lauseke, [Messemlyzer.AVirhe],
           Messemlyzer.AMuuttujat #)
   {- Arity: 3, Strictness: <S,1*U><L,U><L,U>, Inline: [2] -}
-dbcfb45e8b62a4657e029cc7e5b04b90
+065cbc87019a696d1e5d980f17c71187
   $waLausekkeet ::
     [Messer.Lauseke]
     -> Messemlyzer.AMuuttujat
@@ -729,7 +679,7 @@ dbcfb45e8b62a4657e029cc7e5b04b90
     -> (# [Messer.Lauseke], [Messemlyzer.AVirhe],
           Messemlyzer.AMuuttujat #)
   {- Arity: 3, Strictness: <S,1*U><L,U><L,U>, Inline: [2] -}
-d46dda9e655c93b5dca35b150f165c99
+ffd54762926618a271de22281d3eae30
   $waMaaritelma ::
     Messer.Maaritelma
     -> Messemlyzer.AMuuttujat
@@ -737,7 +687,7 @@ d46dda9e655c93b5dca35b150f165c99
     -> (# GHC.Maybe.Maybe Messer.Tietotyyppi, Messer.Maaritelma,
           [Messemlyzer.AVirhe] #)
   {- Arity: 3, Strictness: <S,1*U><L,U><L,U>, Inline: [2] -}
-2333baacf59905cdc22b042dd0a21709
+6fe4045108e2e5f432e8a25524f493bb
   $waMain ::
     Messer.Tietotyyppi
     -> GHC.Base.String
@@ -762,7 +712,7 @@ d46dda9e655c93b5dca35b150f165c99
                                     @ Messemlyzer.AArvo
                                     1#
                                     dt
-                                    Messemlyzer.aMain3
+                                    Messemlyzer.AInt
                                     (Data.Map.Internal.Tip @ GHC.Base.String @ Messemlyzer.AArvo)
                                     (Data.Map.Internal.Tip @ GHC.Base.String @ Messemlyzer.AArvo) }
                                Messer.TTBool
@@ -772,7 +722,7 @@ d46dda9e655c93b5dca35b150f165c99
                                     @ Messemlyzer.AArvo
                                     1#
                                     dt
-                                    Messemlyzer.aMain2
+                                    Messemlyzer.ABool
                                     (Data.Map.Internal.Tip @ GHC.Base.String @ Messemlyzer.AArvo)
                                     (Data.Map.Internal.Tip @ GHC.Base.String @ Messemlyzer.AArvo) }
                                Messer.TTString
@@ -782,7 +732,7 @@ d46dda9e655c93b5dca35b150f165c99
                                     @ Messemlyzer.AArvo
                                     1#
                                     dt
-                                    Messemlyzer.aMain1
+                                    Messemlyzer.AString
                                     (Data.Map.Internal.Tip @ GHC.Base.String @ Messemlyzer.AArvo)
                                     (Data.Map.Internal.Tip
                                        @ GHC.Base.String
@@ -794,7 +744,7 @@ d46dda9e655c93b5dca35b150f165c99
                       (Messer.Parametri ww (Messer.Id ww1))
                       (case ds of wild { (,,) lausekkeet virheet ds1 -> lausekkeet }),
                     case ds of wild { (,,) lausekkeet virheet ds1 -> virheet } #)) -}
-4f6676db60180da05a70715dbdd3c950
+1c0fd59e22ae3a2704f104d571081e2a
   $wanalysoi ::
     Messer.Id
     -> Messer.MainOhjelma
@@ -831,7 +781,7 @@ d46dda9e655c93b5dca35b150f165c99
                    -> Data.Either.Right
                         @ Messemlyzer.ALuokka
                         @ [Messemlyzer.AVirhe]
-                        virheet
+                        (GHC.Base.++ @ [GHC.Types.Char] ww5 virheet)
                    GHC.Types.True
                    -> Data.Either.Left
                         @ Messemlyzer.ALuokka
@@ -847,13 +797,12 @@ d46dda9e655c93b5dca35b150f165c99
     -> (# Data.Map.Internal.Map [GHC.Types.Char] a,
           Data.Map.Internal.Map [GHC.Types.Char] a #)
   {- Arity: 2, Strictness: <L,U><S,1*U>, Inline: [2] -}
-c9add3cab0645efc0329afdeea320f99
-  data AArvo
-    = I GHC.Types.Int | B GHC.Types.Bool | S GHC.Base.String | AVoid
-e2a09adee24d5f19a9995ddde2d978ee
+3887efbedcf73755d71d9a1f20dca752
+  data AArvo = AInt | ABool | AString | AVoid
+76b2fffeee2d3892d14cc300fc7a8005
   data ALuokka
     = ALuokka Messer.Id Messer.MainOhjelma Messemlyzer.Aliohjelmat
-a0d476564700027c38d2e4ba7c160caa
+a8bd1217a5bee9209a45757217896c71
   type AMuuttujat =
     Data.Map.Internal.Map GHC.Base.String Messemlyzer.AArvo
 e900d943a953720cf4fde5c3fbc877d4
@@ -873,7 +822,7 @@ cfde6a4fc963fca275460cf9a1a3a9fb
                 (\ (w :: [Messer.Aliohjelma]) (w1 :: Messemlyzer.Aliohjelmat) ->
                  case Messemlyzer.$waAliohjelmat w w1 of ww { (#,#) ww1 ww2 ->
                  (ww1, ww2) }) -}
-3cabf15e40e2a66f4413a0b4293fee34
+4eee4232880aa186d924d74cb10f5f71
   aLauseke ::
     Messer.Lauseke
     -> Messemlyzer.AMuuttujat
@@ -886,7 +835,7 @@ cfde6a4fc963fca275460cf9a1a3a9fb
                    (w2 :: Messemlyzer.Aliohjelmat) ->
                  case Messemlyzer.$waLauseke w w1 w2 of ww { (#,,#) ww1 ww2 ww3 ->
                  (ww1, ww2, ww3) }) -}
-91e8734d3e7ba6a541fde86be492df7a
+939b1976bf2ecc61ab839d4e28413c77
   aLausekkeet ::
     [Messer.Lauseke]
     -> Messemlyzer.AMuuttujat
@@ -902,7 +851,7 @@ cfde6a4fc963fca275460cf9a1a3a9fb
                         w1
                         w2 of ww { (#,,#) ww1 ww2 ww3 ->
                  (ww1, ww2, ww3) }) -}
-812d79b11211519f82177f3781bd313c
+e311a97f3ac63069f8184d924791ae37
   aMaaritelma ::
     Messer.Maaritelma
     -> Messemlyzer.AMuuttujat
@@ -919,7 +868,7 @@ cfde6a4fc963fca275460cf9a1a3a9fb
                         w1
                         w2 of ww { (#,,#) ww1 ww2 ww3 ->
                  (ww1, ww2, ww3) }) -}
-998b230f5706caf67acdb96887bd4a1a
+991674cef2612ef27fb766d00c4f724f
   aMain ::
     Messer.MainOhjelma
     -> Messemlyzer.Aliohjelmat
@@ -933,19 +882,7 @@ cfde6a4fc963fca275460cf9a1a3a9fb
                  case ww5 of ww6 { Messer.Id ww7 ->
                  case Messemlyzer.$waMain ww4 ww7 ww2 w1 of ww8 { (#,#) ww9 ww10 ->
                  (ww9, ww10) } } } }) -}
-2690493ee5d8e995048c35733789bda9
-  aMain1 :: Messemlyzer.AArvo
-  {- HasNoCafRefs, Strictness: m3,
-     Unfolding: (Messemlyzer.S (GHC.Types.[] @ GHC.Types.Char)) -}
-466614cc9debbb75c3f8404abd017c37
-  aMain2 :: Messemlyzer.AArvo
-  {- HasNoCafRefs, Strictness: m2,
-     Unfolding: (Messemlyzer.B GHC.Types.False) -}
-14d79f1bb4e405ff4ba3d809920021a3
-  aMain3 :: Messemlyzer.AArvo
-  {- HasNoCafRefs, Strictness: m1,
-     Unfolding: (Messemlyzer.I Messemlyzer.$fShowAArvo2) -}
-01bbb8f855f68f418e74d1458914f7ed
+929655507f1c6836491de3906a047a9e
   aParametrit ::
     GHC.Base.String
     -> [Messer.Maaritelma]
@@ -954,7 +891,7 @@ cfde6a4fc963fca275460cf9a1a3a9fb
     -> Messemlyzer.Aliohjelmat
     -> [Messemlyzer.AVirhe]
   {- Arity: 5, Strictness: <L,U><S,1*U><S,1*U><L,U><L,U> -}
-5d7720382c942bec47058e0bf5b57edc
+660f87b1d08c9116023910ac258666ae
   analysoi ::
     Messer.Luokka
     -> Data.Either.Either Messemlyzer.ALuokka [Messemlyzer.AVirhe]
@@ -967,9 +904,10 @@ cfde6a4fc963fca275460cf9a1a3a9fb
 072768f22d3f22b706bad52fb7942d9a
   mapAliohj :: [Messer.Aliohjelma] -> Messemlyzer.Aliohjelmat
   {- Arity: 1, Strictness: <S,1*U> -}
-a71f4bc29e81a5ba340f8b2daf9ef4c2
+89b1a57d5405e6cc2a1951d49ab0b323
   uYmparisto :: [Messer.Parametri] -> Messemlyzer.AMuuttujat
   {- Arity: 1, Strictness: <S,1*U> -}
+instance GHC.Classes.Eq [Messemlyzer.AArvo] = Messemlyzer.$fEqAArvo
 instance GHC.Show.Show [Messemlyzer.AArvo]
   = Messemlyzer.$fShowAArvo
 instance GHC.Show.Show [Messemlyzer.ALuokka]
