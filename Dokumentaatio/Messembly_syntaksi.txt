@@ -1,4 +1,4 @@
-TIES448 Kääntäjätekniikka
+﻿TIES448 Kääntäjätekniikka
 Lähdekielen syntaksin suunnitelma
 
 
@@ -16,6 +16,9 @@ Lähdekielen syntaksin suunnitelma
 - Tyhjällä tilalla ei ole merkitystä ja se ohitetaan
 
 - Tietotyypit: int, bool, string
+
+- HUOM. käytämme määritelmää tässä kuvaamaan jotain joka evaluoituu joksikin arvoksi ja lauseketta
+kuvaamaan, jotain suoritettavaa toimintoa. 
 
 - Määritelmät (expression):
     - Muuttuja
@@ -69,4 +72,4 @@ Lähdekielen syntaksin suunnitelma
     main (string[] args) { [suoritettava lauseke tai kommentti]* };
 
 - aliohjelma
-    [palautusarvon tyyppi tai void] [aliohjelman nimi] ([parametrit pilkulla erotettuna, esim. "int a, int b"]) { [suoritettava lauseke tai kommentti]* };
+    [palautusarvon tyyppi tai void] [aliohjelman nimi] ([parametrit pilkulla erotettuna, esim. "int a, bool b"]) { [suoritettava lauseke tai kommentti]* };

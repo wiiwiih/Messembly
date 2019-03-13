@@ -29,12 +29,12 @@ version :: Version
 version = Version [0,1,0,0] []
 bindir, libdir, dynlibdir, datadir, libexecdir, sysconfdir :: FilePath
 
-bindir     = "C:\\Users\\vijulapp\\Documents\\GitHub\\Messembly\\K\228\228nt\228j\228\\Messer\\.stack-work\\install\\4ce01a7c\\bin"
-libdir     = "C:\\Users\\vijulapp\\Documents\\GitHub\\Messembly\\K\228\228nt\228j\228\\Messer\\.stack-work\\install\\4ce01a7c\\lib\\x86_64-windows-ghc-8.6.3\\Messer-0.1.0.0-Gm7rgtTydiEHjGrkrFaboT-Messer"
-dynlibdir  = "C:\\Users\\vijulapp\\Documents\\GitHub\\Messembly\\K\228\228nt\228j\228\\Messer\\.stack-work\\install\\4ce01a7c\\lib\\x86_64-windows-ghc-8.6.3"
-datadir    = "C:\\Users\\vijulapp\\Documents\\GitHub\\Messembly\\K\228\228nt\228j\228\\Messer\\.stack-work\\install\\4ce01a7c\\share\\x86_64-windows-ghc-8.6.3\\Messer-0.1.0.0"
-libexecdir = "C:\\Users\\vijulapp\\Documents\\GitHub\\Messembly\\K\228\228nt\228j\228\\Messer\\.stack-work\\install\\4ce01a7c\\libexec\\x86_64-windows-ghc-8.6.3\\Messer-0.1.0.0"
-sysconfdir = "C:\\Users\\vijulapp\\Documents\\GitHub\\Messembly\\K\228\228nt\228j\228\\Messer\\.stack-work\\install\\4ce01a7c\\etc"
+bindir     = "C:\\Users\\tarth\\Documents\\GitHub\\Messembly\\K\228\228nt\228j\228\\Messer\\.stack-work\\install\\4ce01a7c\\bin"
+libdir     = "C:\\Users\\tarth\\Documents\\GitHub\\Messembly\\K\228\228nt\228j\228\\Messer\\.stack-work\\install\\4ce01a7c\\lib\\x86_64-windows-ghc-8.6.3\\Messer-0.1.0.0-Gm7rgtTydiEHjGrkrFaboT-Messer"
+dynlibdir  = "C:\\Users\\tarth\\Documents\\GitHub\\Messembly\\K\228\228nt\228j\228\\Messer\\.stack-work\\install\\4ce01a7c\\lib\\x86_64-windows-ghc-8.6.3"
+datadir    = "C:\\Users\\tarth\\Documents\\GitHub\\Messembly\\K\228\228nt\228j\228\\Messer\\.stack-work\\install\\4ce01a7c\\share\\x86_64-windows-ghc-8.6.3\\Messer-0.1.0.0"
+libexecdir = "C:\\Users\\tarth\\Documents\\GitHub\\Messembly\\K\228\228nt\228j\228\\Messer\\.stack-work\\install\\4ce01a7c\\libexec\\x86_64-windows-ghc-8.6.3\\Messer-0.1.0.0"
+sysconfdir = "C:\\Users\\tarth\\Documents\\GitHub\\Messembly\\K\228\228nt\228j\228\\Messer\\.stack-work\\install\\4ce01a7c\\etc"
 
 getBinDir, getLibDir, getDynLibDir, getDataDir, getLibexecDir, getSysconfDir :: IO FilePath
 getBinDir = catchIO (getEnv "Messer_bindir") (\_ -> return bindir)
