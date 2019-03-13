@@ -1,0 +1,305 @@
+
+==================== FINAL INTERFACE ====================
+2019-03-13 11:32:20.3998388 UTC
+
+interface main:MesserTests 8063
+  interface hash: 65ab4f56a42b3ba4d5f53dc6036c5944
+  ABI hash: 1cb92f5360b57e7204ab84d52b966387
+  export-list hash: e35b28a1c19fe6eb222ed752d8a861b0
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 8346313dc06e16ebefba9f23d6444d37
+  opt_hash: 6faf2de08de32d19db9870899d88e59a
+  hpc_hash: 93b885adfe0da089cdf634904fd59f71
+  plugin_hash: ad164012d6b1e14942349d58b1132007
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  MesserTests.ajaTestit
+  MesserTests.jTestit
+  MesserTests.parseOnnistui
+  MesserTests.tTiedosto
+  MesserTests.testit
+  MesserTests.testitiedostot
+  MesserTests.tpf
+module dependencies: Messer
+package dependencies: Win32-2.6.1.0 ansi-terminal-0.8.2
+                      ansi-wl-pprint-0.6.8.2 array-0.5.3.0 async-2.2.1 base-4.12.0.0
+                      binary-0.8.6.0 bytestring-0.10.8.2 call-stack-0.1.0
+                      case-insensitive-1.2.0.11 clock-0.7.2 colour-2.3.4
+                      containers-0.6.0.1 deepseq-1.4.4.0 directory-1.3.3.0
+                      filepath-1.4.2.1 ghc-prim-0.5.3 hashable-1.2.7.0
+                      integer-gmp-1.0.2.0 integer-logarithms-1.0.2.2 megaparsec-7.0.4
+                      mintty-0.1.2 mtl-2.2.2 optparse-applicative-0.14.3.0
+                      parser-combinators-1.0.1 primitive-0.6.4.0 process-1.6.3.0
+                      scientific-0.3.6.2 stm-2.5.0.0 tagged-0.8.6 tasty-1.2
+                      tasty-hunit-0.10.0.1 text-1.2.3.1 time-1.8.0.2 transformers-0.5.5.0
+                      unbounded-delays-0.1.1.0
+orphans: stm-2.5.0.0:Control.Monad.STM
+         time-1.8.0.2:Data.Time.Format.Parse
+         time-1.8.0.2:Data.Time.LocalTime.Internal.ZonedTime
+         time-1.8.0.2:Data.Time.LocalTime.Internal.LocalTime
+         time-1.8.0.2:Data.Time.Calendar.Gregorian colour-2.3.4:Data.Colour
+         transformers-0.5.5.0:Control.Monad.Trans.Error
+         hashable-1.2.7.0:Data.Hashable.Generic text-1.2.3.1:Data.Text.Lazy
+         text-1.2.3.1:Data.Text binary-0.8.6.0:Data.Binary.Generic
+         bytestring-0.10.8.2:Data.ByteString.Builder
+         text-1.2.3.1:Data.Text.Show base-4.12.0.0:GHC.Float
+         base-4.12.0.0:GHC.Base
+family instance modules: base-4.12.0.0:Control.Applicative
+                         base-4.12.0.0:Data.Complex base-4.12.0.0:Data.Functor.Compose
+                         base-4.12.0.0:Data.Functor.Const
+                         base-4.12.0.0:Data.Functor.Identity
+                         base-4.12.0.0:Data.Functor.Product base-4.12.0.0:Data.Functor.Sum
+                         base-4.12.0.0:Data.Monoid base-4.12.0.0:Data.Semigroup
+                         base-4.12.0.0:Data.Semigroup.Internal base-4.12.0.0:Data.Version
+                         base-4.12.0.0:Data.Void base-4.12.0.0:GHC.Exts
+                         base-4.12.0.0:GHC.Generics base-4.12.0.0:GHC.IO.Exception
+                         clock-0.7.2:System.Clock containers-0.6.0.1:Data.Graph
+                         containers-0.6.0.1:Data.IntMap.Internal
+                         containers-0.6.0.1:Data.IntSet.Internal
+                         containers-0.6.0.1:Data.Map.Internal
+                         containers-0.6.0.1:Data.Sequence.Internal
+                         containers-0.6.0.1:Data.Set.Internal containers-0.6.0.1:Data.Tree
+                         megaparsec-7.0.4:Text.Megaparsec.Error
+                         megaparsec-7.0.4:Text.Megaparsec.Pos
+                         megaparsec-7.0.4:Text.Megaparsec.State
+                         megaparsec-7.0.4:Text.Megaparsec.Stream
+                         primitive-0.6.4.0:Control.Monad.Primitive
+                         primitive-0.6.4.0:Data.Primitive.Array tagged-0.8.6:Data.Tagged
+                         tasty-1.2:Test.Tasty.Core text-1.2.3.1:Data.Text
+                         text-1.2.3.1:Data.Text.Lazy
+import  -/  base-4.12.0.0:Data.Maybe f4c6afc48ee9ed1cd2fb5a451772b4fb
+import  -/  base-4.12.0.0:GHC.Base b0f6eed6c4b57b0a2f7c7570f245848b
+import  -/  base-4.12.0.0:GHC.List fa3cdff2fbdd06bd1298029e4f282dd8
+import  -/  base-4.12.0.0:Prelude b1ccc486556b171042710ef6f2d1a539
+import  -/  directory-1.3.3.0:System.Directory f8b884860478f4114f6736c1024e8261
+import  -/  ghc-prim-0.5.3:GHC.Classes 555218a5f891dab16ebc6e6e04763e77
+import  -/  ghc-prim-0.5.3:GHC.Types 57064c9f957b09bc2e360061ad5cae0b
+import  -/  Messer c8351d058a6aa40cc50b279f11d94745
+  exports: 074c6398dfe19dd25eed8799effd875b
+  testaaTiedosto d3536b9c5fb371b07293daac4adf9025
+import  -/  tasty-1.2:Test.Tasty c22fcdb4c8b1fcac6b62bbb378995a7a
+import  -/  tasty-1.2:Test.Tasty.Core ae8841dc1ffc182b40a128efea66bb90
+import  -/  tasty-hunit-0.10.0.1:Test.Tasty.HUnit 451a5ebe1ff5e16a6403f8dfb84a2d22
+import  -/  tasty-hunit-0.10.0.1:Test.Tasty.HUnit.Orig 9717b51e4077fc11889b30984c877a68
+afa15e4d429922127d4f28ddacf8c6ce
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   MesserTests.$trModule3
+                   MesserTests.$trModule1) -}
+bf6b8f08339fb1a616a8055b21e66876
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS MesserTests.$trModule2) -}
+f3341607f85969cd9c0d6bfa35ad07f8
+  $trModule2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("MesserTests"#) -}
+88bf0b6144edfa741b861da32d271a4c
+  $trModule3 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS MesserTests.$trModule4) -}
+94b4ea6cecc2d902974cc4bf6cfe2e96
+  $trModule4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("main"#) -}
+5da21f3789de37fd94f899ff95df2da3
+  ajaTestit :: GHC.Types.IO ()
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: InlineRule (0, True, True)
+                MesserTests.ajaTestit1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
+d9eb2cc1b7630d5334629bd922bffaf5
+  ajaTestit1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 case System.Directory.getDirectoryContents1
+                        MesserTests.tpf
+                        s of ds8 { (#,#) ipv ipv1 ->
+                 case MesserTests.ajaTestit6
+                        (GHC.List.filter
+                           @ [GHC.Types.Char]
+                           System.Directory.listDirectory2
+                           ipv1)
+                        ipv of ds1 { (#,#) ipv2 ipv3 ->
+                 Test.Tasty.CmdLine.defaultMainWithIngredients1
+                   Test.Tasty.defaultIngredients
+                   (Test.Tasty.Core.TestGroup
+                      MesserTests.ajaTestit4
+                      (GHC.Types.:
+                         @ Test.Tasty.Core.TestTree
+                         (Test.Tasty.Core.TestGroup MesserTests.ajaTestit2 ipv3)
+                         (GHC.Types.[] @ Test.Tasty.Core.TestTree)))
+                   ipv2 } }) -}
+4702d881b45ab139a5c200f9bf9efbab
+  ajaTestit2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCStringUtf8#
+                   MesserTests.ajaTestit3) -}
+3cb999b835d4550d8c8bcef1fb54244b
+  ajaTestit3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs,
+     Unfolding: ("J\\195\\164sent\\195\\164minen onnistui"#) -}
+36945e0ec0d546b1d0326889fe0b4e91
+  ajaTestit4 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCStringUtf8#
+                   MesserTests.ajaTestit5) -}
+07f322f6cf499d407e7e93d23cbd3501
+  ajaTestit5 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("J\\195\\164sentimen testit"#) -}
+1771bf6c65efdd445d5efb3a4a954c53
+  ajaTestit6 ::
+    [GHC.Base.String]
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          [Test.Tasty.Core.TestTree] #)
+  {- Arity: 2, Strictness: <S,1*U><S,U> -}
+2e9112c8c8880191d10ee330b4732c98
+  jTestit ::
+    [GHC.Base.String] -> GHC.Types.IO [Test.Tasty.Core.TestTree]
+  {- Arity: 2, Strictness: <S,1*U><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                MesserTests.ajaTestit6
+                  `cast`
+                (<[GHC.Base.String]>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <[Test.Tasty.Core.TestTree]>_R)) -}
+62808f91d18fc1e61923852ed233e132
+  parseOnnistui :: GHC.Types.IO Test.Tasty.Core.TestTree
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: InlineRule (0, True, True)
+                MesserTests.parseOnnistui1
+                  `cast`
+                (Sym (GHC.Types.N:IO[0] <Test.Tasty.Core.TestTree>_R)) -}
+5defcaebc22e3641384f39585c1f218e
+  parseOnnistui1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Test.Tasty.Core.TestTree #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 case System.Directory.getDirectoryContents1
+                        MesserTests.tpf
+                        s of ds8 { (#,#) ipv ipv1 ->
+                 case MesserTests.ajaTestit6
+                        (GHC.List.filter
+                           @ [GHC.Types.Char]
+                           System.Directory.listDirectory2
+                           ipv1)
+                        ipv of ds1 { (#,#) ipv2 ipv3 ->
+                 (# ipv2,
+                    Test.Tasty.Core.TestGroup MesserTests.ajaTestit2 ipv3 #) } }) -}
+10cff53bec093d70e85a255a90a1f566
+  tTiedosto :: GHC.Base.String -> GHC.Types.IO GHC.Types.Bool
+  {- Arity: 2, Strictness: <L,1*U><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                MesserTests.tTiedosto1
+                  `cast`
+                (<GHC.Base.String>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <GHC.Types.Bool>_R)) -}
+aebf547804a0f63e078b8139e6fde9ac
+  tTiedosto1 ::
+    GHC.Base.String
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, GHC.Types.Bool #)
+  {- Arity: 2, Strictness: <L,1*U><S,U>,
+     Unfolding: (\ (tiedosto :: GHC.Base.String)
+                   (s :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 case GHC.IO.Handle.FD.openFile1
+                        (GHC.Base.++ @ GHC.Types.Char MesserTests.tpf tiedosto)
+                        GHC.IO.IOMode.ReadMode
+                        s of ds1 { (#,#) ipv ipv1 ->
+                 case GHC.IO.Handle.Text.hGetContents1
+                        ipv1
+                        ipv of ds { (#,#) ipv2 ipv3 ->
+                 (# ipv2,
+                    case Text.Megaparsec.$wparseMaybe
+                           @ Data.Void.Void
+                           @ GHC.Base.String
+                           @ Messer.Luokka
+                           Text.Megaparsec.Stream.$fStream[]
+                           Messer.jasennin1
+                             `cast`
+                           (Sym (Text.Megaparsec.Internal.N:ParsecT[0]
+                                     <Data.Void.Void>_N
+                                     <[GHC.Types.Char]>_N
+                                     <Data.Functor.Identity.Identity>_R
+                                     <Messer.Luokka>_R))
+                           ipv3 of wild {
+                      GHC.Maybe.Nothing -> GHC.Types.False
+                      GHC.Maybe.Just ipv4 -> GHC.Types.True } #) } }) -}
+8cb5d3c99ec6303dd6fb82185d6d37cc
+  testit :: GHC.Types.IO Test.Tasty.Core.TestTree
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: InlineRule (0, True, True)
+                MesserTests.testit1
+                  `cast`
+                (Sym (GHC.Types.N:IO[0] <Test.Tasty.Core.TestTree>_R)) -}
+b74eb2324566c4cba3e1a78165a03802
+  testit1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Test.Tasty.Core.TestTree #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 case System.Directory.getDirectoryContents1
+                        MesserTests.tpf
+                        s of ds8 { (#,#) ipv ipv1 ->
+                 case MesserTests.ajaTestit6
+                        (GHC.List.filter
+                           @ [GHC.Types.Char]
+                           System.Directory.listDirectory2
+                           ipv1)
+                        ipv of ds1 { (#,#) ipv2 ipv3 ->
+                 (# ipv2,
+                    Test.Tasty.Core.TestGroup
+                      MesserTests.ajaTestit4
+                      (GHC.Types.:
+                         @ Test.Tasty.Core.TestTree
+                         (Test.Tasty.Core.TestGroup MesserTests.ajaTestit2 ipv3)
+                         (GHC.Types.[] @ Test.Tasty.Core.TestTree)) #) } }) -}
+a33ea0223dcbc63d33c3d81406960e5f
+  testitiedostot :: GHC.Types.IO [GHC.Base.String]
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: InlineRule (0, True, True)
+                MesserTests.testitiedostot1
+                  `cast`
+                (Sym (GHC.Types.N:IO[0] <[[GHC.Types.Char]]>_R)) -}
+d56a29f6489d7c6981b0c5681421ca51
+  testitiedostot1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, [[GHC.Types.Char]] #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 case System.Directory.getDirectoryContents1
+                        MesserTests.tpf
+                        s of ds8 { (#,#) ipv ipv1 ->
+                 (# ipv,
+                    GHC.Base.build
+                      @ [GHC.Types.Char]
+                      (\ @ b
+                         (c :: [GHC.Types.Char] -> b -> b)[OneShot]
+                         (n :: b)[OneShot] ->
+                       GHC.Base.foldr
+                         @ [GHC.Types.Char]
+                         @ b
+                         (GHC.List.filterFB
+                            @ [GHC.Types.Char]
+                            @ b
+                            c
+                            System.Directory.listDirectory2)
+                         n
+                         ipv1) #) }) -}
+fbb4740079898b0572f79ad67123ba66
+  tpf :: GHC.Base.String
+  {- Unfolding: (GHC.CString.unpackCString# MesserTests.tpf1) -}
+a3e572af6552840560ddb405939bed6c
+  tpf1 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("../../TestiKoodit/"#) -}
+trusted: none
+require own pkg trusted: False
+module header:
+  Nothing
+declaration docs:
+arg docs:
+

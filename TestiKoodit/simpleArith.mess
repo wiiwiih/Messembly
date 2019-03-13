@@ -1,6 +1,10 @@
+#Yksinkertainen testiesimerkki aritmeettisille operaattoreille
 class SimpleArith {
     
-    main(string[] args){
+    main(){
         print 3 + 4?
+        print 3 - 4?
+        print 3 * 4?
+        print 3 / 4?
     };
 }

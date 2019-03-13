@@ -1,0 +1,24 @@
+Sprintti 5
+Loppupalaveri
+
+31.1.2019
+
+Vilma Lappi ja Janne Isoaho
+
+Sprintin tavoitteet:
+
+- Jäsentimen bugien korjaus
+
+- Jäsentimelle testejä
+
+- Jatkosuunnitelman laatiminen
+
+
+Tavoitteiden toteutuminen:
+
+- Jäsentimen tunnetut bugit korjattu, jäsennin on nyt toimiva (ainakin esimerkkitiedostoilla)
+
+- Testejä ei vielä tehty, koska jäsentimen ongelmat olivat odotettua laajempia
+
+- Suunniteltu tekemistä 1-2 sprinttiä eteenpäin (jäsentimen testit ja suora tulkki), täytyy tehdä lisäselvitystä sen suhteen, mitä sitten tehdään.
+

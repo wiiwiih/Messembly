@@ -1,0 +1,18 @@
+Sprintti 6
+Alkupalaveri
+
+31.1.2019
+
+Vilma Lappi ja Janne Isoaho
+
+Sprintin tavoitteet:
+
+- Jäsentimelle testejä
+
+- Aloitetaan tulkin tekeminen
+
+
+Työnjako:
+
+- Työtä tehdään yhdessä molempien läsnäollessa.
+

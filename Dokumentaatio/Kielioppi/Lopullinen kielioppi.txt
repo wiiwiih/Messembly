@@ -1,0 +1,87 @@
+Lopullinen/toteutettu kielioppi 
+
+Alustavan kieliopin hahmotelman pohjana käytettiin Antti-Juhani Kaijanahon kurssilla laatimaa kielioppia. 
+AJK:n kielioppi https://yousource.it.jyu.fi/ties448/minipascal/blobs/e8dccb853e36610b2b734f0d26e851f79afe3869/MiniPascal.g4
+
+
+Kommentit on aloitettu #-merkillä, kieliopissa tyhjä merkitään merkinnällä EPSILON
+
+------------------------------------------------------------------------------------------------------------------------
+
+VAKIO: [0-9]+
+
+INT: VAKIO | "-" VAKIO
+
+BOOL: "true" | "false"
+
+STRING: "\"" .* "\""
+
+#XID_Start ja XID_Continuet ovat Unicoden merkkien ominaisuuksia kertoen mitkä ovat sopivia ID alkuja/jatkomerkkejä
+ID: [XID_Start] [XID_Continue]*    
+
+#skip on ANTLR:n ominaisuus, mutta käytetään sitä tässä toistaiseksi merkitsemään merkkien ohittamista
+TYHJÄ: [\t\n\r]+ -> skip         
+                                    
+KOMMENTTI: # .* \n -> skip
+
+luokka: "class" ID "{" main aliohjelma* "}"
+
+parametrilista: parametri 
+              | parametri "," parametrilista
+
+parametri: tietotyyppi ID
+
+tietotyyppi: "int" | "bool" | "string" 
+
+main: "main" "(" parametrilista ")" "{" lauseke* "}" ";"
+
+aliohjelma: (tietotyyppi | "void") ID "(" parametrilista ")" "{" lauseke* "}" ";"
+
+#HUOM! lauseke tässä kieliopissa vastaa samaa kuin "statement"
+lauseke: lauseke' "?"
+
+lauseke':  idAlkuL
+        | uusiSijoitus 
+        | "print" määritelmä
+        | "return" määritelmä 
+        | ehtolause
+        | "while" "(" määritelmä ")" "{" lauseke* "}" 
+
+idAlkuL: ID idLoppuL
+
+idLoppuL: aliohjelmakutsu 
+       | vanhaSijoitus
+
+aliohjelmakutsu: "(" määritelmälista ")" 
+
+määritelmälista: määritelmä 
+               | määritelmä "," määritelmälista
+
+uusiSijoitus: tietotyyppi ID "=" määritelmä
+
+vanhaSijoitus: "=" määritelmä
+
+ehtolause: "if" "(" määritelmä ")" "{" lauseke* "}" ehtoloppu
+
+ehtoloppu: "else" "{" lauseke* "}" 
+         | EPSILON
+
+#HUOM! määritelmä tässä kieliopissa vastaa samaa kuin "expression"
+määritelmä: operaattoriMääritelmä
+          | STRING
+          | BOOL
+
+operaattoriMääritelmä: "(" operaattoriMääritelmä ")" 
+                     | INT
+                     | idAlkuM
+                     | operaattoriMääritelmä op operaattoriMääritelmä
+
+idAlkuM: ID idLoppuM
+
+idLoppuM: aliohjelmakutsu 
+        | EPSILON
+
+op: "+" | "-" | "/" | "*" | "<" | ">" | "<=" | ">=" | "==" | "!=" 
+
+
+

@@ -1,7 +1,8 @@
+#Yksinkertainen esimerkki aliohjelmista. Laskee yhteen kaksi komentoriviparametrina saatua lukua
 class SimpleSubroutine {
     
-    main(string[] args){
-        print sum(3, 4)?
+    main(int a, int b){
+        print sum(a, b)?
     };
     
     int sum(int a, int b) {

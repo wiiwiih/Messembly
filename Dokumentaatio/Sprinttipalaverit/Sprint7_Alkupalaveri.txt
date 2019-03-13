@@ -1,0 +1,18 @@
+Sprintti 7
+Alkupalaveri
+
+8.2.2019
+
+Vilma Lappi ja Janne Isoaho
+
+Sprintin tavoitteet:
+
+- Selvitetään jäsentimen testauksen ongelmat
+
+- Aloitetaan tulkin tekeminen
+
+
+Työnjako:
+
+- Työtä tehdään yhdessä molempien läsnäollessa.
+

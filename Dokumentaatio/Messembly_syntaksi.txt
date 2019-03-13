@@ -5,11 +5,15 @@ Lähdekielen syntaksin suunnitelma
 
 - Kieli koostuu blokeista, joita merkitään aaltosuluilla {}. 
 
-- Ohjelman ylimmän tason rakenne on class, joka sisältää vain main-ohjelman, josta suoritus aloitetaan ja mahdollisesti aliohjelmia ja kommentteja
+- Ohjelman ylimmän tason rakenne on class, joka sisältää main-ohjelman, josta suoritus aloitetaan ja mahdollisesti aliohjelmia ja kommentteja
+
+- Main-ohjelman ja aliohjelmien loppuun laitetaan ;-merkki
 
 - Ohjelmablokit sisältävät valinta- ja toistoblokkeja, kommentteja, sekä lausekkeita
 
 - Kommentit aloitetaan #-merkillä, jonka jälkeen kommentti jatkuu rivinvaihtoon asti
+
+- Tyhjällä tilalla ei ole merkitystä ja se ohitetaan
 
 - Tietotyypit: int, bool, string
 
@@ -27,14 +31,16 @@ Lähdekielen syntaksin suunnitelma
         - [määritelmä, joka tuottaa kokonaisluvun] * [määritelmä, joka tuottaa kokonaisluvun]
         - [määritelmä, joka tuottaa kokonaisluvun] / [määritelmä, joka tuottaa kokonaisluvun]
     - Vertailu
-        - [määritelmä, joka tuottaa totuusarvon] < [määritelmä, joka tuottaa totuusarvon]
-        - [määritelmä, joka tuottaa totuusarvon] > [määritelmä, joka tuottaa totuusarvon]
-        - [määritelmä, joka tuottaa totuusarvon] == [määritelmä, joka tuottaa totuusarvon]
-        - [määritelmä, joka tuottaa totuusarvon] != [määritelmä, joka tuottaa totuusarvon]
-        - [määritelmä, joka tuottaa totuusarvon] <= [määritelmä, joka tuottaa totuusarvon]
-        - [määritelmä, joka tuottaa totuusarvon] >= [määritelmä, joka tuottaa totuusarvon]
+        - [määritelmä, joka tuottaa kokonaisluvun] < [määritelmä, joka tuottaa kokonaisluvun]
+        - [määritelmä, joka tuottaa kokonaisluvun] > [määritelmä, joka tuottaa kokonaisluvun]
+        - [määritelmä, joka tuottaa kokonaisluvun] == [määritelmä, joka tuottaa kokonaisluvun]
+        - [määritelmä, joka tuottaa kokonaisluvun] != [määritelmä, joka tuottaa kokonaisluvun]
+        - [määritelmä, joka tuottaa kokonaisluvun] <= [määritelmä, joka tuottaa kokonaisluvun]
+        - [määritelmä, joka tuottaa kokonaisluvun] >= [määritelmä, joka tuottaa kokonaisluvun]
+    - Aliohjelmakutsu
+        [aliohjelman nimi] ([parametreina annettavat määritelmät])
 
-- Lausekkeet (statement):
+- Lausekkeet (statement) (Huom! Kaikki lausekkeet loppuvat ?-merkkiin, myös ehtolauseet ja silmukat):
     - Tulostus
         - print [määritelmä] ?
     - Muuttujaan sijoitus
@@ -44,22 +50,23 @@ Lähdekielen syntaksin suunnitelma
             [muuttujan nimi] = [määritelmä, joka tuottaa oikean tyyppisen arvon] ?
     - Palautus aliohjelmasta
         return [määritelmä] ?
-
-- If-lauseen syntaksi (else ei ole pakollinen):
-      if ([määritelmä joka tuottaa totuusarvon]) { [suoritettava lauseke]* }
-      else { [suoritettava lauseke]* } 
-
-
-- Silmukat 
-    - while
-        while ([määritelmä]) { [suoritettava lauseke]* }
+    - If-lause:
+            if ([määritelmä joka tuottaa totuusarvon]) { [suoritettava lauseke]* } ?
+        TAI
+            if ([määritelmä joka tuottaa totuusarvon]) { [suoritettava lauseke]* }
+            else { [suoritettava lauseke]* } ?
+    - Silmukat 
+        - while
+            while ([määritelmä]) { [suoritettava lauseke]* } ?
+    - Aliohjelmakutsu
+        [aliohjelman nimi] ([parametreina annettavat määritelmät]) ?
 
 
 - class
     class [luokan nimi] { [main] [kommentti tai aliohjelma]* }
 
 - main
-    main (string[] args) { [suoritettava lauseke tai kommentti]* }
+    main (string[] args) { [suoritettava lauseke tai kommentti]* };
 
 - aliohjelma
-    [palautusarvon tyyppi tai void] [aliohjelman nimi] ([parametrit pilkulla erotettuna, esim. "int a, int b"]) { [suoritettava lauseke tai kommentti]* }
+    [palautusarvon tyyppi tai void] [aliohjelman nimi] ([parametrit pilkulla erotettuna, esim. "int a, int b"]) { [suoritettava lauseke tai kommentti]* };

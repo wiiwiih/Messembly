@@ -1,9 +1,10 @@
+#Laskee summan luvuista välillä [0,n[. n annetaan komentoriviparametrina.
 class SimpleLoop {
     
-    main(string[] args){
+    main(int n){
         int i = 0?
         int a = 0?
-        while(i < 10) {
+        while(i < n) {
             a = a + i?
             i = i + 1?
         }?

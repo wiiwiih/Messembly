@@ -1,8 +1,8 @@
+#Yksinkertainen testi ehtolauseille. 
+#Ohjelmalle annetaan kaksi lukua komentoriviparametrina, joista se tulostaa suuremman
 class simpleIfPrint {
     
-    main(string[] args){
-        int a = 3?
-        int b = 4?
+    main(int a, int b){
         if(a > b) {
             print a?
         } else {

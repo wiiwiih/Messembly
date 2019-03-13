@@ -1,0 +1,17 @@
+#Esimerkki, jossa käytetään eri tyyppisiä komentoriviparametreja.
+#Huom! Toistaiseksi bool-tyyppiset komentoriviparametrit pitää kirjoittaa isolla alkukirjaimella (True tai False),
+#muuten ne tulkitaan merkkijonoina
+class manyParameterTypes{
+
+    main (int i, bool b, string s) {
+        if (b) {
+            print "Ehto oli true"?
+        }?
+        if (i > 0){
+            print "Luku oli positiivinen"?
+        }?
+        print "Viestisi oli:"?
+        print s?
+    };
+
+}
