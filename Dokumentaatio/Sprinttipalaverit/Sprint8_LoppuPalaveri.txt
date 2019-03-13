@@ -1,0 +1,30 @@
+﻿Sprintti 8
+Loppupalaveri
+
+13.3.2019
+
+Vilma Lappi ja Janne Isoaho
+
+Sprintin tavoitteet:
+
+- Tulkki toimivaksi
+
+- Selvitetään ylemmän tason tulkkaamisen ongelmat
+
+- Lisää testejä
+
+
+Tavoitteiden toteutuminen:
+
+- Tulkki toimii
+
+- Ongelmat selvitetty
+
+- Muutama testi lisätty ja vanhat paranneltu
+
+- Bonuksena semanttinen analyysi (staattinen tyypintarkastus)
+
+Muuta:
+
+Viimeinen sprintti pidettiin palautukseen asti, koska tarvittiin joustavampaa (vielä ketterämpää) kehitysmallia.
+
